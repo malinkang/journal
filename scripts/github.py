@@ -34,24 +34,24 @@ def getWeekDay():
     today = datetime.now().weekday()
     return week_day_dict[today]
     
-def getBlock(secret,pageId,version):
+def getBlock(secret,pageId,version,token):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/blocks/'+pageId+'/children',headers=headers)
     newResults = filter(isToday,r.json().get("results"))
     for result in newResults:
          id = result.get("id")
-         r = getPage(secret,id,version)
+         r = getPage(secret,id,version,token)
 def isToday(result):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
     return result.get("child_page").get("title")==title
-def github(markdown,token):
+def newPost(markdown,token):
     body = {"message":"写日记","content":markdown}
     file = time.strftime('%Y-%m-%d', time.localtime())+".md"
     headers = {'Accept': 'application/vnd.github.v3+json',"Authorization":token}
     r = requests.put('https://api.github.com/repos/malinkang/diary/contents/2021/'+file,headers=headers,json=body)
     print(r.json())
     return r
-def getPage(secret,id,version):
+def getPage(secret,id,version,token):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/pages/'+id,headers=headers)
     content = r.json()
@@ -75,7 +75,7 @@ def getPage(secret,id,version):
                     post +="- [x] "+content+"\n"
     print(post)
     post = base64.b64encode(post.encode(encoding='utf-8'))
-    github(post.decode('ascii'))
+    newPost(post.decode('ascii'),token)
     return r
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -84,4 +84,4 @@ if __name__ == "__main__":
     parser.add_argument("version")
     parser.add_argument("token")
     options = parser.parse_args()
-    getBlock(options.secret, options.id,options.version)
+    getBlock(options.secret, options.id,options.version,options.token)
