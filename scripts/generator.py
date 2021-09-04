@@ -24,19 +24,8 @@ def createDiary(secret,pageId,version):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
     body = {"parent":{"type":"page_id","page_id":pageId},"properties":{"title":{"title":[{"type":"text","text":{"content":title}}]}},"cover":{"type":"external","external":{"url":cover}},"icon":{"type":"emoji","emoji":"🌚"},"children":[{"type":"heading_2","heading_2":{"text":[{"type":"text","text":{"content":"工作"}}]}},{"type":"heading_2","heading_2":{"text":[{"type":"text","text":{"content":"学习"}}]}},{"object":"block","type":"to_do","to_do":{"text":[{"type":"text","text":{"content":"跑步5km🍅"}}],"checked":False}}]}
     r = requests.post('https://api.notion.com/v1/pages/',headers=headers,json=body)
-    print(r.text)
     
-
-# print(datetime(2021,8,29).strftime('%W'))
-# print(week)
-# r = getNotionPage(root_page_id)
-
-# r = getChildrenBlock(r.json().get("id"))
-# print(r.text)
-# # r = createPage()
-# print(r.text)
 if __name__ == "__main__":
-    print(sys.argv)
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("id")

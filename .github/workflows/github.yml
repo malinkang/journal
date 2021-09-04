@@ -1,4 +1,4 @@
-name: Generate Diary
+name: Github Sync
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
     branches:
       - master
     paths:
-      - scripts/generator.py
+      - scripts/github.py
       - requirements.txt
 
 jobs:
@@ -29,4 +29,4 @@ jobs:
           pip install -r requirements.txt
       - name: notion generator
         run: |
-          python scripts/generator.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}'
+          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.PERSONAL_TOKEN }}'
