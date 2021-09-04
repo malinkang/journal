@@ -7,6 +7,8 @@ import os
 import base64
 import argparse
 import time
+import sys
+
 from datetime import datetime
 
 from requests.api import get
@@ -34,6 +36,7 @@ def createDiary(secret,pageId,version):
 # # r = createPage()
 # print(r.text)
 if __name__ == "__main__":
+    print(sys.argv)
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("id")
