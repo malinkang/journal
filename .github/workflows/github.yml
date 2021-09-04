@@ -1,15 +1,8 @@
 name: Github Sync
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "50 15 * * *"
-  push:
-    branches:
-      - master
-    paths:
-      - scripts/github.py
-      - requirements.txt
+    - cron: "0 15 * * *"
 
 jobs:
   sync:
