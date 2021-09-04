@@ -58,8 +58,8 @@ def getPage(secret,id,version):
     cover = content.get("cover").get("external").get("url")
     title =content.get("properties").get("title").get("title")[0].get("text").get("content")
     createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
-    week = datetime.now().isocalendar().week
-    tag = "第"+str(week)+"周"
+    week = datetime.now().strftime("%V")
+    tag = "第"+week+"周"
     post = template.format(title,createTime,tag,cover)
     print(post)
     r = getChildrenBlock(secret,id,version)
