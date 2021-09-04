@@ -11,15 +11,6 @@ on:
       - scripts/generator.py
       - requirements.txt
 
-env:
-  # please change to your own config.
-  RUN_TYPE: keep # support strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava, Please change the 'pass' it to your own
-  ATHLETE: malinkang
-  TITLE: malinkang Running
-  TITLE_GRID: Over 10km Runs
-  GITHUB_NAME: malinkang
-  GITHUB_EMAIL: linkang.ma@gmail.com
-
 jobs:
   sync:
     name: Sync
@@ -32,11 +23,6 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.6
-      - name: Cache PIP
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.set_variables.outputs.PIP_CACHE }}
-          key: Ubuntu-pip-${{ steps.set_variables.outputs.PY }}
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
