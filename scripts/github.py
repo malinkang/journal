@@ -48,7 +48,7 @@ def newPost(markdown,token):
     body = {"message":"写日记","content":markdown}
     file = time.strftime('%Y-%m-%d', time.localtime())+".md"
     headers = {'Accept': 'application/vnd.github.v3+json',"Authorization":token}
-    r = requests.put('https://api.github.com/repos/malinkang/diary/contents/2021/'+file,headers=headers,json=body)
+    r = requests.put('https://api.github.com/repos/malinkang/d/contents/content/_posts/'+file,headers=headers,json=body)
     print(r.json())
     return r
 def getPage(secret,id,version,token):
