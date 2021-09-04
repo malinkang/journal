@@ -29,4 +29,4 @@ jobs:
           pip install -r requirements.txt
       - name: notion generator
         run: |
-          python scripts/generator.py ${{ secrets.NOTION_SECRET }} ${{secrets.NOTION_PAGE_ID}} ${{secrets.NOTION_VERSION}}
+          python scripts/generator.py ${{ secrets.NOTION_SECRET }} ${{ secrets.NOTION_PAGE_ID }} ${{ secrets.NOTION_VERSION }}
