@@ -2,7 +2,7 @@ name: Github Sync
 
 on:
   schedule:
-    - cron: "0 15 * * *"
+    - cron: "50 15 * * *"
 
 jobs:
   sync:
