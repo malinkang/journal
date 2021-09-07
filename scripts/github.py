@@ -62,16 +62,42 @@ def getPage(secret,id,version,token):
     print(post)
     r = getChildrenBlock(secret,id,version)
     results = r.json().get("results")
-    for result in results:
-            type = result.get("type")
-            text = result.get(type).get("text")
+     for result in results:
+        type = result.get("type")
+        text = result.get(type).get("text")
+        if(not text is None):
+            #text是一个数组 如果text长度为0 说明是回车
             if(len(text)>0):
                 content = text[0].get("text").get("content")
+                annotations = text[0].get("annotations")
+                bold = annotations.get("bold")
+                italic = annotations.get("italic")
+                strikethrough = annotations.get("strikethrough")
+                underline = annotations.get("underline")
+                code = annotations.get("code")
+                if(bold):
+                    content = "**"+content+"**"
+                if(italic):
+                    content = "**"+content+"**"
+                if(strikethrough):
+                    content = "~~"+content+"~~"
+                if(underline):
+                    content = "<u>"+content+"</u>"
+                if(code):
+                    content = "`"+content+"`"
                 if(type=="heading_2"):
                     post +="## "+content+"\n"
                 elif(type=="to_do"):
                     post +="- [x] "+content+"\n"
-    print(post)
+                elif(type=="bulleted_list_item"):
+                    post +="* "+content+"\n"
+                elif(type=="paragraph"):
+                    post += content+"\n"
+            else:
+                post +="\n"
+        elif(type=="image"):
+            url = result.get(type).get("external").get("url")
+            post += "![]("+url+")\n"
     post = base64.b64encode(post.encode(encoding='utf-8'))
     newPost(post.decode('ascii'),token)
     return r
