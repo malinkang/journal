@@ -62,7 +62,7 @@ def getPage(secret,id,version,token):
     print(post)
     r = getChildrenBlock(secret,id,version)
     results = r.json().get("results")
-     for result in results:
+    for result in results:
         type = result.get("type")
         text = result.get(type).get("text")
         if(not text is None):
