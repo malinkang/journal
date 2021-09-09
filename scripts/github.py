@@ -37,6 +37,7 @@ def getWeekDay():
 def getBlock(secret,pageId,version,token):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/blocks/'+pageId+'/children',headers=headers)
+    print(r.json())
     newResults = filter(isToday,r.json().get("results"))
     for result in newResults:
          id = result.get("id")
@@ -53,7 +54,13 @@ def getPage(secret,id,version,token):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/pages/'+id,headers=headers)
     content = r.json()
-    cover = content.get("cover").get("external").get("url")
+    print(content)
+    external = content.get("cover").get("external")
+    file = content.get("cover").get("file")
+    if(not external is None):
+        cover = external.get("url")
+    elif(not file is None):
+        cover = file.get("url")
     title =content.get("properties").get("title").get("title")[0].get("text").get("content")
     createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
     week = datetime.now().strftime("%V")
