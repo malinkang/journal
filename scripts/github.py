@@ -9,16 +9,14 @@ import argparse
 import time
 import sys
 
-from datetime import datetime
-
 from requests.api import get, post
 
 template = '''---
 title: "{0}"
 date: {1}
-description: ""
-tags: [{2}]
-featured_image: "{3}"
+description: "{2}"
+tags: [{3}]
+featured_image: "{4}"
 categories: 2021
 comment : false
 ---
@@ -50,6 +48,26 @@ def newPost(markdown,token):
     file = time.strftime('%Y-%m-%d', time.localtime())+".md"
     headers = {'Accept': 'application/vnd.github.v3+json',"Authorization":token}
     requests.put('https://api.github.com/repos/malinkang/d/contents/content/posts/'+file,headers=headers,json=body)
+def getYearProgress():
+    from datetime import date, datetime
+    complete ='▓'
+    uncomplete ='░'
+    print(complete)
+    print(uncomplete)
+    d0 = datetime(2021, 1, 1)
+    d1 = datetime(2022, 1, 1)
+    d3 = datetime.now()
+    delta = d1 - d0
+    delta2 = d3 - d0
+    progress=(delta2.days+5)/delta.days
+    print(round(progress*20))
+    result = ""
+    for i in range(0,round(progress*20)):
+        result +=complete
+    for i in range(0,20-round(progress*20)):
+        result +=uncomplete
+    result = "Year Progress "+result+" "+str(round(progress, 3)*100)+"%"
+    return result
 def getPage(secret,id,version,token):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/pages/'+id,headers=headers)
@@ -65,7 +83,7 @@ def getPage(secret,id,version,token):
     createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
     week = datetime.now().strftime("%V")
     tag = "第"+week+"周"
-    post = template.format(title,createTime,tag,cover)
+    post = template.format(title,createTime,getYearProgress(),tag,cover)
     print(post)
     r = getChildrenBlock(secret,id,version)
     results = r.json().get("results")
