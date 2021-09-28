@@ -35,14 +35,15 @@ def getWeekDay():
 def getBlock(secret,pageId,version,token):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/blocks/'+pageId+'/children',headers=headers)
-    print(r.json())
     newResults = filter(isToday,r.json().get("results"))
     for result in newResults:
          id = result.get("id")
          r = getPage(secret,id,version,token)
 def isToday(result):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
-    return result.get("child_page").get("title")==title
+    print("isToday")
+    print(result)
+    return result.get("child_page")!=None and result.get("child_page").get("title")==title
 def newPost(markdown,token):
     body = {"message":"写日记","content":markdown}
     file = time.strftime('%Y-%m-%d', time.localtime())+".md"
@@ -83,7 +84,7 @@ def getPage(secret,id,version,token):
     createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
     week = datetime.now().strftime("%V")
     tag = "第"+week+"周"
-    post = template.format(title,createTime,getYearProgress(),tag,cover)
+    post = template.format(title,createTime,"",tag,cover)
     print(post)
     r = getChildrenBlock(secret,id,version)
     results = r.json().get("results")
