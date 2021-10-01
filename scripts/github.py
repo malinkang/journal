@@ -15,8 +15,8 @@ template = '''---
 title: "{0}"
 date: {1}
 description: "{2}"
-tags: [{3}]
-featured_image: "{4}"
+tags: [{3},{4}]
+featured_image: "{5}"
 categories: 2021
 comment : false
 ---
@@ -32,13 +32,13 @@ def getWeekDay():
     today = datetime.now().weekday()
     return week_day_dict[today]
     
-def getBlock(secret,pageId,version,token):
+def getBlock(secret,pageId,version,token,location,content):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/blocks/'+pageId+'/children',headers=headers)
     newResults = filter(isToday,r.json().get("results"))
     for result in newResults:
          id = result.get("id")
-         r = getPage(secret,id,version,token)
+         r = getPage(secret,id,version,token,location,content)
 def isToday(result):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
     print("isToday")
@@ -69,7 +69,7 @@ def getYearProgress():
         result +=uncomplete
     result = "Year Progress "+result+" "+str(round(progress, 3)*100)+"%"
     return result
-def getPage(secret,id,version,token):
+def getPage(secret,id,version,token,location,diary):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/pages/'+id,headers=headers)
     content = r.json()
@@ -84,7 +84,8 @@ def getPage(secret,id,version,token):
     createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
     week = datetime.now().strftime("%V")
     tag = "第"+week+"周"
-    post = template.format(title,createTime,"",tag,cover)
+    post = template.format(title,createTime,"",tag,location,cover)
+    post += diary
     print(post)
     r = getChildrenBlock(secret,id,version)
     results = r.json().get("results")
@@ -133,5 +134,7 @@ if __name__ == "__main__":
     parser.add_argument("id")
     parser.add_argument("version")
     parser.add_argument("token")
+    parser.add_argument("location")
+    parser.add_argument("content")
     options = parser.parse_args()
-    getBlock(options.secret, options.id,options.version,options.token)
+    getBlock(options.secret, options.id,options.version,options.token,options.location,options.content)

@@ -1,8 +1,14 @@
 name: Github Sync
 
 on:
-  schedule:
-    - cron: "50 15 * * *"
+  workflow_dispatch:
+    inputs:
+      location:
+        description: 'location'
+        required: false
+      content:
+        description: 'content'
+        required: false
 
 jobs:
   sync:
@@ -22,4 +28,4 @@ jobs:
           pip install -r requirements.txt
       - name: Github Sync
         run: |
-          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.GITHUB_TOKEN }}'
+          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.GITHUB_TOKEN }}' '${{ github.event.inputs.location }}' '${{ github.event.inputs.content }}'
