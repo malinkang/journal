@@ -15,8 +15,8 @@ template = '''---
 title: "{0}"
 date: {1}
 description: "{2}"
-tags: [{3},{4}]
-featured_image: "{5}"
+tags: [{3}]
+featured_image: "{4}"
 categories: 2021
 comment : false
 ---
@@ -48,7 +48,8 @@ def newPost(markdown,token):
     body = {"message":"写日记","content":markdown}
     file = time.strftime('%Y-%m-%d', time.localtime())+".md"
     headers = {'Accept': 'application/vnd.github.v3+json',"Authorization":token}
-    requests.put('https://api.github.com/repos/malinkang/d/contents/content/posts/'+file,headers=headers,json=body)
+    r = requests.put('https://api.github.com/repos/malinkang/d/contents/content/posts/'+file,headers=headers,json=body)
+    print(r.text)
 def getYearProgress():
     from datetime import date, datetime
     complete ='▓'
@@ -73,7 +74,6 @@ def getPage(secret,id,version,token,location,diary):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/pages/'+id,headers=headers)
     content = r.json()
-    print(content)
     external = content.get("cover").get("external")
     file = content.get("cover").get("file")
     if(not external is None):
@@ -84,9 +84,8 @@ def getPage(secret,id,version,token,location,diary):
     createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
     week = datetime.now().strftime("%V")
     tag = "第"+week+"周"
-    post = template.format(title,createTime,"",tag,location,cover)
+    post = template.format(title,createTime,location,tag,cover)
     post += diary
-    print(post)
     r = getChildrenBlock(secret,id,version)
     results = r.json().get("results")
     for result in results:
@@ -125,6 +124,7 @@ def getPage(secret,id,version,token,location,diary):
         elif(type=="image"):
             url = result.get(type).get("external").get("url")
             post += "![]("+url+")\n"
+    print(post)
     post = base64.b64encode(post.encode(encoding='utf-8'))
     newPost(post.decode('ascii'),token)
     return r
