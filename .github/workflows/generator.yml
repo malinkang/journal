@@ -1,8 +1,12 @@
 name: Generate Diary
 
 on:
-  schedule:
-    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      weather:
+        description: 'weather'
+        required: false
+
 
 jobs:
   sync:
@@ -22,4 +26,4 @@ jobs:
           pip install -r requirements.txt
       - name: notion generator
         run: |
-          python scripts/generator.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.UNSPLASH_ACCESS_KEY }}'
+          python scripts/generator.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.UNSPLASH_ACCESS_KEY }}' '${{ github.event.inputs.weather }}'
