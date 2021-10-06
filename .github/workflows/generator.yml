@@ -6,6 +6,9 @@ on:
       weather:
         description: 'weather'
         required: false
+      content:
+        description: 'content'
+        required: false
 
 
 jobs:
