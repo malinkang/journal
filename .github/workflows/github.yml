@@ -28,4 +28,4 @@ jobs:
           pip install -r requirements.txt
       - name: Github Sync
         run: |
-          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.PERSONAL_TOKEN }}' '${{ github.event.inputs.location }}' '${{ github.event.inputs.content }}'
+          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.PERSONAL_TOKEN }}' '${{ github.event.inputs.location }}' '${{ github.event.inputs.weatherß }}'

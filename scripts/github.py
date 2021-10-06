@@ -32,13 +32,13 @@ def getWeekDay():
     today = datetime.now().weekday()
     return week_day_dict[today]
     
-def getBlock(secret,pageId,version,token,location,content):
+def getBlock(secret,pageId,version,token,location,weather):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/blocks/'+pageId+'/children',headers=headers)
     newResults = filter(isToday,r.json().get("results"))
     for result in newResults:
          id = result.get("id")
-         r = getPage(secret,id,version,token,location,content)
+         r = getPage(secret,id,version,token,location,weather)
 def isToday(result):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
     print("isToday")
@@ -50,27 +50,8 @@ def newPost(markdown,token):
     headers = {'Accept': 'application/vnd.github.v3+json',"Authorization":token}
     r = requests.put('https://api.github.com/repos/malinkang/d/contents/content/posts/'+file,headers=headers,json=body)
     print(r.text)
-def getYearProgress():
-    from datetime import date, datetime
-    complete ='▓'
-    uncomplete ='░'
-    print(complete)
-    print(uncomplete)
-    d0 = datetime(2021, 1, 1)
-    d1 = datetime(2022, 1, 1)
-    d3 = datetime.now()
-    delta = d1 - d0
-    delta2 = d3 - d0
-    progress=(delta2.days+5)/delta.days
-    print(round(progress*20))
-    result = ""
-    for i in range(0,round(progress*20)):
-        result +=complete
-    for i in range(0,20-round(progress*20)):
-        result +=uncomplete
-    result = "Year Progress "+result+" "+str(round(progress, 3)*100)+"%"
-    return result
-def getPage(secret,id,version,token,location,diary):
+
+def getPage(secret,id,version,token,location,weather):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/pages/'+id,headers=headers)
     content = r.json()
@@ -84,8 +65,7 @@ def getPage(secret,id,version,token,location,diary):
     createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
     week = datetime.now().strftime("%V")
     tag = "第"+week+"周"
-    post = template.format(title,createTime,location,tag,cover)
-    post += diary
+    post = template.format(title,createTime,location+" "+weather,tag,cover)
     r = getChildrenBlock(secret,id,version)
     results = r.json().get("results")
     for result in results:
@@ -135,6 +115,6 @@ if __name__ == "__main__":
     parser.add_argument("version")
     parser.add_argument("token")
     parser.add_argument("location")
-    parser.add_argument("content")
+    parser.add_argument("weather")
     options = parser.parse_args()
-    getBlock(options.secret, options.id,options.version,options.token,options.location,options.content)
+    getBlock(options.secret, options.id,options.version,options.token,options.location,options.weather)

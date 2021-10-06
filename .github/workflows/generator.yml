@@ -26,4 +26,4 @@ jobs:
           pip install -r requirements.txt
       - name: notion generator
         run: |
-          python scripts/generator.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.UNSPLASH_ACCESS_KEY }}' '${{ github.event.inputs.weather }}'
+          python scripts/generator.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.UNSPLASH_ACCESS_KEY }}' '${{ github.event.inputs.weather }}' '${{ github.event.inputs.content }}'
