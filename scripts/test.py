@@ -9,8 +9,6 @@ import argparse
 import time
 import sys
 
-from requests.api import get, post
-
 template = '''---
 title: "{0}"
 date: {1}
@@ -22,39 +20,13 @@ comment : false
 ---
 '''
 
+from requests.api import get, post
 def getChildrenBlock(secret,id,version):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/blocks/'+id+'/children',headers=headers)
     return r
-
-def getWeekDay():
-    week_day_dict={0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
-    today = datetime.now().weekday()
-    return week_day_dict[today]
-    
-def getBlock(secret,pageId,version,token,location,weather):
-    print("block")
-    headers = {'Authorization': secret,"Notion-Version":version}
-    r = requests.get('https://api.notion.com/v1/blocks/'+pageId+'/children',headers=headers)
-    print(r.text)
-    newResults = filter(isToday,r.json().get("results"))
-    for result in newResults:
-         id = result.get("id")
-         r = getPage(secret,id,version,token,location,weather)
-def isToday(result):
-    # title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
-    title = "10月12日 星期二"
-    print("isToday")
-    print(result)
-    return result.get("child_page")!=None and result.get("child_page").get("title")==title
-def newPost(markdown,token):
-    body = {"message":"写日记","content":markdown}
-    # file = time.strftime('%Y-%m-%d', time.localtime())+".md"
-    file = "2021-10-12.md"
-    headers = {'Accept': 'application/vnd.github.v3+json',"Authorization":token}
-    r = requests.put('https://api.github.com/repos/malinkang/d/contents/content/posts/'+file,headers=headers,json=body)
-    print(r.text)
 def parseText(text):
+    print("-----")
     r = ''
     for t in text:
         content = t.get("text").get("content")
@@ -79,7 +51,8 @@ def parseText(text):
             content = "<font color='"+color+"'>"+content+"</font>"
         r+=content
     return r
-def getPage(secret,id,version,token,location,weather):
+
+def getPage(secret,id,version,location,weather):
     headers = {'Authorization': secret,"Notion-Version":version}
     r = requests.get('https://api.notion.com/v1/pages/'+id,headers=headers)
     content = r.json()
@@ -121,18 +94,14 @@ def getPage(secret,id,version,token,location,weather):
             elif(not file is None):
                 url = file.get("url")
             post += "![]("+url+")\n"
-    print(post)
-    post = base64.b64encode(post.encode(encoding='utf-8'))
-    newPost(post.decode('ascii'),token)
-    return r
+        # print(post)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("id")
     parser.add_argument("version")
-    parser.add_argument("token")
     parser.add_argument("location")
     parser.add_argument("weather")
     options = parser.parse_args()
-    getBlock(options.secret, options.id,options.version,options.token,options.location,options.weather)
+    getPage(options.secret, options.id,options.version,options.location,options.weather)
