@@ -3,9 +3,6 @@ name: Generate Diary
 on:
   workflow_dispatch:
     inputs:
-      weather:
-        description: 'weather'
-        required: false
       content:
         description: 'content'
         required: false
@@ -29,4 +26,4 @@ jobs:
           pip install -r requirements.txt
       - name: notion generator
         run: |
-          python scripts/generator.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.UNSPLASH_ACCESS_KEY }}' '${{ github.event.inputs.weather }}' '${{ github.event.inputs.content }}'
+          python scripts/generator1.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_DATABASE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.UNSPLASH_ACCESS_KEY }}'  '${{ github.event.inputs.content }}'

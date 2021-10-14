@@ -1,15 +1,7 @@
 name: Github Sync
-
 on:
-  workflow_dispatch:
-    inputs:
-      location:
-        description: 'location'
-        required: false
-      weather:
-        description: 'weather'
-        required: false
-
+  schedule:
+    - cron: "* 16 * * *"
 jobs:
   sync:
     name: Sync
@@ -29,3 +21,9 @@ jobs:
       - name: Github Sync
         run: |
           python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.PERSONAL_TOKEN }}' '${{ github.event.inputs.location }}' '${{ github.event.inputs.weather }}'
+      - name: commit
+        uses: EndBug/add-and-commit@v7 
+        with:
+          branch: master
+          committer_name: malinkang
+          committer_email: linkang.ma@gmail.com
