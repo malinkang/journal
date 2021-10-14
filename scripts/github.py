@@ -93,7 +93,7 @@ def parseText(text):
             content = "<font color='"+color+"'>"+content+"</font>"
         r+=content
     return r
-def getPage(secret,id,version,token,post):
+def getPage(secret,id,version,post):
     r = getContent(secret,id,version)
     results = r.json().get("results")
     for result in results:
