@@ -121,9 +121,10 @@ def getPage(secret,id,version,post):
             elif(not file is None):
                 url = file.get("url")
             post += "![]("+url+")\n"
-    print(post)
-    post = base64.b64encode(post.encode(encoding='utf-8'))
-    newPost(post.decode('ascii'))
+    # print(post)
+    # post = base64.b64encode(post.encode(encoding='utf-8'))
+    # newPost(post.decode('ascii'))
+    newPost(post)
     return r
 
 if __name__ == "__main__":
