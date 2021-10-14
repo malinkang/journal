@@ -42,15 +42,15 @@ def getBlock(secret,pageId,version,token,location,weather):
          id = result.get("id")
          r = getPage(secret,id,version,token,location,weather)
 def isToday(result):
-    # title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
-    title = "10月12日 星期二"
+    title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
+    # title = "10月12日 星期二"
     print("isToday")
     print(result)
     return result.get("child_page")!=None and result.get("child_page").get("title")==title
 def newPost(markdown,token):
     body = {"message":"写日记","content":markdown}
-    # file = time.strftime('%Y-%m-%d', time.localtime())+".md"
-    file = "2021-10-12.md"
+    file = time.strftime('%Y-%m-%d', time.localtime())+".md"
+    # file = "2021-10-12.md"
     headers = {'Accept': 'application/vnd.github.v3+json',"Authorization":token}
     r = requests.put('https://api.github.com/repos/malinkang/d/contents/content/posts/'+file,headers=headers,json=body)
     print(r.text)
