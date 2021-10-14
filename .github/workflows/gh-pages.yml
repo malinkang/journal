@@ -1,11 +1,8 @@
 name: github pages
 
 on:
-  push:
-    branches:
-      - master  # Set a branch to deploy
-  pull_request:
-
+  schedule:
+    - cron: "* 17 * * *"
 jobs:
   deploy:
     runs-on: ubuntu-20.04

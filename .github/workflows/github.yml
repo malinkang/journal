@@ -1,6 +1,5 @@
 name: Github Sync
 on:
-  workflow_dispatch:
   schedule:
     - cron: "* 16 * * *"
 jobs:
