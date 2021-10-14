@@ -123,7 +123,7 @@ def getPage(secret,id,version,post):
             post += "![]("+url+")\n"
     print(post)
     post = base64.b64encode(post.encode(encoding='utf-8'))
-    newPost(post.decode('ascii'),token)
+    newPost(post.decode('ascii'))
     return r
 
 if __name__ == "__main__":
