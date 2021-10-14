@@ -20,9 +20,9 @@ jobs:
           pip install -r requirements.txt
       - name: Github Sync
         run: |
-          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_PAGE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.PERSONAL_TOKEN }}' '${{ github.event.inputs.location }}' '${{ github.event.inputs.weather }}'
+          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}'
       - name: commit
-        uses: EndBug/add-and-commit@v7 
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: master
           committer_name: malinkang

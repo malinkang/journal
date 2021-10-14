@@ -33,7 +33,7 @@ def getWeekDay():
     return week_day_dict[today]
 
 #搜索需要同步的笔记
-def search(secret,version,token):
+def search(secret,version):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
     headers = {'Authorization': secret,"Notion-Version":version}
     body={"query":title}
@@ -53,9 +53,9 @@ def search(secret,version,token):
     week = datetime.now().strftime("%V")
     tag = "第"+week+"周"
     post = template.format(title,createTime,location+" "+weather,tag,cover)
-    getPage(secret,id,version,token,post)
+    getPage(secret,id,version,post)
 #创建post
-def newPost(markdown,token):
+def newPost(markdown):
     file = time.strftime('%Y-%m-%d', time.localtime())+".md"
     with open("./content/posts/"+file, "w") as f:
         f.seek(0)
@@ -130,6 +130,5 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("version")
-    parser.add_argument("token")
     options = parser.parse_args()
-    search(options.secret,options.version,options.token)
+    search(options.secret,options.version)
