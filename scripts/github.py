@@ -15,9 +15,9 @@ template = '''---
 title: "{0}"
 date: {1}
 description: "{2}"
-tags: [{3}]
+tags: ["{3}"]
 featured_image: "{4}"
-categories: 2021
+categories: ["2021"]
 comment : false
 ---
 '''
