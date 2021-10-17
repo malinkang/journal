@@ -29,10 +29,10 @@ title = "linkang's life" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
 [params.gitalk]
-  owner = "user"
-  repo = "repo name"
-  client_id = "your client id"
-  client_secret = "your client secret"
+  owner = "malinkang"
+  repo = "d"
+  client_id = "6ed488cb314d734b8328"
+  client_secret = "3b9f3e6685377f0c723a9dd4064b17f034172900"
 [taxonomies]
    tag = "tags"
    category = "categories"
