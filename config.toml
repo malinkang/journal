@@ -1,6 +1,6 @@
-baseURL = "http://malinkang.cn/d/"
+baseURL = "https://d-opal.vercel.app/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
-languageCode = "en-us"
+languageCode = "zh"
 title = "linkang's life"
 copyright = " 2021 malinkang."
 theme = "diary"
