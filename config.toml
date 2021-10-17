@@ -1,4 +1,4 @@
-baseURL = "https://d-opal.vercel.app/"
+baseURL = "https://diary.malinkang.cn/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "zh"
 title = "linkang's life"
@@ -31,8 +31,8 @@ description = "My HomePage Description"  # will set 'og:description'
 [params.gitalk]
   owner = "malinkang"
   repo = "d"
-  client_id = "6ed488cb314d734b8328"
-  client_secret = "3b9f3e6685377f0c723a9dd4064b17f034172900"
+  client_id = "ac27e3f51bd1be3571a4"
+  client_secret = "17554b79a5e7755c5f997e6aa419c0de45109fdd"
 [taxonomies]
    tag = "tags"
    category = "categories"
