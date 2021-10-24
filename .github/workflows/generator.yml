@@ -9,8 +9,12 @@ on:
 
 
 jobs:
-  - name: send telegram message on push
-    uses: appleboy/telegram-action@master
-    with:
-      token: ${{ secrets.TELEGRAM_TOKEN }}
-      message: "test"
+ build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: "test"
