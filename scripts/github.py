@@ -38,6 +38,7 @@ def search(secret,version):
     headers = {'Authorization': secret,"Notion-Version":version}
     body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
+    print(r.text)
     result = r.json().get("results")[0]
     id = result.get("id")
     location = result.get("properties").get("位置").get("rich_text")[0].get("text").get("content")
@@ -61,11 +62,6 @@ def newPost(markdown):
         f.seek(0)
         f.write(markdown)
         f.truncate()
-    # body = {"message":"写日记","content":markdown}
-    # file = time.strftime('%Y-%m-%d', time.localtime())+".md"
-    # headers = {'Accept': 'application/vnd.github.v3+json',"Authorization":token}
-    # r = requests.put('https://api.github.com/repos/malinkang/d/contents/content/posts/'+file,headers=headers,json=body)
-    # print(r.text)
 
 #解析文本
 def parseText(text):
