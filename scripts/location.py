@@ -13,8 +13,6 @@ from datetime import datetime
 
 from requests.api import get
 
-
-
 def getWeekDay():
     week_day_dict = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
     today = datetime.now().weekday()
@@ -31,37 +29,15 @@ def search(secret,version,content):
     updateDiary(secret,version,id,content)
     
 
-def emoji(weather):
-    if("晴" in weather):
-        return "☀️"
-    elif("雨" in weather):
-        return "🌧"
-    elif("雪" in weather):
-        return "❄️"
-    elif("云" in weather):
-        return "☁️"
-    elif("雾" in weather):
-        return "🌫"
-    else:
-        return "☀️"
-
 
 def updateDiary(secret, version,pageId, content):
     content = json.loads(content)
-    weather = content['weather']
-    highest = content['highest']
-    lowest = content['lowest']
-    aqi = content['aqi']
-    emo = emoji(weather)
+    location = content['location']
     headers = {'Authorization': secret, "Notion-Version": version}
     body = {
         "properties": {
-       "天气": {"rich_text": [{"type": "text", "text": {"content": weather}}]},
-       "最高温度": {"rich_text": [{"type": "text", "text": {"content": highest}}]},
-       "最低温度": {"rich_text": [{"type": "text", "text": {"content": lowest}}]},
-       "空气质量": {"number": int(aqi)},
-    },
-        "icon": {"type": "emoji", "emoji": emo}
+            "位置": {"rich_text": [{"type": "text", "text": {"content": location}}]}
+        }
     }
     r = requests.patch('https://api.notion.com/v1/pages/'+pageId,
                       headers=headers, json=body)
