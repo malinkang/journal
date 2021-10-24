@@ -43,8 +43,6 @@ def createDiary(secret, pageId, version, cover):
     }
     r = requests.post('https://api.notion.com/v1/pages/',
                       headers=headers, json=body)
-    print(r.request.body)
-    # print(r.text)
 
 
 def getCover(accessKey, secret, pageId, version):
