@@ -51,16 +51,15 @@ def updateDiary(secret, version,pageId, content):
     weather = content['weather']
     highest = content['highest']
     lowest = content['lowest']
-    print(weather)
-
+    aqi = content['aqi']
     emo = emoji(weather)
     headers = {'Authorization': secret, "Notion-Version": version}
     body = {
         "properties": {
-        "天气": {"rich_text": [{"type": "text", "text": {"content": weather}}]},
+       "天气": {"rich_text": [{"type": "text", "text": {"content": weather}}]},
        "最高温度": {"rich_text": [{"type": "text", "text": {"content": highest}}]},
        "最低温度": {"rich_text": [{"type": "text", "text": {"content": lowest}}]},
-
+       "空气质量": {"number": int(aqi)},
     },
         "icon": {"type": "emoji", "emoji": emo}
     }
