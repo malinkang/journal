@@ -1,4 +1,4 @@
-name: Generate Diary
+name: send email
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-     - name: Send mail
+      - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:
