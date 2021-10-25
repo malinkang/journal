@@ -27,7 +27,7 @@ jobs:
           # Required mail subject:
           subject: Github Actions job result
           # Required recipients' addresses:
-          to: 458832194@qq.com
+          to: trigger@recipe.ifttt.comgi
           # Required sender full name (address can be skipped):
           from: linkang.ma@gmail.com # <user@example.com>
           # Optional whether this connection use TLS (default is true if server_port is 465)

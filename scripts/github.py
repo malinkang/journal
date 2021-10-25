@@ -33,12 +33,11 @@ def getWeekDay():
     return week_day_dict[today]
 
 #搜索需要同步的笔记
-def search(secret,version):
+def search(secret,version,token):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
     headers = {'Authorization': secret,"Notion-Version":version}
     body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
-    print(r.text)
     result = r.json().get("results")[0]
     id = result.get("id")
     location = result.get("properties").get("位置").get("rich_text")[0].get("text").get("content")
@@ -54,7 +53,7 @@ def search(secret,version):
     week = datetime.now().strftime("%V")
     tag = "第"+week+"周"
     post = template.format(title,createTime,location+" "+weather,tag,cover)
-    getPage(secret,id,version,post)
+    getPage(secret,id,version,post,token)
 #创建post
 def newPost(markdown):
     file = time.strftime('%Y-%m-%d', time.localtime())+".md"
@@ -89,7 +88,8 @@ def parseText(text):
             content = "<font color='"+color+"'>"+content+"</font>"
         r+=content
     return r
-def getPage(secret,id,version,post):
+def getPage(secret,id,version,header,token):
+    post = ""
     r = getContent(secret,id,version)
     results = r.json().get("results")
     for result in results:
@@ -120,12 +120,23 @@ def getPage(secret,id,version,post):
     # print(post)
     # post = base64.b64encode(post.encode(encoding='utf-8'))
     # newPost(post.decode('ascii'))
-    newPost(post)
-    return r
+    newPost(header+post)
+    sendMail(post,token)
+def sendMail(post,token):
+    print(post)
+    body = {
+        "inputs": {"content":post},
+        "ref":"master"
+    }
+    headers = {'Accept': "application/vnd.github.v3+json", "Authorization": token}
+
+    requests.post("https://api.github.com/repos/malinkang/d/actions/workflows/12831282/dispatches",headers=headers,json=body)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("version")
+    parser.add_argument("token")
     options = parser.parse_args()
-    search(options.secret,options.version)
+    search(options.secret,options.version,options.token)
