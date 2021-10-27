@@ -20,7 +20,7 @@ def getWeekDay():
     return week_day_dict[today]
 
 # 搜索笔记
-def search(secret, version, content):
+def search( content):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime())
     headers = {'Authorization': secret, "Notion-Version": version}
     body = {"query": title}
@@ -28,15 +28,14 @@ def search(secret, version, content):
                       headers=headers, json=body)
     result = r.json().get("results")[0]
     id = result.get("id")
-    updateDiary(secret, version, id, content)
+    updateDiary( id, content)
 
 
-def updateDiary(secret, version, id, content):
+def updateDiary(id, content):
     content = json.loads(content)
     start = content['start']
     end = content['end']
     duration = content['duration']
-    headers = {'Authorization': secret, "Notion-Version": version}
     startTime = start[start.find("午")+1:]
     endTime = end[end.find("午")+1:]
     body = {
