@@ -20,9 +20,8 @@ def getWeekDay():
     return week_day_dict[today]
 
 # 搜索笔记
-def search( content):
+def search(content):
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime())
-    headers = {'Authorization': secret, "Notion-Version": version}
     body = {"query": title}
     r = requests.post("https://api.notion.com/v1/search",
                       headers=headers, json=body)
