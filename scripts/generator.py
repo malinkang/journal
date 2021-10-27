@@ -104,5 +104,4 @@ if __name__ == "__main__":
     parser.add_argument("accessKey")
     parser.add_argument("content")
     options = parser.parse_args()
-    getCover(options.accessKey, options.secret,
-             options.id, options.version, options.content)
+    getCover(options.accessKey, options.secret,options.id, options.version, options.content)

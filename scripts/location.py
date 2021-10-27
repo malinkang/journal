@@ -39,8 +39,7 @@ def updateDiary(secret, version,pageId, content):
             "位置": {"rich_text": [{"type": "text", "text": {"content": location}}]}
         }
     }
-    r = requests.patch('https://api.notion.com/v1/pages/'+pageId,
-                      headers=headers, json=body)
+    r = requests.patch('https://api.notion.com/v1/pages/'+pageId,headers=headers, json=body)
 
 
 

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from datetime import datetime
+from datetime import date, datetime
 import json
 import requests
 import os
@@ -8,55 +8,101 @@ import base64
 import argparse
 import time
 import sys
+import csv
 
 from datetime import datetime
 
 from requests.api import get
 
-
 def getWeekDay():
-    week_day_dict = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
+    week_day_dict={0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
     today = datetime.now().weekday()
     return week_day_dict[today]
 
-
-def createDiary(secret, pageId, version, cover):
-    emo = "☀️"
-    week = datetime.now().strftime("%V")
-    month = datetime.now().month
-    headers = {'Authorization': secret, "Notion-Version": version}
-    title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime())
-    body = {"parent": {"type": "database_id", "database_id": pageId},
+def createDiary(title,startTime,endTime):
+    body = {"parent": {"type": "database_id", "database_id": "101341b8f9634e7a9ad522103db35731"},
             "properties": {
         "title": {"title": [{"type": "text", "text": {"content": title}}]},
-        "日期": {"date": {"start": time.strftime("%Y-%m-%d", time.localtime())}},
-        "周": {"select": {"name": "第"+week+"周"}},
-        "月": {"select": {"name": str(month)+"月"}},
+        "时间": {"date": {"start": startTime,"end":endTime}},
     },
-        "cover": {"type": "external", "external": {"url": cover}},
-        "icon": {"type": "emoji", "emoji": emo},
-        "children": [{"object": "block", "type": "paragraph", "paragraph": {"text": [{"type": "text", "text": {"content": ""}}]}},
-                     {"type": "heading_2", "heading_2": {
-                         "text": [{"type": "text", "text": {"content": "每日任务"}}]}},
-    
-                     ]
+        "icon": {"type": "emoji", "emoji": "😄"},
     }
-    r = requests.post('https://api.notion.com/v1/pages/',
-                      headers=headers, json=body)
+    r = requests.post('https://api.notion.com/v1/pages/',headers=headers, json=body)
+    print(r.text)
 
 
-def getCover(accessKey, secret, pageId, version):
-    params = {"client_id": accessKey, "orientation": "landscape"}
-    r = requests.get('https://api.unsplash.com/photos/random', params=params)
-    cover = r.json().get("urls").get("full")
-    createDiary(secret, pageId, version, cover)
+#解析csv
+def parseCsv():
+    file = time.strftime('%Y%m%d', time.localtime())
+    filename = "./data/"+file+".csv"
+    with open(filename) as f:
+        render = csv.reader(f)
+        header_row = next(render)
+        print(header_row) 
+        list = []
+        for row in render:
+            startTime = row[0]
+            start = datetime.strptime(startTime,"%Y-%m-%dT%H:%M:%S.%f+0800")
+            #获取今日0点
+            now = datetime.now()
+            zero = datetime(now.year,now.month,now.day,0,0)
+            if(start > zero):
+                endTime = row[1]
+                end = datetime.strftime(datetime.strptime(endTime,"%Y-%m-%dT%H:%M:%S.%f+0800"),"%H:%M")
+                start = datetime.strftime(start,"%H:%M")
+                tag = row[2]
+                note = row[3]
+                title = ""
+                if(len(note)==0):
+                    title = tag
+                else:
+                    title = note
+                content = start+"~"+end+" "+title
+                body = {
+                    "type":"bulleted_list_item",
+                    "bulleted_list_item":{
+                        "text":[
+                            {
+                                "type":"text",
+                                "text":{
+                                    "content":content
+                                }
+                            }
+                        ]
+                    }
+                }
+                list.append(body)
+        # print(list)
+        search(list)
+    #     createDiary(title,startTime,endTime)
 
+def getBlock(id,children):
+    r = requests.get('https://api.notion.com/v1/blocks/'+id,headers=headers)
+    append(r.json().get('id'),children)
 
+#添加block
+def append(id,children):
+    print(children)
+    body = {
+        "children":children
+    }
+    r = requests.patch('https://api.notion.com/v1/blocks/'+id+'/children',headers=headers,json=body)
+    print(r.text)
+
+#搜索需要同步的笔记
+def search(children):
+    title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
+    body={"query":title}
+    r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
+    result = r.json().get("results")[0]
+    id = result.get("id")
+    getBlock(id,children)
+    
+headers={}  
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
-    parser.add_argument("id")
     parser.add_argument("version")
-    parser.add_argument("accessKey")
     options = parser.parse_args()
-    getCover(options.accessKey, options.secret,options.id, options.version)
+    headers = {'Authorization': options.secret, "Notion-Version":options.version}
+    parseCsv()
