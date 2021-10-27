@@ -26,7 +26,7 @@ def createPage(secret, pageId, version, cover):
     month = datetime.now().month
     headers = {'Authorization': secret, "Notion-Version": version}
     title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime())
-    body = {"parent": {"type": "database_id", "database_id": pageId},
+    body = {"parent": { "database_id": pageId},
             "properties": {
         "title": {"title": [{"type": "text", "text": {"content": title}}]},
         "日期": {"date": {"start": time.strftime("%Y-%m-%d", time.localtime())}},
@@ -36,8 +36,7 @@ def createPage(secret, pageId, version, cover):
         "cover": {"type": "external", "external": {"url": cover}},
         "icon": {"type": "emoji", "emoji": emo}, 
          "children": [{"object": "block", "type": "paragraph", "paragraph": {"text": [{"type": "text", "text": {"content": ""}}]}},
-                     {"type": "heading_2", "heading_2": {
-                         "text": [{"type": "text", "text": {"content": "今日日程"}}]}},
+                     {"type": "heading_2", "heading_2": { "text": [{"type": "text", "text": {"content": "今日日程"}}]}},
                
                      ]
     }
