@@ -2,7 +2,7 @@ name: Github Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: "* 23 * * *"
+    - cron: "0 23 * * *"
 jobs:
   sync:
     name: Sync

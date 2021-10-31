@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from datetime import datetime
+from datetime import date, datetime
 import json
 import requests
 import os
@@ -9,27 +9,26 @@ import argparse
 import time
 import sys
 
-from datetime import datetime
+from datetime import datetime,timedelta
 
 from requests.api import get
 
 
-def getWeekDay():
-    week_day_dict = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
-    today = datetime.now().weekday()
-    return week_day_dict[today]
+week_day_dict = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
+
 
 #创建Page
 def createPage(secret, pageId, version, cover):
     emo = "☀️"
-    week = datetime.now().strftime("%V")
-    month = datetime.now().month
+    tomorrow = datetime.now()+timedelta(days=1)
+    week = tomorrow.strftime("%V")
+    month = tomorrow.month
     headers = {'Authorization': secret, "Notion-Version": version}
-    title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime())
+    title = datetime.strftime(tomorrow,'%m月%d日 星期'+week_day_dict[tomorrow.weekday()])
     body = {"parent": { "database_id": pageId},
             "properties": {
         "title": {"title": [{"type": "text", "text": {"content": title}}]},
-        "日期": {"date": {"start": time.strftime("%Y-%m-%d", time.localtime())}},
+        "日期": {"date": {"start": datetime.strftime(tomorrow,"%Y-%m-%d")}},
         "周": {"select": {"name": "第"+week+"周"}},
         "月": {"select": {"name": str(month)+"月"}},
     },
@@ -43,7 +42,6 @@ def createPage(secret, pageId, version, cover):
     r = requests.post('https://api.notion.com/v1/pages/',headers=headers, json=body)
     print(r.text)
 #创建Database
-
 def createDatabase(secret, pageId, version):
     headers = {'Authorization': secret, "Notion-Version": version}
     body = {"parent": {"type": "page_id", "page_id": pageId},
