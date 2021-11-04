@@ -1,6 +1,10 @@
 name: Github Sync
 on:
   workflow_dispatch:
+    inputs:
+      content:
+        description: 'content'
+        required: false
   schedule:
     - cron: "0 23 * * *"
 jobs:
@@ -21,7 +25,7 @@ jobs:
           pip install -r requirements.txt
       - name: github sync
         run: |
-          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}'
+          python scripts/github.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}' '${{ github.event.inputs.content }}'
       - name: commit
         uses: EndBug/add-and-commit@v7
         with:

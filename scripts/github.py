@@ -27,15 +27,12 @@ def getContent(secret,id,version):
     r = requests.get('https://api.notion.com/v1/blocks/'+id+'/children',headers=headers)
     return r
 #获取星期
-def getWeekDay():
-    week_day_dict={0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
-    today = datetime.now().weekday()
-    return week_day_dict[today]
-
 #搜索需要同步的笔记
-def search(secret,version):
-    title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
+def search(secret,version,date):
+    week_day_dict={0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
+    title = datetime.strftime(date,"%m月%d日 星期"+week_day_dict[date.weekday()])
     headers = {'Authorization': secret,"Notion-Version":version}
+    print(title)
     body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
     result = r.json().get("results")[0]
@@ -53,11 +50,11 @@ def search(secret,version):
     week = datetime.now().strftime("%V")
     tag = "第"+week+"周"
     post = template.format(title,createTime,location+" "+weather,tag,cover)
-    getPage(secret,id,version,post)
+    getPage(secret,id,version,post,date)
 
 #创建markdown文件
-def newPost(markdown):
-    file = time.strftime('%Y-%m-%d', time.localtime())+".md"
+def newPost(markdown,date):
+    file = datetime.strftime(date,'%Y-%m-%d')+".md"
     with open("./content/posts/"+file, "w") as f:
         f.seek(0)
         f.write(markdown)
@@ -90,7 +87,7 @@ def parseText(text):
         r+=content
     return r
 
-def getPage(secret,id,version,header):
+def getPage(secret,id,version,header,date):
     post = ""
     r = getContent(secret,id,version)
     results = r.json().get("results")
@@ -119,12 +116,19 @@ def getPage(secret,id,version,header):
             elif(not file is None):
                 url = file.get("url")
             post += "![]("+url+")\n"
-    newPost(header+post)
+    newPost(header+post,date)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("version")
+    parser.add_argument("title")
     options = parser.parse_args()
-    search(options.secret,options.version)
+    title = options.title
+    if(len(title)==0):
+        print("null")
+        target = datetime.now()
+    else:    
+        target = datetime.strptime(title, '%Y%m%d')
+    search(options.secret,options.version,target)
