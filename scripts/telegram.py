@@ -42,7 +42,10 @@ def search(secret,version,date):
     location = properties.get("位置").get("rich_text")[0].get("text").get("content")
     weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
     highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
+    #负数添加转移
+    highest = highest.replace("-","\\-")
     lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
+    lowest = lowest.replace("-","\\-")
     aq = properties.get("空气质量").get("number")
     NewYear = properties.get("距离元旦").get("formula").get("number")
     SpringFestival = properties.get("距离春节").get("formula").get("number")
