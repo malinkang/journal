@@ -87,6 +87,7 @@ def send(message,cover):
         'Content-Type': 'application/json'
     }
     r = requests.request("POST", url, headers=headers, json=body)
+    print(r.text)
    
 #解析文本
 def parseText(text):
