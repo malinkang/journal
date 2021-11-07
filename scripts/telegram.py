@@ -77,6 +77,7 @@ def search(secret,version,date):
 #创建markdown文件
 def send(message,cover):
     url = "https://api.telegram.org/bot2055023678:AAETIYMOXp5Bj9X6T5-qx_0-hslX8FHi1Gc/sendPhoto"
+    print(message)
     body = {
         "chat_id": "@pony2025",
         "photo": cover,
