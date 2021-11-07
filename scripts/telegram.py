@@ -12,17 +12,12 @@ import sys
 
 from requests.api import get, post
 
-template = '''---
-title: "{0}"
-date: {1}
-description: "{2}"
-tags: [{3}]
-featured_image: "{4}"
-categories: ["{5}"]
-comment : false
----
+template = '''
+ {0}
+今天是{1}年{2}，今天天气{3}，最高温度{4}，最低温度{5}，空气质量{6}。距离元旦还有{7}天。距离春节还有{8}天。睡眠时长{9}小时。体重{10}斤。
 
-今天是{6}年{7}，今天天气{8}，最高温度{9}，最低温度{10}，空气质量{11}。距离元旦还有{12}天。距离春节还有{13}天。睡眠时长{14}小时。体重{15}斤。
+{11}
+🏷  {12}
 
 '''
 #获取内容
@@ -38,13 +33,12 @@ def search(secret,version,date):
     week_day_dict={0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
     title = datetime.strftime(date,"%m月%d日 星期"+week_day_dict[date.weekday()])
     headers = {'Authorization': secret,"Notion-Version":version}
-    print(title)
     body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
+    # print(r.text)
     result = r.json().get("results")[0]
     id = result.get("id")
     properties = result.get("properties")
-    print("呵呵 "+str())
     location = properties.get("位置").get("rich_text")[0].get("text").get("content")
     weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
     highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
@@ -52,37 +46,48 @@ def search(secret,version,date):
     aq = properties.get("空气质量").get("number")
     NewYear = properties.get("距离元旦").get("formula").get("number")
     SpringFestival = properties.get("距离春节").get("formula").get("number")
-    if(hasattr(properties,"睡眠时长")):
-        sleep = properties.get("睡眠时长").get("number")
-    else:
+    
+    if(properties.get("睡眠时长") is None):
         sleep = 0
-    if(hasattr(properties,"体重")):
-        weight = properties.get("体重").get("number")
     else:
+        sleep = properties.get("睡眠时长").get("number")
+    sleep = str(sleep).replace(".","\\.")
+    if(properties.get("体重") is None):
         weight = 0
+    else:
+        weight = properties.get("体重").get("number")
+    weight = str(weight).replace(".","\\.")
+    print(sleep)
     #获取Tags
     tags = properties.get("标签").get("multi_select")
-    tags = ",".join("\""+tag.get("name")+"\""for tag in tags)
+    tags = " ".join("\\#"+tag.get("name")for tag in tags)
     external = result.get("cover").get("external")
     file = result.get("cover").get("file")
     if(not external is None):
         cover = external.get("url")
     elif(not file is None):
         cover = file.get("url")
-    title =result.get("properties").get("标题").get("title")[0].get("text").get("content")
-    createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
+    emoji =result.get("icon").get("emoji")
+    title = properties.get("标题").get("title")[0].get("text").get("content")
     year = datetime.now().year
-    post = template.format(title,createTime,location+" "+weather,tags,cover,year,year,title,weather,highest,lowest,aq,NewYear,SpringFestival,sleep,weight)
-    getPage(secret,id,version,post,date)
+    post = getPage(secret,id,version)
+    message = template.format(emoji+title,year,title,weather,highest,lowest,aq,NewYear,SpringFestival,sleep,weight,post,tags)
+    send(message,cover)
 
 #创建markdown文件
-def newPost(markdown,date):
-    file = datetime.strftime(date,'%Y-%m-%d')+".md"
-    with open("./content/posts/"+file, "w") as f:
-        f.seek(0)
-        f.write(markdown)
-        f.truncate()
-
+def send(message,cover):
+    url = "https://api.telegram.org/bot2055023678:AAETIYMOXp5Bj9X6T5-qx_0-hslX8FHi1Gc/sendPhoto"
+    body = {
+        "chat_id": "@pony2025",
+        "photo": cover,
+        "caption":message,
+        "parse_mode": "MarkdownV2"
+    }
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    r = requests.request("POST", url, headers=headers, json=body)
+   
 #解析文本
 def parseText(text):
     r = ''
@@ -95,6 +100,7 @@ def parseText(text):
         underline = annotations.get("underline")
         code = annotations.get("code")
         color = annotations.get("color")
+        content = content.replace("~","至")
         if(bold):
             content = "**"+content+"**"
         if(italic):
@@ -109,8 +115,8 @@ def parseText(text):
             content = "<font color='"+color+"'>"+content+"</font>"
         r+=content
     return r
-
-def getPage(secret,id,version,header,date):
+    return r.json().get("urls").get("small")
+def getPage(secret,id,version):
     post = ""
     r = getContent(secret,id,version)
     results = r.json().get("results")
@@ -122,24 +128,16 @@ def getPage(secret,id,version,header,date):
             if(len(text)>0):
                 content = parseText(text)
                 if(type=="heading_2"):
-                    post +="## "+content+"\n"
+                    post +="*"+content+"*\n"
                 elif(type=="to_do"):
                     post +="- [x] "+content+"\n"
                 elif(type=="bulleted_list_item"):
-                    post +="* "+content+"\n"
+                    post +="· "+content+"\n"
                 elif(type=="paragraph"):
                     post += content+"\n"
             else:
                 post +="\n"
-        elif(type=="image"):
-            external = result.get(type).get("external")
-            file = result.get(type).get("file")
-            if(not external is None):
-                url = external.get("url")
-            elif(not file is None):
-                url = file.get("url")
-            post += "![]("+url+")\n"
-    newPost(header+post,date)
+    return post
 
 
 if __name__ == "__main__":
@@ -150,7 +148,6 @@ if __name__ == "__main__":
     options = parser.parse_args()
     title = options.title
     if(len(title)==0):
-        print("null")
         target = datetime.now()
     else:    
         target = datetime.strptime(title, '%Y%m%d')

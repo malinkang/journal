@@ -29,14 +29,15 @@ def createPage(secret, pageId, version, cover):
             "properties": {
         "title": {"title": [{"type": "text", "text": {"content": title}}]},
         "日期": {"date": {"start": datetime.strftime(tomorrow,"%Y-%m-%d")}},
-        "周": {"select": {"name": "第"+week+"周"}},
-        "月": {"select": {"name": str(month)+"月"}},
+        "标签": {"type":"multi_select","multi_select":[{"name":str(month)+"月"},{"name":"第"+week+"周"}]},
     },
         "cover": {"type": "external", "external": {"url": cover}},
         "icon": {"type": "emoji", "emoji": emo}, 
          "children": [{"object": "block", "type": "paragraph", "paragraph": {"text": [{"type": "text", "text": {"content": ""}}]}},
-                     {"type": "heading_2", "heading_2": { "text": [{"type": "text", "text": {"content": "今日日程"}}]}},
-               
+                     {"type": "heading_2", "heading_2": { "text": [{"type": "text", "text": {"content": "💬 碎碎念"}}]}},
+                     {"object": "block", "type": "paragraph", "paragraph": {"text": [{"type": "text", "text": {"content": ""}}]}},
+                     {"type": "heading_2", "heading_2": { "text": [{"type": "text", "text": {"content": "📅 今日日程"}}]}},
+                    {"object": "block", "type": "paragraph", "paragraph": {"text": [{"type": "text", "text": {"content": ""}}]}},
                      ]
     }
     r = requests.post('https://api.notion.com/v1/pages/',headers=headers, json=body)
@@ -53,7 +54,8 @@ def createDatabase(secret, pageId, version):
 def getCover(accessKey, secret, pageId, version):
     params = {"client_id": accessKey, "orientation": "landscape"}
     r = requests.get('https://api.unsplash.com/photos/random', params=params)
-    cover = r.json().get("urls").get("full")
+    cover = r.json().get("urls").get("small")
+    print(r.text)
     createPage(secret, pageId, version, cover)
 
 
