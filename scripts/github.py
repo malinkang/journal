@@ -52,11 +52,11 @@ def search(secret,version,date):
     aq = properties.get("空气质量").get("number")
     NewYear = properties.get("距离元旦").get("formula").get("number")
     SpringFestival = properties.get("距离春节").get("formula").get("number")
-    if(hasattr(properties,"睡眠时长")):
+    if(properties.get("睡眠时长") is None):
         sleep = properties.get("睡眠时长").get("number")
     else:
         sleep = 0
-    if(hasattr(properties,"体重")):
+    if(properties.get("体重") is None):
         weight = properties.get("体重").get("number")
     else:
         weight = 0

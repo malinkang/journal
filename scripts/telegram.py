@@ -42,7 +42,7 @@ def search(secret,version,date):
     location = properties.get("位置").get("rich_text")[0].get("text").get("content")
     weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
     highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
-    #负数添加转移
+    #
     highest = highest.replace("-","\\-")
     lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
     lowest = lowest.replace("-","\\-")
@@ -120,7 +120,6 @@ def parseText(text):
             content = "<font color='"+color+"'>"+content+"</font>"
         r+=content
     return r
-    return r.json().get("urls").get("small")
 def getPage(secret,id,version):
     post = ""
     r = getContent(secret,id,version)

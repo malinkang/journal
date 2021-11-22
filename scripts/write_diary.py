@@ -31,6 +31,57 @@ def createDiary(title,startTime,endTime):
     print(r.text)
 
 
+def getEvent():
+    date =time.strftime("%Y-%m-%d", time.localtime()) 
+    body = {
+    "filter": {
+        "or": [
+            {
+                "property": "日期",
+                "date":{
+                    "equals":date
+                }
+            }
+        ]
+    },
+    "sorts": [
+        {
+        "property": "日期",
+        "direction": "ascending"
+            }
+        ]
+    }
+    r = requests.post("https://api.notion.com/v1/databases/d8eee75d8c1049e7aa3dd6614907bb04/query",headers=headers,json=body)
+    results = r.json().get("results");
+    list = []
+    for result in results:
+        properties = result.get("properties");
+        name = properties.get("Name").get("title")[0].get("text").get("content")
+        if(properties.get("备注") is not None and len(properties.get("备注").get("rich_text"))>0):
+            name = properties.get("备注").get("rich_text")[0].get("text").get("content")
+        startTime = properties.get("时间").get("date").get("start")
+        endTime = properties.get("时间").get("date").get("end")
+        print(name)
+        start = datetime.strftime(datetime.strptime(startTime,"%Y-%m-%dT%H:%M:%S.000+00:00"),"%H:%M")
+        end = datetime.strftime(datetime.strptime(endTime,"%Y-%m-%dT%H:%M:%S.000+00:00"),"%H:%M")
+        content = start+"~"+end+" "+name
+        body = {
+                    "type":"bulleted_list_item",
+                    "bulleted_list_item":{
+                        "text":[
+                            {
+                                "type":"text",
+                                "text":{
+                                    "content":content
+                                }
+                            }
+                        ]
+                    }
+                }
+                
+        list.append(body)
+    search(list)
+
 #解析csv
 def parseCsv():
     file = time.strftime('%Y%m%d', time.localtime())
@@ -105,4 +156,4 @@ if __name__ == "__main__":
     parser.add_argument("version")
     options = parser.parse_args()
     headers = {'Authorization': options.secret, "Notion-Version":options.version}
-    parseCsv()
+    getEvent()

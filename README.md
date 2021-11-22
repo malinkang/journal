@@ -4,5 +4,9 @@ python3 scripts/create_diary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSU
 
 python3 scripts/github.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211101'
 
- python3 scripts/telegram.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211101'
+
+```
+
+```shell
+python3 scripts/telegram.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211108'
 ```
