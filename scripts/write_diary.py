@@ -57,7 +57,8 @@ def getEvent():
     for result in results:
         properties = result.get("properties");
         name = properties.get("Name").get("title")[0].get("text").get("content")
-        if(properties.get("备注") is not None and len(properties.get("备注").get("rich_text"))>0):
+        print(len(properties.get("备注").get("rich_text")))
+        if(properties.get("备注") is not None and len(properties.get("备注").get("rich_text")[0].get("text").get("content"))>1):
             name = properties.get("备注").get("rich_text")[0].get("text").get("content")
         startTime = properties.get("时间").get("date").get("start")
         endTime = properties.get("时间").get("date").get("end")
