@@ -19,7 +19,7 @@ theme = "diary"
     tabWidth = 4
 
 [params]
-subtitle = "记录生活。"
+subtitle = "过好每一天。"
 enableGitalk = false
 
 # Twitter Card and Open Graph settings
@@ -29,8 +29,8 @@ title = "linkang's life" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
 [params.gitalk]
-  owner = ""
-  repo = ""
+  owner = "malinkang"
+  repo = "diary"
   client_id = ""
   client_secret = ""
 [taxonomies]
