@@ -37,7 +37,7 @@ def getEvent():
     "filter": {
         "or": [
             {
-                "property": "日期",
+                "property": "时间",
                 "date":{
                     "equals":date
                 }
@@ -46,13 +46,16 @@ def getEvent():
     },
     "sorts": [
         {
-        "property": "日期",
+        "property": "时间",
         "direction": "ascending"
             }
         ]
     }
     r = requests.post("https://api.notion.com/v1/databases/d8eee75d8c1049e7aa3dd6614907bb04/query",headers=headers,json=body)
+    print(r.text)
     results = r.json().get("results");
+    if(len(results)==0): 
+        return
     list = []
     for result in results:
         properties = result.get("properties");
