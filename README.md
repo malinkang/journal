@@ -1,12 +1,19 @@
+## 脚本执行
+
 ```shell
 python3 scripts/create_diary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '294060cd-e13e-4c29-b0ac-6ee490c8a448' '2021-08-16' 'b0cbd23d5d1b188ffbf313d0c78071280f3d506d0279a1d31302ad87548b1beb'
 
 
 python3 scripts/github.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211101'
 
+python3 scripts/write_diary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
 
-```
-
-```shell
 python3 scripts/telegram.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211108'
+
 ```
+
+## TODO
+
+- [ ] 睡眠计入Time tacker中，更新前先检查是否已经记录过
+- [ ] 写日记自动从计划database中获取任务名称建立TODO List
+- [ ] 每天更新计划是否完成

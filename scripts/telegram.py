@@ -105,7 +105,7 @@ def parseText(text):
         underline = annotations.get("underline")
         code = annotations.get("code")
         color = annotations.get("color")
-        content = content.replace("~","至")
+        content = content.replace("~","\~")
         if(bold):
             content = "**"+content+"**"
         if(italic):
@@ -131,10 +131,11 @@ def getPage(secret,id,version):
             #text是一个数组 如果text长度为0 说明是回车
             if(len(text)>0):
                 content = parseText(text)
+                # 遇到标题前面多一个回车
                 if(type=="heading_2"):
-                    post +="*"+content+"*\n"
+                    post +="\n*"+content+"*\n"
                 elif(type=="to_do"):
-                    post +="- [x] "+content+"\n"
+                    post +="\- \[x\] "+content+"\n"
                 elif(type=="bulleted_list_item"):
                     post +="· "+content+"\n"
                 elif(type=="paragraph"):
