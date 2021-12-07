@@ -59,7 +59,7 @@ def getEvent():
     list = []
     for result in results:
         properties = result.get("properties");
-        name = properties.get("Name").get("title")[0].get("text").get("content")
+        name = properties.get("分类").get("select").get("name")
         print(len(properties.get("备注").get("rich_text")))
         if(properties.get("备注") is not None and len(properties.get("备注").get("rich_text")[0].get("text").get("content"))>1):
             name = properties.get("备注").get("rich_text")[0].get("text").get("content")

@@ -6,7 +6,7 @@ on:
         description: 'content'
         required: false
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "50 15 * * *" # 23:50 同步
 jobs:
   sync:
     name: Sync

@@ -3,7 +3,7 @@ name: create diary
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 14 * * *"
+    - cron: "0 14 * * *" #每天22点创建第二天的日记
 
 jobs:
   sync:
