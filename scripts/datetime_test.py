@@ -33,3 +33,6 @@ now = datetime.now()
 zero = datetime(now.year,now.month,now.day,0,0)
 print(zero < datetime.now())
 
+
+print(now - timedelta(hours=8))
+

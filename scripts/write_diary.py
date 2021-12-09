@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import json
 import requests
 import os
@@ -32,42 +32,47 @@ def createDiary(title,startTime,endTime):
 
 
 def getEvent():
-    date =time.strftime("%Y-%m-%d", time.localtime()) 
+    now = datetime.now()
+    #时区问题 所以要减去8小时
+    now = datetime(now.year,now.month,now.day,0,0)-timedelta(hours=8)
+    date =datetime.strftime(now,"%Y-%m-%dT%H:%M:%S") 
+    print(date)
     body = {
     "filter": {
         "or": [
             {
-                "property": "时间",
+                "property": "创建时间",
                 "date":{
-                    "equals":date
+                    "after":date
                 }
             }
         ]
     },
     "sorts": [
         {
-        "property": "时间",
+        "property": "结束",
         "direction": "ascending"
             }
         ]
     }
     r = requests.post("https://api.notion.com/v1/databases/d8eee75d8c1049e7aa3dd6614907bb04/query",headers=headers,json=body)
-    print(r.text)
-    results = r.json().get("results");
+    print("结果："+r.text)
+    print(r.request.body)
+    results = r.json().get("results")
     if(len(results)==0): 
         return
     list = []
     for result in results:
-        properties = result.get("properties");
+        properties = result.get("properties")
         name = properties.get("分类").get("select").get("name")
         print(len(properties.get("备注").get("rich_text")))
-        if(properties.get("备注") is not None and len(properties.get("备注").get("rich_text")[0].get("text").get("content"))>1):
+        if(properties.get("备注") is not None and len(properties.get("备注").get("rich_text"))>1):
             name = properties.get("备注").get("rich_text")[0].get("text").get("content")
-        startTime = properties.get("时间").get("date").get("start")
-        endTime = properties.get("时间").get("date").get("end")
+        startTime = properties.get("开始").get("date").get("start")
+        endTime = properties.get("结束").get("date").get("start")
         print(name)
-        start = datetime.strftime(datetime.strptime(startTime,"%Y-%m-%dT%H:%M:%S.000+00:00"),"%H:%M")
-        end = datetime.strftime(datetime.strptime(endTime,"%Y-%m-%dT%H:%M:%S.000+00:00"),"%H:%M")
+        start = datetime.strftime(datetime.strptime(startTime,"%Y-%m-%dT%H:%M:%S.000+08:00"),"%H:%M")
+        end = datetime.strftime(datetime.strptime(endTime,"%Y-%m-%dT%H:%M:%S.000+08:00"),"%H:%M")
         content = start+"~"+end+" "+name
         body = {
                     "type":"bulleted_list_item",
