@@ -122,7 +122,7 @@ def getPage(secret,id,version,header,date):
             if(len(text)>0):
                 content = parseText(text)
                 if(type=="heading_2"):
-                    post +="## "+content+"\n"
+                    post +="\n## "+content+"\n\n"
                 elif(type=="to_do"):
                     post +="- [x] "+content+"\n"
                 elif(type=="bulleted_list_item"):
