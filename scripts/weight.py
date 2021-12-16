@@ -37,6 +37,7 @@ def updateDiary(secret, version, pageId, content):
     content = json.loads(content)
     weight = content['weight']
     headers = {'Authorization': secret, "Notion-Version": version}
+    print("体重"+weight)
     body = {
         "properties": {
              "体重": {"number": float(weight)},
