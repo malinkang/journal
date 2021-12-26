@@ -28,9 +28,9 @@ def createDiary():
                     newTag= {"name":tag}
                     newTags.append(newTag)
             start = datetime.strptime(task.get('start'),'%Y-%m-%dT%H:%M:%S%z').astimezone(tz=timezone(timedelta(hours=8)))
-            start = start.astimezone().replace(microsecond=0).isoformat()
+            start = start.replace(microsecond=0).isoformat()
             end = datetime.strptime(task.get('stop'),'%Y-%m-%dT%H:%M:%S%z').astimezone(tz=timezone(timedelta(hours=8)))
-            end = end.astimezone().replace(microsecond=0).isoformat()
+            end = end.replace(microsecond=0).isoformat()
             response = requests.get("https://api.track.toggl.com/api/v8/projects/"+str(task.get('pid')),auth=auth)
             name = response.json().get("data").get("name")
             print(newTags)
