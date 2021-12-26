@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 from datetime import date, datetime,timedelta
 
-
+print(datetime.strptime("2021-12-26T05:39:58+00:00",'%Y-%m-%dT%H:%M:%S%z'))
 print(datetime.now())
 
 time = datetime(2022, 1, 1, 0, 0)
