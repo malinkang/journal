@@ -34,7 +34,7 @@ def createDiary(title,startTime,endTime):
 def getEvent():
     now = datetime.now()
     #时区问题 所以要减去8小时
-    now = datetime(now.year,now.month,now.day-1,23,30).astimezone(tz=timezone(timedelta(hours=8)))
+    now = datetime(now.year,now.month,now.day-1,15,30).astimezone(tz=timezone(timedelta(hours=8)))
     date =now.replace(microsecond=0).isoformat()
     print(date)
     body = {

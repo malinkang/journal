@@ -11,7 +11,7 @@ from requests.auth import HTTPBasicAuth
 def createDiary():
     now = datetime.now()
     #前一天的11点半
-    start = datetime(now.year,now.month,now.day-1,23,30).astimezone(tz=timezone(timedelta(hours=8)))
+    start = datetime(now.year,now.month,now.day-1,15,30).astimezone(tz=timezone(timedelta(hours=8)))
     start = start.replace(microsecond=0).isoformat()
     print("start = "+start)
     auth = ('2ef95512ce5b1528809f9a03a68e02b1', 'api_token')
