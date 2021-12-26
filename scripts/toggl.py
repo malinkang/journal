@@ -6,7 +6,6 @@ from datetime import date, datetime, timedelta, timezone
 import requests
 from requests.api import get
 from requests.auth import HTTPBasicAuth
-from dateutil import parser
 
 
 def createDiary():
