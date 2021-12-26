@@ -1,4 +1,4 @@
-name: write diary
+name: togg
 
 on:
   workflow_dispatch:
@@ -21,6 +21,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: write diary
+      - name: togg
         run: |
           python scripts/toggl.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}'
