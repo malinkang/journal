@@ -3,7 +3,7 @@ name: write diary
 on:
   workflow_dispatch:
   schedule:
-    - cron: "40 15 * * *"
+    - cron: "30 15 * * *"
 
 jobs:
   sync:
@@ -23,4 +23,4 @@ jobs:
           pip install -r requirements.txt
       - name: write diary
         run: |
-          python scripts/write_diary.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}'
+          python scripts/toggl.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}'

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 import json
 import requests
 import os
@@ -34,14 +34,14 @@ def createDiary(title,startTime,endTime):
 def getEvent():
     now = datetime.now()
     #时区问题 所以要减去8小时
-    now = datetime(now.year,now.month,now.day,0,0)-timedelta(hours=8)
-    date =datetime.strftime(now,"%Y-%m-%dT%H:%M:%S") 
+    now = datetime(now.year,now.month,now.day-1,23,30).astimezone(tz=timezone(timedelta(hours=8)))
+    date =now.replace(microsecond=0).isoformat()
     print(date)
     body = {
     "filter": {
         "or": [
             {
-                "property": "创建时间",
+                "property": "结束",
                 "date":{
                     "after":date
                 }
