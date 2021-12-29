@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+from typing import ItemsView
 import urllib.parse
 import argparse
 from datetime import date, datetime, timedelta, timezone
@@ -10,6 +11,7 @@ from requests.auth import HTTPBasicAuth
 
 def createDiary():
     now = datetime.now()
+    print(now)
     #前一天的11点半
     start = datetime(now.year,now.month,now.day-1,15,30).astimezone(tz=timezone(timedelta(hours=8)))
     start = start.replace(microsecond=0).isoformat()
@@ -19,6 +21,7 @@ def createDiary():
     response = requests.get('https://api.track.toggl.com/api/v8/time_entries',params=params, auth=auth)
     print(response.text)
     print(response.request.url)
+    message = ""
     for task in response.json():
         if task.get('pid') is not None and task.get('stop') is not None:
             newTags = []
@@ -33,6 +36,7 @@ def createDiary():
             end = end.replace(microsecond=0).isoformat()
             response = requests.get("https://api.track.toggl.com/api/v8/projects/"+str(task.get('pid')),auth=auth)
             name = response.json().get("data").get("name")
+            message += name+""+"\n"
             print(newTags)
             emoji = name[0:1]
             description = ""
@@ -51,6 +55,22 @@ def createDiary():
                 "icon": {"type": "emoji", "emoji": emoji},
             }
             r = requests.post('https://api.notion.com/v1/pages/',headers=headers, json=body)
+    send(message)
+#创建markdown文件
+def send(message):
+    url = "https://api.telegram.org/bot1756944825:AAHVzM7zWJ-QTwomwTOJrF08raPqVqhtQhc/sendPhoto"
+    print(message)
+    body = {
+        "chat_id": "@xiaoma1989",
+        "photo": "https://images.unsplash.com/photo-1640412751362-28febe09c3a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2ODUwfDB8MXxyYW5kb218fHx8fHx8fHwxNjQwNzc4ODA5&ixlib=rb-1.2.1&q=80&w=400",
+        "caption":message,
+        "parse_mode": "MarkdownV2"
+    }
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    r = requests.request("POST", url, headers=headers, json=body)
+    print(r.text)
         
 headers={}  
 if __name__ == "__main__":
