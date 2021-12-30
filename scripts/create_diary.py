@@ -64,7 +64,6 @@ def getTodo():
     todo.append({"object":"block","type":"to_do","to_do":{"text":[{"type":"text","text":{"content":"🏃🏻 步数打卡"}, "link":{"url":"https://www.json.cn/"}}],"checked":False}})
     return todo
 
-def getLeetcode():
     
 #获取封面
 def getCover(accessKey, pageId):
