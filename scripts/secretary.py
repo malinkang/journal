@@ -68,8 +68,7 @@ def parseText(text):
     for t in text:
         content = t.get("text").get("content")
         link = t.get("text").get("link")
-      
-            
+        content = content.replace(".","\.")
         annotations =t.get("annotations")
         bold = annotations.get("bold")
         italic = annotations.get("italic")
@@ -108,7 +107,7 @@ def send(message,cover):
         'Content-Type': 'application/json'
     }
     r = requests.request("POST", url, headers=headers, json=body)
-    # print(r.text)
+    print(r.text)
    
 
 headers = {}
