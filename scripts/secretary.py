@@ -13,12 +13,6 @@ import sys
 from requests.api import get, post
 
 
-def getCover(accessKey):
-    params = {"client_id": accessKey, "orientation": "landscape"}
-    r = requests.get('https://api.unsplash.com/photos/random', params=params)
-    cover = r.json().get("urls").get("small")
-    search(cover)
-
 map = {
     1:"1️⃣",
     2:"2️⃣",
@@ -31,39 +25,79 @@ map = {
     9:"9️⃣",
     10:"🔟",
 }
-
-def search(cover):
-    body={"query":"今年"}
-    now = datetime.now()
-    title = now.strftime("%Y年%m月%d日")
+#获取星期
+#搜索需要同步的笔记
+def search(date):
+    week_day_dict={0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
+    title = datetime.strftime(date,"%m月%d日 星期"+week_day_dict[date.weekday()])
+    body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
-    properties = r.json().get("results")[0].get("properties")
-    name = properties.get("Name").get("title")[0].get("text").get("content")
-    content = properties.get("倒数日").get("formula").get("string")
-    progress = properties.get("进度条").get("formula").get("string")
-    message = title +"\n\n"
-    message += name+content+"\n"
-    message += progress+"\n\n"
-    message +="今日待办:\n\n"
+    result = r.json().get("results")[0]
+    file = result.get("cover").get("file")
+    external = result.get("cover").get("external")
+    if(not external is None):
+        cover = external.get("url")
+    elif(not file is None):
+        cover = file.get("url")
+    id = result.get("id")
+    getPage(id,cover)
+def getPage(id,cover):
+    message =" "
     index = 1
-    day = now.day
-    week = now.weekday()
-    print(map[index])
-    if(week < 5):
-        message +=map[index]+" 订餐\n\n"
-        index += 1
-        message +=map[index]+" 打新\n\n"
-        index += 1
-    if(day == 6 or day == 8 or day == 21):
-        message +=map[index]+" 信用卡还款\n\n"
-    send(message,cover)
-    print(cover)
+    r = getContent(id)
     print(r.text)
+    results = r.json().get("results")
+    for result in results:
+        type = result.get("type")
+        text = result.get(type).get("text")
+        checked = result.get(type).get("checked")
+        if(type=="to_do" and not text is None and not checked):
+            content =map[index]+" "+parseText(text)+"\n\n"
+            message += content
+            index+=1
+    print(message)
+    if index > 1:
+        send(message,cover)
+#获取内容
+def getContent(id):
+    r = requests.get('https://api.notion.com/v1/blocks/'+id+'/children',headers=headers)
+    return r
+#解析文本
+def parseText(text):
+    r = ''
+    for t in text:
+        content = t.get("text").get("content")
+        link = t.get("text").get("link")
+      
+            
+        annotations =t.get("annotations")
+        bold = annotations.get("bold")
+        italic = annotations.get("italic")
+        strikethrough = annotations.get("strikethrough")
+        underline = annotations.get("underline")
+        code = annotations.get("code")
+        color = annotations.get("color")
+        if(bold):
+            content = "**"+content+"**"
+        if(italic):
+            content = "_"+content+"_"
+        if(strikethrough):
+           content = "~~"+content+"~~"
+        if(underline):
+            content = "<u>"+content+"</u>"
+        if(code):
+            content = "`"+content+"`"
+        if(color !='default'):
+            content = "<font color='"+color+"'>"+content+"</font>"
+        if(not link is None):
+            url = link.get("url")
+            content = "["+content+"]("+url+")"
+        r+=content
+    return r
     
 #创建markdown文件
 def send(message,cover):
     url = "https://api.telegram.org/bot1756944825:AAHVzM7zWJ-QTwomwTOJrF08raPqVqhtQhc/sendPhoto"
-    print(message)
     body = {
         "chat_id": "@xiaoma1989",
         "photo": cover,
@@ -74,7 +108,7 @@ def send(message,cover):
         'Content-Type': 'application/json'
     }
     r = requests.request("POST", url, headers=headers, json=body)
-    print(r.text)
+    # print(r.text)
    
 
 headers = {}
@@ -82,7 +116,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("version")
-    parser.add_argument("accessKey")
+    parser.add_argument("title")
     options = parser.parse_args()
+    title = options.title
+    if(len(title)==0):
+        print("null")
+        target = datetime.now()
+    else:    
+        target = datetime.strptime(title, '%Y%m%d')
     headers = {'Authorization': options.secret,"Notion-Version":options.version}
-    getCover( options.accessKey)
+    search(target)

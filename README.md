@@ -10,7 +10,8 @@ python3 scripts/write_diary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm
 
 python3 scripts/telegram.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211108'
 
-python3 scripts/secretary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16' 'b0cbd23d5d1b188ffbf313d0c78071280f3d506d0279a1d31302ad87548b1beb'
+python3 scripts/secretary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211101'
+python3 scripts/cover.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16' 'b0cbd23d5d1b188ffbf313d0c78071280f3d506d0279a1d31302ad87548b1beb'
 ```
 
 ## TODO

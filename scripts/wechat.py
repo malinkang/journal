@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+#https://github.com/easychen/wecomchan
 import json,requests,base64
 def send_to_wecom(text,wecom_cid,wecom_aid,wecom_secret,wecom_touid='@all'):
     get_token_url = f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={wecom_cid}&corpsecret={wecom_secret}"
@@ -72,6 +73,5 @@ def send_to_wecom_markdown(text,wecom_cid,wecom_aid,wecom_secret,wecom_touid='@a
 
 if __name__ == "__main__":
     # ret = send_to_wecom_image("此处填写图片Base64", "wwe8515a5e128e6d5b", "1000002", "PG9_idLRQEVhfz_hRhKHtytYN-t6qRM1zi7TAYgoYmU");
-
-    ret = send_to_wecom_markdown("", "wwe8515a5e128e6d5b", "1000002", "PG9_idLRQEVhfz_hRhKHtytYN-t6qRM1zi7TAYgoYmU")
+    ret = send_to_wecom_markdown("1.🍎苹果 \n 2.🍌香蕉 \n 3.🍓草莓", "wwe8515a5e128e6d5b", "1000002", "PG9_idLRQEVhfz_hRhKHtytYN-t6qRM1zi7TAYgoYmU")
     print( ret )
