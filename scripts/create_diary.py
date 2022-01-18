@@ -54,7 +54,6 @@ def getTodo():
     tomorrow = datetime.now()+timedelta(days=1)
     day = tomorrow.day   
     week = tomorrow.weekday()
-    print("day"+str(day))
     leetcode(todo)
     android(todo)
     if(week < 5):
@@ -76,7 +75,7 @@ def leetcode(todo):
     "filter": {
         "or": [
             {
-                "property": "Date",
+                "property": "学习时间",
                 "date":{
                     "equals":date
                 }
@@ -85,12 +84,13 @@ def leetcode(todo):
     },
     "sorts": [
         {
-        "property": "Date",
+        "property": "学习时间",
         "direction": "ascending"
             }
         ]
     }
     r = requests.post("https://api.notion.com/v1/databases/b6f37ca9b5f844b487ac9c06e4813406/query",headers=headers,json=body)
+    print(r.text)
     results = r.json().get("results")
     for result in results:
         properties = result.get("properties")
@@ -116,7 +116,7 @@ def android(todo):
     },
     "sorts": [
         {
-        "property": "Date",
+        "property": "学习时间",
         "direction": "ascending"
             }
         ]
@@ -134,6 +134,7 @@ def getCover(accessKey, pageId):
     params = {"client_id": accessKey, "orientation": "landscape"}
     r = requests.get('https://api.unsplash.com/photos/random', params=params)
     cover = r.json().get("urls").get("small")
+    print(cover)
     createPage( pageId, cover)
 
 headers = {}

@@ -28,13 +28,12 @@ def get_run_id():
     r = requests.get(RUN_DATA_API.format(last_date=last_date), headers=keep_headers)
     if r.ok:
         last_date = r.json()["data"]["lastTimestamp"]
-        print("last_date = "+str(last_date))
         for record in filter(is_today,r.json().get("data").get("records")):
             for log in record.get("logs"):
                 id = log.get("stats").get("id")
                 get_run_data(id,record.get("date"))
 def is_today(record):
-    today = (datetime.now()-timedelta(days=1)).strftime("%-m月%d日")
+    today = datetime.now().strftime("%-m月%d日")
     return today == record.get("date")
                
 def get_run_data(id,title):
@@ -44,16 +43,14 @@ def get_run_data(id,title):
         start = datetime.fromtimestamp(data.get("startTime")/1000).astimezone(tz=timezone(timedelta(hours=8)))
         week = "第"+start.strftime("%-V")+"周"
         year = start.strftime("%Y")
-        if(start.year>=2021):
-            print(start.day)
-            start = start.replace(microsecond=0).isoformat()
-            end = datetime.fromtimestamp(data.get("endTime")/1000).astimezone(tz=timezone(timedelta(hours=8)))
-            end = end.replace(microsecond=0).isoformat()
-            cover = data.get("polylineSnapshot")
-            if cover is None:
-                cover = "https://images.unsplash.com/photo-1502224562085-639556652f33?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000"
-            distance = round(float(data.get("distance"))/1000,2)
-            add_to_notion(start,end,cover,distance,title,week,year)
+        start = start.replace(microsecond=0).isoformat()
+        end = datetime.fromtimestamp(data.get("endTime")/1000).astimezone(tz=timezone(timedelta(hours=8)))
+        end = end.replace(microsecond=0).isoformat()
+        cover = data.get("polylineSnapshot")
+        if cover is None:
+            cover = "https://images.unsplash.com/photo-1502224562085-639556652f33?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000"
+        distance = round(float(data.get("distance"))/1000,2)
+        add_to_notion(start,end,cover,distance,title,week,year)
 def add_to_notion(start,end,cover,distance,title,week,year):
     week = search_week(week,year)
     body = {"parent": { "database_id": "8dc2c4145901403ea9c4fb0b10ad3f86"},
@@ -77,7 +74,6 @@ def add_to_notion(start,end,cover,distance,title,week,year):
 
 def search_week(week,year):
     year = search_year(year)
-    print(year)
     body = {
     "filter": {
         "and": [
@@ -96,13 +92,11 @@ def search_week(week,year):
         ]
     }
 }
-    print(week)
     r = requests.post("https://api.notion.com/v1/databases/194f66886cd8479899d38b0fb0b7da26/query",headers=notion_headers,json=body)
     return r.json().get("results")[0].get("id")
 
 #获取年的datebase_id
 def search_year(year):
-    print(year)
     body = {
     "filter": {
         "and": [
@@ -168,8 +162,6 @@ if __name__ == "__main__":
     parser.add_argument("notion_secret")
     parser.add_argument("notion_version")
     options = parser.parse_args()
+    print("执行时间"+datetime.now().isoformat())
     notion_headers = {'Authorization':options.notion_secret, "Notion-Version": options.notion_version}
     login(options.phone_number, options.password) 
-    # create_week()
-    # print(search_year())
-    # print(search_year("2022"))
