@@ -12,7 +12,7 @@ def getDatebase(accessKey):
     results = r.json().get("results")
     for result in results:
         if result.get("cover") is None:
-            cover = getCover(accessKey,2)
+            cover = getCover(accessKey)
             print("cover "+cover)
             emoji = "🤖"
             body = {
@@ -22,8 +22,8 @@ def getDatebase(accessKey):
             r = requests.patch("https://api.notion.com/v1/pages/"+result.get("id"),headers=headers,json=body)
             print(r.json())
 
-def getCover(accessKey,count):
-    params = {"client_id": accessKey, "orientation": "landscape","count":count}
+def getCover(accessKey):
+    params = {"client_id": accessKey, "orientation": "landscape"}
     r = requests.get('https://api.unsplash.com/photos/random', params=params)
     print(r.text)
     cover = r.json().get("urls").get("small")

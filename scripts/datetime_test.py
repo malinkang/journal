@@ -1,10 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from datetime import date, datetime,timedelta
-list = ['a','b','c']
-list2 = ['d','e','f']
-list.extend(list2)
-print(list)
+print(datetime.now().day)
+print(datetime.now().year)
+
 # print(datetime.strptime("2021-12-26T05:39:58+00:00",'%Y-%m-%dT%H:%M:%S%z'))
 # print(datetime.now())
 

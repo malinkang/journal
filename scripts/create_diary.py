@@ -46,6 +46,7 @@ def createPage( pageId, cover):
          "children": children
     }
     r = requests.post('https://api.notion.com/v1/pages/',headers=headers, json=body)
+    'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
     print(r.text)
 
 def getTodo():
@@ -106,7 +107,7 @@ def android(todo):
     "filter": {
         "or": [
             {
-                "property": "Date",
+                "property": "学习时间",
                 "date":{
                     "equals":date
                 }
