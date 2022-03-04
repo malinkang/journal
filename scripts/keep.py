@@ -33,7 +33,7 @@ def get_run_id():
                 id = log.get("stats").get("id")
                 get_run_data(id,record.get("date"))
 def is_today(record):
-    today = datetime.now().strftime("%-m月%d日")
+    today = (datetime.now()-timedelta(days=1)).strftime("%-m月%d日")
     return today == record.get("date")
                
 def get_run_data(id,title):
