@@ -4,7 +4,6 @@ from datetime import date, datetime
 import requests
 import argparse
 
-from sqlalchemy import null
 import unsplash
 import notion
 from datetime import datetime, timedelta

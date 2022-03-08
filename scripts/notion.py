@@ -95,9 +95,27 @@ def get_day_relation(date):
         headers=headers,
         json=body,
     )
-    print(day)
-    print(r.text)
+    # print(day)
+    # print(r.text)
     return r.json().get("results")[0].get("id")
+
+
+def search(id,title):
+    body = {
+        "filter": {
+            "and": [
+                {"property": "Name", "text": {"equals": title}}
+            ]
+        }
+    }
+    r = requests.post(
+        "https://api.notion.com/v1/databases/"+id+"/query",
+        headers=headers,
+        json=body,
+    )
+    # print(r.text)
+    return r.json().get("results")[0].get("id")
+
 
 
 def get_week_relation(year,week):
@@ -115,7 +133,7 @@ def get_week_relation(year,week):
         headers=headers,
         json=body,
     )
-    print(r.text)
+    # print(r.text)
     return r.json().get("results")[0].get("id")
 
 def get_month_relation(year,month):
