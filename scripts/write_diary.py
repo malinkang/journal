@@ -93,7 +93,6 @@ def getEvent():
                 "text": [{"type": "text", "text": {"content": content}}]
             },
         }
-
         list.append(body)
     search(list)
 
