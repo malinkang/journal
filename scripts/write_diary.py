@@ -64,19 +64,9 @@ def getEvent():
         properties = result.get("properties")
         name = properties.get("二级分类").get("select").get("name")
         print(len(properties.get("备注").get("rich_text")))
-        if("📚读书" == name):
-            book =  properties.get("书名").get("rollup").get("array")[0].get("title")[0].get("text").get("content")
-            start_page = properties.get("开始页数").get("rollup").get("array")[0].get("number")
-            end_page = properties.get("结束页数").get("rollup").get("array")[0].get("number")
-            name = "📚读《" + book + "》 第" + str(start_page) + "到" + str(end_page)+"页"
-        elif("🏃🏻跑步" == name):
-            distance = properties.get("距离").get("rollup").get("array")[0].get("number")
-            name = "🏃🏻跑了" + str(distance) + "km"
-        elif (
-            properties.get("备注") is not None
-            and len(properties.get("备注").get("rich_text")) > 1
-        ):
-            name = properties.get("备注").get("rich_text")[0].get("text").get("content")
+        if (properties.get("备注") is not None and len(properties.get("备注").get("rich_text")) > 0):
+            name += "，"+properties.get("备注").get("rich_text")[0].get("text").get("content")
+            print("note"+name)
         startTime = properties.get("时间").get("date").get("start")
         endTime = properties.get("时间").get("date").get("end")
 
@@ -135,7 +125,6 @@ def parseCsv():
                 list.append(body)
         # print(list)
         search(list)
-    #     createDiary(title,startTime,endTime)
 
 
 def getBlock(id, children):
