@@ -114,7 +114,10 @@ def search(id,title):
         json=body,
     )
     # print(r.text)
-    return r.json().get("results")[0].get("id")
+    results = r.json().get("results")
+    if len(results) == 0:
+        return None
+    return results[0].get("id")
 
 
 

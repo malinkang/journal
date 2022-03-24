@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
 
+from curses import noecho
 from datetime import datetime, timedelta, timezone
 import json
 from unittest import result
@@ -40,6 +41,7 @@ def get_plants(user_id):
     r = s.get(
         FOREST_CLAENDAR_URL.format(date=now, user_id=user_id), headers=headers
     )
+    print(r.text)
     for plant in r.json().get("plants"):
         note = plant.get("note")
         start_time = plant.get("start_time")
@@ -51,8 +53,25 @@ def get_plants(user_id):
 
 # 搜索todo
 def search_todo(title):
-    return notion.search(TODO, title)
+    id = notion.search(TODO, title)
+    if(id is None):
+        return insert_todo(title)
+    return id
 
+def insert_todo(title):
+    body = {
+        "parent": {"database_id": TODO},
+        "properties": {
+            "Name": {"title": [{"type": "text", "text": {"content": title}}]},
+            "状态": {"select": {"name": "已完成"}},
+        },
+        "cover": {"type": "external", "external": {"url": unsplash.random()}},
+        "icon": {"type": "emoji", "emoji": "🍅"},
+    }
+    r = requests.post(
+        "https://api.notion.com/v1/pages/", headers=notion.headers, json=body
+    )
+    return r.json().get("id")
 
 # 番茄钟插入notion
 def insert_notion(note, start, end,start_time,end_time):
@@ -114,7 +133,7 @@ def update_todo():
         )
         print(r.text)
         duration = r.json().get("properties").get("duration").get("formula").get("number")
-    insert_to_toggl(title, ret.get("start_time"), duration,"177393358")
+        insert_to_toggl(title, ret.get("start_time"), duration,"177393358")
 
 # 插入Toggle
 def insert_to_toggl(description, start, duration,pid):
