@@ -1,14 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from datetime import date, datetime, timedelta, timezone
-import json
 import requests
-import os
-import base64
 import argparse
 import time
-import sys
-import csv
+import notion
 
 from datetime import datetime
 
@@ -37,14 +33,32 @@ def createDiary(title, startTime, endTime):
     print(r.text)
 
 
-def getEvent():
+def get_time():
     now = datetime.now()
     # 时区问题 所以要减去8小时
     now = datetime(now.year, now.month, now.day - 1, 15, 30).astimezone(
         tz=timezone(timedelta(hours=8))
     )
     date = now.replace(microsecond=0).isoformat()
-    print(date)
+    body = {
+        "filter": {"or": [{"timestamp": "created_time", "created_time": {"after": date}}]},
+        "sorts": [{"timestamp": "created_time", "direction": "ascending"}],
+    }
+    r = requests.post(
+        "https://api.notion.com/v1/databases/5351451787d9403fb48d9a9c20f31f43/query",
+        headers=headers,
+        json=body,
+    )
+    children = []
+   
+    results = r.json().get("results")
+    if (results is not None and len(results) > 0):
+        children.append(notion.get_divider())
+        children.append(notion.get_heading_2("💬 碎碎念"))
+        for result in results:
+            properties = result.get("properties")
+            content = properties.get("text").get("rich_text")[0].get("text").get("content")
+            children.append(notion.get_bulleted_list_item(content))
     body = {
         "filter": {"or": [{"property": "时间", "date": {"after": date}}]},
         "sorts": [{"property": "时间", "direction": "ascending"}],
@@ -54,77 +68,30 @@ def getEvent():
         headers=headers,
         json=body,
     )
-    print("结果：" + r.text)
-    print(r.request.body)
     results = r.json().get("results")
-    if len(results) == 0:
-        return
-    list = []
-    for result in results:
-        properties = result.get("properties")
-        name = properties.get("二级分类").get("select").get("name")
-        print(len(properties.get("备注").get("rich_text")))
-        if (properties.get("备注") is not None and len(properties.get("备注").get("rich_text")) > 0):
-            name += "，"+properties.get("备注").get("rich_text")[0].get("text").get("content")
-            print("note"+name)
-        startTime = properties.get("时间").get("date").get("start")
-        endTime = properties.get("时间").get("date").get("end")
+    if (results is not None and len(results) > 0):
+        children.append(notion.get_divider())
+        children.append(notion.get_heading_2("📅 今日日程"))
+        for result in results:
+            properties = result.get("properties")
+            name = properties.get("二级分类").get("select").get("name")
+            if (properties.get("备注") is not None and len(properties.get("备注").get("rich_text")) > 0):
+                name += "，"+properties.get("备注").get("rich_text")[0].get("text").get("content")
+            
+            startTime = properties.get("时间").get("date").get("start")
+            endTime = properties.get("时间").get("date").get("end")
 
-        start = datetime.strftime(
-            datetime.strptime(startTime, "%Y-%m-%dT%H:%M:%S.000+08:00"), "%H:%M"
-        )
-        end = datetime.strftime(
-            datetime.strptime(endTime, "%Y-%m-%dT%H:%M:%S.000+08:00"), "%H:%M"
-        )
-        content = start + "~" + end + " " + name
-        body = {
-            "type": "bulleted_list_item",
-            "bulleted_list_item": {
-                "text": [{"type": "text", "text": {"content": content}}]
-            },
-        }
-        list.append(body)
-    search(list)
+            start = datetime.strftime(
+                datetime.strptime(startTime, "%Y-%m-%dT%H:%M:%S.000+08:00"), "%H:%M"
+            )
+            end = datetime.strftime(
+                datetime.strptime(endTime, "%Y-%m-%dT%H:%M:%S.000+08:00"), "%H:%M"
+            )
+            content = start + "~" + end + " " + name
+            children.append(notion.get_bulleted_list_item(content))
+    search(children)
 
 
-# 解析csv
-def parseCsv():
-    file = time.strftime("%Y%m%d", time.localtime())
-    filename = "./data/" + file + ".csv"
-    with open(filename) as f:
-        render = csv.reader(f)
-        header_row = next(render)
-        print(header_row)
-        list = []
-        for row in render:
-            startTime = row[0]
-            start = datetime.strptime(startTime, "%Y-%m-%dT%H:%M:%S.%f+0800")
-            # 获取今日0点
-            now = datetime.now()
-            zero = datetime(now.year, now.month, now.day, 0, 0)
-            if start > zero:
-                endTime = row[1]
-                end = datetime.strftime(
-                    datetime.strptime(endTime, "%Y-%m-%dT%H:%M:%S.%f+0800"), "%H:%M"
-                )
-                start = datetime.strftime(start, "%H:%M")
-                tag = row[2]
-                note = row[3]
-                title = ""
-                if len(note) == 0:
-                    title = tag
-                else:
-                    title = note
-                content = start + "~" + end + " " + title
-                body = {
-                    "type": "bulleted_list_item",
-                    "bulleted_list_item": {
-                        "text": [{"type": "text", "text": {"content": content}}]
-                    },
-                }
-                list.append(body)
-        # print(list)
-        search(list)
 
 
 def getBlock(id, children):
@@ -134,24 +101,24 @@ def getBlock(id, children):
 
 # 添加block
 def append(id, children):
-    print(children)
     body = {"children": children}
     r = requests.patch(
         "https://api.notion.com/v1/blocks/" + id + "/children",
         headers=headers,
         json=body,
     )
-    print(r.text)
+    # print(r.text)
 
 
 # 搜索需要同步的笔记
 def search(children):
+    print(children)
     title = time.strftime("%m月%d日 星期" + getWeekDay(), time.localtime())
     body = {"query": title}
     r = requests.post("https://api.notion.com/v1/search", headers=headers, json=body)
     result = r.json().get("results")[0]
     id = result.get("id")
-    getBlock(id, children)
+    append(id, children)
 
 
 headers = {}
@@ -161,4 +128,4 @@ if __name__ == "__main__":
     parser.add_argument("version")
     options = parser.parse_args()
     headers = {"Authorization": options.secret, "Notion-Version": options.version}
-    getEvent()
+    get_time()

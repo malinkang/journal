@@ -23,13 +23,13 @@ def create_page(pageId):
     title = datetime.strftime(tomorrow, "%m月%d日 星期" + week_day_dict[tomorrow.weekday()])
     children = []
 
-    children.append(notion.get_heading_2("✅ TODO"))
-    for todo in getTodo():
-        children.append(todo)
-    children.append(notion.get_divider())
-    children.append(notion.get_heading_2("💬 碎碎念"))
-    children.append(notion.get_divider())
-    children.append(notion.get_heading_2("📅 今日日程"))
+    # children.append(notion.get_heading_2("✅ TODO"))
+    # for todo in getTodo():
+    #     children.append(todo)
+    # children.append(notion.get_divider())
+    # children.append(notion.get_heading_2("💬 碎碎念"))
+    # children.append(notion.get_divider())
+    # children.append(notion.get_heading_2("📅 今日日程"))
     cover = unsplash.random()
     properties = {
         "title": {"title": [{"type": "text", "text": {"content": title}}]},

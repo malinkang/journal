@@ -14,7 +14,7 @@ import requests
 def get_heading_2(content):
     return {
         "type": "heading_2",
-        "heading_2": {"text": [{"type": "text", "text": {"content": content}}]},
+        "heading_2": {"rich_text": [{"type": "text", "text": {"content": content}}]},
     }
 
 
@@ -23,6 +23,15 @@ def get_paragraph(content):
         "object": "block",
         "type": "paragraph",
         "paragraph": {"text": [{"type": "text", "text": {"content": content}}]},
+    }
+
+
+def get_bulleted_list_item(content):
+    return {
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+            "rich_text": [{"type": "text", "text": {"content": content}}]
+        },
     }
 
 
@@ -81,13 +90,16 @@ headers = {
 week_day_dict = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
 
 
-def get_day_relation(year_id,date):
+def get_day_relation(year_id, date):
     day = datetime.strftime(date, "%m月%d日 星期" + week_day_dict[date.weekday()])
     body = {
         "filter": {
             "and": [
                 {"property": "标题", "text": {"equals": day}},
-                {"property": "年", "relation": {"contains": get_year_releation(year_id)}},
+                {
+                    "property": "年",
+                    "relation": {"contains": get_year_releation(year_id)},
+                },
             ]
         }
     }
@@ -99,16 +111,10 @@ def get_day_relation(year_id,date):
     return r.json().get("results")[0].get("id")
 
 
-def search(id,title):
-    body = {
-        "filter": {
-            "and": [
-                {"property": "Name", "text": {"equals": title}}
-            ]
-        }
-    }
+def search(id, title):
+    body = {"filter": {"and": [{"property": "Name", "text": {"equals": title}}]}}
     r = requests.post(
-        "https://api.notion.com/v1/databases/"+id+"/query",
+        "https://api.notion.com/v1/databases/" + id + "/query",
         headers=headers,
         json=body,
     )
@@ -119,18 +125,18 @@ def search(id,title):
     return results[0].get("id")
 
 
-
 WEEK_PAGE_ID = "194f66886cd8479899d38b0fb0b7da26"
 
-def get_week_relation(year_id,date):
+
+def get_week_relation(year_id, date):
     year = date.isocalendar().year
     week = date.isocalendar().week
-    week = "第"+str(week)+"周"
-    week_json_file = DATA_DIR+str(year)+"/"+week+".json"
-    if(os.path.exists(week_json_file)):
-        with open(week_json_file,"r") as json_file:
+    week = "第" + str(week) + "周"
+    week_json_file = DATA_DIR + str(year) + "/" + week + ".json"
+    if os.path.exists(week_json_file):
+        with open(week_json_file, "r") as json_file:
             return json.load(json_file).get("id")
-    
+
     body = {
         "filter": {
             "and": [
@@ -140,24 +146,25 @@ def get_week_relation(year_id,date):
         }
     }
     r = requests.post(
-        "https://api.notion.com/v1/databases/"+WEEK_PAGE_ID+"/query",
+        "https://api.notion.com/v1/databases/" + WEEK_PAGE_ID + "/query",
         headers=headers,
         json=body,
     )
-    if(len(r.json().get("results")) == 0):
+    if len(r.json().get("results")) == 0:
         return None
     else:
         id = r.json().get("results")[0].get("id")
-    json_data = {'id':id}
-    with open(week_json_file, 'w') as outfile:
-        json.dump(json_data, outfile)  
+    json_data = {"id": id}
+    with open(week_json_file, "w") as outfile:
+        json.dump(json_data, outfile)
     return id
 
-def get_month_relation(year_id,year,month):
+
+def get_month_relation(year_id, year, month):
     id = ""
-    month_json_file = DATA_DIR+year+"/"+month+".json"
-    if(os.path.exists(month_json_file)):
-        with open(month_json_file,"r") as json_file:
+    month_json_file = DATA_DIR + year + "/" + month + ".json"
+    if os.path.exists(month_json_file):
+        with open(month_json_file, "r") as json_file:
             return json.load(json_file).get("id")
     body = {
         "filter": {
@@ -172,21 +179,24 @@ def get_month_relation(year_id,year,month):
         headers=headers,
         json=body,
     )
-    if(len(r.json().get("results")) == 0):
+    if len(r.json().get("results")) == 0:
         return None
     else:
         id = r.json().get("results")[0].get("id")
-    json_data = {'id':id}
-    with open(month_json_file, 'w') as outfile:
-        json.dump(json_data, outfile)  
+    json_data = {"id": id}
+    with open(month_json_file, "w") as outfile:
+        json.dump(json_data, outfile)
     return id
+
+
 DATA_DIR = "./data/"
+
 
 def get_year_releation(year):
     id = ""
-    year_json_file = DATA_DIR+year+"/id.json"
-    if(os.path.exists(year_json_file)):
-        with open(year_json_file,"r") as json_file:
+    year_json_file = DATA_DIR + year + "/id.json"
+    if os.path.exists(year_json_file):
+        with open(year_json_file, "r") as json_file:
             return json.load(json_file).get("id")
     body = {"filter": {"and": [{"property": "Name", "text": {"equals": year}}]}}
     r = requests.post(
@@ -194,22 +204,22 @@ def get_year_releation(year):
         headers=headers,
         json=body,
     )
-    #如果返回结果为空，则创建年份
-    if(len(r.json().get("results")) == 0):
-        #TODO 
+    # 如果返回结果为空，则创建年份
+    if len(r.json().get("results")) == 0:
+        # TODO
         return None
     else:
         id = r.json().get("results")[0].get("id")
-    json_data = {'id':id}
-    year_dir = "./data/"+year
-    if(os.path.exists(year_dir) == False):
-        os.makedirs(year_dir)  
-    with open(year_json_file, 'w') as outfile:
-        json.dump(json_data, outfile)  
+    json_data = {"id": id}
+    year_dir = "./data/" + year
+    if os.path.exists(year_dir) == False:
+        os.makedirs(year_dir)
+    with open(year_json_file, "w") as outfile:
+        json.dump(json_data, outfile)
     return id
 
 
-def get_relation(properties, date=datetime.now(),include_day = False):
+def get_relation(properties, date=datetime.now(), include_day=False):
     year = date.strftime("%Y")
     month = date.strftime("%-m月")
 
@@ -224,14 +234,14 @@ def get_relation(properties, date=datetime.now(),include_day = False):
     properties["月"] = {
         "relation": [
             {
-                "id": get_month_relation(year_id,year,month),
+                "id": get_month_relation(year_id, year, month),
             }
         ]
     }
     properties["周"] = {
         "relation": [
             {
-                "id": get_week_relation(year_id,date),
+                "id": get_week_relation(year_id, date),
             }
         ]
     }
@@ -239,10 +249,8 @@ def get_relation(properties, date=datetime.now(),include_day = False):
         properties["日"] = {
             "relation": [
                 {
-                    "id": get_day_relation(year_id,date),
+                    "id": get_day_relation(year_id, date),
                 }
             ]
         }
     return properties
-
-

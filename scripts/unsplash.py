@@ -14,6 +14,3 @@ def topics():
     params = {"client_id": ACCESS_KEY}
     r = requests.get(BASE_URL+'/topics', params=params)
     print(r.text)
-
-
-print(random())

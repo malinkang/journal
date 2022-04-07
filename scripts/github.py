@@ -58,7 +58,10 @@ def search(date):
         lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
     else:
         lowest = "未知"
-    aq = properties.get("空气质量").get("number")
+    if( properties.get("空气质量") is not None):
+        aq = properties.get("空气质量").get("number")
+    else:
+        aq = 0
     NewYear = properties.get("距离元旦").get("formula").get("number")
     SpringFestival = properties.get("距离春节").get("formula").get("number")
     if(properties.get("睡眠时长") is not None):
