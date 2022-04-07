@@ -28,7 +28,7 @@ comment : true
 
 
 
-{{< tweet user="malinkang" id="1509130094627135489" >}}
+{{< tweet user="malinkang" id=1509130094627135489 >}}
  
 测试测试
 
