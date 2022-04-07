@@ -26,37 +26,46 @@ comment : false
 
 '''
 #获取内容
-def getContent(secret,id,version):
-    headers = {'Authorization': secret,"Notion-Version":version}
+def getContent(id):
     r = requests.get('https://api.notion.com/v1/blocks/'+id+'/children',headers=headers)
     return r
 
 
 #获取星期
 #搜索需要同步的笔记
-def search(secret,version,date):
+def search(date):
     week_day_dict={0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
     title = datetime.strftime(date,"%m月%d日 星期"+week_day_dict[date.weekday()])
-    headers = {'Authorization': secret,"Notion-Version":version}
-    print(title)
+   
     body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
     result = r.json().get("results")[0]
     id = result.get("id")
     properties = result.get("properties")
-    print("呵呵 "+str())
-    location = properties.get("位置").get("rich_text")[0].get("text").get("content")
-    weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
-    highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
-    lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
+    if(properties.get("位置") is not None and len(properties.get("位置").get("rich_text"))>0):
+        location = properties.get("位置").get("rich_text")[0].get("text").get("content")
+    else:
+        location = "未知"
+    if(properties.get("天气") is not None and len(properties.get("天气").get("rich_text"))>0):
+        weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
+    else:
+        weather = "未知"
+    if(properties.get("最高温度") is not None and len(properties.get("最高温度").get("rich_text"))>0):
+        highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
+    else:
+        highest = "未知"
+    if(properties.get("最低温度") is not None and len(properties.get("最低温度").get("rich_text"))>0):
+        lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
+    else:
+        lowest = "未知"
     aq = properties.get("空气质量").get("number")
     NewYear = properties.get("距离元旦").get("formula").get("number")
     SpringFestival = properties.get("距离春节").get("formula").get("number")
-    if(properties.get("睡眠时长") is None):
+    if(properties.get("睡眠时长") is not None):
         sleep = properties.get("睡眠时长").get("number")
     else:
         sleep = 0
-    if(properties.get("体重") is None):
+    if(properties.get("体重") is not None):
         weight = properties.get("体重").get("number")
     else:
         weight = 0
@@ -65,15 +74,15 @@ def search(secret,version,date):
     tags = ",".join("\""+tag.get("name")+"\""for tag in tags)
     external = result.get("cover").get("external")
     file = result.get("cover").get("file")
-    if(not external is None):
+    if(external is not None):
         cover = external.get("url")
-    elif(not file is None):
+    elif(file is not None):
         cover = file.get("url")
     title =result.get("properties").get("标题").get("title")[0].get("text").get("content")
     createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
     year = datetime.now().year
     post = template.format(title,createTime,location+" "+weather,tags,cover,year,year,title,weather,highest,lowest,aq,NewYear,SpringFestival,sleep,weight)
-    getPage(secret,id,version,post,date)
+    getPage(id,post,date)
 
 #创建markdown文件
 def newPost(markdown,date):
@@ -110,9 +119,9 @@ def parseText(text):
         r+=content
     return r
 
-def getPage(secret,id,version,header,date):
+def getPage(id,header,date):
     post = ""
-    r = getContent(secret,id,version)
+    r = getContent(id)
     results = r.json().get("results")
     for result in results:
         type = result.get("type")
@@ -141,7 +150,7 @@ def getPage(secret,id,version,header,date):
             post += "![]("+url+")\n"
     newPost(header+post,date)
 
-
+headers ={}
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
@@ -154,4 +163,5 @@ if __name__ == "__main__":
         target = datetime.now()
     else:    
         target = datetime.strptime(title, '%Y%m%d')
-    search(options.secret,options.version,target)
+    headers = {'Authorization': options.secret,"Notion-Version":options.version}
+    search(target)
