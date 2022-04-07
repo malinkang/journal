@@ -5,8 +5,8 @@ on:
       content:
         description: 'content'
         required: false
-  schedule:
-    - cron: "0 2,7 * * *"
+  # schedule:
+    # - cron: "0 2,7 * * *"
 jobs:
   sync:
     name: Sync

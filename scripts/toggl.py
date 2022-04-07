@@ -54,7 +54,7 @@ def sync():
             client = response.json().get("data").get("name")
     
 
-            description = "描述"
+            description = ""
             if task.get("description") is not None:
                 description = task.get("description")
             properties = {
