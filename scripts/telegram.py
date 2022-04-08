@@ -39,14 +39,24 @@ def search(secret,version,date):
     result = r.json().get("results")[0]
     id = result.get("id")
     properties = result.get("properties")
-    location = properties.get("位置").get("rich_text")[0].get("text").get("content")
-    weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
-    highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
-    #
-    highest = highest.replace("-","\\-")
-    lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
-    lowest = lowest.replace("-","\\-")
-    aq = properties.get("空气质量").get("number")
+    if(properties.get("天气") is not None and len(properties.get("天气").get("rich_text"))>0):
+        weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
+    else:
+        weather = "未知"
+    if(properties.get("最高温度") is not None and len(properties.get("最高温度").get("rich_text"))>0):
+        highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
+        highest = highest.replace("-","\\-")
+    else:
+        highest = "未知"
+    if(properties.get("最低温度") is not None and len(properties.get("最低温度").get("rich_text"))>0):
+        lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
+        lowest = lowest.replace("-","\\-")
+    else:
+        lowest = "未知"
+    if( properties.get("空气质量") is not None):
+        aq = properties.get("空气质量").get("number")
+    else:
+        aq = 0
     NewYear = properties.get("距离元旦").get("formula").get("number")
     SpringFestival = properties.get("距离春节").get("formula").get("number")
     
