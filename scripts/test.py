@@ -1,3 +1,13 @@
+import json
+from multiprocessing import parent_process
+import os
+import pprint
+
+# import feedparser
+# import json
+# # d = feedparser.parse("https://www.douban.com/feed/people/malinkang/interests")
+# # for entry in d['entries']:
+# #     print(json.dumps(entry))
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 import requests
@@ -8,7 +18,7 @@ import dateutils
 from datetime import datetime, timedelta
 from notion import Properties
 from notion import Page
-
+from notion_client import Client
 
 
 
@@ -24,15 +34,13 @@ def create_page(pageId):
     properties = Properties().title(title).date("日期",datetime.strftime(tomorrow, "%Y-%m-%d"),None).multi_select("标签",tags)
     properties = notion.get_relation(properties,tomorrow,False)
     page  = Page().parent(pageId).cover(cover).icon(emo).properties(properties)
-    requests.post("https://api.notion.com/v1/pages/", headers=headers, json=page)
+    client = Client(auth="secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb")
+    # page=json.dumps(page.parent)
+    response=client.pages.create(parent=page.get_parent(),properties=page.get_properties())
+    print(response)
 
-headers = {}
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("secret")
     parser.add_argument("id")
-    parser.add_argument("version")
-    parser.add_argument("accessKey")
     options = parser.parse_args()
-    headers = {"Authorization": options.secret, "Notion-Version": options.version}
     create_page(options.id)

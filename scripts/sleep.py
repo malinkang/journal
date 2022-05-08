@@ -3,11 +3,8 @@
 from datetime import datetime
 import json
 import requests
-import os
-import base64
 import argparse
 import time
-import sys
 
 from datetime import datetime
 

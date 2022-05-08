@@ -4,6 +4,7 @@ import argparse
 import notion
 import requests
 from datetime import date, datetime, timedelta, timezone
+import unsplash
 LOGIN_API = "https://api.gotokeep.com/v1.1/users/login"
 RUN_DATA_API = "https://api.gotokeep.com/pd/v3/stats/detail?dateUnit=all&type=running&lastDate={last_date}"
 RUN_LOG_API = "https://api.gotokeep.com/pd/v3/runninglog/{run_id}"
@@ -31,7 +32,7 @@ def get_run_id():
 
 
 def is_today(record):
-    today = (datetime.now()-timedelta(days=2)).strftime("%-m月%d日")
+    today = (datetime.now()-timedelta(days=0)).strftime("%-m月%d日")
     return today == record.get("date")
                
 def get_run_data(id,title):
@@ -42,7 +43,7 @@ def get_run_data(id,title):
         end = datetime.fromtimestamp(data.get("endTime")/1000).astimezone(tz=timezone(timedelta(hours=8)))
         cover = data.get("polylineSnapshot")
         if cover is None:
-            cover = "https://images.unsplash.com/photo-1502224562085-639556652f33?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000"
+            cover = unsplash.random()
         distance = round(float(data.get("distance"))/1000,2)
         add_to_notion(start,end,cover,distance,title)
 def add_to_notion(start,end,cover,distance,title,):

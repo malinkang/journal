@@ -23,13 +23,13 @@ from requests.api import get
 def get_reading(end):
     body = {"filter": {"and": [{"property": "状态", "select": {"equals": "在读"}}]}}
     r = requests.post(
-        "https://api.notion.com/v1/databases/08e634c8ab2c46edab3fb12d2aae5944/query",
+        "https://api.notion.com/v1/databases/c7efdba75f4146ad84a3f5b773998859/query",
         headers=headers,
         json=body,
     )
     result = r.json().get("results")[0]
     id = result.get("id")
-    name = result.get("properties").get("书名").get("title")[0].get("text").get("content")
+    name = result.get("properties").get("标题").get("title")[0].get("text").get("content")
     start = get_yestorday(id)
     add(name, id, start, end)
 
@@ -41,6 +41,7 @@ def add(
     end,
 ):
     now = datetime.now()
+    print(id)
     properties = {
             "Name": {"title": [{"type": "text", "text": {"content": title}}]},
             "书名": {
@@ -64,36 +65,9 @@ def add(
         "icon": {"type": "emoji", "emoji": "📚"},
     }
     r = requests.post("https://api.notion.com/v1/pages/", headers=headers, json=body)
-    print(r.text)
 
 
-def search_week(week, year):
-    year = search_year(year)
-    body = {
-        "filter": {
-            "and": [
-                {"property": "Name", "text": {"equals": week}},
-                {"property": "年", "relation": {"contains": year}},
-            ]
-        }
-    }
-    r = requests.post(
-        "https://api.notion.com/v1/databases/194f66886cd8479899d38b0fb0b7da26/query",
-        headers=headers,
-        json=body,
-    )
-    return r.json().get("results")[0].get("id")
 
-
-# 获取年的datebase_id
-def search_year(year):
-    body = {"filter": {"and": [{"property": "Name", "text": {"equals": year}}]}}
-    r = requests.post(
-        "https://api.notion.com/v1/databases/f4d2374344ca409aa22d40e8d33833eb/query",
-        headers=headers,
-        json=body,
-    )
-    return r.json().get("results")[0].get("id")
 
 
 # 获取昨天的数据

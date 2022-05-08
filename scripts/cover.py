@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import json
 import requests
 import argparse
@@ -30,10 +30,11 @@ def getCover(accessKey):
     return cover
 headers = {}
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("secret")
-    parser.add_argument("version")
-    parser.add_argument("accessKey")
-    options = parser.parse_args()
-    headers = {'Authorization': options.secret, "Notion-Version": options.version}
-    getDatebase(options.accessKey)
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("secret")
+    # parser.add_argument("version")
+    # parser.add_argument("accessKey")
+    # options = parser.parse_args()
+    # headers = {'Authorization': options.secret, "Notion-Version": options.version}
+    # getDatebase(options.accessKey)
+    print(datetime(2022,1,29)+timedelta(days=99))

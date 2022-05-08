@@ -2,13 +2,95 @@
 # -*- coding: UTF-8 -*-
 
 # block对象：https://developers.notion.com/reference/block
-from calendar import month, week
 from datetime import datetime
 import json
 import os
-from webbrowser import get
 import unsplash
 import requests
+
+
+class Page(dict):
+    def parent(self, database_id):
+        dict = {}
+        dict["database_id"] = database_id
+        self["parent"] = dict
+        return self
+    def children(self, children):
+        self["children"] = children
+        return self
+    def cover(self,cover):
+        self["cover"] = {"type": "external", "external": {"url": cover}}
+        return self
+    def icon(self,icon):
+        self["icon"] = {"type": "emoji", "emoji": icon}
+        return self
+    def properties(self,properties):
+        self["properties"] = properties
+        return self
+    def get_parent(self):
+        return json.dumps(self["parent"])
+    def get_properties(self):
+        return json.dumps(self["properties"])
+class Properties(dict):
+    """https://developers.notion.com/reference/property-value-object"""
+    def title(self,title):
+        self["title"] = {"title": [{"type": "text", "text": {"content": title}}]}
+        return self
+    def multi_select(self, property, list):
+        multi_select = []
+        for item in list:
+            multi_select.append({"name": item})
+        self[property] = {
+            "type": "multi_select",
+            "multi_select": multi_select,
+        }
+        return self
+    def date(self, property, start,end):
+        self[property] = {"date": {"start": start,"end":end}}
+        return self
+    def number(self,property,number):
+        self[property] = {"number": number}
+        return self
+
+
+class Children(list):
+    """"""
+
+    def add_heading_2(self, content, link=None):
+        self.add_rich_text("heading_2", content, link)
+        return self
+
+    def add_bulleted_list_item(self, content, link=None):
+        self.add_rich_text("bulleted_list_item", content, link)
+        return self
+
+    def add_to_do(self, content, link=None):
+        self.add_rich_text("to_do", content, link)
+        return self
+
+    """https://developers.notion.com/reference/rich-text"""
+
+    def add_rich_text(self, type, content, link, color="default"):
+        self.append(
+            {
+                "type": type,
+                type: {
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": content,
+                                "link": {"type": "url", "url": link},
+                            },
+                            "annotations": {
+                                "color": color,
+                            },
+                        }
+                    ]
+                },
+            }
+        )
+        return self
 
 
 def get_heading_2(content):
@@ -108,6 +190,7 @@ def get_day_relation(year_id, date):
         headers=headers,
         json=body,
     )
+    
     return r.json().get("results")[0].get("id")
 
 
