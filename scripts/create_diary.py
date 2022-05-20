@@ -24,7 +24,9 @@ def create_page(pageId):
     properties = Properties().title(title).date("日期",datetime.strftime(tomorrow, "%Y-%m-%d"),None).multi_select("标签",tags)
     properties = notion.get_relation(properties,tomorrow,False)
     page  = Page().parent(pageId).cover(cover).icon(emo).properties(properties)
-    requests.post("https://api.notion.com/v1/pages/", headers=headers, json=page)
+    print(title)
+    r= requests.post("https://api.notion.com/v1/pages/", headers=headers, json=page)
+    print(r.text)
 
 headers = {}
 if __name__ == "__main__":

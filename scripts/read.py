@@ -41,7 +41,6 @@ def add(
     end,
 ):
     now = datetime.now()
-    print(id)
     properties = {
             "Name": {"title": [{"type": "text", "text": {"content": title}}]},
             "书名": {
@@ -65,7 +64,7 @@ def add(
         "icon": {"type": "emoji", "emoji": "📚"},
     }
     r = requests.post("https://api.notion.com/v1/pages/", headers=headers, json=body)
-
+    print(id)
 
 
 

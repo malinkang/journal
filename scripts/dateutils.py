@@ -4,7 +4,7 @@ from datetime import datetime
 week_day_dict = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
 
 def format_date_with_week(date):
-    datetime.strftime(date, "%m月%d日 星期" + week_day_dict[date.weekday()])
+    return datetime.strftime(date, "%m月%d日 星期" + week_day_dict[date.weekday()])
 # print(datetime.now().day)
 # print(datetime.now().year)
 
