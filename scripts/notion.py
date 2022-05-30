@@ -45,6 +45,16 @@ class Properties(dict):
             "multi_select": multi_select,
         }
         return self
+    def rich_text(self, property, text):
+        rich_text = []
+        rich_text.append({"type": "text", "text": {"content": text}})
+        self[property] = {
+            "rich_text": rich_text,
+        }
+        return self
+    def select(self, property, name):
+        self[property] = {"select": {"name": name}}
+        return self
     def date(self, property, start,end):
         self[property] = {"date": {"start": start,"end":end}}
         return self

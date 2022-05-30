@@ -43,7 +43,7 @@ def sync():
                 "https://api.track.toggl.com/api/v8/projects/" + str(task.get("pid")),
                 auth=auth,
             )
-
+            print(response.json())
             data = response.json().get("data")
             project = data.get("name")
             cid = data.get("cid")
@@ -51,9 +51,8 @@ def sync():
                 "https://api.track.toggl.com/api/v8/clients/" + str(cid),
                 auth=auth,
             )
+            print(response.json())
             client = response.json().get("data").get("name")
-    
-
             description = ""
             if task.get("description") is not None:
                 description = task.get("description")
