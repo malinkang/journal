@@ -32,8 +32,11 @@ def updateDiary(id, content):
     start = content['start']
     end = content['end']
     duration = content['duration']
+    print(start)
+    print(end)
     startTime = start[start.find("午")+1:]
     endTime = end[end.find("午")+1:]
+    
     body = {
         "properties": {
             "睡眠时长": {"number": float(duration)},
