@@ -18,7 +18,7 @@ def create_page(pageId):
     tomorrow = datetime.now() + timedelta(days=1)
     week = tomorrow.strftime("第%V周")
     month = tomorrow.strftime("%-m月")
-    title = dateutils.format_date_with_week(tomorrow)
+    title = dateutils.format_date_with_week(date=tomorrow)
     cover = unsplash.random()
     tags = [week,month]
     properties = Properties().title(title).date("日期",datetime.strftime(tomorrow, "%Y-%m-%d"),None).multi_select("标签",tags)

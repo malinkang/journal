@@ -4,6 +4,7 @@ from datetime import datetime
 import requests
 import argparse
 import time
+import dateutils
 
 from requests.api import get, post
 
@@ -29,12 +30,11 @@ def getContent(id):
 #获取星期
 #搜索需要同步的笔记
 def search(date):
-    week_day_dict={0:"一",1:"二",2:"三",3:"四",4:"五",5:"六",6:"日"}
-    title = datetime.strftime(date,"%m月%d日 星期"+week_day_dict[date.weekday()])
-   
+    title = dateutils.format_date_with_week(date=date)
     body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
     result = r.json().get("results")[0]
+    print(result)
     id = result.get("id")
     properties = result.get("properties")
     if(properties.get("位置") is not None and len(properties.get("位置").get("rich_text"))>0):
