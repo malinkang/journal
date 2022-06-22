@@ -10,14 +10,13 @@ import dateutils
 
 
 #搜索笔记
-def search(secret,version,content):
+def search(content):
     title = dateutils.format_date_with_week()
-    headers = {'Authorization': secret,"Notion-Version":version}
     body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
     result = r.json().get("results")[0]
     id = result.get("id")
-    update(secret,version,id,content)
+    update(id,content)
     
 
 def emoji(weather):
@@ -35,14 +34,13 @@ def emoji(weather):
         return "☀️"
 
 
-def update(secret, version,pageId, content):
+def update(pageId, content):
     content = json.loads(content)
     weather = content['weather']
     highest = content['highest']
     lowest = content['lowest']
     aqi = content['aqi']
     emo = emoji(weather)
-    headers = {'Authorization': secret, "Notion-Version": version}
     body = {
         "properties": {
        "天气": {"rich_text": [{"type": "text", "text": {"content": weather}}]},
@@ -56,11 +54,12 @@ def update(secret, version,pageId, content):
                       headers=headers, json=body)
     print(r.text)
                     
-
+headers={}
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("version")
     parser.add_argument("content")
     options = parser.parse_args()
-    search(options.secret, options.version,options.content)
+    headers = {'Authorization': options.secret,"Notion-Version":options.version}
+    search(options.content)
