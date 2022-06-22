@@ -6,7 +6,8 @@ import requests
 import argparse
 import time
 from notion import Properties
-
+import notion
+import dateutils
 
 from datetime import datetime
 
@@ -18,33 +19,48 @@ def getWeekDay():
     today = datetime.now().weekday()
     return week_day_dict[today]
 
+
 # 搜索笔记
 def search(content):
-    title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime())
-    body = {"query": title}
-    r = requests.post("https://api.notion.com/v1/search",
-                      headers=headers, json=body)
+    title = dateutils.format_date_with_week()
+    print(title)
+    body = {
+        "filter": {"and": [{"property": "标题", "text": {"equals": title}}]},
+    }
+    r = requests.post(
+        "https://api.notion.com/v1/databases/294060cde13e4c29b0ac6ee490c8a448/query",
+        headers=notion.headers,
+        json=body,
+    )
+    print(r.text)
+    # for result in r.json().get("results"):
+    #     print(result)
     result = r.json().get("results")[0]
     id = result.get("id")
-    updateDiary( id, content)
+    updateDiary(id, content)
+
 
 def format_date(d):
-    date = d[:d.find("周")]+" "+d[d.find("午")+1:]
+    date = d[: d.find("周")] + " " + d[d.find("午") + 1 :]
     if "上午" in d:
-        date = datetime.strptime(date,"%y/%m/%d %I:%M")
-    else :
-        date = datetime.strptime(date,"%y/%m/%d %H:%M")
+        date = datetime.strptime(date, "%y/%m/%d %I:%M")
+    else:
+        date = datetime.strptime(date, "%y/%m/%d %H:%M")
     return date
+
 
 def updateDiary(id, content):
     content = json.loads(content)
-    start = format_date( content['start'])
-    end = format_date(content['end'])
-    properties = Properties().date("睡眠",datetime.strftime(start, "%Y-%m-%d"),datetime.strftime(end, "%Y-%m-%d"))
-    properties = {"properties":properties}
+    start = format_date(content["start"])
+    end = format_date(content["end"])
+    properties = Properties().date(
+        "睡眠", datetime.strftime(start, "%Y-%m-%d"), datetime.strftime(end, "%Y-%m-%d")
+    )
+    properties = {"properties": properties}
     print(properties)
-    r = requests.patch('https://api.notion.com/v1/pages/'+id,
-                       headers=headers, json=properties)
+    r = requests.patch(
+        "https://api.notion.com/v1/pages/" + id, headers=headers, json=properties
+    )
     print(r.text)
     # content = startTime+"~"+endTime+" 睡觉"
     # children = [
@@ -65,24 +81,27 @@ def updateDiary(id, content):
     # getBlock(id,children)
 
 
+def getBlock(id, children):
+    r = requests.get("https://api.notion.com/v1/blocks/" + id, headers=headers)
+    append(r.json().get("id"), children)
 
-def getBlock(id,children):
-    r = requests.get('https://api.notion.com/v1/blocks/'+id,headers=headers)
-    append(r.json().get('id'),children)
 
-#添加block
-def append(id,children):
+# 添加block
+def append(id, children):
     print(children)
-    body = {
-        "children":children
-    }
-    r = requests.patch('https://api.notion.com/v1/blocks/'+id+'/children',headers=headers,json=body)
-headers={}  
+    body = {"children": children}
+    r = requests.patch(
+        "https://api.notion.com/v1/blocks/" + id + "/children",
+        headers=headers,
+        json=body,
+    )
+
+
+headers = {}
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("secret")
     parser.add_argument("version")
     parser.add_argument("content")
     options = parser.parse_args()
-    headers = {'Authorization':options.secret, "Notion-Version":options.version}
     search(options.content)
