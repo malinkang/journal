@@ -3,32 +3,21 @@
 from datetime import datetime
 import json
 import requests
-import os
-import base64
 import argparse
-import time
-import sys
-
-from datetime import datetime
-
 from requests.api import get
+import dateutils
 
 
-
-def getWeekDay():
-    week_day_dict = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
-    today = datetime.now().weekday()
-    return week_day_dict[today]
 
 #搜索笔记
 def search(secret,version,content):
-    title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime()) 
+    title = dateutils.format_date_with_week()
     headers = {'Authorization': secret,"Notion-Version":version}
     body={"query":title}
     r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
     result = r.json().get("results")[0]
     id = result.get("id")
-    updateDiary(secret,version,id,content)
+    update(secret,version,id,content)
     
 
 def emoji(weather):
@@ -46,7 +35,7 @@ def emoji(weather):
         return "☀️"
 
 
-def updateDiary(secret, version,pageId, content):
+def update(secret, version,pageId, content):
     content = json.loads(content)
     weather = content['weather']
     highest = content['highest']
@@ -65,8 +54,8 @@ def updateDiary(secret, version,pageId, content):
     }
     r = requests.patch('https://api.notion.com/v1/pages/'+pageId,
                       headers=headers, json=body)
-
-
+    print(r.text)
+                    
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
