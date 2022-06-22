@@ -5,6 +5,8 @@ import json
 import requests
 import argparse
 import time
+from notion import Properties
+
 
 from datetime import datetime
 
@@ -26,43 +28,39 @@ def search(content):
     id = result.get("id")
     updateDiary( id, content)
 
+def format_date(d):
+    date = d[:d.find("周")]+" "+d[d.find("午")+1:]
+    if "上午" in d:
+        date = datetime.strptime(date,"%y/%m/%d %I:%M")
+    else :
+        date = datetime.strptime(date,"%y/%m/%d %H:%M")
+    return date
 
 def updateDiary(id, content):
     content = json.loads(content)
-    start = content['start']
-    end = content['end']
-    duration = content['duration']
-    print(start)
-    print(end)
-    startTime = start[start.find("午")+1:]
-    endTime = end[end.find("午")+1:]
-    
-    body = {
-        "properties": {
-            "睡眠时长": {"number": float(duration)},
-            "睡眠开始": {"rich_text": [{"type": "text", "text": {"content": startTime}}]},
-            "睡眠结束": {"rich_text": [{"type": "text", "text": {"content":endTime }}]},
-        }
-    }
+    start = format_date( content['start'])
+    end = format_date(content['end'])
+    properties = Properties().date("睡眠",datetime.strftime(start, "%Y-%m-%d"),datetime.strftime(end, "%Y-%m-%d"))
     r = requests.patch('https://api.notion.com/v1/pages/'+id,
-                       headers=headers, json=body)
-    content = startTime+"~"+endTime+" 睡觉"
-    children = [
-        {
-        "type":"bulleted_list_item",
-        "bulleted_list_item":{
-            "text":[
-                {
-                    "type":"text",
-                    "text":{
-                        "content":content
-                    }
-                }
-            ]
-        }
-    }
-    ]
-    getBlock(id,children)
+                       headers=headers, json=properties)
+    print(r.text)
+    # content = startTime+"~"+endTime+" 睡觉"
+    # children = [
+    #     {
+    #     "type":"bulleted_list_item",
+    #     "bulleted_list_item":{
+    #         "text":[
+    #             {
+    #                 "type":"text",
+    #                 "text":{
+    #                     "content":content
+    #                 }
+    #             }
+    #         ]
+    #     }
+    # }
+    # ]
+    # getBlock(id,children)
 
 
 
