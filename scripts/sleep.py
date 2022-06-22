@@ -41,6 +41,8 @@ def updateDiary(id, content):
     start = format_date( content['start'])
     end = format_date(content['end'])
     properties = Properties().date("睡眠",datetime.strftime(start, "%Y-%m-%d"),datetime.strftime(end, "%Y-%m-%d"))
+    properties = {"properties":properties}
+    print(properties)
     r = requests.patch('https://api.notion.com/v1/pages/'+id,
                        headers=headers, json=properties)
     print(r.text)
