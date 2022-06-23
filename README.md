@@ -2,6 +2,9 @@
 
 ```shell
 python3 scripts/create_diary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '294060cd-e13e-4c29-b0ac-6ee490c8a448' '2021-08-16' 'b0cbd23d5d1b188ffbf313d0c78071280f3d506d0279a1d31302ad87548b1beb'
+
+python3 scripts/notion/create_diary.py '294060cd-e13e-4c29-b0ac-6ee490c8a448' 'b0cbd23d5d1b188ffbf313d0c78071280f3d506d0279a1d31302ad87548b1beb'
+
 python3 scripts/test.py  '294060cd-e13e-4c29-b0ac-6ee490c8a448'
 
 python3 scripts/github.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211101'
@@ -15,6 +18,8 @@ python3 scripts/secretary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U
 python3 scripts/cover.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16' 'b0cbd23d5d1b188ffbf313d0c78071280f3d506d0279a1d31302ad87548b1beb'
 
 python3 scripts/sleep.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16' '{"start":"22\/6\/22周三 上午12:00","end":"22\/6\/22周三 上午8:14","duration":"8.17"}'
+
+python3 scripts/toggl.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
 ```
 
 ### 跑步

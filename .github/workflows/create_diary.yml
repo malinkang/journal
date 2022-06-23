@@ -23,4 +23,4 @@ jobs:
           pip install -r requirements.txt
       - name: create diary
         run: |
-          python scripts/create_diary.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_DATABASE_ID }}' '${{ secrets.NOTION_VERSION }}' '${{ secrets.UNSPLASH_ACCESS_KEY }}'
+          python scripts/notion/create_diary.py  '${{ secrets.NOTION_DATABASE_ID }}' '${{ secrets.UNSPLASH_ACCESS_KEY }}'

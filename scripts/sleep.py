@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import requests
 import argparse
@@ -32,13 +32,13 @@ def search(content):
         headers=notion.headers,
         json=body,
     )
-    print(r.text)
-    # for result in r.json().get("results"):
-    #     print(result)
     result = r.json().get("results")[0]
     id = result.get("id")
-    updateDiary(id, content)
-
+    content = json.loads(content)
+    start = format_date(content["start"])
+    end = format_date(content["end"])
+    insert_to_notion(id, start,end)
+    insert_to_toggl("AutoSleep自动同步",start,(end-start).seconds,"177393271")
 
 def format_date(d):
     date = d[: d.find("周")] + " " + d[d.find("午") + 1 :]
@@ -47,55 +47,24 @@ def format_date(d):
     else:
         date = datetime.strptime(date, "%y/%m/%d %H:%M")
     return date
-
-
-def updateDiary(id, content):
-    content = json.loads(content)
-    start = format_date(content["start"])
-    end = format_date(content["end"])
-    properties = Properties().date(
-        "睡眠", datetime.strftime(start, "%Y-%m-%d"), datetime.strftime(end, "%Y-%m-%d")
+# 插入Toggle
+def insert_to_toggl(description, start, duration,pid):
+    start = start - timedelta(hours=8)
+    auth = ("2ef95512ce5b1528809f9a03a68e02b1", "api_token")
+    params = {"time_entry":{"description":description,"start": start.strftime("%Y-%m-%dT%H:%M:%S.%fZ"), "duration": duration, "pid": pid,"created_with":"curl"}}
+    response = requests.post(
+        "https://api.track.toggl.com/api/v8/time_entries", json=params, auth=auth,headers=headers
     )
+    print(response.text)
+
+def insert_to_notion(id, start,end):
+    properties = Properties().date("睡眠", start.isoformat(),end.isoformat() )
     properties = {"properties": properties}
     print(properties)
     r = requests.patch(
         "https://api.notion.com/v1/pages/" + id, headers=headers, json=properties
     )
     print(r.text)
-    # content = startTime+"~"+endTime+" 睡觉"
-    # children = [
-    #     {
-    #     "type":"bulleted_list_item",
-    #     "bulleted_list_item":{
-    #         "text":[
-    #             {
-    #                 "type":"text",
-    #                 "text":{
-    #                     "content":content
-    #                 }
-    #             }
-    #         ]
-    #     }
-    # }
-    # ]
-    # getBlock(id,children)
-
-
-def getBlock(id, children):
-    r = requests.get("https://api.notion.com/v1/blocks/" + id, headers=headers)
-    append(r.json().get("id"), children)
-
-
-# 添加block
-def append(id, children):
-    print(children)
-    body = {"children": children}
-    r = requests.patch(
-        "https://api.notion.com/v1/blocks/" + id + "/children",
-        headers=headers,
-        json=body,
-    )
-
 
 headers = {}
 if __name__ == "__main__":
@@ -104,4 +73,5 @@ if __name__ == "__main__":
     parser.add_argument("version")
     parser.add_argument("content")
     options = parser.parse_args()
+    headers = {'Authorization': options.secret,"Notion-Version":options.version}
     search(options.content)
