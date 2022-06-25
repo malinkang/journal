@@ -3,11 +3,8 @@
 from datetime import datetime
 import json
 import requests
-import os
-import base64
 import argparse
 import time
-import sys
 
 from datetime import datetime
 
@@ -33,24 +30,20 @@ def search(secret, version, content):
     updateDiary(secret, version, id, content)
 
 
-def updateDiary(secret, version, pageId, content):
+def updateDiary(pageId, content):
     content = json.loads(content)
     weight = content['weight']
-    headers = {'Authorization': secret, "Notion-Version": version}
-    print("体重"+weight)
     body = {
         "properties": {
              "体重": {"number": float(weight)},
         }
     }
-    r = requests.patch('https://api.notion.com/v1/pages/'+pageId,
+    requests.patch('https://api.notion.com/v1/pages/'+pageId,
                        headers=headers, json=body)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("secret")
-    parser.add_argument("version")
     parser.add_argument("content")
     options = parser.parse_args()
     search(options.secret, options.version, options.content)

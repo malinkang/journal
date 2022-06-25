@@ -20,6 +20,9 @@ python3 scripts/cover.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voA
 python3 scripts/notion/sleep.py '{"start":"22\/6\/22周三 上午12:00","end":"22\/6\/22周三 上午8:14","duration":"8.17"}'
 
 python3 scripts/toggl.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
+
+python3 scripts/notion/weather.py '{"lowest":"21°C","aqi":"40","highest":"38°C","weather":"大部晴朗"}'
+  
 ```
 
 ### 跑步
