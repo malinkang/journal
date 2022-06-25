@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-import requests
 import argparse
 import unsplash
 import notion
@@ -25,8 +24,7 @@ def create_page(pageId):
     properties = Properties().title(title).date("日期",datetime.strftime(tomorrow, "%Y-%m-%d"),None).multi_select("标签",tags)
     properties = notion.get_relation(properties,tomorrow,False)
     parent = DatebaseParent(pageId)
-    children = Children().add_bulleted_list_item("test")
-    page  = Page().parent(parent).children(children).cover(cover).icon(emo).properties(properties)
+    page  = Page().parent(parent).children(Children()).cover(cover).icon(emo).properties(properties)
     notion_api.create_page(page=page)
 
 headers = {}
