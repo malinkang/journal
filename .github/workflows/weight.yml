@@ -26,4 +26,4 @@ jobs:
           pip install -r requirements.txt
       - name: update weight
         run: |
-          python scripts/weight.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}' '${{ github.event.inputs.content }}'
+          python scripts/notion/weight.py '${{ github.event.inputs.content }}'

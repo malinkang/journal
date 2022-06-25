@@ -26,4 +26,4 @@ jobs:
           pip install -r requirements.txt
       - name: update sleep
         run: |
-          python scripts/sleep.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}' '${{ github.event.inputs.content }}'
+          python scripts/notion/sleep.py '${{ github.event.inputs.content }}'
