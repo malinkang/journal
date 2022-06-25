@@ -16,7 +16,7 @@ import requests
 
 
 # 搜索笔记
-def search(content):
+def insert(content):
     content = json.loads(content)
     start = format_date(content["start"])
     end = format_date(content["end"])
@@ -55,4 +55,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("content")
     options = parser.parse_args()
-    search(options.content)
+    insert(options.content)
