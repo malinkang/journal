@@ -1,40 +1,49 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-import argparse
+from datetime import datetime
 import json
-import unsplash
-import notion
-import dateutils
-from datetime import datetime, timedelta
-from properties import Properties
-from page import Page
-from datebase_parent import DatebaseParent
-from children import Children
-import notion_api
 import requests
+import argparse
+import time
+
+from datetime import datetime
+
+from requests.api import get
 
 
+def getWeekDay():
+    week_day_dict = {0: "一", 1: "二", 2: "三", 3: "四", 4: "五", 5: "六", 6: "日"}
+    today = datetime.now().weekday()
+    return week_day_dict[today]
 
 # 搜索笔记
-def search(content):
+
+
+def search(secret, version, content):
+    title = time.strftime("%m月%d日 星期"+getWeekDay(), time.localtime())
+    headers = {'Authorization': secret, "Notion-Version": version}
+    body = {"query": title}
+    r = requests.post("https://api.notion.com/v1/search",
+                      headers=headers, json=body)
+    result = r.json().get("results")[0]
+    id = result.get("id")
+    updateDiary(secret, version, id, content)
+
+
+def updateDiary(pageId, content):
     content = json.loads(content)
-    weight = content["weight"]
-    insert_to_notion(weight)
-
-
-def insert_to_notion(weight):
-    now = datetime.now()
-    title = dateutils.format_date_with_week(date=now)
-    cover = unsplash.random()
-    properties = Properties().title(title).number("体重",weight)
-    properties = notion.get_relation(properties,now,False)
-    parent = DatebaseParent("34c0db4313b24c3fac8e25436f5b3530")
-    page  = Page().parent(parent).children(Children()).cover(cover).icon("").properties(properties)
-    notion_api.create_page(page=page)
+    weight = content['weight']
+    body = {
+        "properties": {
+             "体重": {"number": float(weight)},
+        }
+    }
+    requests.patch('https://api.notion.com/v1/pages/'+pageId,
+                       headers=headers, json=body)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("content")
     options = parser.parse_args()
-    search(options.content)
+    search(options.secret, options.version, options.content)
