@@ -24,7 +24,7 @@ def insert_to_notion(weight):
     cover = unsplash.random()
     properties = Properties().title(title).number("体重",weight)
     properties = notion.get_relation(properties,now,False)
-    parent = DatebaseParent("8117b5547c7b44f5a3cb0fdfb2b464e4")
+    parent = DatebaseParent("34c0db4313b24c3fac8e25436f5b3530")
     page  = Page().parent(parent).children(Children()).cover(cover).icon("🏋️").properties(properties)
     notion_api.create_page(page=page)
 
