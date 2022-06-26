@@ -7,6 +7,8 @@ import time
 import dateutils
 
 from requests.api import get, post
+from filter import Filter
+import notion_api
 
 template = '''---
 title: "{0}"
@@ -31,56 +33,57 @@ def getContent(id):
 #搜索需要同步的笔记
 def search(date):
     title = dateutils.format_date_with_week(date=date)
-    body={"query":title}
-    r = requests.post("https://api.notion.com/v1/search",headers=headers,json=body)
-    result = r.json().get("results")[0]
-    print(result)
-    id = result.get("id")
-    properties = result.get("properties")
-    if(properties.get("位置") is not None and len(properties.get("位置").get("rich_text"))>0):
-        location = properties.get("位置").get("rich_text")[0].get("text").get("content")
-    else:
-        location = "未知"
-    if(properties.get("天气") is not None and len(properties.get("天气").get("rich_text"))>0):
-        weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
-    else:
-        weather = "未知"
-    if(properties.get("最高温度") is not None and len(properties.get("最高温度").get("rich_text"))>0):
-        highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
-    else:
-        highest = "未知"
-    if(properties.get("最低温度") is not None and len(properties.get("最低温度").get("rich_text"))>0):
-        lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
-    else:
-        lowest = "未知"
-    if( properties.get("空气质量") is not None):
-        aq = properties.get("空气质量").get("number")
-    else:
-        aq = 0
-    NewYear = properties.get("距离元旦").get("formula").get("number")
-    SpringFestival = properties.get("距离春节").get("formula").get("number")
-    if(properties.get("睡眠时长") is not None):
-        sleep = properties.get("睡眠时长").get("number")
-    else:
-        sleep = 0
-    if(properties.get("体重") is not None):
-        weight = properties.get("体重").get("number")
-    else:
-        weight = 0
-    #获取Tags
-    tags = properties.get("标签").get("multi_select")
-    tags = ",".join("\""+tag.get("name")+"\""for tag in tags)
-    external = result.get("cover").get("external")
-    file = result.get("cover").get("file")
-    if(external is not None):
-        cover = external.get("url")
-    elif(file is not None):
-        cover = file.get("url")
-    title =result.get("properties").get("标题").get("title")[0].get("text").get("content")
-    createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
-    year = datetime.now().year
-    post = template.format(title,createTime,location+" "+weather,tags,cover,year,year,title,weather,highest,lowest,aq,NewYear,SpringFestival,sleep,weight)
-    getPage(id,post,date)
+    filter = Filter("标题","text","equals",title)
+    response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448",filter)
+    if(len(response["results"])>0)):
+        result = response["results"][0]
+        print(result)
+        id = result.get("id")
+        properties = result.get("properties")
+        if(properties.get("位置") is not None and len(properties.get("位置").get("rich_text"))>0):
+            location = properties.get("位置").get("rich_text")[0].get("text").get("content")
+        else:
+            location = "未知"
+        if(properties.get("天气") is not None and len(properties.get("天气").get("rich_text"))>0):
+            weather = properties.get("天气").get("rich_text")[0].get("text").get("content")
+        else:
+            weather = "未知"
+        if(properties.get("最高温度") is not None and len(properties.get("最高温度").get("rich_text"))>0):
+            highest = properties.get("最高温度").get("rich_text")[0].get("text").get("content")
+        else:
+            highest = "未知"
+        if(properties.get("最低温度") is not None and len(properties.get("最低温度").get("rich_text"))>0):
+            lowest = properties.get("最低温度").get("rich_text")[0].get("text").get("content")
+        else:
+            lowest = "未知"
+        if( properties.get("空气质量") is not None):
+            aq = properties.get("空气质量").get("number")
+        else:
+            aq = 0
+        NewYear = properties.get("距离元旦").get("formula").get("number")
+        SpringFestival = properties.get("距离春节").get("formula").get("number")
+        if(properties.get("睡眠时长") is not None):
+            sleep = properties.get("睡眠时长").get("number")
+        else:
+            sleep = 0
+        if(properties.get("体重") is not None):
+            weight = properties.get("体重").get("number")
+        else:
+            weight = 0
+        #获取Tags
+        tags = properties.get("标签").get("multi_select")
+        tags = ",".join("\""+tag.get("name")+"\""for tag in tags)
+        external = result.get("cover").get("external")
+        file = result.get("cover").get("file")
+        if(external is not None):
+            cover = external.get("url")
+        elif(file is not None):
+            cover = file.get("url")
+        title =result.get("properties").get("标题").get("title")[0].get("text").get("content")
+        createTime = time.strftime('%Y-%m-%dT%H:%M:%S+08:00', time.localtime())
+        year = datetime.now().year
+        post = template.format(title,createTime,location+" "+weather,tags,cover,year,year,title,weather,highest,lowest,aq,NewYear,SpringFestival,sleep,weight)
+        getPage(id,post,date)
 
 #创建markdown文件
 def newPost(markdown,date):
