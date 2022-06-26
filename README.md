@@ -7,7 +7,7 @@ python3 scripts/notion/create_diary.py '294060cd-e13e-4c29-b0ac-6ee490c8a448' 'b
 
 python3 scripts/test.py  '294060cd-e13e-4c29-b0ac-6ee490c8a448'
 
-python3 scripts/github.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211101'
+python3 scripts/notion/hugo.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211101'
 python3 scripts/blog.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13'
 
 python3 scripts/write_diary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
