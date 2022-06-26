@@ -23,7 +23,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: github sync
+      - name: hugo sync
         run: |
           python scripts/notion/hugo.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}' '${{ github.event.inputs.content }}'
       - name: commit

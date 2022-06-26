@@ -14,7 +14,7 @@ from properties import Properties
 #搜索笔记
 def search(content):
     title = dateutils.format_date_with_week()
-    filter = Filter("标题","text","equals",title)
+    filter = Filter("标题","rich_text","equals",title)
     response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448",filter)
     if(len([response["results"]])>0):
         id = response["results"][0].get("id")
