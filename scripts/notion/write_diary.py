@@ -7,8 +7,11 @@ import time
 import notion
 
 from datetime import datetime
+import dateutils
+from filter import Filter
 
 from requests.api import get
+import notion_api
 
 
 def getWeekDay():
@@ -50,7 +53,6 @@ def get_time():
         json=body,
     )
     children = []
-   
     results = r.json().get("results")
     if (results is not None and len(results) > 0):
         children.append(notion.get_divider())
@@ -113,12 +115,12 @@ def append(id, children):
 # 搜索需要同步的笔记
 def search(children):
     print(children)
-    title = time.strftime("%m月%d日 星期" + getWeekDay(), time.localtime())
-    body = {"query": title}
-    r = requests.post("https://api.notion.com/v1/search", headers=headers, json=body)
-    result = r.json().get("results")[0]
-    id = result.get("id")
-    append(id, children)
+    title = dateutils.format_date_with_week()
+    filter = Filter("标题","rich_text","equals",title)
+    response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448",filter)
+    if(len([response["results"]])>0):
+        id = response["results"][0].get("id")
+        append(id, children)
 
 
 headers = {}
