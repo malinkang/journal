@@ -35,7 +35,7 @@ def search(date):
     title = dateutils.format_date_with_week(date=date)
     filter = Filter("标题","text","equals",title)
     response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448",filter)
-    if(len(response["results"])>0)):
+    if(len(response["results"])>0):
         result = response["results"][0]
         print(result)
         id = result.get("id")
