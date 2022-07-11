@@ -174,8 +174,19 @@ def properties_retrieve(page_id, property_id):
     return response
 
 
-def get_rich_text(response):
-    response.get("results")[0].get("rich_text").get("plain_text")
+def get_title(response,name,index=0):
+    result = response.get("results")[index]
+    response = client.pages.properties.retrieve(
+        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+    )
+    return response.get("results")[0].get("title").get("text").get("content")
+
+def get_rich_text(response,name,index=0):
+    result = response.get("results")[index]
+    response = client.pages.properties.retrieve(
+        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+    )
+    return response.get("results")[0].get("rich_text").get("text").get("content")
 
 
 #

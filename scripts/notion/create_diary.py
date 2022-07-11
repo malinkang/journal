@@ -15,7 +15,7 @@ import notion_api
 # 创建Page
 def create_page(pageId):
     emo = "☀️"
-    tomorrow = datetime.now() + timedelta(days=1)
+    tomorrow = datetime.now() + timedelta(days=0)
     week = tomorrow.strftime("第%V周")
     month = tomorrow.strftime("%-m月")
     title = dateutils.format_date_with_week(date=tomorrow)

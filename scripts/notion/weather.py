@@ -5,7 +5,6 @@ import json
 import requests
 import argparse
 import dateutils
-from filter import Filter
 import notion_api
 from page import Page
 from properties import Properties
