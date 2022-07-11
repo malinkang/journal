@@ -9,7 +9,7 @@ import requests
 
 
 def parse_csv():
-    with open('./data/微信支付账单(20220501-20220531).csv', newline='') as csvfile:
+    with open('./data/微信支付账单(20220601-20220630).csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             create_page(row["\ufeff交易时间"],row["交易类型"],row["交易对方"],row["商品"],row["收/支"],float(row["金额(元)"].replace("¥","")),row["备注"])

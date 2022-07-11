@@ -5,13 +5,12 @@ import json
 import unsplash
 import notion
 import dateutils
-from datetime import datetime, timedelta
-from properties import Properties
-from page import Page
-from datebase_parent import DatebaseParent
+from datetime import datetime
+from notion_api import Properties
+from notion_api import Page
+from notion_api import DatabaseParent
 from children import Children
 import notion_api
-import requests
 
 
 def insert(content):
@@ -22,9 +21,9 @@ def insert_to_notion(weight):
     now = datetime.now()
     title = dateutils.format_date_with_week(date=now)
     cover = unsplash.random()
-    properties = Properties().title(title).number("体重",weight)
-    properties = notion.get_relation(properties,now,False)
-    parent = DatebaseParent("34c0db4313b24c3fac8e25436f5b3530")
+    properties = Properties().title(title).date().number("体重",weight)
+    properties = notion_api.get_relation(properties,now,False)
+    parent = DatabaseParent("34c0db4313b24c3fac8e25436f5b3530")
     page  = Page().parent(parent).children(Children()).cover(cover).icon("🏋️").properties(properties)
     notion_api.create_page(page=page)
 

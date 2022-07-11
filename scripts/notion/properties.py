@@ -19,6 +19,9 @@ class Properties(dict):
             "rich_text": rich_text,
         }
         return self
+    def status(self,property,status):
+        self[property] = {"status": {"name": status}}
+        return self
     def select(self, property, name):
         self[property] = {"select": {"name": name}}
         return self

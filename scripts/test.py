@@ -42,5 +42,6 @@ def create_page(pageId):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("id")
-    options = parser.parse_args()
-    create_page(options.id)
+    # options = parser.parse_args()
+    # create_page(options.id)
+    print(datetime.now().isoformat())

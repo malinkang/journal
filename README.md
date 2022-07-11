@@ -11,6 +11,7 @@ python3 scripts/github.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9vo
 python3 scripts/blog.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13'
 
 python3 scripts/write_diary.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
+python3 scripts/notion/weight.py '{"weight":"20"}'
 
 python3 scripts/telegram.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13' '20211108'
 
@@ -23,12 +24,13 @@ python3 scripts/toggl.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voA
 
 python3 scripts/notion/weather.py '{"lowest":"21°C","aqi":"40","highest":"38°C","weather":"大部晴朗"}'
   
+python3 scripts/zhangdan.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-05-13'
 ```
 
 ### 跑步
 
 ```shell
-python3 scripts/keep.py  18611145755  KFitness@4  'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
+python3 scripts/notion/keep.py  18611145755  KFitness@4  'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
 ```
 
 ## TODO

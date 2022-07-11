@@ -6,10 +6,10 @@ import unsplash
 import notion
 import dateutils
 from datetime import datetime, timedelta
-from properties import Properties
-from page import Page
-from datebase_parent import DatebaseParent
-from children import Children
+from notion_api import Properties
+from notion_api import Page
+from notion_api import DatabaseParent
+from notion_api import Children
 import notion_api
 import requests
 
@@ -44,9 +44,9 @@ def insert_to_notion(start,end):
     now = datetime.now()
     title = dateutils.format_date_with_week(date=now)
     cover = unsplash.random()
-    properties = Properties().title(title).date("睡眠",start.isoformat(),end.isoformat())
-    properties = notion.get_relation(properties,now,False)
-    parent = DatebaseParent("8117b5547c7b44f5a3cb0fdfb2b464e4")
+    properties = Properties().title(title).date("睡眠",start,end)
+    properties = notion_api.get_relation(properties,now,False)
+    parent = DatabaseParent("8117b5547c7b44f5a3cb0fdfb2b464e4")
     page  = Page().parent(parent).children(Children()).cover(cover).icon("😴").properties(properties)
     notion_api.create_page(page=page)
 

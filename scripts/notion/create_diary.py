@@ -5,10 +5,10 @@ import unsplash
 import notion
 import dateutils
 from datetime import datetime, timedelta
-from properties import Properties
-from page import Page
-from datebase_parent import DatebaseParent
-from children import Children
+from notion_api import Properties
+from notion_api import Page
+from notion_api import DatabaseParent
+from notion_api import Children
 import notion_api
 
 
@@ -21,9 +21,9 @@ def create_page(pageId):
     title = dateutils.format_date_with_week(date=tomorrow)
     cover = unsplash.random()
     tags = [week,month]
-    properties = Properties().title(title).date("日期",datetime.strftime(tomorrow, "%Y-%m-%d"),None).multi_select("标签",tags)
-    properties = notion.get_relation(properties,tomorrow,False)
-    parent = DatebaseParent(pageId)
+    properties = Properties().title(title).date().multi_select("Tag",tags)
+    properties = notion_api.get_relation(properties,tomorrow,False)
+    parent = DatabaseParent(pageId)
     page  = Page().parent(parent).children(Children()).cover(cover).icon(emo).properties(properties)
     notion_api.create_page(page=page)
 

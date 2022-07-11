@@ -140,7 +140,7 @@ def get_cover():
 
 headers = {
     "Authorization": "Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb",
-    "Notion-Version": "2021-08-16",
+    "Notion-Version": "2022-02-22",
 }
 
 
@@ -170,13 +170,14 @@ def get_day_relation(year_id, date):
 
 
 def search(id, title):
-    body = {"filter": {"and": [{"property": "Name", "text": {"equals": title}}]}}
+    print(title)
+    body = {"filter": {"property": "Name", "rich_text": {"equals": title}}}
     r = requests.post(
         "https://api.notion.com/v1/databases/" + id + "/query",
         headers=headers,
         json=body,
     )
-    # print(r.text)
+    print(r.text)
     results = r.json().get("results")
     if len(results) == 0:
         return None
