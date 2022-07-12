@@ -21,4 +21,4 @@ jobs:
           pip install -r requirements.txt
       - name: keep sync
         run: |
-          python scripts/notion/keep.py '${{ secrets.KEEP_MOBILE }}' '${{ secrets.KEEP_PASSWORD }}' '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}' 
+          python scripts/notion/keep.py '${{ secrets.KEEP_MOBILE }}' '${{ secrets.KEEP_PASSWORD }}'

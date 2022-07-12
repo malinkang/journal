@@ -23,4 +23,4 @@ jobs:
           pip install -r requirements.txt
       - name: read sync
         run: |
-          python scripts/read.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}' '${{ github.event.inputs.content }}'
+          python scripts/notion/read.py '${{ github.event.inputs.content }}'

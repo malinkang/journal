@@ -1,10 +1,7 @@
-name: write diary
-
+name: nobelium sync
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "40 15 * * *"
-
+    - cron: "50 15 * * *" # 23:50 同步
 jobs:
   sync:
     name: Sync
@@ -21,6 +18,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: write diary
+      - name: hugo sync
         run: |
-          python scripts/notion/write_diary.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}'
+          python scripts/notion/nobelium.py
+      - name: commit
+        uses: EndBug/add-and-commit@v7
+        with:
+          branch: master
+          author_name: malinkang
+          author_email: linkang.ma@gmail.com
+          committer_name: malinkang
+          committer_email: linkang.ma@gmail.com

@@ -77,8 +77,10 @@ class Properties(dict):
         self[property] = {"select": {"name": name}}
         return self
 
-    def date(self, property = "Date", start=datetime.now(), end=datetime.now()):
-        self[property] = {"date": {"start": start.isoformat(), "end": end.isoformat(),"time_zone":"Asia/Shanghai"}}
+    def date(self, property = "Date", start=datetime.now(), end=None):
+        if end is not None:
+            end = end.isoformat()
+        self[property] = {"date": {"start": start.isoformat(), "end":end,"time_zone":"Asia/Shanghai"}}
         return self
 
     def number(self, property, number):
@@ -100,17 +102,31 @@ class Children(list):
         self.append(block)
         return self
 
+    def add_embed_block(self, url):
+        self.append(EmbedBlock(url))
+        return self
 
-# https://developers.notion.com/reference/block
+
+"""https://developers.notion.com/reference/block"""
 class Block(dict):
     def __init__(self, type, color):
         self["object"] = "block"
         self["type"] = type
         self[type] = {"rich_text": [], "color": color}
+        if(type == "to_do"):
+            self[type]["checked"] = True
 
     def add_rich_text(self, rich_text):
         self[self["type"]]["rich_text"].append(rich_text)
         return self
+
+"""https://developers.notion.com/reference/block#embed-blocks"""
+class EmbedBlock(dict):
+     def __init__(self,url):
+        self["object"] = "block"
+        self["type"] = "embed"
+        self["embed"] = {"url": url}
+
 
 
 class RichText(dict):
@@ -160,9 +176,9 @@ def update_page(page_id, page):
     )
 
 
-def query_database(database_id, filter, sorts=None):
+def query_database(database_id, filter=None, sorts=None,page_size =None):
     response = client.databases.query(
-        database_id=database_id, filter=filter, sorts=sorts
+        database_id=database_id, filter=filter, sorts=sorts,page_size=page_size
     )
     return response
 
@@ -186,10 +202,43 @@ def get_rich_text(response,name,index=0):
     response = client.pages.properties.retrieve(
         page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
     )
-    return response.get("results")[0].get("rich_text").get("text").get("content")
+    if(len(response.get("results"))>0):
+        return response.get("results")[0].get("rich_text").get("text").get("content")
+    return None
 
+def get_date(response,name,index=0):
+    result = response.get("results")[index]
+    response = client.pages.properties.retrieve(
+        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+    )
+    return response.get("date")
 
-#
+def get_multi_select(response,name,index=0):
+    result = response.get("results")[index]
+    response = client.pages.properties.retrieve(
+        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+    )
+    return response.get("multi_select")
+
+def get_select(response,name,index=0):
+    result = response.get("results")[index]
+    response = client.pages.properties.retrieve(
+        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+    )
+    return response.get("select").get("name")
+
+def get_number(response,name,index=0):
+    result = response.get("results")[index]
+    response = client.pages.properties.retrieve(
+        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+    )
+    return response.get("number")
+def get_formula_string(response,name,index=0):
+    result = response.get("results")[index]
+    response = client.pages.properties.retrieve(
+        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+    )
+    return response.get("formula").get("string")
 def get_page_id(response, index=0):
     return response.get("results")[index].get("id")
 
