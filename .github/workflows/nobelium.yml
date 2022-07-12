@@ -1,5 +1,10 @@
 name: nobelium sync
 on:
+  workflow_dispatch:
+    inputs:
+      content:
+        description: 'content'
+        required: false
   schedule:
     - cron: "50 15 * * *" # 23:50 同步
 jobs:
