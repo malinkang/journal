@@ -15,13 +15,13 @@ import notion_api
 # 创建Page
 def create_page(pageId):
     emo = "☀️"
-    tomorrow = datetime.now() + timedelta(days=0)
+    tomorrow = datetime.now() + timedelta(days=1)
     week = tomorrow.strftime("第%V周")
     month = tomorrow.strftime("%-m月")
     title = dateutils.format_date_with_week(date=tomorrow)
     cover = unsplash.random()
     tags = [week,month]
-    properties = Properties().title(title).date().multi_select("Tag",tags)
+    properties = Properties().title(title).date(start=tomorrow).multi_select("Tag",tags)
     properties = notion_api.get_relation(properties,tomorrow,False)
     parent = DatabaseParent(pageId)
     page  = Page().parent(parent).children(Children()).cover(cover).icon(emo).properties(properties)

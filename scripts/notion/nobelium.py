@@ -17,7 +17,6 @@ def query_day():
         day = notion_api.get_formula_string(response, "倒数日", index)
         progress = notion_api.get_formula_string(response, "Progress", index)
         list.append(name + day + " " + progress)
-        # notion_api.get_rich_text(response, "倒数日")
     return list
 
 
@@ -26,7 +25,7 @@ def query_twitter():
     response = notion_api.query_database("5351451787d9403fb48d9a9c20f31f43", filter)
     urls = []
     for index in range(0, len(response.get("results"))):
-        url = notion_api.get_rich_text(response, "image", index)
+        url = notion_api.get_by_type(response, "url","url", index)
         urls.append(url)
     return urls
 
@@ -46,7 +45,7 @@ def query_book():
         name = notion_api.get_title(response, "Name")
         start = notion_api.get_number(response, "Start")
         end = notion_api.get_number(response, "End")
-        return "读《" + name + "》" + str(start) + "-" + str(end) + "》" + name
+        return "读《" + name + "》Page" + str(start) + " - Page" + str(end) + ""
     return None
 
 
@@ -165,10 +164,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     options = parser.parse_args()
     create()
-    # query_toggl()
-    # print(query_todo())
-    # query_day()
-    # # query_twitter()
-    # query_weight()
-    # # print(query_weight())
-    # query_book()
+    # query_twitter()

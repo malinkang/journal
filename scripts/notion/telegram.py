@@ -1,5 +1,8 @@
 import argparse
 from datetime import date, datetime
+from unittest import result
+
+import requests
 import notion_api
 import dateutils
 from notion_api import Page
@@ -38,9 +41,9 @@ def query_twitter():
     response = notion_api.query_database("5351451787d9403fb48d9a9c20f31f43", filter)
     urls = []
     for index in range(0, len(response.get("results"))):
-        id = notion_api.get_rich_text(response, "id", index)
-        name = notion_api.get_title(response, "Name", index)
-        urls.append( "{"+"""{{< tweet user="{name}" id="{id}" >}}""".format(name=name,id=id)+"}")
+        text = notion_api.get_rich_text(response, "text", index)
+        url = notion_api.get_by_type(response, "url","url", index)
+        urls.append("[" + text + "](" + url + ")")
     return urls
 
 
@@ -59,7 +62,7 @@ def query_book():
         name = notion_api.get_title(response, "Name")
         start = notion_api.get_number(response, "Start")
         end = notion_api.get_number(response, "End")
-        return "读《" + name + "》Page" + str(start) + " - Page" + str(end) + ""
+        return "读《" + name + "》Page" + str(start) + " \\- Page" + str(end) + ""
     return None
 
 
@@ -83,7 +86,7 @@ def query_toggl():
         end = datetime.fromisoformat(date.get("end")).strftime("%H:%M")
         name = notion_api.get_select(response, "二级分类", index)
         note = notion_api.get_rich_text(response, "备注", index)
-        result = start + "-" + end + "：" + name
+        result = start + "\\-" + end + "：" + name
         if note is not None and note is not "":
             result += "，" + note
         toggl_list.append(result)
@@ -98,18 +101,9 @@ def create():
     icon = response.get("results")[0].get("icon").get("emoji")
     name = notion_api.get_title(response, "Name")
     name = icon +" "+ name
-    tag = notion_api.get_multi_select(response, "Tag")
-    items = []
-    for item in tag:
-        items.append(item.get("name"))
-    location = notion_api.get_rich_text(response, "位置")
-    result = template.format(
-        title=name,
-        date=notion_api.get_date(response, "Date").get("start"),
-        location=location,
-        tag=",".join(items),
-        cover=cover,
-    )
+    tags = notion_api.get_multi_select(response, "Tag")
+    tags = " ".join("\\#"+tag.get("name")for tag in tags)
+    result = name
     result += "\n"
     content = ""
     weather = notion_api.get_rich_text(response, "天气")
@@ -130,50 +124,65 @@ def create():
         content += "。"
     result += content
     result += "\n"
-
     days = query_day()
     if len(days) > 0:
-        result += "## 📅 倒数日"
+        result += "\n"
+        result += "*📅 倒数日*"
         result += "\n"
         for day in days:
-            result += "- " + day
+            result += "\- " + day
             result += "\n"
-    result += "## ✅ ToDo"
+    result += "\n"
+    result += "*✅ ToDo*"
     result += "\n"
     book = query_book()
     if book is not None:
-        result += "- [x] " + book
+        result += "\- \[x\] " + book
         result += "\n"
     todos = query_todo()
     for todo in todos:
-        result += "- [x] " + todo
+        result += "\- \[x\] " + todo
         result += "\n"
-    result += "## ❤️ 健康"
+    result += "\n"
+    result += "*❤️ 健康*"
     result += "\n"
     weight = query_weight()
     if weight is not None:
-        result += "- 体重：" + str(weight) + "斤"
+        result += "\- 体重：" + str(weight).replace(".","\.") + "斤"
         result += "\n"
-    result += "## ⏰ 时间统计"
+    result += "\n"
+    result += "*⏰ 时间统计*"
     result += "\n"
     toggls = query_toggl()
     for toggl in toggls:
-        result += "- " + toggl
+        result += "\- " + toggl
         result += "\n"
 
     urls = query_twitter()
     if len(urls) > 0:
-        result +="## 💬 碎碎念"
+        result += "\n"
+        result +="*💬 碎碎念*"
         result += "\n"
         for url in urls:
-            result += url
+            result += "\- "+url
             result += "\n"
-    file = datetime.strftime(datetime.now(), "%Y-%m-%d") + ".md"
-    with open("./content/posts/" + file, "w") as f:
-        f.seek(0)
-        f.write(result)
-        f.truncate()
-
+    result += "\n"
+    result += tags
+    send(result,cover)
+def send(message,cover):
+    url = "https://api.telegram.org/bot5509900379:AAHSimr7FiKrclApJImy91A3Dff4R4g2OPk/sendPhoto"
+    print(message)
+    body = {
+        "chat_id": "@xiaoma2023",
+        "photo": cover,
+        "caption":message,
+        "parse_mode": "MarkdownV2"
+    }
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    r = requests.request("POST", url, headers=headers, json=body)
+    print(r.text)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

@@ -227,6 +227,15 @@ def get_select(response,name,index=0):
     )
     return response.get("select").get("name")
 
+#根据类型获取    
+def get_by_type(response,name,type,index=0):
+    result = response.get("results")[index]
+    response = client.pages.properties.retrieve(
+        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+    )
+    return response.get(type)
+
+
 def get_number(response,name,index=0):
     result = response.get("results")[index]
     response = client.pages.properties.retrieve(
