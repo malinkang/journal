@@ -1,3 +1,4 @@
+from curses import noecho
 from datetime import datetime, timedelta
 import json
 import logging
@@ -171,8 +172,11 @@ def create_page(page):
 
 
 def update_page(page_id, page):
+    icon = None
+    if ("icon" in page):
+        icon = page["icon"]
     response = client.pages.update(
-        page_id, properties=page["properties"], icon=page["icon"]
+        page_id, properties=page["properties"], icon=icon
     )
 
 
