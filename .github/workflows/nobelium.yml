@@ -23,14 +23,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: hugo sync
+      - name: nobelium sync
         run: |
           python scripts/notion/nobelium.py
-      - name: commit
-        uses: EndBug/add-and-commit@v7
-        with:
-          branch: master
-          author_name: malinkang
-          author_email: linkang.ma@gmail.com
-          committer_name: malinkang
-          committer_email: linkang.ma@gmail.com
