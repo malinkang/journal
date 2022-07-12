@@ -1,13 +1,5 @@
 import argparse
-from ctypes.wintypes import tagSIZE
-from datetime import datetime, timedelta
-from email import contentmanager
-from pydoc import pager
-from termios import TIOCPKT_DOSTOP
-from tracemalloc import start
-
-from bs4 import ResultSet
-
+from datetime import datetime
 import notion_api
 import dateutils
 from notion_api import Page
@@ -15,16 +7,20 @@ from notion_api import Children, DatabaseParent
 from notion_api import Properties
 
 today = datetime.now().strftime("%Y-%m-%d")
+
+
 def query_day():
     response = notion_api.query_database("d34e3250832a4b5fb44054a8b364df2a")
     list = []
     for index in range(0, len(response.get("results"))):
-        name = notion_api.get_title(response, "Name",index)
-        day = notion_api.get_formula_string(response, "倒数日",index)
-        progress = notion_api.get_formula_string(response, "Progress",index)
-        list.append(name+day+" "+progress)
+        name = notion_api.get_title(response, "Name", index)
+        day = notion_api.get_formula_string(response, "倒数日", index)
+        progress = notion_api.get_formula_string(response, "Progress", index)
+        list.append(name + day + " " + progress)
         # notion_api.get_rich_text(response, "倒数日")
     return list
+
+
 def query_twitter():
     filter = {"property": "date", "date": {"equals": today}}
     response = notion_api.query_database("5351451787d9403fb48d9a9c20f31f43", filter)
@@ -38,27 +34,30 @@ def query_twitter():
 def query_weight():
     filter = {"property": "Date", "date": {"equals": today}}
     response = notion_api.query_database("34c0db4313b24c3fac8e25436f5b3530", filter)
-    if(len(response.get("results"))>0):
+    if len(response.get("results")) > 0:
         return notion_api.get_number(response, "体重")
     return 0
+
 
 def query_book():
     filter = {"property": "Date", "date": {"equals": today}}
     response = notion_api.query_database("cca71ece15ac48a68c34e5f86a2e6b38", filter)
-    if(len(response.get("results"))>0):
+    if len(response.get("results")) > 0:
         name = notion_api.get_title(response, "Name")
         start = notion_api.get_number(response, "Start")
         end = notion_api.get_number(response, "End")
-        return "读《"+name+"》"+str(start)+"-"+str(end)+"》"+name
+        return "读《" + name + "》" + str(start) + "-" + str(end) + "》" + name
     return None
-    
+
+
 def query_todo():
-    filter= {"property": "Date", "date": {"equals": today}}
+    filter = {"property": "Date", "date": {"equals": today}}
     response = notion_api.query_database("97955f34653b4658bc0aaa50423be45f", filter)
     todo_list = []
-    if(len(response.get("results"))>0):
+    if len(response.get("results")) > 0:
         todo_list.append(notion_api.get_title(response, "Name"))
     return todo_list
+
 
 def query_toggl():
     filter = {"property": "Date", "date": {"equals": today}}
@@ -66,16 +65,17 @@ def query_toggl():
     toggl_list = []
     for index in range(0, len(response.get("results"))):
         date = notion_api.get_date(response, "Date", index)
-        #格式化一下只保留时间
+        # 格式化一下只保留时间
         start = datetime.fromisoformat(date.get("start")).strftime("%H:%M")
         end = datetime.fromisoformat(date.get("end")).strftime("%H:%M")
         name = notion_api.get_select(response, "二级分类", index)
         note = notion_api.get_rich_text(response, "备注", index)
-        result = start+"-"+end+"："+name
-        if(note is not None and note is not ""):
-            result += "，"+note
+        result = start + "-" + end + "：" + name
+        if note is not None and note is not "":
+            result += "，" + note
         toggl_list.append(result)
     return toggl_list
+
 
 def create():
     title = dateutils.format_date_with_week()
@@ -108,15 +108,15 @@ def create():
     children = Children().add_block("paragraph", content)
 
     days = query_day()
-    if(len(days)>0):
+    if len(days) > 0:
         children.add_block("heading_2", "📅 倒数日")
         for day in days:
             children.add_block("bulleted_list_item", day)
-    
+
     children.add_block("heading_2", "✅ ToDo")
     book = query_book()
     if book is not None:
-        children.add_block("to_do", book) 
+        children.add_block("to_do", book)
     todos = query_todo()
     for todo in todos:
         children.add_block("to_do", todo)

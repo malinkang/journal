@@ -6,9 +6,8 @@ import requests
 import argparse
 import dateutils
 import notion_api
-from page import Page
-from properties import Properties
-
+from notion_api import Page
+from notion_api import Properties
 
 #搜索笔记
 def search(content):

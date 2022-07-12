@@ -77,7 +77,7 @@ class Properties(dict):
         self[property] = {"select": {"name": name}}
         return self
 
-    def date(self, property = "Date", start=datetime.now(), end=None):
+    def date(self, property = "Date", start=datetime.now()+timedelta(hours=8), end=None):
         if end is not None:
             end = end.isoformat()
         self[property] = {"date": {"start": start.isoformat(), "end":end,"time_zone":"Asia/Shanghai"}}
