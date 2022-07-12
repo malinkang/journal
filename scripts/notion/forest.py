@@ -42,8 +42,8 @@ def get_plants(user_id):
         note = plant.get("note")
         start_time = plant.get("start_time")
         end_time = plant.get("end_time")
-        start = date.format_utc(start_time)
-        end = date.format_utc(end_time)
+        start = date.format_utc(start_time)+timedelta(hours=8)
+        end = date.format_utc(end_time)+timedelta(hours=8)
         if note == "":
             pass
         else:
@@ -99,7 +99,7 @@ def update_todo():
     filter= {
         "and": [
             {"property": "Date", "date": {"is_empty": True}},
-            {"property": "🍅", "rollup": {"number": {"greater_than": 0}}},
+            {"property": "✅", "rollup": {"number": {"greater_than": 0}}},
         ]
     }
     r = notion_api.query_database(TODO, filter)
