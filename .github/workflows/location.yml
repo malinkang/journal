@@ -26,4 +26,4 @@ jobs:
           pip install -r requirements.txt
       - name: update location
         run: |
-          python scripts/location.py '${{ secrets.NOTION_SECRET }}' '${{ secrets.NOTION_VERSION }}' '${{ github.event.inputs.content }}'
+          python scripts/location.py '${{ github.event.inputs.content }}'

@@ -1,11 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+from datetime import datetime
 import json
+import requests
 import argparse
 import dateutils
 import notion_api
-from notion_api import Page
+from datetime import datetime
 from notion_api import Properties
+from notion_api import Page
 
 #搜索笔记
 def search(content):
@@ -17,33 +20,16 @@ def search(content):
         update(id,content)
     
 
-def emoji(weather):
-    if("晴" in weather):
-        return "☀️"
-    elif("雨" in weather):
-        return "🌧"
-    elif("雪" in weather):
-        return "❄️"
-    elif("云" in weather):
-        return "☁️"
-    elif("雾" in weather):
-        return "🌫"
-    else:
-        return "☀️"
-
 
 def update(id, content):
     content = json.loads(content)
-    weather = content['weather']
-    highest = content['highest']
-    lowest = content['lowest']
-    aqi = content['aqi']
-    emo = emoji(weather)
-    properties=Properties().rich_text("天气",weather).rich_text("最高温度",highest).rich_text("最低温度",lowest).number("空气质量",int(aqi))
-    page = Page().icon(emo).properties(properties)
+    location = content['location']
+    properties=Properties().rich_text("位置",location)
+    page = Page().properties(properties)
     notion_api.update_page(id,page)
-    
-                    
+
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("content")
