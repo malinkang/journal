@@ -37,7 +37,7 @@ def get_run_id():
 
 
 def is_today(record):
-    today = (datetime.now()-timedelta(days=0)).strftime("%-m月%d日")
+    today = (datetime.now()-timedelta(days=1)).strftime("%-m月%d日")
     return today == record.get("date")
                
 def get_run_data(id,title):
