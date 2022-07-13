@@ -28,6 +28,7 @@ headers = {"Content-Type": "application/json"}
 USER_ID = "6d411501-82d6-46e5-b809-97c0fdce722c"
 s = requests.Session()
 
+
 def login():
     data = {"session": {"email": email, "password": password}}
     r = s.post(FOREST_LOGIN_URL, headers=headers, json=data)
@@ -37,20 +38,19 @@ def login():
 
 # 获取植物
 def get_plants(user_id):
-    now =datetime.now().strftime("%Y-%m-%d")
+    now = datetime.now().strftime("%Y-%m-%d")
     r = s.get(FOREST_CLAENDAR_URL.format(date=now, user_id=user_id), headers=headers)
     for plant in r.json().get("plants"):
         note = plant.get("note")
         start_time = plant.get("start_time")
         end_time = plant.get("end_time")
-        start = date.format_utc(start_time)+timedelta(hours=8)
-        end = date.format_utc(end_time)+timedelta(hours=8)
+        start = date.format_utc(start_time) + timedelta(hours=8)
+        end = date.format_utc(end_time) + timedelta(hours=8)
         if note == "":
             pass
         else:
             insert_tomato(note, start, end)
     update_todo()
-
 
 
 def search_todo(title):
@@ -61,7 +61,13 @@ def search_todo(title):
 
 
 def insert_todo(title):
-    properties = Properties().title(title).select("Status", "Completed").select("Priority","High 🔥").people("Assign",["6d411501-82d6-46e5-b809-97c0fdce722c"])
+    properties = (
+        Properties()
+        .title(title)
+        .select("Status", "Completed")
+        .select("Priority", "High 🔥")
+        .people("Assign", ["6d411501-82d6-46e5-b809-97c0fdce722c"])
+    )
     parent = DatabaseParent(TODO)
     page = (
         Page()
@@ -93,34 +99,37 @@ def insert_tomato(note, start, end):
     )
     response = notion_api.create_page(page=page)
     return response.get("id")
+
+
 def get_end_time(title):
     filter = {"property": "Name", "rich_text": {"equals": title}}
     sorts = [{"property": "Date", "direction": "ascending"}]
     response = notion_api.query_database(TOMATO, filter, sorts)
     results = response.get("results")
     size = len(results)
-    start =  notion_api.get_date(response).get("start")
-    end = notion_api.get_date(response,index=size-1).get("end")
-    return (start,end)
+    start = notion_api.get_date(response).get("start")
+    end = notion_api.get_date(response, index=size - 1).get("end")
+    return (start, end)
+
 
 # 更新todo的时间
 def update_todo():
-    filter= {
+    filter = {
         "and": [
             {"property": "Date", "date": {"is_empty": True}},
             {"property": "🍅", "rollup": {"number": {"greater_than": 0}}},
         ]
     }
     response = notion_api.query_database(TODO, filter)
-    for index in range(0,len(response.get("results"))):
+    for index in range(0, len(response.get("results"))):
         print("index" + str(index))
         page_id = response.get("results")[index].get("id")
         print(page_id)
-        title = notion_api.get_title(response, "Name",index=index)
+        title = notion_api.get_title(response, "Name", index=index)
         ret = get_end_time(title)
-        properties = Properties().date(start=ret[0], end=ret[1],time_zone=None)
+        properties = Properties().date(start=ret[0], end=ret[1], time_zone=None)
         response2 = notion_api.update_page(page_id, properties)
-        duration = notion_api.get_formula(response2,"Duration",type="number")
+        duration = notion_api.get_formula(response2, "Duration", type="number")
         insert_to_toggl(title, ret[0], duration, "177393358")
 
 
@@ -144,6 +153,7 @@ def insert_to_toggl(description, start, duration, pid):
         headers=headers,
     )
     print(response.text)
+
 
 if __name__ == "__main__":
     login()
