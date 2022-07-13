@@ -21,7 +21,7 @@ def add_todo(title):
         .parent(parent)
         .children(Children())
         .cover(unsplash.random())
-        .icon("❎")
+        .icon("✅")
         .properties(properties)
     )
     response = notion_api.create_page(page=page)
