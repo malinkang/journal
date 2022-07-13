@@ -164,4 +164,3 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     options = parser.parse_args()
     create()
-    # query_twitter()

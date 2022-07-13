@@ -24,7 +24,7 @@ def sync():
     response = requests.get(
         "https://api.track.toggl.com/api/v8/time_entries", params=params, auth=auth
     )
-    print("hhhh = "+response.text)
+    print("hhhh = " + response.text)
     for task in response.json():
         if task.get("pid") is not None and task.get("stop") is not None:
             newTags = []
@@ -34,9 +34,9 @@ def sync():
                     newTag = {"name": tag}
                     newTags.append(newTag)
             start = datetime.fromisoformat(task.get("start"))
-            start = start +timedelta(hours=8)
-            end =datetime.fromisoformat(task.get("stop"))
-            end = end+timedelta(hours=8)
+            start = start + timedelta(hours=8)
+            end = datetime.fromisoformat(task.get("stop"))
+            end = end + timedelta(hours=8)
             response = requests.get(
                 "https://api.track.toggl.com/api/v8/projects/" + str(task.get("pid")),
                 auth=auth,
@@ -64,8 +64,16 @@ def sync():
             )
 
             properties = notion_api.get_relation(properties, datetime.now())
-            page = Page().parent(DatabaseParent("d8eee75d8c1049e7aa3dd6614907bb04")).children(Children()).properties(properties).cover(unsplash.random()).icon("⏰")
+            page = (
+                Page()
+                .parent(DatabaseParent("d8eee75d8c1049e7aa3dd6614907bb04"))
+                .children(Children())
+                .properties(properties)
+                .cover(unsplash.random())
+                .icon("⏰")
+            )
             notion_api.create_page(page)
+
 
 headers = {}
 if __name__ == "__main__":
