@@ -25,8 +25,7 @@ def update(id, content):
     content = json.loads(content)
     location = content['location']
     properties=Properties().rich_text("位置",location)
-    page = Page().properties(properties)
-    notion_api.update_page(id,page)
+    notion_api.update_page(id,properties)
 
 
 

@@ -40,8 +40,7 @@ def update(id, content):
     aqi = content['aqi']
     emo = emoji(weather)
     properties=Properties().rich_text("天气",weather).rich_text("最高温度",highest).rich_text("最低温度",lowest).number("空气质量",int(aqi))
-    page = Page().icon(emo).properties(properties)
-    notion_api.update_page(id,page)
+    notion_api.update_page(id,properties,emo)
     
                     
 if __name__ == "__main__":

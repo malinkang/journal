@@ -27,8 +27,8 @@ def query_day():
     list = []
     for index in range(0, len(response.get("results"))):
         name = notion_api.get_title(response, "Name", index)
-        day = notion_api.get_formula_string(response, "倒数日", index)
-        progress = notion_api.get_formula_string(response, "Progress", index)
+        day = notion_api.get_formula(response, "倒数日", index)
+        progress = notion_api.get_formula(response, "Progress", index)
         list.append(name + day + " " + progress)
     return list
 

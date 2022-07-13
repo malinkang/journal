@@ -62,6 +62,15 @@ class Properties(dict):
         }
         return self
 
+    def people(self, property, list):
+        people = []
+        for item in list:
+            people.append({"object": "user", "id": item})
+        self[property] = {
+            "people": people,
+        }
+        return self
+
     def rich_text(self, property, text):
         rich_text = []
         rich_text.append({"type": "text", "text": {"content": text}})
@@ -78,15 +87,25 @@ class Properties(dict):
         self[property] = {"select": {"name": name}}
         return self
 
-    def date(self, property = "Date", start=datetime.now()+timedelta(hours=8), end=None):
-        if end is not None:
+    def date(
+        self,
+        property="Date",
+        start=datetime.now() + timedelta(hours=8),
+        end=None,
+        time_zone="Asia/Shanghai",
+    ):
+        # 如果是date类型需要格式化 如果是字符串类型则不需要
+        if isinstance(start, datetime):
+            start = start.isoformat()
+        if isinstance(end, datetime):
             end = end.isoformat()
-        self[property] = {"date": {"start": start.isoformat(), "end":end,"time_zone":"Asia/Shanghai"}}
+        self[property] = {"date": {"start": start, "end": end, "time_zone": time_zone}}
         return self
 
     def number(self, property, number):
         self[property] = {"number": number}
         return self
+
     def relation(self, property, relation):
         self[property] = {"relation": [{"id": relation}]}
         return self
@@ -109,25 +128,29 @@ class Children(list):
 
 
 """https://developers.notion.com/reference/block"""
+
+
 class Block(dict):
     def __init__(self, type, color):
         self["object"] = "block"
         self["type"] = type
         self[type] = {"rich_text": [], "color": color}
-        if(type == "to_do"):
+        if type == "to_do":
             self[type]["checked"] = True
 
     def add_rich_text(self, rich_text):
         self[self["type"]]["rich_text"].append(rich_text)
         return self
 
+
 """https://developers.notion.com/reference/block#embed-blocks"""
+
+
 class EmbedBlock(dict):
-     def __init__(self,url):
+    def __init__(self, url):
         self["object"] = "block"
         self["type"] = "embed"
         self["embed"] = {"url": url}
-
 
 
 class RichText(dict):
@@ -154,9 +177,7 @@ class Text(dict):
 
 
 client = Client(
-    auth=NOTION_TOKEN,
-    notion_version=NOTION_VERSION,
-    log_level = logging.DEBUG
+    auth=NOTION_TOKEN, notion_version=NOTION_VERSION, log_level=logging.DEBUG
 )
 
 
@@ -171,18 +192,15 @@ def create_page(page):
     return response
 
 
-def update_page(page_id, page):
-    icon = None
-    if ("icon" in page):
-        icon = page["icon"]
-    response = client.pages.update(
-        page_id, properties=page["properties"], icon=icon
-    )
+def update_page(page_id, properties, icon=None, cover=None):
+    response = client.pages.update(page_id, properties=properties, icon=icon)
+    print("update === "+json.dumps(response))
+    return response
 
 
-def query_database(database_id, filter=None, sorts=None,page_size =None):
+def query_database(database_id, filter=None, sorts=None, page_size=None):
     response = client.databases.query(
-        database_id=database_id, filter=filter, sorts=sorts,page_size=page_size
+        database_id=database_id, filter=filter, sorts=sorts, page_size=page_size
     )
     return response
 
@@ -194,64 +212,84 @@ def properties_retrieve(page_id, property_id):
     return response
 
 
-def get_title(response,name,index=0):
+def get_title(response, name, index=0):
     result = response.get("results")[index]
     response = client.pages.properties.retrieve(
-        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+        page_id=result.get("id"),
+        property_id=result.get("properties").get(name).get("id"),
     )
     return response.get("results")[0].get("title").get("text").get("content")
 
-def get_rich_text(response,name,index=0):
+
+def get_rich_text(response, name, index=0):
     result = response.get("results")[index]
     response = client.pages.properties.retrieve(
-        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+        page_id=result.get("id"),
+        property_id=result.get("properties").get(name).get("id"),
     )
-    if(len(response.get("results"))>0):
+    if len(response.get("results")) > 0:
         return response.get("results")[0].get("rich_text").get("text").get("content")
     return None
 
-def get_date(response,name,index=0):
+
+def get_date(response, name="Date", index=0):
     result = response.get("results")[index]
     response = client.pages.properties.retrieve(
-        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+        page_id=result.get("id"),
+        property_id=result.get("properties").get(name).get("id"),
     )
     return response.get("date")
 
-def get_multi_select(response,name,index=0):
+
+def get_multi_select(response, name, index=0):
     result = response.get("results")[index]
     response = client.pages.properties.retrieve(
-        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+        page_id=result.get("id"),
+        property_id=result.get("properties").get(name).get("id"),
     )
     return response.get("multi_select")
 
-def get_select(response,name,index=0):
+
+def get_select(response, name, index=0):
     result = response.get("results")[index]
     response = client.pages.properties.retrieve(
-        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+        page_id=result.get("id"),
+        property_id=result.get("properties").get(name).get("id"),
     )
     return response.get("select").get("name")
 
-#根据类型获取    
-def get_by_type(response,name,type,index=0):
+
+# 根据类型获取
+def get_by_type(response, name, type, index=0):
     result = response.get("results")[index]
     response = client.pages.properties.retrieve(
-        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+        page_id=result.get("id"),
+        property_id=result.get("properties").get(name).get("id"),
     )
     return response.get(type)
 
 
-def get_number(response,name,index=0):
+def get_number(response, name, index=0):
     result = response.get("results")[index]
     response = client.pages.properties.retrieve(
-        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+        page_id=result.get("id"),
+        property_id=result.get("properties").get(name).get("id"),
     )
     return response.get("number")
-def get_formula_string(response,name,index=0):
-    result = response.get("results")[index]
+
+
+def get_formula(response, name, index=0, type="string"):
+    if isinstance(response.get("results"), list):
+        result = response.get("results")[index]
+    else:
+        result = response
     response = client.pages.properties.retrieve(
-        page_id=result.get("id"), property_id=result.get("properties").get(name).get("id")
+        page_id=result.get("id"),
+        property_id=result.get("properties").get(name).get("id"),
     )
-    return response.get("formula").get("string")
+    return response.get("formula").get(type)
+
+
 def get_page_id(response, index=0):
     return response.get("results")[index].get("id")
 
@@ -269,20 +307,22 @@ def get_week_relation(year_id, date):
         with open(week_json_file, "r") as json_file:
             return json.load(json_file).get("id")
 
-    filter= {
+    filter = {
         "and": [
             {"property": "Name", "rich_text": {"equals": week}},
             {"property": "Year", "relation": {"contains": year_id}},
         ]
     }
-    
+
     response = query_database(database_id=WEEK_DATABASE_ID, filter=filter)
     if len(response.get("results")) == 0:
-        start = date-timedelta(days=date.weekday())
+        start = date - timedelta(days=date.weekday())
         end = start + timedelta(days=6)
         print(start)
         parent = DatabaseParent(WEEK_DATABASE_ID)
-        properties = Properties().title(week).date("Date",start,end).relation("Year",year_id)
+        properties = (
+            Properties().title(week).date("Date", start, end).relation("Year", year_id)
+        )
         page = (
             Page()
             .parent(parent=parent)
@@ -294,7 +334,7 @@ def get_week_relation(year_id, date):
         id = create_page(page=page).get("id")
     else:
         id = response.get("results")[0].get("id")
-        print("week_id = ",id)
+        print("week_id = ", id)
     json_data = {"id": id}
     with open(week_json_file, "w") as outfile:
         json.dump(json_data, outfile)
@@ -316,7 +356,7 @@ def get_month_relation(year_id, year, month):
     response = query_database(database_id=MONTH_DATABASE_ID, filter=filter)
     if len(response.get("results")) == 0:
         parent = DatabaseParent(MONTH_DATABASE_ID)
-        properties = Properties().title(month).relation("Year",year_id)
+        properties = Properties().title(month).relation("Year", year_id)
         page = (
             Page()
             .parent(parent=parent)
@@ -328,7 +368,7 @@ def get_month_relation(year_id, year, month):
         id = create_page(page=page).get("id")
     else:
         id = response.get("results")[0].get("id")
-        print("month = ",id)
+        print("month = ", id)
     json_data = {"id": id}
     with open(month_json_file, "w") as outfile:
         json.dump(json_data, outfile)
