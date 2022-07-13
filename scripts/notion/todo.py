@@ -11,6 +11,7 @@ def add_todo(title):
     properties = (
         Properties()
         .title(title)
+        .date()
         .select("Status", "Not started")
         .select("Priority", "High 🔥")
         .people("Assign", ["6d411501-82d6-46e5-b809-97c0fdce722c"])
