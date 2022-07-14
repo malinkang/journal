@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import json
 import argparse
+from operator import iconcat
 import dateutils
 import notion_api
 from notion_api import Page
@@ -38,9 +39,10 @@ def update(id, content):
     highest = content['highest']
     lowest = content['lowest']
     aqi = content['aqi']
-    emo = emoji(weather)
+    icon = emoji(weather)
     properties=Properties().rich_text("天气",weather).rich_text("最高温度",highest).rich_text("最低温度",lowest).number("空气质量",int(aqi))
-    notion_api.update_page(id,properties,icon=emo)
+    icon = {"type": "emoji", "emoji": icon}
+    notion_api.update_page(id,properties,icon=icon)
     
                     
 if __name__ == "__main__":
