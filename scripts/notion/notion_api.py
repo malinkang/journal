@@ -193,7 +193,7 @@ def create_page(page):
 
 
 def update_page(page_id, properties, icon=None, cover=None):
-    response = client.pages.update(page_id, properties=properties, icon=icon)
+    response = client.pages.update(page_id, properties=properties, icon=icon,cover=cover)
     print("update === "+json.dumps(response))
     return response
 
