@@ -59,7 +59,11 @@ def query_todo():
 
 
 def query_toggl():
-    filter = {"property": "Date", "date": {"equals": today}}
+    now = datetime.now()
+    yestoday =datetime(year=now.year,month=now.month,day = now.day-1,hour=23)
+    yestoday = yestoday.isoformat()
+    yestoday+="+08:00"
+    filter = {"property": "Date", "date": {"equals": yestoday}}
     response = notion_api.query_database("d8eee75d8c1049e7aa3dd6614907bb04", filter)
     toggl_list = []
     for index in range(0, len(response.get("results"))):
