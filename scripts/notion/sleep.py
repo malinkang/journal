@@ -25,10 +25,9 @@ def insert(content):
 
 def format_date(d):
     date = d[: d.find("周")] + " " + d[d.find("午") + 1 :]
-    if "上午" in d:
-        date = datetime.strptime(date, "%y/%m/%d %I:%M")
-    else:
-        date = datetime.strptime(date, "%y/%m/%d %H:%M")
+    date = datetime.strptime(date, "%y/%m/%d %H:%M")
+    if "下午" in d:
+        date +=timedelta(hours=12)
     return date
 # 插入Toggle
 def insert_to_toggl(description, start, duration,pid):
