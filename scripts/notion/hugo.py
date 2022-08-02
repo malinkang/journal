@@ -1,5 +1,6 @@
 import argparse
 from datetime import date, datetime, timedelta
+from traceback import print_tb
 import notion_api
 import dateutils
 from notion_api import Page
@@ -74,9 +75,11 @@ def query_todo():
 
 def query_toggl():
     now = datetime.now()
-    yestoday =datetime(year=now.year,month=now.month,day = now.day-1,hour=23)
+    yestoday =now-timedelta(days=1)
+    yestoday = yestoday.replace(hour=23).replace(minute=30).replace(second=0).replace(microsecond=0)
     yestoday = yestoday.isoformat()
     yestoday+="+08:00"
+    print(yestoday)
     filter = {"property": "Date", "date": {"on_or_after": yestoday}}
     response = notion_api.query_database("d8eee75d8c1049e7aa3dd6614907bb04", filter)
     toggl_list = []
@@ -88,7 +91,7 @@ def query_toggl():
         name = notion_api.get_select(response, "二级分类", index)
         note = notion_api.get_rich_text(response, "备注", index)
         result = start + "-" + end + "：" + name
-        if note is not None and note is not "":
+        if note != None and note != "":
             result += "，" + note
         toggl_list.append(result)
     return toggl_list

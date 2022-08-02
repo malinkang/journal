@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 import argparse
+from dataclasses import dataclass
 import json
 import unsplash
 import notion
@@ -18,16 +19,20 @@ import requests
 # 搜索笔记
 def insert(content):
     content = json.loads(content)
-    start = format_date(content["start"])
+    start = format_date(content["start"],True)
     end = format_date(content["end"])
     insert_to_notion(start,end)
     insert_to_toggl("AutoSleep自动同步",start,(end-start).seconds,"177393271")
 
-def format_date(d):
+def format_date(d,start=False):
     date = d[: d.find("周")] + " " + d[d.find("午") + 1 :]
     date = datetime.strptime(date, "%y/%m/%d %H:%M")
+    print(date.hour)
     if "下午" in d:
         date +=timedelta(hours=12)
+    #autosleep上午0点不是0点是12点，所以如果是12点，那么就要减去12小时
+    if start and date.hour ==12:
+        date -= timedelta(hours=12)
     return date
 # 插入Toggle
 def insert_to_toggl(description, start, duration,pid):
