@@ -183,7 +183,6 @@ def create():
 
 
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser()
-    # options = parser.parse_args()
-    # create()
-    query_toggl()
+    parser = argparse.ArgumentParser()
+    options = parser.parse_args()
+    create()
