@@ -5,7 +5,7 @@ import json
 import unsplash
 import notion
 import dateutils
-from datetime import datetime
+from datetime import datetime, timedelta
 from notion_api import Properties
 from notion_api import Page
 from notion_api import DatabaseParent
@@ -18,7 +18,7 @@ def insert(content):
     insert_to_notion(float(content["weight"]))
 
 def insert_to_notion(weight):
-    now = datetime.now()
+    now = datetime.now() + timedelta(hours=8)
     title = dateutils.format_date_with_week(date=now)
     cover = unsplash.random()
     properties = Properties().title(title).date().number("体重",weight)
