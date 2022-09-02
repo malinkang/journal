@@ -75,12 +75,11 @@ def query_todo():
 
 def query_toggl():
     now = datetime.now()
-    yestoday =now-timedelta(days=1)
-    yestoday = yestoday.replace(hour=23).replace(minute=30).replace(second=0).replace(microsecond=0)
-    yestoday = yestoday.isoformat()
-    yestoday+="+08:00"
-    print(yestoday)
-    filter = {"property": "Date", "date": {"on_or_after": yestoday}}
+    yesteday =now-timedelta(days=1)
+    yesteday = yesteday.replace(hour=23).replace(minute=30).replace(second=0).replace(microsecond=0)
+    yesteday = yesteday.isoformat()
+    yesteday+="+08:00"
+    filter = {"property": "Date", "date": {"on_or_after": yesteday}}
     response = notion_api.query_database("d8eee75d8c1049e7aa3dd6614907bb04", filter)
     toggl_list = []
     for index in range(0, len(response.get("results"))):

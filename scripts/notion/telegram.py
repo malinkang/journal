@@ -1,5 +1,5 @@
 import argparse
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from unittest import result
 
 import requests
@@ -86,7 +86,7 @@ def query_toggl():
         end = datetime.fromisoformat(date.get("end")).strftime("%H:%M")
         name = notion_api.get_select(response, "二级分类", index)
         note = notion_api.get_rich_text(response, "备注", index)
-        result = start + "\\-" + end + "：" + name
+        result = start + "-" + end + "：" + name
         if note is not None and note is not "":
             result += "，" + note
         toggl_list.append(result)
@@ -102,7 +102,7 @@ def create():
     name = notion_api.get_title(response, "Name")
     name = icon +" "+ name
     tags = notion_api.get_multi_select(response, "Tag")
-    tags = " ".join("\\#"+tag.get("name")for tag in tags)
+    tags = " ".join("#"+tag.get("name")for tag in tags)
     result = name
     result += "\n"
     content = ""
@@ -130,32 +130,32 @@ def create():
         result += "*📅 倒数日*"
         result += "\n"
         for day in days:
-            result += "\- " + day
+            result += "- " + day
             result += "\n"
     result += "\n"
     result += "*✅ ToDo*"
     result += "\n"
     book = query_book()
     if book is not None:
-        result += "\- \[x\] " + book
+        result += "- [x] " + book
         result += "\n"
     todos = query_todo()
     for todo in todos:
-        result += "\- \[x\] " + todo
+        result += "- [x] " + todo
         result += "\n"
     result += "\n"
     result += "*❤️ 健康*"
     result += "\n"
     weight = query_weight()
     if weight is not None:
-        result += "\- 体重：" + str(weight).replace(".","\.") + "斤"
+        result += "- 体重：" + str(weight)+ "斤"
         result += "\n"
     result += "\n"
     result += "*⏰ 时间统计*"
     result += "\n"
     toggls = query_toggl()
     for toggl in toggls:
-        result += "\- " + toggl
+        result += "- " + toggl
         result += "\n"
 
     urls = query_twitter()
@@ -164,10 +164,14 @@ def create():
         result +="*💬 碎碎念*"
         result += "\n"
         for url in urls:
-            result += "\- "+url
+            result += "- "+url
             result += "\n"
     result += "\n"
     result += tags
+    result = result.replace('.','\.')
+    result = result.replace('-','\-')
+    result = result.replace('[x]','\[x\]')
+    result = result.replace('#','\#')
     send(result,cover)
 def send(message,cover):
     url = "https://api.telegram.org/bot5509900379:AAHSimr7FiKrclApJImy91A3Dff4R4g2OPk/sendPhoto"
