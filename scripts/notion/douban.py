@@ -138,7 +138,7 @@ def insert_movie(title, date, link, cover, rating, note, status, year, directors
         .multi_select('导演', directors)
         .multi_select('主演', actors)
         .multi_select('类型', genre)
-        .select('制片国家', country)
+        .rich_text('制片国家', country)
         .url("IMDb 链接", imdb)
     )
     if rating != "":
