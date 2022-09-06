@@ -53,8 +53,6 @@ def feed_parser():
                 rating = rating_dict[p.string.split(": ")[1]]
             if '备注: ' in p.string:
                 note = p.string.split(": ")[1]
-        print("评分", rating)
-        print("备注", note)
         if ('看' in status):
             parse_movie(date, rating, note, status, link)
         elif ('读' in status):
@@ -97,7 +95,7 @@ def parse_movie(date, rating, note, status, link):
 def parse_book(date, rating, note, status, link):
     f = {"property": "条目链接", "url": {"equals": link}}
     response = notion_api.query_database(
-        database_id=MOVIE_DATABASE_ID, filter=f)
+        database_id=BOOK_DATABASE_ID, filter=f)
     if (len(response['results']) > 0):
         update(date, rating, note, status,response['results'][0]['id'])
         return
