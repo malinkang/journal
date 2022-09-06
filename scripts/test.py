@@ -9,10 +9,10 @@ import json
 
 
 if __name__ == "__main__":
-    pattern = r'想看|看过|想读|听过|想读|读过|玩过|在读'
-    r = re.match(pattern,'想读小黄人大眼萌：神偷奶爸前传')
-    if r:
-        print(r.group(0))
+    l =['刘江江']
+    directors = filter(lambda x: '/' not in x,
+                     l)
+    print(list(directors))
     # d = feedparser.parse("https://www.douban.com/feed/people/malinkang/interests")
     # print(d)
     # create_page(options.id)

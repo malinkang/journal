@@ -62,9 +62,9 @@ def feed_parser():
 
 
 def parse_movie(date, rating, note, status, link):
-    filter = {"property": "条目链接", "url": {"equals": link}}
+    f = {"property": "条目链接", "url": {"equals": link}}
     response = notion_api.query_database(
-        database_id=MOVIE_DATABASE_ID, filter=filter)
+        database_id=MOVIE_DATABASE_ID, filter=f)
     if (len(response['results']) > 0):
         update(date, rating, note, status,response['results'][0]['id'])
         return
@@ -76,8 +76,7 @@ def parse_movie(date, rating, note, status, link):
     # print('info ',info)
     cover = soup.find(id='mainpic').img['src']
     # 导演
-    directors = list(filter(lambda x: '/' not in x,
-                     info.find('span', {'class': 'attrs'}).strings))
+    directors = list(filter(lambda x: '/' not in x,info.find('span', {'class': 'attrs'}).strings))
     # 演员
     actors = list(map(lambda x: x.string, info.find(
         'span', {'class': 'actor'}).findAll('a')))
@@ -96,9 +95,9 @@ def parse_movie(date, rating, note, status, link):
 
 
 def parse_book(date, rating, note, status, link):
-    filter = {"property": "条目链接", "url": {"equals": link}}
+    f = {"property": "条目链接", "url": {"equals": link}}
     response = notion_api.query_database(
-        database_id=MOVIE_DATABASE_ID, filter=filter)
+        database_id=MOVIE_DATABASE_ID, filter=f)
     if (len(response['results']) > 0):
         update(date, rating, note, status,response['results'][0]['id'])
         return
@@ -145,7 +144,7 @@ def insert_movie(title, date, link, cover, rating, note, status, year, directors
     if rating != "":
         properties.select("个人评分", rating)
     if note != "":
-        properties.select("我的短评", note)
+        properties.rich_text("我的短评", note)
     page = (
         Page()
         .parent(DatabaseParent(MOVIE_DATABASE_ID))
