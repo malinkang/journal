@@ -20,6 +20,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'}
 
 MOVIE_DATABASE_ID = "f551b7e002ac4b0ab73eb34d0dd53951"
+BOOK_DATABASE_ID = "c7efdba75f4146ad84a3f5b773998859"
 rating_dict = {
     '很差': '⭐️',
     '较差': '⭐️⭐️',
@@ -65,7 +66,7 @@ def parse_movie(date, rating, note, status, link):
     response = notion_api.query_database(
         database_id=MOVIE_DATABASE_ID, filter=filter)
     if (len(response['results']) > 0):
-        update_movie(date, rating, note, status,response['results'][0]['id'])
+        update(date, rating, note, status,response['results'][0]['id'])
         return
     response = requests.get(link, headers=headers)
     soup = BeautifulSoup(response.content)
@@ -95,6 +96,12 @@ def parse_movie(date, rating, note, status, link):
 
 
 def parse_book(date, rating, note, status, link):
+    filter = {"property": "条目链接", "url": {"equals": link}}
+    response = notion_api.query_database(
+        database_id=MOVIE_DATABASE_ID, filter=filter)
+    if (len(response['results']) > 0):
+        update(date, rating, note, status,response['results'][0]['id'])
+        return
     response = requests.get(link, headers=headers)
     soup = BeautifulSoup(response.content)
     title = soup.find(property='v:itemreviewed').string
@@ -109,7 +116,7 @@ def parse_book(date, rating, note, status, link):
     cover = soup.find(id='mainpic').img['src']
     insert_book(title, date, link, cover, dict, rating, note, status)
 
-def update_movie(date,rating,note, status,page_id):
+def update(date,rating,note, status,page_id):
     properties = (
         Properties()
         .date(property='打分日期', start=date)
@@ -173,7 +180,7 @@ def insert_book(title, date, link, cover, info, rating, note, status):
 
     page = (
         Page()
-        .parent(DatabaseParent("c7efdba75f4146ad84a3f5b773998859"))
+        .parent(DatabaseParent(BOOK_DATABASE_ID))
         .cover(cover)
         .icon("📚")
         .children(Children())
