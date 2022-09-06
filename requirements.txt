@@ -1,2 +1,5 @@
 requests
 notion-client
+lxml
+feedparser
+beautifulsoup4

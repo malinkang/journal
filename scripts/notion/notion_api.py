@@ -49,7 +49,8 @@ class Properties(dict):
     """https://developers.notion.com/reference/property-value-object"""
 
     def title(self, title):
-        self["title"] = {"title": [{"type": "text", "text": {"content": title}}]}
+        self["title"] = {
+            "title": [{"type": "text", "text": {"content": title}}]}
         return self
 
     def multi_select(self, property, list):
@@ -83,8 +84,23 @@ class Properties(dict):
         self[property] = {"status": {"name": status}}
         return self
 
+    def file(self, property, file):
+        self[property] = {"files": [
+            {
+                "type": "external",
+                "name": property,
+                "external": {
+                    "url": file
+                }
+            }
+        ]}
+        return self
+
     def select(self, property, name):
         self[property] = {"select": {"name": name}}
+        return self
+    def url(self, property, url):
+        self[property] = {"url": url}
         return self
 
     def date(
@@ -99,7 +115,8 @@ class Properties(dict):
             start = start.isoformat()
         if isinstance(end, datetime):
             end = end.isoformat()
-        self[property] = {"date": {"start": start, "end": end, "time_zone": time_zone}}
+        self[property] = {"date": {"start": start,
+                                   "end": end, "time_zone": time_zone}}
         return self
 
     def number(self, property, number):
@@ -193,7 +210,8 @@ def create_page(page):
 
 
 def update_page(page_id, properties, icon=None, cover=None):
-    response = client.pages.update(page_id, properties=properties, icon=icon,cover=cover)
+    response = client.pages.update(
+        page_id, properties=properties, icon=icon, cover=cover)
     print("update === "+json.dumps(response))
     return response
 
