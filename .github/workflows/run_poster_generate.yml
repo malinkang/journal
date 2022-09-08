@@ -135,7 +135,7 @@ jobs:
       - name: Push new svg posters
         uses: EndBug/add-and-commit@v7
         with:
-          branch: main
+          branch: master
           author_name: malinkang
           author_email: linkang.ma@gmail.com
           committer_name: malinkang
