@@ -132,11 +132,6 @@ jobs:
         run: |
           python3 -m github_poster multiple --types "github, twitter" --github_user_name ${{ secrets.G_USER_NAME }} --twitter_user_name ${{ secrets.TWITTER_USER_NAME }} --year 2019-2021
 
-      - name: Mv svg files to examples
-        # only for me to show
-        if: github.repository_owner == 'malinkang'
-        run: mv OUT_FOLDER/*.svg examples/
-
       - name: Push new svg posters
         uses: EndBug/add-and-commit@v7
         with:
