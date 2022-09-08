@@ -4,3 +4,4 @@ lxml
 feedparser
 beautifulsoup4
 svgwrite
+colour
