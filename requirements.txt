@@ -3,3 +3,4 @@ notion-client
 lxml
 feedparser
 beautifulsoup4
+svgwrite
