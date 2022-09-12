@@ -194,7 +194,8 @@ class Text(dict):
 
 
 client = Client(
-    auth=NOTION_TOKEN, notion_version=NOTION_VERSION, log_level=logging.DEBUG
+    auth=NOTION_TOKEN, notion_version=NOTION_VERSION, 
+    log_level=logging.DEBUG
 )
 
 
@@ -212,7 +213,6 @@ def create_page(page):
 def update_page(page_id, properties, icon=None, cover=None):
     response = client.pages.update(
         page_id, properties=properties, icon=icon, cover=cover)
-    print("update === "+json.dumps(response))
     return response
 
 

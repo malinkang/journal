@@ -3,6 +3,7 @@ from cmath import pi
 from datetime import date, datetime
 import json
 from nis import match
+from os import stat
 import re
 import time
 import feedparser
@@ -35,19 +36,19 @@ def feed_parser():
     for entry in d.entries:
         title = entry['title']
         id = entry['id']
-        pattern = r'想看|在看|看过|想读|在读|读过'
+        pattern = r'想看|在看|看过|想读|最近在读|读过'
         status = ""
         m = re.match(pattern, title)
         if m:
             status = m.group(0)
+            if(status == '最近在读'):
+                status = status[2:]
         link = entry['link']
         rating = ''
         note = ''
         date = datetime(*entry.published_parsed[:6])
-        print(time)
-        print('id ', id)
-        print('link ', link)
         soup = BeautifulSoup(entry['description'])
+        
         for p in soup.find_all('p'):
             if '推荐: ' in p.string:
                 rating = rating_dict[p.string.split(": ")[1]]
@@ -56,6 +57,7 @@ def feed_parser():
         if ('看' in status):
             parse_movie(date, rating, note, status, link)
         elif ('读' in status):
+            print(title)
             parse_book(date, rating, note, status, link)
 
 
