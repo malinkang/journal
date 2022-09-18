@@ -1,7 +1,7 @@
 from calendar import month
 from cmath import pi
 from datetime import date, datetime
-import json
+import csv
 from nis import match
 from os import stat
 import re
@@ -29,13 +29,19 @@ rating_dict = {
     '推荐': '⭐️⭐️⭐️⭐️',
     '力荐': '⭐️⭐️⭐️⭐️⭐️',
 }
-
+rating_dict2 = {
+    '': '⭐️',
+    '1': '⭐️',
+    '2': '⭐️⭐️',
+    '3': '⭐️⭐️⭐️',
+    '4': '⭐️⭐️⭐️⭐️',
+    '5': '⭐️⭐️⭐️⭐️⭐️',
+}
 
 def feed_parser():
     d = feedparser.parse(url)
     for entry in d.entries:
         title = entry['title']
-        id = entry['id']
         pattern = r'想看|在看|看过|想读|最近在读|读过'
         status = ""
         m = re.match(pattern, title)
@@ -60,6 +66,19 @@ def feed_parser():
             print(title)
             parse_book(date, rating, note, status, link)
 
+def parse_movie_csv():
+    with open('./data/db-movie-20220918.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            title = row['\ufeff标题']
+            print(title)
+            status='看过'
+            date = datetime.strptime(row['打分日期'],'%Y/%M/%d')
+            rating = rating_dict2[row['个人评分']]
+            note = row['我的短评']
+            link =row['条目链接']
+            time.sleep(1)
+            parse_movie(date, rating, note, status, link)
 
 def parse_movie(date, rating, note, status, link):
     f = {"property": "条目链接", "url": {"equals": link}}
@@ -78,8 +97,11 @@ def parse_movie(date, rating, note, status, link):
     # 导演
     directors = list(filter(lambda x: '/' not in x,info.find('span', {'class': 'attrs'}).strings))
     # 演员
-    actors = list(map(lambda x: x.string, info.find(
-        'span', {'class': 'actor'}).findAll('a')))
+    actors = list()
+    actor_span=info.find(
+        'span', {'class': 'actor'})
+    if actor_span!=None:
+        actors = list(map(lambda x: x.string,actor_span.find_all('a')))
     # 类型
     genre = list(map(lambda x: x.string, info.find_all(property='v:genre')))
     country = ''
@@ -139,8 +161,10 @@ def insert_movie(title, date, link, cover, rating, note, status, year, directors
         .multi_select('主演', actors)
         .multi_select('类型', genre)
         .rich_text('制片国家', country)
-        .url("IMDb 链接", imdb)
+       
     )
+    if imdb!="":
+         properties.url("IMDb 链接", imdb)
     if rating != "":
         properties.select("个人评分", rating)
     if note != "":
@@ -190,4 +214,5 @@ def insert_book(title, date, link, cover, info, rating, note, status):
 
 
 if __name__ == "__main__":
-    feed_parser()
+    # feed_parser()
+    parse_movie_csv()
