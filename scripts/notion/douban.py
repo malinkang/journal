@@ -73,11 +73,12 @@ def parse_movie_csv():
             title = row['\ufeff标题']
             print(title)
             status='看过'
-            date = datetime.strptime(row['打分日期'],'%Y/%M/%d')
+            date = datetime.strptime(row['打分日期'],'%Y/%m/%d')
+            print(date)
             rating = rating_dict2[row['个人评分']]
             note = row['我的短评']
-            link =row['条目链接']
-            time.sleep(1)
+            link =row['条目链接'].strip()
+            time.sleep(2)
             parse_movie(date, rating, note, status, link)
 
 def parse_movie(date, rating, note, status, link):
@@ -88,6 +89,8 @@ def parse_movie(date, rating, note, status, link):
         update(date, rating, note, status,response['results'][0]['id'])
         return
     response = requests.get(link, headers=headers)
+    print(response)
+    print(date)
     soup = BeautifulSoup(response.content)
     title = soup.find(property='v:itemreviewed').string
     year = soup.find('span', {'class': 'year'}).string[1:-1]
@@ -98,8 +101,7 @@ def parse_movie(date, rating, note, status, link):
     directors = list(filter(lambda x: '/' not in x,info.find('span', {'class': 'attrs'}).strings))
     # 演员
     actors = list()
-    actor_span=info.find(
-        'span', {'class': 'actor'})
+    actor_span=info.find('span', {'class': 'actor'})
     if actor_span!=None:
         actors = list(map(lambda x: x.string,actor_span.find_all('a')))
     # 类型
@@ -111,7 +113,6 @@ def parse_movie(date, rating, note, status, link):
             country = span.next_sibling.string
         if ('IMDb:' == span.string):
             imdb = 'https://www.imdb.com/title/'+span.next_sibling.string.strip()
-
     insert_movie(title, date, link, cover, rating, note, status,
                  year, directors, actors, genre, country, imdb)
 
@@ -163,6 +164,7 @@ def insert_movie(title, date, link, cover, rating, note, status, year, directors
         .rich_text('制片国家', country)
        
     )
+    properties = notion_api.get_relation(properties=properties,date=date)
     if imdb!="":
          properties.url("IMDb 链接", imdb)
     if rating != "":
