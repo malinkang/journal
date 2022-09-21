@@ -50,6 +50,8 @@ def feed_parser():
             if(status == '最近在读'):
                 status = status[2:]
         link = entry['link']
+        if 'https' not in link:
+            link = link.replace('http','https')
         rating = ''
         note = ''
         date = datetime(*entry.published_parsed[:6])
@@ -63,7 +65,6 @@ def feed_parser():
         if ('看' in status):
             parse_movie(date, rating, note, status, link)
         elif ('读' in status):
-            print(title)
             parse_book(date, rating, note, status, link)
 
 def parse_movie_csv():
@@ -81,6 +82,21 @@ def parse_movie_csv():
             time.sleep(2)
             parse_movie(date, rating, note, status, link)
 
+def parse_book_csv():
+    with open('./data/db-book-20220921.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            title = row['\ufeff标题']
+            print(title)
+            status='已读'
+            date = datetime.strptime(row['打分日期'],'%Y/%m/%d')
+            print(date)
+            rating = rating_dict2[row['个人评分']]
+            note = row['我的短评']
+            link =row['条目链接'].strip()
+            time.sleep(2)
+            parse_book(date, rating, note, status, link)
+
 def parse_movie(date, rating, note, status, link):
     f = {"property": "条目链接", "url": {"equals": link}}
     response = notion_api.query_database(
@@ -89,8 +105,6 @@ def parse_movie(date, rating, note, status, link):
         update(date, rating, note, status,response['results'][0]['id'])
         return
     response = requests.get(link, headers=headers)
-    print(response)
-    print(date)
     soup = BeautifulSoup(response.content)
     title = soup.find(property='v:itemreviewed').string
     year = soup.find('span', {'class': 'year'}).string[1:-1]
@@ -129,12 +143,12 @@ def parse_book(date, rating, note, status, link):
     title = soup.find(property='v:itemreviewed').string
     #
     info = soup.find(id='info')
-    info = list(map(lambda x: x.replace(':', ''), list(
+    info = list(map(lambda x: x.replace(':', '').strip(), list(
         filter(lambda x: '\n' not in x, info.strings))))
     dict = {}
-    for i in range(0, len(info), 2):
-        dict[info[i].strip()] = info[i+1]
-
+    dict['作者']=info[info.index('作者')+1:info.index('出版社')]
+    dict['出版年']=info[info.index('出版年')+1:info.index('出版年')+2]
+    dict['ISBN']=info[info.index('ISBN')+1:]
     cover = soup.find(id='mainpic').img['src']
     insert_book(title, date, link, cover, dict, rating, note, status)
 
@@ -180,11 +194,12 @@ def insert_movie(title, date, link, cover, rating, note, status, year, directors
         .properties(properties)
     )
     notion_api.create_page(page)
-    print("插入成功")
+    print("插入 "+title+" 成功")
 
 
 def insert_book(title, date, link, cover, info, rating, note, status):
-    l = list(map(int, info['出版年'].split('-')))
+    s = info['出版年'][0]
+    l = list(map(int, s.split('-')))
     l.append(1)
     properties = (
         Properties()
@@ -193,15 +208,14 @@ def insert_book(title, date, link, cover, info, rating, note, status):
         .file("海报", cover)
         .url("条目链接", link)
         .date(property='出版日期', start=datetime(*l))
-        .rich_text('作者', info['作者'])
-        .number('ISBN', int(info['ISBN']))
-        .rich_text('出版社', info['出版社'])
+        .multi_select('作者', info['作者'])
+        .number('ISBN', int(info['ISBN'][0]))
         .select('状态', status)
     )
     if rating != "":
         properties.select("个人评分", rating)
     if note != "":
-        properties.select("我的短评", note)
+        properties.rich_text("我的短评", note)
 
     page = (
         Page()
@@ -212,9 +226,8 @@ def insert_book(title, date, link, cover, info, rating, note, status):
         .properties(properties)
     )
     notion_api.create_page(page)
-    print("插入成功")
+    print("插入 "+title+" 成功")
 
 
 if __name__ == "__main__":
-    # feed_parser()
-    parse_movie_csv()
+    feed_parser()
