@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 import feedparser
 import notion_api
 from notion_api import Properties
