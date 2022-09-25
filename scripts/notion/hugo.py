@@ -33,6 +33,13 @@ def query_day():
         list.append(name + day + " " + progress)
     return list
 
+def query_ncm():
+    filter = {"property": "Date", "date": {"equals": today}}
+    response = notion_api.query_database("46beb49d60b84317a0a2c36a0a024c71",filter=filter)
+    if len(response.get("results")) > 0:
+        return notion_api.get_rich_text(response, "id")
+    return ''
+
 
 def query_twitter():
     filter = {"property": "date", "date": {"equals": today}}
@@ -136,7 +143,11 @@ def create():
         content += "。"
     result += content
     result += "\n"
-
+    song = query_ncm()
+    print(song)
+    if song!='':
+        song_id = song.split('=')[1]
+        result +='{{<aplayer server="netease" type="song" id="'+song_id+'">}}\n'
     days = query_day()
     if len(days) > 0:
         result += "## 📅 倒数日"
