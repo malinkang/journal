@@ -14,10 +14,11 @@ for entry in d.entries:
     response = notion_api.query_database("46beb49d60b84317a0a2c36a0a024c71", filter)
     print(len(response.get("results")))
     if(len(response.get("results")) == 0):
+        date = datetime.strptime(entry['published'],'%a, %d %b %Y %H:%M:%S %Z')+timedelta(hours=8)
         properties = (
             Properties()
             .title(entry.title)
-            .date(start=datetime.strptime(entry['published'],'%a, %d %b %Y %I:%M:%S %Z'))
+            .date(start=date)
             .rich_text("id", entry.id)
             .rich_text("link", entry.link)
         )
