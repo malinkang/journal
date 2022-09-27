@@ -31,7 +31,7 @@
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
-<link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
+
 
 {{if .Site.Params.manifest}}
 <link rel="manifest" href="{{.Site.Params.manifest}}">
@@ -47,19 +47,41 @@
 {{ end }}
 
 {{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
 {{ if not .Site.Params.disableDarkmode }}
 {{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
+<link rel="stylesheet" href="{{ $darkmode.RelPermalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
 
-<script src="{{"/vendor/js/loadCSS.js" | relURL}}"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+
+<!-- For compatibility. View https://github.com/AmazingRise/hugo-theme-diary/pull/135 for details.-->
+{{- $hugoVersion := split (replaceRE ".*([0-9]+)\\.([0-9]+)\\.([0-9]+).*" "$1 $2 $3" hugo.Version) " " -}}
+{{- if and (eq (int (index $hugoVersion 0)) 0) (ge (int (index $hugoVersion 1)) 101) -}}
+    {{- /* no leading slash */ -}}
+    {{ if and (not (.Params.disableToC) ) (.IsPage) }}
+      <script src="{{"js/toc.js" | relURL}}"></script>
+    {{ end }}
+    <link type="text/css" rel="stylesheet" href="{{"vendor/css/bootstrap.min.css" | relURL}}">
+{{- else -}}
+    {{- /* with leading slash */ -}}
+    {{ if and (not (.Params.disableToC) ) (.IsPage) }}
+      <script src="{{"/js/toc.js" | relURL}}"></script>
+    {{ end }}
+    <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
+{{- end -}}
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+{{ if .Site.Params.cloudflareToken }}
+<!-- Cloudflare Web Analytics -->
+<script defer
+	src='https://static.cloudflareinsights.com/beacon.min.js'
+	data-cf-beacon='{"token": {{ .Site.Params.cloudflareToken }}'>
 </script>
-
-
+<!-- End Cloudflare Web Analytics -->
+{{ end }}
 
 {{ if or (.Params.enableLaTeX) (.Site.Params.enableLaTeX) }}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
@@ -83,14 +105,20 @@
 </script>
 {{ end }}
 
-{{ if and (not (.Params.disableToC) ) (.IsPage) }}
-  <script src="{{"/js/toc.js" | relURL}}"></script>
-{{ end }}
 
-{{ if and (.Site.Params.enableGitalk) (.IsPage) }}
+
+{{ if and ( and ( .Site.Params.enableGitalk ) ( .IsPage ) ) ( or ( not ( isset .Params "comment" ) ) ( eq .Params.comment true ) ) }}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="{{"/vendor/js/md5.min.js" | relURL}}"></script>
+<!-- For compatibility. View https://github.com/AmazingRise/hugo-theme-diary/pull/135 for details.-->
+{{- $hugoVersion := split (replaceRE ".*([0-9]+)\\.([0-9]+)\\.([0-9]+).*" "$1 $2 $3" hugo.Version) " " -}}
+{{- if and (eq (int (index $hugoVersion 0)) 0) (ge (int (index $hugoVersion 1)) 101) -}}
+    {{- /* no leading slash */ -}}
+    <script src="{{"vendor/js/md5.min.js" | relURL}}"></script>
+{{- else -}}
+    {{- /* with leading slash */ -}}
+    <script src="{{"/vendor/js/md5.min.js" | relURL}}"></script>
+{{- end -}}
 <script>
   var gitalk = new Gitalk({
   clientID: '{{ .Site.Params.Gitalk.client_id }}',
@@ -117,12 +145,15 @@
 {{ end }}
 
 {{ if and (.Site.Params.enableTwikoo) (.IsPage) }}
-<script src="https://cdn.jsdelivr.net/npm/twikoo@1.3.0/dist/twikoo.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.3/dist/twikoo.all.min.js"></script>
 {{ end }}
 
 {{ if and (.Site.Params.walineServer) (.IsPage) }}
-<script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
-
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
 {{ end }}
 
 <!-- require APlayer -->
@@ -133,40 +164,5 @@
 
 <!-- head custom -->
 {{- partial "extended_head.html" . }}
-
-<script>
-
-const loadScript = (url, onloadFunction) => {
-  var newScript = document.createElement("script");
-  newScript.onerror =  (oError) => {
-    throw new URIError("The script " + oError.target.src + " didn't load correctly.");
-  };
-  if (onloadFunction) { newScript.onload = onloadFunction; }
-  document.head.insertAdjacentElement('beforeend', newScript);
-  newScript.src = url;
-  }
-
-  // mermaid loader by ttys3.dev
-  const loadMermaidOnNeed = () => {
-  if (document.querySelectorAll('.mermaid').length > 0) {
-    loadScript('https://cdn.jsdelivr.net/npm/mermaid@8.10.1/dist/mermaid.min.js', () => {
-    document.head.insertAdjacentHTML("beforeend", `<style>.mermaid svg { background-color: #ffffff !important; }</style>`);
-    // default, dark, neutral, forest
-    mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "default" });
-    // https://github.com/mermaid-js/mermaid/blob/e6e94ad57ea06ef8627bf91ddfbd88f5082952bf/src/mermaid.js#L153
-    // mermaid.contentLoaded();
-    mermaid.init();
-    console.log("mermaid init done");
-    })
-  }
-  }
-
-  window.addEventListener('load', function(event) {
-  // load mermaid
-  loadMermaidOnNeed();
-  });
-</script>
-
-
 
 </head>

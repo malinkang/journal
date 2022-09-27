@@ -4,7 +4,7 @@ date: 2021-09-07T21:01:58+08:00
 description: ""
 tags: [Test]
 featured_image: "https://images.unsplash.com/photo-1608870229932-cec85e0390ee?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb"
-categories: ["2021"]
+categories: [Test]
 comment : true
 ---
 
@@ -28,12 +28,6 @@ comment : true
  
 测试测试
 
-{{< mermaid >}}
-pie
-    title 时间消费
-    "睡觉" : 480
-    "学习" : 240
-    "跑步" : 30
-    "工作" :  240
-    "吃午饭" :  30
-{{< /mermaid >}}
+## 参考
+* [在 Hugo 里内嵌音乐播放器（APlayer）](https://blog.ohmykreee.top/article/music-player-in-hugo-page/)
+

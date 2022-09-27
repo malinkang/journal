@@ -150,6 +150,9 @@ pre {
   }
   code {
     padding: 0;
+    * {
+      color: inherit;
+    }
   }
 }
 
@@ -711,9 +714,9 @@ a {
         }
 
         //transition: all 0.2s linear;
-        * {
-          transition: all 0.2s linear;
-        }
+        // * {
+        //   transition: all 0.2s linear;
+        // }
         &:not(.post-item-wrapper-no-hover):hover {
           text-decoration: none;
           background: rgba(0, 0, 0, 0.03);
@@ -1003,6 +1006,10 @@ a {
 .pagination {
   display: none;
 
+  .pagination-action {
+    -webkit-appearance: none; // Fix bootstrap set the appearance to button.
+  }
+
   @media screen and (max-width: $single-column-max-width) {
     display: flex !important;
     flex-direction: row;
@@ -1084,4 +1091,15 @@ mjx-container {
 
 .vcontent p {
   color: black !important;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 10px;
+  flex-wrap: wrap;
+  .tag {
+    margin: 10px;
+  }
 }

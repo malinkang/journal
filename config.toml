@@ -23,7 +23,7 @@ theme = "diary"
 
 [params]
 subtitle = "过好每一天。"
-enableGitalk = false
+enableUtterances = true
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
@@ -32,13 +32,19 @@ title = "linkang's life" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
 [params.gitalk]
-  owner = "malinkang"
-  repo = "diary"
+  owner = ""
+  repo = ""
   client_id = ""
   client_secret = ""
 [taxonomies]
    tag = "tags"
    category = "categories"
+
+[params.utterances]
+  repo="malinkang/d"
+  term="url"
+  label="diary"
+  theme="preferred-color-scheme"
 
 [[menu.main]]
 url = "/categories"

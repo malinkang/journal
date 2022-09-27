@@ -14,8 +14,8 @@ date: {date}
 description: "{location}"
 tags: [{tag}]
 featured_image: "{cover}"
-categories: ["日记"]
-comment : false
+categories: [日记]
+comment : true
 ---
 """
 
