@@ -41,7 +41,7 @@ description = "My HomePage Description"  # will set 'og:description'
    category = "categories"
 
 [params.utterances]
-  repo="malinkang/d"
+  repo="malinkang/note"
   term="url"
   label="diary"
   theme="preferred-color-scheme"

@@ -28,6 +28,26 @@ comment : true
  
 测试测试
 
+```js
+<script src="https://utteranc.es/client.js"
+        repo="malinkang/d"
+        issue-term="url"
+        label="diary"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+```
+
+```java
+public SimpleArrayMap() {
+    mHashes = ContainerHelpers.EMPTY_INTS;
+    mArray = ContainerHelpers.EMPTY_OBJECTS;
+    mSize = 0;
+}
+```
+
 ## 参考
 * [在 Hugo 里内嵌音乐播放器（APlayer）](https://blog.ohmykreee.top/article/music-player-in-hugo-page/)
 
