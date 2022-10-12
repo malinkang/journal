@@ -32,5 +32,5 @@ if __name__ == "__main__":
     now = datetime.now()
     print(now.day)
     print(now.weekday())
-    if(now.weekday() < 5):
-        add_todo("订餐")
+    # if(now.weekday() < 5):
+    #     add_todo("订餐")
