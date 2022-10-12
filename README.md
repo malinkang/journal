@@ -32,6 +32,9 @@ python3 scripts/zhangdan.py 'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9
 
 ```shell
 python3 scripts/notion/keep.py  18611145755  KFitness@4  'Bearer secret_xvMkQzLkCRtZL478L8MhvLdIDOxicjjSUm9U9voAwbb' '2021-08-16'
+python3 -m github_poster weread --weread_cookie 'RK=KZ0Ew/JFS7; ptcz=cba8e45558c5cab1cccb43896ab8d5980c5506b676460d857e0bf24492a9479f; wr_gid=223315174; wr_vid=16308016; wr_skey=JwIRK8YS; wr_pf=0; wr_rt=web@tYV~PulLBf27nZ3~LrZ_WL; wr_localvid=79c322606f8d73079ce03da; wr_name=CarveTime; wr_avatar=https://res.weread.qq.com/wravatar/WV0016-RnaEL_g5XKTnGxtCRB5EW76/0; wr_gender=1; _pk_ref.4.5084=["","",1665573770,"https://x.weread.qq.com/"]; _pk_id.4.5084=1aa918092ac19997.1665573770.; _pk_ses.4.5084=1; wr_vid=16308016; wr_skey=vTZxhvYM; wr_auth={"cpIds":[],"cpEBook":0,"cpLecture":0,"cpAdmin":0,"cpAdminPublisher":false,"cpAdminBalance":false}' --year 2021-2022 --me "malinkang"
+
+python3 scripts/notion/weread.py 'RK=KZ0Ew/JFS7; ptcz=cba8e45558c5cab1cccb43896ab8d5980c5506b676460d857e0bf24492a9479f; wr_gid=223315174; wr_vid=16308016; wr_skey=JwIRK8YS; wr_pf=0; wr_rt=web@tYV~PulLBf27nZ3~LrZ_WL; wr_localvid=79c322606f8d73079ce03da; wr_name=CarveTime; wr_avatar=https://res.weread.qq.com/wravatar/WV0016-RnaEL_g5XKTnGxtCRB5EW76/0; wr_gender=1; _pk_ref.4.5084=["","",1665573770,"https://x.weread.qq.com/"]; _pk_id.4.5084=1aa918092ac19997.1665573770.; _pk_ses.4.5084=1; wr_vid=16308016; wr_skey=vTZxhvYM; wr_auth={"cpIds":[],"cpEBook":0,"cpLecture":0,"cpAdmin":0,"cpAdminPublisher":false,"cpAdminBalance":false}'
 ```
 
 ## TODO

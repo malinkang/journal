@@ -39,13 +39,14 @@ def query_weight():
 
 
 def query_book():
-    filter = {"property": "Date", "date": {"equals": today}}
+    filter = {"property": "Date", "date": {"after": today}}
     response = notion_api.query_database("cca71ece15ac48a68c34e5f86a2e6b38", filter)
-    if len(response.get("results")) > 0:
-        name = notion_api.get_title(response, "Name")
-        start = notion_api.get_number(response, "Start")
-        end = notion_api.get_number(response, "End")
-        return "读《" + name + "》Page" + str(start) + " - Page" + str(end) + ""
+    results = response.get("results")
+    if len(results) > 0:
+        properties = results[0]['properties']
+        name = properties['Name']['title'][0]['text']['content']
+        duration =properties['时长']['number']
+        return "读《" + name + "》" + str(duration) + " 分钟"
     return None
 
 
