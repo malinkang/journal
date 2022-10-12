@@ -20,7 +20,7 @@ comment : true
 """
 
 
-today = datetime.now().strftime("%Y-%m-%d")
+today = (datetime.now()+timedelta(hours=8)).strftime("%Y-%m-%dT00:00:00+08:00")
 
 
 def query_day():
@@ -34,7 +34,7 @@ def query_day():
     return list
 
 def query_ncm():
-    filter = {"property": "Date", "date": {"equals": today}}
+    filter = {"property": "Date", "date": {"after": today}}
     response = notion_api.query_database("46beb49d60b84317a0a2c36a0a024c71",filter=filter)
     if len(response.get("results")) > 0:
         return notion_api.get_rich_text(response, "id")
@@ -42,7 +42,7 @@ def query_ncm():
 
 
 def query_twitter():
-    filter = {"property": "date", "date": {"equals": today}}
+    filter = {"property": "date", "date": {"after": today}}
     response = notion_api.query_database("5351451787d9403fb48d9a9c20f31f43", filter)
     urls = []
     for index in range(0, len(response.get("results"))):
@@ -53,15 +53,23 @@ def query_twitter():
 
 
 def query_weight():
-    filter = {"property": "Date", "date": {"equals": today}}
+    filter = {"property": "Date", "date": {"after": today}}
     response = notion_api.query_database("34c0db4313b24c3fac8e25436f5b3530", filter)
-    if len(response.get("results")) > 0:
-        return notion_api.get_number(response, "体重")
+    results = response.get("results")
+    if len(results) > 0:
+        return results[0]["properties"]["体重"]["number"]
     return 0
 
+def query_run():
+    filter = {"property": "Date", "date": {"after": today}}
+    response = notion_api.query_database("8dc2c4145901403ea9c4fb0b10ad3f86", filter)
+    results = response.get("results")
+    if len(results) > 0:
+        return results[0]["properties"]["距离"]["number"]
+    return 0
 
 def query_book():
-    filter = {"property": "Date", "date": {"equals": today}}
+    filter = {"property": "Date", "date": {"after": today}}
     response = notion_api.query_database("cca71ece15ac48a68c34e5f86a2e6b38", filter)
     if len(response.get("results")) > 0:
         name = notion_api.get_title(response, "Name")
@@ -72,13 +80,12 @@ def query_book():
 
 
 def query_todo():
-    filter = {"property": "Date", "date": {"equals": today}}
+    filter = {"property": "Date", "date": {"after": today}}
     response = notion_api.query_database("97955f34653b4658bc0aaa50423be45f", filter)
     todo_list = []
     if len(response.get("results")) > 0:
         todo_list.append(notion_api.get_title(response, "Name"))
     return todo_list
-
 
 def query_toggl():
     now = datetime.now()
@@ -168,8 +175,12 @@ def create():
     result += "## ❤️ 健康"
     result += "\n"
     weight = query_weight()
-    if weight is not None:
+    if weight > 0:
         result += "- 体重：" + str(weight) + "斤"
+        result += "\n"
+    run = query_run()
+    if run > 0:
+        result += "- 跑步：" + str(run) + "km"
         result += "\n"
     result += "## ⏰ 时间统计"
     result += "\n"
@@ -177,7 +188,6 @@ def create():
     for toggl in toggls:
         result += "- " + toggl
         result += "\n"
-
     urls = query_twitter()
     if len(urls) > 0:
         result +="## 💬 碎碎念"
