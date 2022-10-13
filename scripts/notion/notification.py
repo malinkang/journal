@@ -1,14 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from datetime import datetime
-import json
-from typing import ItemsView
 import requests
-import os
-import base64
 import argparse
-import time
-import sys
 
 from requests.api import get, post
 

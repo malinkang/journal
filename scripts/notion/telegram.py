@@ -37,7 +37,7 @@ def query_day():
 
 
 def query_twitter():
-    filter = {"property": "Date", "date": {"after": today}}
+    filter = {"property": "date", "date": {"after": today}}
     response = notion_api.query_database("5351451787d9403fb48d9a9c20f31f43", filter)
     urls = []
     for index in range(0, len(response.get("results"))):
@@ -92,7 +92,7 @@ def query_toggl():
         name = notion_api.get_select(response, "二级分类", index)
         note = notion_api.get_rich_text(response, "备注", index)
         result = start + "-" + end + "：" + name
-        if note is not None and note is not "":
+        if note != None and note != "":
             result += "，" + note
         toggl_list.append(result)
     return toggl_list
@@ -197,4 +197,3 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     options = parser.parse_args()
     create()
-    # print(query_twitter())
