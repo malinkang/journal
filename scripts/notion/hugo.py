@@ -20,8 +20,8 @@ comment : true
 ---
 """
 
-
-today = (datetime.now()+timedelta(hours=8)).strftime("%Y-%m-%dT00:00:00+08:00")
+#写前一天的
+today = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
 
 
 def query_day():
@@ -90,8 +90,7 @@ def query_todo():
     return todo_list
 
 def query_toggl():
-    now = datetime.now()
-    yesteday =now-timedelta(days=1)
+    yesteday =datetime.now()-timedelta(days=2)
     yesteday = yesteday.replace(hour=23).replace(minute=30).replace(second=0).replace(microsecond=0)
     yesteday = yesteday.isoformat()
     yesteday+="+08:00"
@@ -207,5 +206,4 @@ def create():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     options = parser.parse_args()
-    # create()
-    print(query_run())
+    create()
