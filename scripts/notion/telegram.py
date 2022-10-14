@@ -9,18 +9,6 @@ from notion_api import Page
 from notion_api import Children, DatabaseParent
 from notion_api import Properties
 
-template = """
----
-title: "{title}"
-date: {date}
-description: "{location}"
-tags: [{tag}]
-featured_image: "{cover}"
-categories: ["日记"]
-comment : false
----
-"""
-
 
 today = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
 
@@ -99,7 +87,7 @@ def query_toggl():
 
 
 def create():
-    title = dateutils.format_date_with_week()
+    title = dateutils.format_date_with_week(date=datetime.now()-timedelta(days=1))
     filter = {"property": "Name", "rich_text": {"equals": title}}
     response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448", filter)
     cover = response.get("results")[0].get("cover").get("external").get("url")
