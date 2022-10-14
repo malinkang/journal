@@ -59,8 +59,9 @@ def query_todo():
     filter = {"property": "Date", "date": {"after": today}}
     response = notion_api.query_database("97955f34653b4658bc0aaa50423be45f", filter)
     todo_list = []
-    if len(response.get("results")) > 0:
-        todo_list.append(notion_api.get_title(response, "Name"))
+    results= response.get("results")
+    for result in results:
+        todo_list.append(result['properties']['Name']['title'][0]['text']['content'])
     return todo_list
 
 
