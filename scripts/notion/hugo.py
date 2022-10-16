@@ -22,8 +22,8 @@ comment : true
 yesterday = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
 today = datetime.now().strftime("%Y-%m-%dT00:00:00+08:00")
 filter = {"and":[
-    {"property": "date", "date": {"after": yesterday}},
-    {"property": "date", "date": {"before": today}},
+    {"property": "Date", "date": {"after": yesterday}},
+    {"property": "Date", "date": {"before": today}},
 ]}
 
 
