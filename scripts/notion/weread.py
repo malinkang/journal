@@ -1,7 +1,7 @@
 
 
 import argparse
-from datetime import datetime
+from datetime import datetime, timedelta
 from http.cookies import SimpleCookie
 import requests
 from requests.utils import cookiejar_from_dict
@@ -42,7 +42,7 @@ def insert(title, id,minutes):
         .title(title)
         .relation("Book", id)
         .number("时长", minutes)
-        .date()
+        .date(start=datetime.now-timedelta(days=1))
     )
     properties = notion_api.get_relation(properties)
     page = (
@@ -62,8 +62,7 @@ if __name__ == "__main__":
     session = requests.Session()
     session.cookies = parse_cookie_string(options.cookie)
     r = session.get("https://i.weread.qq.com/readdetail?baseTimestamp=0&count=32&type=1")
-    day = datetime.now().day
+    day = datetime.now()-timedelta(days=1).day
     seconds = r.json()['datas'][0]['timeMeta']['readTimeList'][day-1]
     minutes = round(seconds/60)
-    print(round(minutes))
     get_reading(minutes)

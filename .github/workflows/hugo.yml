@@ -14,7 +14,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
@@ -23,6 +22,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+      - name: ncm sync
+        run: |
+          python scripts/notion/ncm.py
+      - name: weread sync
+        run: |
+          python scripts/notion/weread.py
+      - name: ncm sync
+        run: |
+          python scripts/notion/ncm.py 
+      - name: bilibili sync
+        run: |
+          python scripts/notion/bilibili.py 
       - name: hugo sync
         run: |
           python scripts/notion/hugo.py

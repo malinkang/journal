@@ -20,6 +20,12 @@ comment : true
 
 #写前一天的
 yesterday = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
+today = datetime.now().strftime("%Y-%m-%dT00:00:00+08:00")
+filter = {"and":[
+    {"property": "date", "date": {"after": yesterday}},
+    {"property": "date", "date": {"before": today}},
+]}
+
 
 
 def query_day():
@@ -33,7 +39,6 @@ def query_day():
     return list
 
 def query_ncm():
-    filter = {"property": "Date", "date": {"after": yesterday}}
     response = notion_api.query_database("46beb49d60b84317a0a2c36a0a024c71",filter=filter)
     if len(response.get("results")) > 0:
         return notion_api.get_rich_text(response, "id")
@@ -41,7 +46,6 @@ def query_ncm():
 
 
 def query_twitter():
-    filter = {"property": "date", "date": {"after": yesterday}}
     response = notion_api.query_database("5351451787d9403fb48d9a9c20f31f43", filter)
     urls = []
     for index in range(0, len(response.get("results"))):
@@ -52,7 +56,6 @@ def query_twitter():
 
 
 def query_weight():
-    filter = {"property": "Date", "date": {"after": yesterday}}
     response = notion_api.query_database("34c0db4313b24c3fac8e25436f5b3530", filter)
     results = response.get("results")
     if len(results) > 0:
@@ -60,7 +63,6 @@ def query_weight():
     return 0
 
 def query_run():
-    filter = {"property": "Date", "date": {"after": yesterday}}
     response = notion_api.query_database("8dc2c4145901403ea9c4fb0b10ad3f86", filter)
     results = response.get("results")
     if len(results) > 0:
@@ -68,7 +70,6 @@ def query_run():
     return 0
 
 def query_book():
-    filter = {"property": "Date", "date": {"after": yesterday}}
     response = notion_api.query_database("cca71ece15ac48a68c34e5f86a2e6b38", filter)
     results = response.get("results")
     if len(results) > 0:
@@ -80,7 +81,6 @@ def query_book():
 
     
 def query_todo():
-    filter = {"property": "Date", "date": {"after": yesterday}}
     response = notion_api.query_database("97955f34653b4658bc0aaa50423be45f", filter)
     todo_list = []
     results= response.get("results")
@@ -93,8 +93,8 @@ def query_toggl():
     day = day.replace(hour=23).replace(minute=30).replace(second=0).replace(microsecond=0)
     day = day.isoformat()
     day+="+08:00"
-    filter = {"property": "Date", "date": {"on_or_after": day}}
-    response = notion_api.query_database("d8eee75d8c1049e7aa3dd6614907bb04", filter)
+    f = {"property": "Date", "date": {"on_or_after": day}}
+    response = notion_api.query_database("d8eee75d8c1049e7aa3dd6614907bb04", f)
     toggl_list = []
     for index in range(0, len(response.get("results"))):
         date = notion_api.get_date(response, "Date", index)
@@ -112,8 +112,8 @@ def query_toggl():
 
 def create():
     title = dateutils.format_date_with_week(date=datetime.now()-timedelta(days=1))
-    filter = {"property": "Name", "rich_text": {"equals": title}}
-    response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448", filter)
+    f = {"property": "Name", "rich_text": {"equals": title}}
+    response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448", f)
     cover = response.get("results")[0].get("cover").get("external").get("url")
     icon = response.get("results")[0].get("icon").get("emoji")
     name = notion_api.get_title(response, "Name")
