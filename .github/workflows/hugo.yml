@@ -25,9 +25,9 @@ jobs:
       - name: ncm sync
         run: |
           python scripts/notion/ncm.py
-      - name: weread sync
-        run: |
-          python scripts/notion/weread.py "${{secrets.WEREAD_COOKIE}}"
+      # - name: weread sync
+      #   run: |
+      #     python scripts/notion/weread.py "${{secrets.WEREAD_COOKIE}}"
       - name: ncm sync
         run: |
           python scripts/notion/ncm.py 

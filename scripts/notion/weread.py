@@ -63,6 +63,7 @@ if __name__ == "__main__":
     session.cookies = parse_cookie_string(options.cookie)
     r = session.get("https://i.weread.qq.com/readdetail?baseTimestamp=0&count=32&type=1")
     day = (datetime.now()-timedelta(days=1)).day
+    print(r.json())
     seconds = r.json()['datas'][0]['timeMeta']['readTimeList'][day-1]
     minutes = round(seconds/60)
     get_reading(minutes)
