@@ -45,7 +45,7 @@ def insert(title, id,minutes):
         .title(title)
         .relation("Book", id)
         .number("时长", minutes)
-        .date(start=datetime.now-timedelta(days=1))
+        .date(start=datetime.now()-timedelta(days=1))
     )
     properties = notion_api.get_relation(properties)
     page = (
