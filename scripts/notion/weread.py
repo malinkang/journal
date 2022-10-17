@@ -12,7 +12,10 @@ from notion_api import Children
 from notion_api import Page
 import unsplash
 import notion_api
-
+WEREAD_BASE_URL = "https://weread.qq.com/"
+WEREAD_HISTORY_URL = (
+    "https://i.weread.qq.com/readdetail?baseTimestamp=0&count=32&type=1"
+)
 
 def parse_cookie_string(cookie_string):
     cookie = SimpleCookie()
@@ -61,7 +64,14 @@ if __name__ == "__main__":
     options = parser.parse_args()
     session = requests.Session()
     session.cookies = parse_cookie_string(options.cookie)
-    r = session.get("https://i.weread.qq.com/readdetail?baseTimestamp=0&count=32&type=1")
+    r = session.get(WEREAD_HISTORY_URL)
+    if not r.ok:
+        # need to refresh cookie WTF the design!!
+        if r.json()["errcode"] == -2012:
+            session.get(WEREAD_BASE_URL)
+            r = session.get(WEREAD_HISTORY_URL)
+        else:
+            raise Exception("Can not get weread hisoty data")
     day = (datetime.now()-timedelta(days=1)).day
     print(r.json())
     seconds = r.json()['datas'][0]['timeMeta']['readTimeList'][day-1]
