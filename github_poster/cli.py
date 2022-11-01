@@ -36,6 +36,7 @@ def run():
         if type_ in ["summary", "multiple"]:
             l.parser_loader_list = list(temp_list)
             optional = False
+        print("l = "+l)
         l.add_arguments(parser, optional)
 
     args = args_parser.parse_args()
