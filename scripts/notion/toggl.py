@@ -18,13 +18,11 @@ def sync():
         "d8eee75d8c1049e7aa3dd6614907bb04", sorts=sorts, page_size=page_size
     )
     end = notion_api.get_date(response, "Date").get("end")
-    print(end)
     auth = ("2ef95512ce5b1528809f9a03a68e02b1", "api_token")
     params = {"start_date": end}
     response = requests.get(
         "https://api.track.toggl.com/api/v8/time_entries", params=params, auth=auth
     )
-    print("hhhh = " + response.text)
     for task in response.json():
         if task.get("pid") is not None and task.get("stop") is not None:
             newTags = []

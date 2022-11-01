@@ -17,8 +17,10 @@ RUN_LOG_API = "https://api.gotokeep.com/pd/v3/runninglog/{run_id}"
 DATABASE_ID = "8dc2c4145901403ea9c4fb0b10ad3f86"
 
 
-def login( mobile, passowrd):
-    data = {"mobile": mobile, "password": passowrd}
+def login( ):
+    mobile = "18611145755"
+    password = "KFitness04"
+    data = {"mobile": mobile, "password": password}
     r = requests.post(LOGIN_API, headers=keep_headers, data=data)
     if r.ok:
         token = r.json()["data"]["token"]
@@ -83,7 +85,4 @@ keep_headers  = {
 }
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("phone_number")
-    parser.add_argument("password")
-    options = parser.parse_args()
-    login(options.phone_number, options.password) 
+    login() 

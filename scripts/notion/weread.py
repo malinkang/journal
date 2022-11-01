@@ -65,15 +65,15 @@ if __name__ == "__main__":
     session = requests.Session()
     session.cookies = parse_cookie_string(options.cookie)
     r = session.get(WEREAD_HISTORY_URL)
+    print(r.text)
     if not r.ok:
         # need to refresh cookie WTF the design!!
         if r.json()["errcode"] == -2012:
             session.get(WEREAD_BASE_URL)
             r = session.get(WEREAD_HISTORY_URL)
-        else:
-            raise Exception("Can not get weread hisoty data")
-    day = (datetime.now()-timedelta(days=1)).day
-    print(r.json())
-    seconds = r.json()['datas'][0]['timeMeta']['readTimeList'][day-1]
-    minutes = round(seconds/60)
-    get_reading(minutes)
+    if r.ok:
+        day = (datetime.now()-timedelta(days=1)).day
+        print(r.json())
+        seconds = r.json()['datas'][0]['timeMeta']['readTimeList'][day-1]
+        minutes = round(seconds/60)
+        get_reading(minutes)

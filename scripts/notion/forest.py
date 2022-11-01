@@ -157,5 +157,3 @@ def insert_to_toggl(description, start, duration, pid):
 
 if __name__ == "__main__":
     login()
-    # update_todo()
-    # get_end_time("hugo自动化脚本编写")

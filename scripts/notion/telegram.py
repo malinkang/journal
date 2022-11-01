@@ -1,17 +1,16 @@
 import argparse
 from datetime import date, datetime, timedelta
-from unittest import result
 
 import requests
 import notion_api
-import dateutils
 from notion_api import Page
 from notion_api import Children, DatabaseParent
 from notion_api import Properties
 
 
-yesterday = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
-today = datetime.now().strftime("%Y-%m-%dT00:00:00+08:00")
+today = datetime.now()
+yesterday = (today-timedelta(days=1)).strftime("%Y-%m-%dT23:30:00+08:00")
+today = today.strftime("%Y-%m-%dT23:30:00+08:00")
 filter = {"and":[
     {"property": "Date", "date": {"after": yesterday}},
     {"property": "Date", "date": {"before": today}},
@@ -67,12 +66,7 @@ def query_todo():
 
 
 def query_toggl():
-    yesteday =datetime.now()-timedelta(days=2)
-    yesteday = yesteday.replace(hour=23).replace(minute=30).replace(second=0).replace(microsecond=0)
-    yesteday = yesteday.isoformat()
-    yesteday+="+08:00"
-    f = {"property": "Date", "date": {"after": yesteday}}
-    response = notion_api.query_database("d8eee75d8c1049e7aa3dd6614907bb04", f)
+    response = notion_api.query_database("d8eee75d8c1049e7aa3dd6614907bb04", filter)
     toggl_list = []
     for index in range(0, len(response.get("results"))):
         date = notion_api.get_date(response, "Date", index)
@@ -89,9 +83,7 @@ def query_toggl():
 
 
 def create():
-    title = dateutils.format_date_with_week(date=datetime.now()-timedelta(days=1))
-    f = {"property": "Name", "rich_text": {"equals": title}}
-    response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448", f)
+    response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448", filter)
     cover = response.get("results")[0].get("cover").get("external").get("url")
     icon = response.get("results")[0].get("icon").get("emoji")
     name = notion_api.get_title(response, "Name")

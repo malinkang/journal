@@ -13,7 +13,7 @@ import notion_api
 
 
 # 创建Page
-def create_page(pageId):
+def create_page():
     emo = "☀️"
     tomorrow = datetime.now() + timedelta(days=1)
     week = tomorrow.strftime("第%V周")
@@ -23,13 +23,10 @@ def create_page(pageId):
     tags = [week,month]
     properties = Properties().title(title).date(start=tomorrow).multi_select("Tag",tags)
     properties = notion_api.get_relation(properties,tomorrow,False)
-    parent = DatabaseParent(pageId)
+    parent = DatabaseParent("294060cd-e13e-4c29-b0ac-6ee490c8a448")
     page  = Page().parent(parent).children(Children()).cover(cover).icon(emo).properties(properties)
     notion_api.create_page(page=page)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("id")
-    parser.add_argument("accessKey")
-    options = parser.parse_args()
-    create_page(options.id)
+    create_page()
