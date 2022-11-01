@@ -49,8 +49,8 @@ jobs:
       - name: commit
         uses: EndBug/add-and-commit@v7
         with:
-          branch: main
-          author_name: qweruqwio
-          author_email: malinkang198981@gmail.com
-          committer_name: qweruqwio
-          committer_email: malinkang198981@gmail.com
+          branch: master
+          author_name: malinkang
+          author_email: linkang.ma@gmail.com
+          committer_name: malinkang
+          committer_email: linkang.ma@gmail.com
