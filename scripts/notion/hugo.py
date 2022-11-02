@@ -102,7 +102,8 @@ def query_todo():
 
 
 def query_toggl():
-    response = notion_api.query_database("d8eee75d8c1049e7aa3dd6614907bb04", filter)
+    response = notion_api.query_database(
+        "d8eee75d8c1049e7aa3dd6614907bb04", filter)
     toggl_list = []
     for index in range(0, len(response.get("results"))):
         date = notion_api.get_date(response, "Date", index)
@@ -119,7 +120,8 @@ def query_toggl():
 
 
 def create():
-    response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448", filter)
+    response = notion_api.query_database(
+        "294060cd-e13e-4c29-b0ac-6ee490c8a448", filter)
     cover = response.get("results")[0].get("cover").get("external").get("url")
     icon = response.get("results")[0].get("icon").get("emoji")
     name = notion_api.get_title(response, "Name")
@@ -200,8 +202,7 @@ def create():
         for url in urls:
             result += url
             result += "\n"
-    file = datetime.strftime(
-        datetime.now()-timedelta(days=1), "%Y-%m-%d") + ".md"
+    file = datetime.strftime(datetime.now(), "%Y-%m-%d") + ".md"
     with open("./content/posts/" + file, "w") as f:
         f.seek(0)
         f.write(result)
