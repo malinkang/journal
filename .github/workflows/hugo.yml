@@ -25,6 +25,12 @@ jobs:
       - name: create tomorrow diary 
         run: |
           python scripts/notion/create_diary.py
+      - name: douban sync
+        run: |
+          python scripts/notion/douban.py
+      - name: forest sync
+        run: |
+          python scripts/notion/forest.py
       - name: ncm sync
         run: |
           python scripts/notion/ncm.py
