@@ -117,7 +117,6 @@ def get_end_time(title):
 def update_todo():
     today = datetime.now()
     yesterday = (today-timedelta(days=1)).strftime("%Y-%m-%dT23:30:00+08:00")
-    today = today.strftime("%Y-%m-%dT23:30:00+08:00")
     filter = {
         "and": [
             {"property": "Date", "date": {"after": yesterday}},
