@@ -7,6 +7,7 @@ import unsplash
 import requests
 import notion
 import date
+import dateutils
 from notion_api import Properties
 from notion_api import Page
 import notion_api
@@ -114,9 +115,12 @@ def get_end_time(title):
 
 # 更新todo的时间
 def update_todo():
+    today = datetime.now()
+    yesterday = (today-timedelta(days=1)).strftime("%Y-%m-%dT23:30:00+08:00")
+    today = today.strftime("%Y-%m-%dT23:30:00+08:00")
     filter = {
         "and": [
-            {"property": "Date", "date": {"is_empty": True}},
+            {"property": "Date", "date": {"after": yesterday}},
             {"property": "🍅", "rollup": {"number": {"greater_than": 0}}},
         ]
     }
