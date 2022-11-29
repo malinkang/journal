@@ -37,11 +37,13 @@ def login():
     get_plants(user_id)
 
 
-# 获取植物
+
 def get_plants(user_id):
-    now = datetime.now().strftime("%Y-%m-%d")
+    """tag:15 工作"""
+    now = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%d")
     r = s.get(FOREST_CLAENDAR_URL.format(date=now, user_id=user_id), headers=headers)
     for plant in r.json().get("plants"):
+        id = plant.get("id")
         note = plant.get("note")
         start_time = plant.get("start_time")
         end_time = plant.get("end_time")
@@ -50,7 +52,7 @@ def get_plants(user_id):
         if note == "":
             pass
         else:
-            insert_tomato(note, start, end)
+            insert_tomato(id,note, start, end)
     update_todo()
 
 
@@ -78,15 +80,16 @@ def insert_todo(title):
         .icon("✅")
         .properties(properties)
     )
-    print("test == " + json.dumps(page))
     response = notion_api.create_page(page=page)
     return response.get("id")
 
 
 # 番茄钟插入notion
-def insert_tomato(note, start, end):
-    print(start)
-    properties = Properties().title(note).date("Date", start, end)
+def insert_tomato(id,note, start, end):
+    if(exist(id)):
+        print("已经存在")
+        return
+    properties = Properties().title(note).date("Date", start, end).number("Id",id)
     properties = notion_api.get_relation(properties)
     properties["ToDo"] = {"relation": [{"id": search_todo(note)}]}
     parent = DatabaseParent(TOMATO)
@@ -100,6 +103,12 @@ def insert_tomato(note, start, end):
     )
     response = notion_api.create_page(page=page)
     return response.get("id")
+
+def exist(id):
+    filter = {"property": "Id", "number": {"equals": id}}
+    response=notion_api.query_database(TOMATO, filter)
+    results = response["results"]
+    return len(results)>0
 
 
 def get_end_time(title):
@@ -125,9 +134,7 @@ def update_todo():
     }
     response = notion_api.query_database(TODO, filter)
     for index in range(0, len(response.get("results"))):
-        print("index" + str(index))
         page_id = response.get("results")[index].get("id")
-        print(page_id)
         title = notion_api.get_title(response, "Name", index=index)
         ret = get_end_time(title)
         properties = Properties().date(start=ret[0], end=ret[1], time_zone=None)
