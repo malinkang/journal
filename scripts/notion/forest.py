@@ -40,7 +40,7 @@ def login():
 
 def get_plants(user_id):
     """tag:15 工作"""
-    now = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%d")
+    now = datetime.now().strftime("%Y-%m-%d")
     r = s.get(FOREST_CLAENDAR_URL.format(date=now, user_id=user_id), headers=headers)
     for plant in r.json().get("plants"):
         id = plant.get("id")
