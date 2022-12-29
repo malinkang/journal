@@ -3,6 +3,7 @@
 import argparse
 import json
 import notion
+import time
 import requests
 from datetime import date, datetime, timedelta, timezone
 import unsplash
@@ -17,27 +18,30 @@ RUN_LOG_API = "https://api.gotokeep.com/pd/v3/runninglog/{run_id}"
 DATABASE_ID = "8dc2c4145901403ea9c4fb0b10ad3f86"
 
 
-def login( ):
+def login():
     mobile = "18611145755"
     password = "KFitness04"
     data = {"mobile": mobile, "password": password}
     r = requests.post(LOGIN_API, headers=keep_headers, data=data)
+    print(r.text)
     if r.ok:
+        print("登录成功")
         token = r.json()["data"]["token"]
         keep_headers["Authorization"] = f"Bearer {token}"
         get_run_id()
 
+
 def get_run_id():
-    last_date=0
-    r = requests.get(RUN_DATA_API.format(last_date=last_date), headers=keep_headers)
+    last_date = 0
+    r = requests.get(RUN_DATA_API.format(
+        last_date=last_date), headers=keep_headers)
     if r.ok:
         last_date = r.json()["data"]["lastTimestamp"]
-        # print(last_date)
         for record in filter(is_today,r.json().get("data").get("records")):
             for log in record.get("logs"):
                 id = log.get("stats").get("id")
                 if not exists(id):
-                    get_run_data(id,record.get("date"))
+                    get_run_data(id, record.get("date"))
                 else:
                     print("已存在")
 
@@ -46,13 +50,18 @@ def is_today(record):
     today = datetime.now().strftime("%-m月%d日")
     return today == record.get("date")
 
-#检查是否存在
+# 检查是否存在
+
+
 def exists(id):
+    time.sleep(0.3)
     filter = {"property": "id", "rich_text": {"equals": id}}
     response = notion_api.query_database(DATABASE_ID, filter)
     return len(response.get("results")) > 0
-               
-def get_run_data(id,title):
+
+
+def get_run_data(id, title):
+    
     r = requests.get(RUN_LOG_API.format(run_id=id), headers=keep_headers)
     if r.ok:
         data = r.json().get("data")
@@ -61,28 +70,32 @@ def get_run_data(id,title):
         cover = data.get("polylineSnapshot")
         if cover is None:
             cover = unsplash.random()
-        distance = round(float(data.get("distance"))/1000,2)
-        add_to_notion(start,end,cover,distance,title)
+        distance = round(float(data.get("distance"))/1000, 2)
+        add_to_notion(start, end, cover, distance, title, id)
+
 
 def write(r):
-    with open("data/keep.json","w") as f:
+    with open("data/keep.json", "w") as f:
         f.write(json.dumps(r.json()))
 
 
-def add_to_notion(start,end,cover,distance,title,):
+def add_to_notion(start, end, cover, distance, title, id):
+    time.sleep(0.3)
     date = start
     start = start.replace(microsecond=0)
     end = end.replace(microsecond=0)
-    properties = Properties().title(title).date(start = start,end=end).number("距离",distance)
-    notion_api.get_relation(properties,date)
-    page = Page().parent(DatabaseParent(DATABASE_ID)).children(Children()).cover(cover).icon("🏃🏻").properties(properties)
+    properties = Properties().title(title).date(
+        start=start, end=end).number("距离", distance).rich_text("id", id)
+    notion_api.get_relation(properties, date)
+    page = Page().parent(DatabaseParent(DATABASE_ID)).children(
+        Children()).cover(cover).icon("🏃🏻").properties(properties)
     r = notion_api.create_page(page=page)
 
 
-keep_headers  = {
+keep_headers = {
     "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0",
     "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
 }
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    login() 
+    login()

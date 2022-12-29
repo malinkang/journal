@@ -68,6 +68,14 @@ def query_weight():
         return results[0]["properties"]["体重"]["number"]
     return 0
 
+def query_bilibili():
+    response = notion_api.query_database("de0b737abfd0490abd9e4652073becfe", filter)
+    urls = []
+    for result in response.get("results"):
+        title = result["properties"]["Name"]["title"][0]["text"]["content"]
+        url = result["properties"]["link"]["rich_text"][0]["text"]["content"]
+        urls.append("[" + title + "](" + url + ")")
+    return urls
 
 def query_run():
     response = notion_api.query_database(
@@ -201,6 +209,14 @@ def create():
         result += "\n"
         for url in urls:
             result += url
+            result += "\n"
+    urls  = query_bilibili()
+    if len(urls) > 0:
+        result += "\n"
+        result +="## 📺 今天看了啥"
+        result += "\n"
+        for url in urls:
+            result += "- "+url
             result += "\n"
     file = datetime.strftime(datetime.now(), "%Y-%m-%d") + ".md"
     with open("./content/posts/" + file, "w") as f:

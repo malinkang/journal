@@ -37,6 +37,14 @@ def query_twitter():
         urls.append("[" + text + "](" + url + ")")
     return urls
 
+def query_bilibili():
+    response = notion_api.query_database("de0b737abfd0490abd9e4652073becfe", filter)
+    urls = []
+    for result in response.get("results"):
+        title = result["properties"]["Name"]["title"][0]["text"]["content"]
+        url = result["properties"]["link"]["rich_text"][0]["text"]["content"]
+        urls.append("[" + title + "](" + url + ")")
+    return urls
 
 def query_weight():
     response = notion_api.query_database("34c0db4313b24c3fac8e25436f5b3530", filter)
@@ -153,6 +161,14 @@ def create():
         for url in urls:
             result += "- "+url
             result += "\n"
+    urls  = query_bilibili()
+    if len(urls) > 0:
+        result += "\n"
+        result +="*📺 今天看了啥*"
+        result += "\n"
+        for url in urls:
+            result += "- "+url
+            result += "\n"
     result += "\n"
     result += tags
     result = result.replace('.','\.')
@@ -162,7 +178,6 @@ def create():
     send(result,cover)
 def send(message,cover):
     url = "https://api.telegram.org/bot5509900379:AAHSimr7FiKrclApJImy91A3Dff4R4g2OPk/sendPhoto"
-    print(message)
     body = {
         "chat_id": "@xiaoma2023",
         "photo": cover,
