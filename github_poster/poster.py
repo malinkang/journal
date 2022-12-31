@@ -86,7 +86,7 @@ class Poster:
         d.add(d.rect((0, 0), (width, height), fill=self.colors["background"]))
         #绘制头
         # self.__draw_header(d)
-        self.__draw_tracks(d, XY(10, 0))
+        self.__draw_tracks(d, XY(10, 1))
         # for multiple types show
         if self.is_multiple_type:
             #绘制尾
