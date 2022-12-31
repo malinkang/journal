@@ -125,7 +125,7 @@ jobs:
       - name: Run sync weread script
         if: contains(env.TYPE, 'weread')
         run: |
-          python3 -m github_poster weread --weread_cookie "${{secrets.WEREAD_COOKIE}}" --year 2021-2022 --me "malinkang"
+          python3 -m github_poster weread --weread_cookie "${{secrets.WEREAD_COOKIE}}" --year 2022 --me "malinkang"
       # change the types to yours
       - name: Run sync multiple script
         if: contains(env.TYPE, 'multiple')
