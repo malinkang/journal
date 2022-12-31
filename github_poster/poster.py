@@ -85,8 +85,8 @@ class Poster:
         d.viewbox(0, 0, self.width, height)
         d.add(d.rect((0, 0), (width, height), fill=self.colors["background"]))
         #绘制头
-        self.__draw_header(d)
-        self.__draw_tracks(d, XY(10, 30))
+        # self.__draw_header(d)
+        self.__draw_tracks(d, XY(10, 0))
         # for multiple types show
         if self.is_multiple_type:
             #绘制尾

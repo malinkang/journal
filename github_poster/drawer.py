@@ -19,6 +19,7 @@ class Drawer:
 
     def __init__(self, p):
         self.poster = p
+        #年字体大小 字体修改会导致错位
         self.year_size = 200 * 4.0 / 80.0
         self.year_style = f"font-size:{self.year_size}px; font-family:Arial;"
         self.year_length_style = f"font-size:{110 * 3.0 / 80.0}px; font-family:Arial;"
