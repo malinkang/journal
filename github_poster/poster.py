@@ -80,6 +80,7 @@ class Poster:
     def _draw_github(self, drawer, output):
         height = self.height
         width = self.width
+        print(height)
         self.tracks_drawer = drawer
         d = svgwrite.Drawing(output, (f"{width}mm", f"{height}mm"))
         d.viewbox(0, 0, self.width, height)
