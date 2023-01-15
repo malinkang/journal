@@ -68,14 +68,17 @@ def query_weight():
         return results[0]["properties"]["体重"]["number"]
     return 0
 
+
 def query_bilibili():
-    response = notion_api.query_database("de0b737abfd0490abd9e4652073becfe", filter)
+    response = notion_api.query_database(
+        "de0b737abfd0490abd9e4652073becfe", filter)
     urls = []
     for result in response.get("results"):
         title = result["properties"]["Name"]["title"][0]["text"]["content"]
         url = result["properties"]["link"]["rich_text"][0]["text"]["content"]
         urls.append("[" + title + "](" + url + ")")
     return urls
+
 
 def query_run():
     response = notion_api.query_database(
@@ -99,13 +102,19 @@ def query_book():
 
 
 def query_todo():
+    filter = {"and": [
+        {"property": "Date", "date": {"after": yesterday}},
+        {"property": "Date", "date": {"before": today}},
+        {"property": "Status", "select": {"equals": "Completed"}},
+    ]}
     response = notion_api.query_database(
         "97955f34653b4658bc0aaa50423be45f", filter)
     todo_list = []
     results = response.get("results")
     for result in results:
-        todo_list.append(result['properties']['Name']
+        todo_list.append(result['properties']['Title']
                          ['title'][0]['text']['content'])
+    print(todo_list)
     return todo_list
 
 
@@ -210,10 +219,10 @@ def create():
         for url in urls:
             result += url
             result += "\n"
-    urls  = query_bilibili()
+    urls = query_bilibili()
     if len(urls) > 0:
         result += "\n"
-        result +="## 📺 今天看了啥"
+        result += "## 📺 今天看了啥"
         result += "\n"
         for url in urls:
             result += "- "+url

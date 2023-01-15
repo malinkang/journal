@@ -57,10 +57,11 @@ def get_plants(user_id):
 
 
 def search_todo(title):
-    id = notion.search(TODO, title)
-    if id is None:
+    filter = {"property": "Title", "rich_text": {"equals": title}}
+    response = notion_api.query_database(TODO, filter)
+    if len(response.get("results")) == 0:
         return insert_todo(title)
-    return id
+    return response.get("results")[0]["id"]
 
 
 def insert_todo(title):
@@ -116,10 +117,11 @@ def get_end_time(title):
     sorts = [{"property": "Date", "direction": "ascending"}]
     response = notion_api.query_database(TOMATO, filter, sorts)
     results = response.get("results")
-    size = len(results)
-    start = notion_api.get_date(response).get("start")
-    end = notion_api.get_date(response, index=size - 1).get("end")
-    return (start, end)
+    if(len(results) > 0):
+        start = results[0].get("properties").get("Date").get("date").get("start")
+        end = results[-1].get("properties").get("Date").get("date").get("end")
+        return (start, end)
+    return None
 
 
 # 更新todo的时间
@@ -130,22 +132,22 @@ def update_todo():
         "and": [
             {"property": "Date", "date": {"after": yesterday}},
             {"property": "🍅", "rollup": {"number": {"greater_than": 0}}},
+            {"property": "Status", "select": {"equals": "Completed"}},
         ]
     }
     response = notion_api.query_database(TODO, filter)
     for index in range(0, len(response.get("results"))):
         page_id = response.get("results")[index].get("id")
-        title = notion_api.get_title(response, "Name", index=index)
+        title =  response.get("results")[index]['properties']['Title']['title'][0]['text']['content']
         ret = get_end_time(title)
         properties = Properties().date(start=ret[0], end=ret[1], time_zone=None)
         response2 = notion_api.update_page(page_id, properties)
-        duration = notion_api.get_formula(response2, "Duration", type="number")
+        duration = response2["properties"]["Duration"]["formula"]["number"]
         insert_to_toggl(title, ret[0], duration, "177393358")
 
 
 # 插入Toggle
 def insert_to_toggl(description, start, duration, pid):
-    print("insert_to_toggl")
     auth = ("2ef95512ce5b1528809f9a03a68e02b1", "api_token")
     params = {
         "time_entry": {
