@@ -37,7 +37,6 @@ def login():
     get_plants(user_id)
 
 
-
 def get_plants(user_id):
     """tag:15 工作"""
     now = datetime.now().strftime("%Y-%m-%d")
@@ -146,7 +145,7 @@ def update_todo():
         insert_to_toggl(title, ret[0], duration, "177393358")
 
 
-# 插入Toggle
+# 插入Toggl
 def insert_to_toggl(description, start, duration, pid):
     auth = ("2ef95512ce5b1528809f9a03a68e02b1", "api_token")
     params = {
