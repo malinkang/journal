@@ -69,7 +69,7 @@ def query_todo():
     todo_list = []
     results= response.get("results")
     for result in results:
-        todo_list.append(result['properties']['Name']['title'][0]['text']['content'])
+        todo_list.append(result['properties']['Title']['title'][0]['text']['content'])
     return todo_list
 
 
