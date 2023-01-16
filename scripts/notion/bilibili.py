@@ -10,22 +10,21 @@ import unsplash
 d = feedparser.parse("https://rsshub.app/bilibili/user/coin/27440979")
 id = "de0b737abfd0490abd9e4652073becfe"
 for entry in d.entries:
-    filter = {"property": "id", "rich_text": {"equals": entry.id}}
+    filter = {"property": "Url", "url": {"equals": entry.link}}
     response = notion_api.query_database(id, filter)
-    print(len(response.get("results")))
     if(len(response.get("results")) == 0):
         properties = (
             Properties()
             .title(entry.title)
+            .select("From","BiliBili")
             .date(start=datetime(*entry.published_parsed[:6]))
-            .rich_text("id", entry.id)
-            .rich_text("link", entry.link)
+            .url("Url", entry.link)
         )
         page = (
             Page()
             .parent(DatabaseParent("de0b737abfd0490abd9e4652073becfe"))
             .cover(unsplash.random())
-            .icon("💰")
+            .icon("📺")
             .children(Children())
             .properties(properties)
         )

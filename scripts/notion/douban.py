@@ -14,14 +14,16 @@ from notion_api import Children
 from notion_api import DatabaseParent
 from bs4 import BeautifulSoup
 import requests
-
+from config import(
+    BOOK_DATABASE_ID,
+    MOVIE_DATABASE_ID
+)
 
 url = 'https://www.douban.com/feed/people/malinkang/interests'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'}
 
-MOVIE_DATABASE_ID = "f551b7e002ac4b0ab73eb34d0dd53951"
-BOOK_DATABASE_ID = "c7efdba75f4146ad84a3f5b773998859"
+
 rating_dict = {
     '很差': '⭐️',
     '较差': '⭐️⭐️',
@@ -158,11 +160,14 @@ def update(date,rating,note, status,page_id):
         .date(property='打分日期', start=date)
         .select('状态', status)
     )
+    properties = notion_api.get_relation(properties=properties,date=date)
     if rating != "":
         properties.select("个人评分", rating)
     if note != "":
         properties.rich_text("我的短评", note)
     notion_api.update_page(page_id=page_id,properties=properties)
+
+
 def insert_movie(title, date, link, cover, rating, note, status, year, directors, actors, genre, country, imdb):
     properties = (
         Properties()
@@ -212,6 +217,7 @@ def insert_book(title, date, link, cover, info, rating, note, status):
         .number('ISBN', int(info['ISBN'][0]))
         .select('状态', status)
     )
+    properties = notion_api.get_relation(properties=properties,date=date)
     if rating != "":
         properties.select("个人评分", rating)
     if note != "":

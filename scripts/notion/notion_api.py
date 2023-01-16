@@ -62,6 +62,11 @@ class Properties(dict):
             "multi_select": multi_select,
         }
         return self
+    def url(self, property, url):
+        self[property] = {
+            "url": url,
+        }
+        return self
 
     def people(self, property, list):
         people = []

@@ -1,4 +1,7 @@
-from locale import DAY_1
 
 
 DAY_PAGE_ID = "294060cd-e13e-4c29-b0ac-6ee490c8a448"
+
+MOVIE_DATABASE_ID = "f551b7e002ac4b0ab73eb34d0dd53951"
+
+BOOK_DATABASE_ID = "c7efdba75f4146ad84a3f5b773998859"

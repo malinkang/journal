@@ -5,7 +5,9 @@ import dateutils
 from notion_api import Page
 from notion_api import Children, DatabaseParent
 from notion_api import Properties
-
+from config import (
+    MOVIE_DATABASE_ID
+)
 template = """
 ---
 title: "{title}"
@@ -17,16 +19,6 @@ categories: [日记]
 comment : true
 ---
 """
-
-# 写前一天的
-today = datetime.now()
-yesterday = (today-timedelta(days=1)).strftime("%Y-%m-%dT23:30:00+08:00")
-today = today.strftime("%Y-%m-%dT23:30:00+08:00")
-
-filter = {"and": [
-    {"property": "Date", "date": {"after": yesterday}},
-    {"property": "Date", "date": {"before": today}},
-]}
 
 
 def query_day():
@@ -42,7 +34,7 @@ def query_day():
 
 def query_ncm():
     response = notion_api.query_database(
-        "46beb49d60b84317a0a2c36a0a024c71", filter=filter)
+        "46beb49d60b84317a0a2c36a0a024c71", filter=get_filter())
     if len(response.get("results")) > 0:
         return notion_api.get_rich_text(response, "id")
     return ''
@@ -50,7 +42,7 @@ def query_ncm():
 
 def query_twitter():
     response = notion_api.query_database(
-        "5351451787d9403fb48d9a9c20f31f43", filter)
+        "5351451787d9403fb48d9a9c20f31f43", get_filter())
     urls = []
     for index in range(0, len(response.get("results"))):
         id = notion_api.get_rich_text(response, "id", index)
@@ -62,7 +54,7 @@ def query_twitter():
 
 def query_weight():
     response = notion_api.query_database(
-        "34c0db4313b24c3fac8e25436f5b3530", filter)
+        "34c0db4313b24c3fac8e25436f5b3530", get_filter())
     results = response.get("results")
     if len(results) > 0:
         return results[0]["properties"]["体重"]["number"]
@@ -71,18 +63,48 @@ def query_weight():
 
 def query_bilibili():
     response = notion_api.query_database(
-        "de0b737abfd0490abd9e4652073becfe", filter)
+        "de0b737abfd0490abd9e4652073becfe", get_filter())
     urls = []
     for result in response.get("results"):
         title = result["properties"]["Name"]["title"][0]["text"]["content"]
-        url = result["properties"]["link"]["rich_text"][0]["text"]["content"]
+        url = result["properties"]["Url"]["url"]
         urls.append("[" + title + "](" + url + ")")
+    return urls
+
+
+def get_filter(date=datetime.now(), name="Date", extras=[]):
+    """
+    date：时间
+    name：属性名称
+    extras：额外的条件
+    """
+    yesterday = (date-timedelta(days=1)).strftime("%Y-%m-%dT23:30:00+08:00")
+    date = date.strftime("%Y-%m-%dT23:30:00+08:00")
+    conditions = [
+        {"property": name, "date": {"after": yesterday}},
+        {"property": name, "date": {"before": date}},
+    ]
+    if(len(extras) > 0):
+        conditions.extend(extras)
+    filter = {"and":conditions}
+    return filter
+
+
+def query_movie():
+    filter = get_filter(date=datetime.now() - timedelta(days=1),name="打分日期")
+    response = notion_api.query_database(MOVIE_DATABASE_ID, filter)
+    urls = []
+    for result in response.get("results"):
+        title = result["properties"]["标题"]["title"][0]["text"]["content"]
+        url = result["properties"]["条目链接"]["url"]
+        status = result["properties"]["状态"]["select"]["name"]
+        urls.append(f"[{status}{title}]({url})")
     return urls
 
 
 def query_run():
     response = notion_api.query_database(
-        "8dc2c4145901403ea9c4fb0b10ad3f86", filter)
+        "8dc2c4145901403ea9c4fb0b10ad3f86", get_filter())
     results = response.get("results")
     if len(results) > 0:
         return results[0]["properties"]["距离"]["number"]
@@ -91,24 +113,20 @@ def query_run():
 
 def query_book():
     response = notion_api.query_database(
-        "cca71ece15ac48a68c34e5f86a2e6b38", filter)
-    results = response.get("results")
-    if len(results) > 0:
-        properties = results[0]['properties']
+        "cca71ece15ac48a68c34e5f86a2e6b38", get_filter())
+    books = []
+    for result in response.get("results"):
+        properties = result['properties']
         name = properties['Name']['title'][0]['text']['content']
         duration = properties['时长']['number']
-        return "读《" + name + "》" + str(duration) + " 分钟"
-    return None
+        books.append("读《" + name + "》" + str(duration) + " 分钟")
+    return books
 
 
 def query_todo():
-    filter = {"and": [
-        {"property": "Date", "date": {"after": yesterday}},
-        {"property": "Date", "date": {"before": today}},
-        {"property": "Status", "select": {"equals": "Completed"}},
-    ]}
+    extras = [{"property": "Status", "select": {"equals": "Completed"}}]
     response = notion_api.query_database(
-        "97955f34653b4658bc0aaa50423be45f", filter)
+        "97955f34653b4658bc0aaa50423be45f", get_filter(extras=extras))
     todo_list = []
     results = response.get("results")
     for result in results:
@@ -120,7 +138,7 @@ def query_todo():
 
 def query_toggl():
     response = notion_api.query_database(
-        "d8eee75d8c1049e7aa3dd6614907bb04", filter)
+        "d8eee75d8c1049e7aa3dd6614907bb04", get_filter())
     toggl_list = []
     for index in range(0, len(response.get("results"))):
         date = notion_api.get_date(response, "Date", index)
@@ -188,10 +206,6 @@ def create():
             result += "\n"
     result += "## ✅ ToDo"
     result += "\n"
-    book = query_book()
-    if book is not None:
-        result += "- [x] " + book
-        result += "\n"
     todos = query_todo()
     for todo in todos:
         result += "- [x] " + todo
@@ -227,6 +241,14 @@ def create():
         for url in urls:
             result += "- "+url
             result += "\n"
+    books = query_book()
+    if len(books) > 0:
+        result += "\n"
+        result += "## 📺 今天看了啥"
+        result += "\n"
+        for url in books:
+            result += "- "+books
+            result += "\n"
     file = datetime.strftime(datetime.now(), "%Y-%m-%d") + ".md"
     with open("./content/posts/" + file, "w") as f:
         f.seek(0)
@@ -235,6 +257,7 @@ def create():
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    options = parser.parse_args()
-    create()
+    # parser = argparse.ArgumentParser()
+    # options = parser.parse_args()
+    # create()
+    print(query_todo())
