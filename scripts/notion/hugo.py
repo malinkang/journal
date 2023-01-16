@@ -64,11 +64,11 @@ def query_weight():
 def query_bilibili():
     response = notion_api.query_database(
         "de0b737abfd0490abd9e4652073becfe", get_filter())
-    urls = []
+    urls = set()
     for result in response.get("results"):
         title = result["properties"]["Name"]["title"][0]["text"]["content"]
         url = result["properties"]["Url"]["url"]
-        urls.append("[" + title + "](" + url + ")")
+        urls.add("[" + title + "](" + url + ")")
     return urls
 
 
@@ -93,12 +93,12 @@ def get_filter(date=datetime.now(), name="Date", extras=[]):
 def query_movie():
     filter = get_filter(date=datetime.now() - timedelta(days=1),name="打分日期")
     response = notion_api.query_database(MOVIE_DATABASE_ID, filter)
-    urls = []
+    urls = set()
     for result in response.get("results"):
         title = result["properties"]["标题"]["title"][0]["text"]["content"]
         url = result["properties"]["条目链接"]["url"]
         status = result["properties"]["状态"]["select"]["name"]
-        urls.append(f"[{status}{title}]({url})")
+        urls.add(f"[{status}{title}]({url})")
     return urls
 
 
@@ -156,7 +156,7 @@ def query_toggl():
 
 def create():
     response = notion_api.query_database(
-        "294060cd-e13e-4c29-b0ac-6ee490c8a448", filter)
+        "294060cd-e13e-4c29-b0ac-6ee490c8a448", get_filter())
     cover = response.get("results")[0].get("cover").get("external").get("url")
     icon = response.get("results")[0].get("icon").get("emoji")
     name = notion_api.get_title(response, "Name")
@@ -233,7 +233,7 @@ def create():
         for url in urls:
             result += url
             result += "\n"
-    urls = query_bilibili()
+    urls = query_bilibili() | query_movie()
     if len(urls) > 0:
         result += "\n"
         result += "## 📺 今天看了啥"
@@ -244,7 +244,7 @@ def create():
     books = query_book()
     if len(books) > 0:
         result += "\n"
-        result += "## 📺 今天看了啥"
+        result += "## 📚 今天读了啥"
         result += "\n"
         for url in books:
             result += "- "+books
@@ -257,7 +257,6 @@ def create():
 
 
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser()
-    # options = parser.parse_args()
-    # create()
-    print(query_todo())
+    parser = argparse.ArgumentParser()
+    options = parser.parse_args()
+    create()
