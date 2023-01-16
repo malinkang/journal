@@ -135,14 +135,16 @@ def update_todo():
         ]
     }
     response = notion_api.query_database(TODO, filter)
-    for index in range(0, len(response.get("results"))):
-        page_id = response.get("results")[index].get("id")
-        title =  response.get("results")[index]['properties']['Title']['title'][0]['text']['content']
-        ret = get_end_time(title)
-        properties = Properties().date(start=ret[0], end=ret[1], time_zone=None)
-        response2 = notion_api.update_page(page_id, properties)
-        duration = response2["properties"]["Duration"]["formula"]["number"]
-        insert_to_toggl(title, ret[0], duration, "177393358")
+    for result in response.get("results"):
+        page_id = result.get("id")
+        title =  result['properties']['Title']['title'][0]['text']['content']
+        end =  result['properties']['Date']['date']['end']
+        if(end == None):        
+            ret = get_end_time(title)
+            properties = Properties().date(start=ret[0], end=ret[1], time_zone=None)
+            response2 = notion_api.update_page(page_id, properties)
+            duration = response2["properties"]["Duration"]["formula"]["number"]
+            insert_to_toggl(title, ret[0], duration, "177393358")
 
 
 # 插入Toggl
