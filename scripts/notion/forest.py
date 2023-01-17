@@ -139,6 +139,7 @@ def update_todo():
         page_id = result.get("id")
         title =  result['properties']['Title']['title'][0]['text']['content']
         end =  result['properties']['Date']['date']['end']
+        print(f"end == {end}")
         if(end == None):        
             ret = get_end_time(title)
             properties = Properties().date(start=ret[0], end=ret[1], time_zone=None)
