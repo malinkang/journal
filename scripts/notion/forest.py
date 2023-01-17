@@ -41,9 +41,10 @@ def get_plants(user_id):
     """tag:15 工作"""
     now = datetime.now().strftime("%Y-%m-%d")
     r = s.get(FOREST_CLAENDAR_URL.format(date=now, user_id=user_id), headers=headers)
+    results = []
     for plant in r.json().get("plants"):
         id = plant.get("id")
-        note = plant.get("note")
+        note = plant.get("note").strip()
         start_time = plant.get("start_time")
         end_time = plant.get("end_time")
         start = date.format_utc(start_time) + timedelta(hours=8)
@@ -51,8 +52,26 @@ def get_plants(user_id):
         if note == "":
             pass
         else:
-            insert_tomato(id,note, start, end)
-    update_todo()
+            if(exist(id)):
+                pass
+            else:
+                result = insert_tomato(id,note, start, end)
+                results.append(result)
+    results = remove(results)
+    update_todo(results)
+
+#移除重复的
+def remove(list):
+    print(f"remove before {len(list)}")
+    new_list = []
+    s = set()
+    for i in list:
+        if i["id"] in s:
+            pass
+        else:
+            s.add(i["id"])
+            new_list.append(i)
+    return new_list
 
 
 def search_todo(title):
@@ -60,7 +79,7 @@ def search_todo(title):
     response = notion_api.query_database(TODO, filter)
     if len(response.get("results")) == 0:
         return insert_todo(title)
-    return response.get("results")[0]["id"]
+    return response.get("results")[0]
 
 
 def insert_todo(title):
@@ -81,17 +100,15 @@ def insert_todo(title):
         .properties(properties)
     )
     response = notion_api.create_page(page=page)
-    return response.get("id")
+    return response
 
 
 # 番茄钟插入notion
 def insert_tomato(id,note, start, end):
-    if(exist(id)):
-        print("已经存在")
-        return
     properties = Properties().title(note).date("Date", start, end).number("Id",id)
     properties = notion_api.get_relation(properties)
-    properties["ToDo"] = {"relation": [{"id": search_todo(note)}]}
+    result = search_todo(note)
+    properties["ToDo"] = {"relation": [{"id": result["id"]}]}
     parent = DatabaseParent(TOMATO)
     page = (
         Page()
@@ -101,8 +118,8 @@ def insert_tomato(id,note, start, end):
         .icon("🍅")
         .properties(properties)
     )
-    response = notion_api.create_page(page=page)
-    return response.get("id")
+    notion_api.create_page(page=page)
+    return result
 
 def exist(id):
     filter = {"property": "Id", "number": {"equals": id}}
@@ -124,26 +141,18 @@ def get_end_time(title):
 
 
 # 更新todo的时间
-def update_todo():
-    today = datetime.now()
-    yesterday = (today-timedelta(days=1)).strftime("%Y-%m-%dT23:30:00+08:00")
-    filter = {
-        "and": [
-            {"property": "Date", "date": {"after": yesterday}},
-            {"property": "🍅", "rollup": {"number": {"greater_than": 0}}},
-            {"property": "Status", "select": {"equals": "Completed"}},
-        ]
-    }
-    response = notion_api.query_database(TODO, filter)
-    for result in response.get("results"):
-        page_id = result.get("id")
-        title =  result['properties']['Title']['title'][0]['text']['content']
-        end =  result['properties']['Date']['date']['end']
-        print(f"end == {end}")
-        if(end == None):        
+def update_todo(results):
+    print(f"len = {len(results)}")
+    for result in results:
+        status =  result['properties']['Status']['select']['name']
+        if status == "Completed":  
+            page_id = result["id"]
+            title =  result['properties']['Title']['title'][0]['text']['content']
             ret = get_end_time(title)
             properties = Properties().date(start=ret[0], end=ret[1], time_zone=None)
-            response2 = notion_api.update_page(page_id, properties)
+            icon = {"type": "emoji", "emoji": "✅"}
+            cover =  {"type": "external", "external": {"url": unsplash.random()}}
+            response2 = notion_api.update_page(page_id, properties,icon=icon,cover=cover)
             duration = response2["properties"]["Duration"]["formula"]["number"]
             insert_to_toggl(title, ret[0], duration, "177393358")
 
