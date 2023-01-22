@@ -91,7 +91,7 @@ def get_filter(date=datetime.now(), name="Date", extras=[]):
 
 
 def query_movie():
-    filter = get_filter(date=datetime.now() - timedelta(days=1),name="打分日期")
+    filter = get_filter(date=datetime.now(),name="打分日期")
     response = notion_api.query_database(MOVIE_DATABASE_ID, filter)
     urls = set()
     for result in response.get("results"):
