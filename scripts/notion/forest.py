@@ -55,30 +55,15 @@ def get_plants(user_id):
             if(exist(id)):
                 pass
             else:
-                result = insert_tomato(id,note, start, end)
-                results.append(result)
-    results = remove(results)
-    update_todo(results)
+                insert_tomato(id,note, start, end)
 
-#移除重复的
-def remove(list):
-    print(f"remove before {len(list)}")
-    new_list = []
-    s = set()
-    for i in list:
-        if i["id"] in s:
-            pass
-        else:
-            s.add(i["id"])
-            new_list.append(i)
-    return new_list
 
 
 def search_todo(title):
     filter = {"property": "Title", "rich_text": {"equals": title}}
     response = notion_api.query_database(TODO, filter)
     if len(response.get("results")) == 0:
-        return insert_todo(title)
+        return None
     return response.get("results")[0]
 
 
@@ -105,10 +90,11 @@ def insert_todo(title):
 
 # 番茄钟插入notion
 def insert_tomato(id,note, start, end):
+    result = search_todo(note)
     properties = Properties().title(note).date("Date", start, end).number("Id",id)
     properties = notion_api.get_relation(properties)
-    result = search_todo(note)
-    properties["ToDo"] = {"relation": [{"id": result["id"]}]}
+    if(result!=None):
+        properties["ToDo"] = {"relation": [{"id": result["id"]}]}
     parent = DatabaseParent(TOMATO)
     page = (
         Page()
@@ -127,34 +113,6 @@ def exist(id):
     results = response["results"]
     return len(results)>0
 
-
-def get_end_time(title):
-    filter = {"property": "Name", "rich_text": {"equals": title}}
-    sorts = [{"property": "Date", "direction": "ascending"}]
-    response = notion_api.query_database(TOMATO, filter, sorts)
-    results = response.get("results")
-    if(len(results) > 0):
-        start = results[0].get("properties").get("Date").get("date").get("start")
-        end = results[-1].get("properties").get("Date").get("date").get("end")
-        return (start, end)
-    return None
-
-
-# 更新todo的时间
-def update_todo(results):
-    print(f"len = {len(results)}")
-    for result in results:
-        status =  result['properties']['Status']['select']['name']
-        if status == "Completed":  
-            page_id = result["id"]
-            title =  result['properties']['Title']['title'][0]['text']['content']
-            ret = get_end_time(title)
-            properties = Properties().date(start=ret[0], end=ret[1], time_zone=None)
-            icon = {"type": "emoji", "emoji": "✅"}
-            cover =  {"type": "external", "external": {"url": unsplash.random()}}
-            response2 = notion_api.update_page(page_id, properties,icon=icon,cover=cover)
-            duration = response2["properties"]["Duration"]["formula"]["number"]
-            insert_to_toggl(title, ret[0], duration, "177393358")
 
 
 # 插入Toggl

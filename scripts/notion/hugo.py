@@ -119,7 +119,8 @@ def query_book():
         properties = result['properties']
         name = properties['Name']['title'][0]['text']['content']
         duration = properties['时长']['number']
-        books.append("读《" + name + "》" + str(duration) + " 分钟")
+        url = properties['URL']['url']
+        books.append(f"读《[{name}]({url})》{duration}分钟")
     return books
 
 
@@ -247,7 +248,7 @@ def create():
         result += "## 📚 今天读了啥"
         result += "\n"
         for url in books:
-            result += "- "+books
+            result += "- "+url
             result += "\n"
     file = datetime.strftime(datetime.now(), "%Y-%m-%d") + ".md"
     with open("./content/posts/" + file, "w") as f:

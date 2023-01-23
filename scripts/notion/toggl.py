@@ -23,6 +23,7 @@ def sync():
     response = requests.get(
         "https://api.track.toggl.com/api/v8/time_entries", params=params, auth=auth
     )
+    print(response.json())
     for task in response.json():
         if task.get("pid") is not None and task.get("stop") is not None:
             newTags = []
@@ -31,9 +32,11 @@ def sync():
                 for tag in tags:
                     newTag = {"name": tag}
                     newTags.append(newTag)
+            id = task.get("id")
             start = datetime.fromisoformat(task.get("start"))
             start = start + timedelta(hours=8)
             end = datetime.fromisoformat(task.get("stop"))
+            #获取project
             end = end + timedelta(hours=8)
             response = requests.get(
                 "https://api.track.toggl.com/api/v8/projects/" + str(task.get("pid")),
@@ -43,6 +46,7 @@ def sync():
             data = response.json().get("data")
             project = data.get("name")
             cid = data.get("cid")
+            #获取client
             response = requests.get(
                 "https://api.track.toggl.com/api/v8/clients/" + str(cid),
                 auth=auth,
@@ -55,6 +59,7 @@ def sync():
             properties = (
                 Properties()
                 .title("时间统计")
+                .number("id",id)
                 .date(start=start, end=end)
                 .select("二级分类", project)
                 .select("一级分类", client)
