@@ -120,7 +120,7 @@ def query_book():
         name = properties['Name']['title'][0]['text']['content']
         duration = properties['时长']['number']
         url = properties['URL']['url']
-        books.append(f"读《[{name}]({url})》{duration}分钟")
+        books.append(f"读[《{name}》]({url}){duration}分钟")
     return books
 
 
