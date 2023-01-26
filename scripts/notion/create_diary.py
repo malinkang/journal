@@ -9,6 +9,7 @@ from notion_api import Properties
 from notion_api import Page
 from notion_api import DatabaseParent
 from notion_api import Children
+from config import DAY_PAGE_ID
 import notion_api
 
 
@@ -16,14 +17,15 @@ import notion_api
 def create_page():
     emo = "☀️"
     tomorrow = datetime.now() + timedelta(days=1)
+    year = tomorrow.strftime("%Y")
     week = tomorrow.strftime("第%V周")
     month = tomorrow.strftime("%-m月")
     title = dateutils.format_date_with_week(date=tomorrow)
     cover = unsplash.random()
-    tags = [week,month]
-    properties = Properties().title(title).date(start=tomorrow).multi_select("Tag",tags)
+    tags = [year,month,week]
+    properties = Properties().title(title).date(start=tomorrow).multi_select("Tags",tags)
     properties = notion_api.get_relation(properties,tomorrow,False)
-    parent = DatabaseParent("294060cd-e13e-4c29-b0ac-6ee490c8a448")
+    parent = DatabaseParent(DAY_PAGE_ID)
     page  = Page().parent(parent).children(Children()).cover(cover).icon(emo).properties(properties)
     notion_api.create_page(page=page)
 

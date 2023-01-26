@@ -4,6 +4,7 @@ import argparse
 from datetime import datetime, timedelta
 from http.cookies import SimpleCookie
 import json
+from math import floor
 import requests
 from requests.utils import cookiejar_from_dict
 
@@ -14,6 +15,7 @@ from notion_api import Page
 from util import get_title
 import unsplash
 import notion_api
+from config import BOOK_DATABASE_ID
 WEREAD_BASE_URL = "https://weread.qq.com/"
 WEREAD_HISTORY_URL = (
     "https://i.weread.qq.com/readdetail?baseTimestamp=0&count=32&type=1"
@@ -34,7 +36,7 @@ def parse_cookie_string(cookie_string):
 
 def get_reading(minutes):
     filter = {"property": "状态", "select": {"equals": "在读"}}
-    response = notion_api.query_database("c7efdba75f4146ad84a3f5b773998859", filter)
+    response = notion_api.query_database(BOOK_DATABASE_ID, filter)
     for result in response["results"]:
         name = get_title(result,"标题")
         id = result["id"]
@@ -79,5 +81,5 @@ if __name__ == "__main__":
     if r.ok:
         day = datetime.now().day
         seconds = r.json()['datas'][0]['timeMeta']['readTimeList'][day-1]
-        minutes = round(seconds/60)
+        minutes = floor(seconds/60)
         get_reading(minutes)

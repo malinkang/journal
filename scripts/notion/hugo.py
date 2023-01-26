@@ -6,7 +6,8 @@ from notion_api import Page
 from notion_api import Children, DatabaseParent
 from notion_api import Properties
 from config import (
-    MOVIE_DATABASE_ID
+    MOVIE_DATABASE_ID,
+    DAY_PAGE_ID
 )
 template = """
 ---
@@ -156,15 +157,14 @@ def query_toggl():
 
 
 def create():
-    response = notion_api.query_database(
-        "294060cd-e13e-4c29-b0ac-6ee490c8a448", get_filter())
+    response = notion_api.query_database(DAY_PAGE_ID, get_filter())
     cover = response.get("results")[0].get("cover").get("external").get("url")
     icon = response.get("results")[0].get("icon").get("emoji")
     name = notion_api.get_title(response, "Name")
     name = icon + " " + name
-    tag = notion_api.get_multi_select(response, "Tag")
+    tags = notion_api.get_multi_select(response, "Tags")
     items = []
-    for item in tag:
+    for item in tags:
         items.append(item.get("name"))
     location = notion_api.get_rich_text(response, "位置")
     result = template.format(
