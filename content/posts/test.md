@@ -28,17 +28,6 @@ comment : true
  
 测试测试
 
-```js
-<script src="https://utteranc.es/client.js"
-        repo="malinkang/d"
-        issue-term="url"
-        label="diary"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
-
-```
 
 ```java
 public SimpleArrayMap() {
