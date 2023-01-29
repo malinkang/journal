@@ -7,7 +7,8 @@ from notion_api import Children, DatabaseParent
 from notion_api import Properties
 from config import (
     MOVIE_DATABASE_ID,
-    DAY_PAGE_ID
+    DAY_PAGE_ID,
+    TOGGL_DATABASE_ID
 )
 template = """
 ---
@@ -134,13 +135,11 @@ def query_todo():
     for result in results:
         todo_list.append(result['properties']['Title']
                          ['title'][0]['text']['content'])
-    print(todo_list)
     return todo_list
 
 
 def query_toggl():
-    response = notion_api.query_database(
-        "d8eee75d8c1049e7aa3dd6614907bb04", get_filter())
+    response = notion_api.query_database(TOGGL_DATABASE_ID, get_filter())
     toggl_list = []
     for index in range(0, len(response.get("results"))):
         date = notion_api.get_date(response, "Date", index)
@@ -151,7 +150,7 @@ def query_toggl():
         note = notion_api.get_rich_text(response, "备注", index)
         result = start + "-" + end + "：" + name
         if note != None and note != "":
-            result += "，" + note
+            result += "：" + note
         toggl_list.append(result)
     return toggl_list
 

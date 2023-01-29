@@ -9,13 +9,13 @@ from notion_api import Children
 from notion_api import DatabaseParent
 from notion_api import Page
 import unsplash
-
+from config import TOGGL_DATABASE_ID
 
 def sync():
     sorts = [{"property": "Date", "direction": "descending"}]
     page_size = 1
     response = notion_api.query_database(
-        "d8eee75d8c1049e7aa3dd6614907bb04", sorts=sorts, page_size=page_size
+        TOGGL_DATABASE_ID, sorts=sorts, page_size=page_size
     )
     end = notion_api.get_date(response, "Date").get("end")
     auth = ("2ef95512ce5b1528809f9a03a68e02b1", "api_token")
@@ -69,7 +69,7 @@ def sync():
             properties = notion_api.get_relation(properties, datetime.now())
             page = (
                 Page()
-                .parent(DatabaseParent("d8eee75d8c1049e7aa3dd6614907bb04"))
+                .parent(DatabaseParent(TOGGL_DATABASE_ID))
                 .children(Children())
                 .properties(properties)
                 .cover(unsplash.random())

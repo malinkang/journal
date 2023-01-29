@@ -40,6 +40,9 @@ public SimpleArrayMap() {
 ![](/images/test.png)
 ![](/images/weread.svg)
 
+
+
 ## 参考
 * [在 Hugo 里内嵌音乐播放器（APlayer）](https://blog.ohmykreee.top/article/music-player-in-hugo-page/)
 
+{{<aplayer server="netease" type="song" id="1867217766">}}
