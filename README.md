@@ -47,3 +47,18 @@ python3 scripts/notion/weread.py 'RK=KZ0Ew/JFS7; ptcz=cba8e45558c5cab1cccb43896a
 ## 文档
 
 * [钉钉](//https://developers.dingtalk.com/document/app/custom-robot-access/title-jfe-yo9-jl2)
+
+
+```
+//1676472
+curl -u linkang.ma@gmail.com:TFitness@5 \
+  -H "Content-Type: application/json" \
+  -X GET   https://api.track.toggl.com/api/v9/workspaces
+
+
+
+curl -u 2ef95512ce5b1528809f9a03a68e02b1:api_token \
+  -H "Content-Type: application/json" \
+  -X GET  https://api.track.toggl.com/api/v9/me/projects
+
+```

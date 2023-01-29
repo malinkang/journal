@@ -13,7 +13,8 @@ from notion_api import Page
 import notion_api
 from notion_api import DatabaseParent
 from notion_api import Children
-
+from config import TOMATO_DATABASE_ID
+import util
 FOREST_URL_HEAD = "https://forest-china.upwardsware.com"
 FOREST_LOGIN_URL = FOREST_URL_HEAD + "/api/v1/sessions"
 FOREST_CLAENDAR_URL = (
@@ -21,7 +22,6 @@ FOREST_CLAENDAR_URL = (
     + "/api/v1/plants/updated_plants?update_since={date}&seekruid={user_id}"
 )
 TODO = "97955f34653b4658bc0aaa50423be45f"
-TOMATO = "bcdcfb9068eb458a94c8266c2b88ec09"
 FOREST_TAG_URL = FOREST_URL_HEAD + "/api/v1/tags?seekruid={id}"
 email = "linkang.ma@gmail.com"
 password = "FFitness06"
@@ -29,73 +29,57 @@ headers = {"Content-Type": "application/json"}
 USER_ID = "6d411501-82d6-46e5-b809-97c0fdce722c"
 s = requests.Session()
 
+dict = {
+    15: "👨‍💻工作",  # 工作
+    50: "📚读书",  # 计算机网络原理
+    51: "🍎LeetCode",  # 计算机网络原理
+    52: "🌐计算机网络原理",  # 计算机网络原理
+    53: "🇺🇸英语",  # 计算机网络原理
+}
+
+dict2 = {
+    "👨‍💻工作":177393358,  # 工作
+    "📚读书":177394096,  # 计算机网络原理
+    "🍎LeetCode":188371890,  # 计算机网络原理
+    "🌐计算机网络原理":189166678,  # 计算机网络原理
+    "🇺🇸英语":186296615,  # 计算机网络原理
+}
 
 def login():
     data = {"session": {"email": email, "password": password}}
     r = s.post(FOREST_LOGIN_URL, headers=headers, json=data)
     user_id = r.json().get("user_id")
-    get_plants(user_id)
+    return user_id
 
 
 def get_plants(user_id):
-    """tag:15 工作"""
     now = datetime.now().strftime("%Y-%m-%d")
-    r = s.get(FOREST_CLAENDAR_URL.format(date=now, user_id=user_id), headers=headers)
-    results = []
-    for plant in r.json().get("plants"):
+    r = s.get(FOREST_CLAENDAR_URL.format(
+        date=now, user_id=user_id), headers=headers)
+    plants = r.json().get("plants")
+    for plant in plants:
         id = plant.get("id")
+        tag = plant.get("tag")
         note = plant.get("note").strip()
         start_time = plant.get("start_time")
         end_time = plant.get("end_time")
         start = date.format_utc(start_time) + timedelta(hours=8)
         end = date.format_utc(end_time) + timedelta(hours=8)
-        if note == "":
+        if tag == 0:
             pass
         else:
-            if(exist(id)):
+            if (exist(id)):
                 pass
             else:
-                insert_tomato(id,note, start, end)
-
-
-
-def search_todo(title):
-    filter = {"property": "Title", "rich_text": {"equals": title}}
-    response = notion_api.query_database(TODO, filter)
-    if len(response.get("results")) == 0:
-        return None
-    return response.get("results")[0]
-
-
-def insert_todo(title):
-    properties = (
-        Properties()
-        .title(title)
-        .select("Status", "Completed")
-        .select("Priority", "High 🔥")
-        .people("Assign", ["6d411501-82d6-46e5-b809-97c0fdce722c"])
-    )
-    parent = DatabaseParent(TODO)
-    page = (
-        Page()
-        .parent(parent)
-        .children(Children())
-        .cover(unsplash.random())
-        .icon("✅")
-        .properties(properties)
-    )
-    response = notion_api.create_page(page=page)
-    return response
+                insert_tomato(id, tag, note, start, end)
 
 
 # 番茄钟插入notion
-def insert_tomato(id,note, start, end):
-    result = search_todo(note)
-    properties = Properties().title(note).date("Date", start, end).number("Id",id)
+def insert_tomato(id, tag, note, start, end):
+    properties = Properties().title(note).select(
+        "Tag", dict[tag]).date("Date", start, end).number("Id", id)
     properties = notion_api.get_relation(properties)
-    if(result!=None):
-        properties["ToDo"] = {"relation": [{"id": result["id"]}]}
-    parent = DatabaseParent(TOMATO)
+    parent = DatabaseParent(TOMATO_DATABASE_ID)
     page = (
         Page()
         .parent(parent)
@@ -105,17 +89,45 @@ def insert_tomato(id,note, start, end):
         .properties(properties)
     )
     notion_api.create_page(page=page)
-    return result
+
 
 def exist(id):
     filter = {"property": "Id", "number": {"equals": id}}
-    response=notion_api.query_database(TOMATO, filter)
+    response = notion_api.query_database(TOMATO_DATABASE_ID, filter)
     results = response["results"]
-    return len(results)>0
+    return len(results) > 0
 
 
+def query_tomato():
+    today = datetime.now().strftime("%Y-%m-%dT00:00:00+08:00")
+    print(today)
+    filter = {
+        "and": [
+            {"property": "Date", "date": {"after": today}},
+            {"property": "Toggl", "number": {"is_empty": True}}
+        ]
+    }
+    sorts = [
+        {
+            "property": "Date",
+            "direction": "ascending"
+        }
+    ]
+    response = notion_api.query_database(TOMATO_DATABASE_ID,filter=filter,sorts= sorts)
+    for result in response["results"]:
+        page_id = id = result["id"]
+        properties = result["properties"]
+        tag = properties["Tag"]["select"]["name"]
+        note = util.get_title(result,"Name")
+        start = properties["Date"]["date"]["start"]
+        duration = properties["Duration"]["formula"]["number"]
+        id = insert_to_toggl(note,start,duration,dict2[tag])
+        update_tomato(page_id=page_id,id=id)
 
-# 插入Toggl
+def update_tomato(page_id,id):
+    properties = Properties().number("Toggl",id)
+    notion_api.update_page(page_id=page_id,properties=properties)
+
 def insert_to_toggl(description, start, duration, pid):
     auth = ("2ef95512ce5b1528809f9a03a68e02b1", "api_token")
     params = {
@@ -133,8 +145,10 @@ def insert_to_toggl(description, start, duration, pid):
         auth=auth,
         headers=headers,
     )
-    print(response.text)
+    return response.json()["data"]["id"]
 
 
 if __name__ == "__main__":
-    login()
+    user_id = login()
+    get_plants(user_id)
+    query_tomato()
