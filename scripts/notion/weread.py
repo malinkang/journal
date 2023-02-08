@@ -58,7 +58,7 @@ def get_read_ifo(bookId,title,id,url):
         datas = r.json()["readDetail"]["data"]
         for data in datas:
             date = data["readDate"]
-            date = datetime.fromtimestamp(date)
+            date = datetime.fromtimestamp(date) + timedelta(hours=8)
             minutes = floor(data["readTime"] / 60)
             print(date)
             page_id= query_database(bookId,date)
