@@ -60,6 +60,7 @@ def get_read_ifo(bookId,title,id,url):
             date = data["readDate"]
             date = datetime.fromtimestamp(date)
             minutes = floor(data["readTime"] / 60)
+            print(date)
             page_id= query_database(bookId,date)
             if page_id =="":
                 insert(title,id,minutes,url,date,bookId)

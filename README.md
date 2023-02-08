@@ -39,11 +39,6 @@ python3 scripts/notion/weread.py 'RK=KZ0Ew/JFS7; ptcz=cba8e45558c5cab1cccb43896a
 
 ## TODO
 
-- [ ] 睡眠计入Time tacker中，更新前先检查是否已经记录过
-- [ ] 写日记自动从计划database中获取任务名称建立TODO List
-- [ ] 每天更新计划是否完成
-
-
 ## 文档
 
 * [钉钉](//https://developers.dingtalk.com/document/app/custom-robot-access/title-jfe-yo9-jl2)
