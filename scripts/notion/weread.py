@@ -15,12 +15,13 @@ from notion_api import Page
 from util import get_title
 import unsplash
 import notion_api
+from util import get_rich_text
 from config import BOOK_DATABASE_ID
+
 WEREAD_BASE_URL = "https://weread.qq.com/"
 WEREAD_HISTORY_URL = (
-    "https://i.weread.qq.com/readdetail?baseTimestamp=0&count=32&type=1"
+    "https://i.weread.qq.com/book/readinfo"
 )
-
 def parse_cookie_string(cookie_string):
     cookie = SimpleCookie()
     cookie.load(cookie_string)
@@ -34,26 +35,71 @@ def parse_cookie_string(cookie_string):
     return cookiejar
 
 
-def get_reading(minutes):
+def get_reading():
     filter = {"property": "状态", "select": {"equals": "在读"}}
     response = notion_api.query_database(BOOK_DATABASE_ID, filter)
-    for result in response["results"]:
-        name = get_title(result,"标题")
+    results = response["results"]
+    print(len(results))
+    for result in results:
+        weread = get_rich_text(result, "WeRead")
+        title = get_title(result,"标题")
         id = result["id"]
         url = result["properties"]["条目链接"]["url"]
-        insert(name,id,minutes,url)
+        get_read_ifo(weread,title,id,url)
 
 
-def insert(title, id,minutes,url):
+def get_read_ifo(bookId,title,id,url):
+    """获取书的详情"""
+    session.get(WEREAD_BASE_URL)
+    params = dict(bookId=bookId, readingDetail=1)
+    r = session.get(WEREAD_HISTORY_URL,params=params)
+    print(r.text)
+    if r.ok:
+        datas = r.json()["readDetail"]["data"]
+        for data in datas:
+            date = data["readDate"]
+            date = datetime.fromtimestamp(date)
+            minutes = floor(data["readTime"] / 60)
+            page_id= query_database(bookId,date)
+            if page_id =="":
+                insert(title,id,minutes,url,date,bookId)
+            else:
+                update(page_id,minutes)
+
+
+def query_database(weread,date):
+    date = date.strftime("%Y-%m-%dT00:00:00+08:00")
+    filter= {
+        "and":[
+        {"property": "ID", "rich_text": {"equals": weread}},
+        {"property": "Date", "date": {"equals": date}},
+        ]
+    }
+    id = ""
+    response = notion_api.query_database("cca71ece15ac48a68c34e5f86a2e6b38", filter)
+    results = response["results"]
+    if len(results) > 0:
+        id = results[0]["id"]
+    return id 
+
+def update(id,minutes):
+    properties = (
+        Properties()
+        .number("时长", minutes)
+    )
+    notion_api.update_page(id,properties)
+
+def insert(title, id,minutes,url,date,bookId):
     properties = (
         Properties()
         .title(title)
+        .rich_text("ID",bookId)
         .relation("Book", id)
         .url("URL",url)
         .number("时长", minutes)
-        .date(start=datetime.now())
+        .date(start=date.strftime("%Y-%m-%dT00:00:00"))
     )
-    properties = notion_api.get_relation(properties)
+    properties = notion_api.get_relation(properties,date=date)
     page = (
         Page()
         .parent(DatabaseParent("cca71ece15ac48a68c34e5f86a2e6b38"))
@@ -66,20 +112,9 @@ def insert(title, id,minutes,url):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("cookie")
+    parser.add_argument("cookies")
     options = parser.parse_args()
+    cookies = options.cookies
     session = requests.Session()
-    session.cookies = parse_cookie_string(options.cookie)
-    r = session.get(WEREAD_HISTORY_URL)
-    with open('r.json','w') as f:
-        f.write(json.dumps(r.json()))
-    if not r.ok:
-        # need to refresh cookie WTF the design!!
-        if r.json()["errcode"] == -2012:
-            session.get(WEREAD_BASE_URL)
-            r = session.get(WEREAD_HISTORY_URL)
-    if r.ok:
-        day = datetime.now().day
-        seconds = r.json()['datas'][0]['timeMeta']['readTimeList'][day-1]
-        minutes = floor(seconds/60)
-        get_reading(minutes)
+    session.cookies = parse_cookie_string(cookies)
+    get_reading()

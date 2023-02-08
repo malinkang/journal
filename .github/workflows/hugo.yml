@@ -27,7 +27,7 @@ jobs:
           python scripts/notion/create_diary.py
       - name: douban sync
         run: |
-          python scripts/notion/douban.py
+          python scripts/notion/douban.py "${{secrets.WEREAD_COOKIE}}"
       - name: ncm sync
         run: |
           python scripts/notion/ncm.py

@@ -62,3 +62,8 @@ curl -u 2ef95512ce5b1528809f9a03a68e02b1:api_token \
   -X GET  https://api.track.toggl.com/api/v9/me/projects
 
 ```
+
+python3 scripts/notion/weread.py 'RK=KZ0Ew/JFS7; ptcz=cba8e45558c5cab1cccb43896ab8d5980c5506b676460d857e0bf24492a9479f; wr_gid=223315174; wr_fp=2017239275; ptui_loginuin=458832194; pgv_info=ssid=s1778422266; pgv_pvid=5013319515; wr_vid=16308016; wr_pf=0; wr_rt=web@MQH3cqXN3ib5l5f0~ol_WL; wr_localvid=79c322606f8d73079ce03da; wr_name=CarveTime; wr_avatar=https://res.weread.qq.com/wravatar/WV0016-RnaEL_g5XKTnGxtCRB5EW76/0; wr_gender=1; wr_skey=iRnMYrvT'
+
+
+python3 scripts/notion/douban.py 'RK=KZ0Ew/JFS7; ptcz=cba8e45558c5cab1cccb43896ab8d5980c5506b676460d857e0bf24492a9479f; wr_gid=223315174; wr_fp=2017239275; ptui_loginuin=458832194; pgv_info=ssid=s1778422266; pgv_pvid=5013319515; wr_vid=16308016; wr_pf=0; wr_rt=web@MQH3cqXN3ib5l5f0~ol_WL; wr_localvid=79c322606f8d73079ce03da; wr_name=CarveTime; wr_avatar=https://res.weread.qq.com/wravatar/WV0016-RnaEL_g5XKTnGxtCRB5EW76/0; wr_gender=1; wr_skey=iRnMYrvT'

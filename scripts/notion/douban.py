@@ -1,3 +1,4 @@
+import argparse
 from calendar import month
 from cmath import pi
 from datetime import date, datetime
@@ -13,17 +14,34 @@ from notion_api import Properties
 from notion_api import Children
 from notion_api import DatabaseParent
 from bs4 import BeautifulSoup
+from http.cookies import SimpleCookie
+import requests
+from requests.utils import cookiejar_from_dict
 import requests
 from config import(
     BOOK_DATABASE_ID,
-    MOVIE_DATABASE_ID
+    MOVIE_DATABASE_ID,
+    WEREAD_COOKIES
 )
+
+
+def parse_cookie_string(cookie_string):
+    cookie = SimpleCookie()
+    cookie.load(cookie_string)
+    cookies_dict = {}
+    cookiejar = None
+    for key, morsel in cookie.items():
+        cookies_dict[key] = morsel.value
+        cookiejar = cookiejar_from_dict(
+            cookies_dict, cookiejar=None, overwrite=True
+        )
+    return cookiejar
 
 url = 'https://www.douban.com/feed/people/malinkang/interests'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'}
 
-
+WEREAD_BASE_URL = "https://weread.qq.com/"
 rating_dict = {
     '很差': '⭐️',
     '较差': '⭐️⭐️',
@@ -84,20 +102,6 @@ def parse_movie_csv():
             time.sleep(2)
             parse_movie(date, rating, note, status, link)
 
-def parse_book_csv():
-    with open('./data/db-book-20220921.csv', newline='') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            title = row['\ufeff标题']
-            print(title)
-            status='已读'
-            date = datetime.strptime(row['打分日期'],'%Y/%m/%d')
-            print(date)
-            rating = rating_dict2[row['个人评分']]
-            note = row['我的短评']
-            link =row['条目链接'].strip()
-            time.sleep(2)
-            parse_book(date, rating, note, status, link)
 
 def parse_movie(date, rating, note, status, link):
     f = {"property": "条目链接", "url": {"equals": link}}
@@ -152,7 +156,39 @@ def parse_book(date, rating, note, status, link):
     dict['出版年']=info[info.index('出版年')+1:info.index('出版年')+2]
     dict['ISBN']=info[info.index('ISBN')+1:]
     cover = soup.find(id='mainpic').img['src']
-    insert_book(title, date, link, cover, dict, rating, note, status)
+    weread = search_book(title,dict['ISBN'][0])
+    insert_book(title, date, link, cover, dict, rating, note, status,weread)
+
+def search_book(keyword,ISBN):
+    """搜索书籍"""
+    session.get(WEREAD_BASE_URL)
+    id = ""
+    url = "https://i.weread.qq.com/store/search"
+    params = {"count": 10, "keyword": keyword}
+    r = session.get(url, params=params)
+    print(f"搜索{keyword} 结果{r.ok}")
+    for book in r.json()["books"]:
+        bookId = book["bookInfo"]["bookId"]
+        isbn = get_bookinfo(bookId=bookId)
+        if isbn == ISBN:
+            id = bookId
+            break
+    return id
+
+
+
+def get_bookinfo(bookId):
+    """获取书的详情"""
+    url = "https://i.weread.qq.com/book/info"
+    params = dict(bookId=bookId)
+    r = session.get(url, params=params)
+    isbn = ""
+    if r.ok:
+        data = r.json()
+        isbn = data["isbn"]
+        title = data["title"]
+        print(f"书名{title} ISBN{isbn}")
+    return isbn
 
 def update(date,rating,note, status,page_id):
     properties = (
@@ -201,8 +237,8 @@ def insert_movie(title, date, link, cover, rating, note, status, year, directors
     notion_api.create_page(page)
     print("插入 "+title+" 成功")
 
-
-def insert_book(title, date, link, cover, info, rating, note, status):
+#插入
+def insert_book(title, date, link, cover, info, rating, note, status,weread):
     s = info['出版年'][0]
     l = list(map(int, s.split('-')))
     l.append(1)
@@ -217,6 +253,8 @@ def insert_book(title, date, link, cover, info, rating, note, status):
         .number('ISBN', int(info['ISBN'][0]))
         .select('状态', status)
     )
+    if weread != "":
+        properties.rich_text("WeRead", weread)
     properties = notion_api.get_relation(properties=properties,date=date)
     if rating != "":
         properties.select("个人评分", rating)
@@ -234,6 +272,11 @@ def insert_book(title, date, link, cover, info, rating, note, status):
     notion_api.create_page(page)
     print("插入 "+title+" 成功")
 
-
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("cookies")
+    options = parser.parse_args()
+    cookies = options.cookies
+    session = requests.Session()
+    session.cookies = parse_cookie_string(cookies)    
     feed_parser()
