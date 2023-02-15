@@ -8,7 +8,7 @@ from notion_api import Properties
 from config import (
     MOVIE_DATABASE_ID,
     DAY_PAGE_ID,
-    TOGGL_DATABASE_ID
+    TOGGL_DATABASE_ID, TODO_DATABASE_ID
 )
 template = """
 ---
@@ -74,26 +74,26 @@ def query_bilibili():
     return urls
 
 
-def get_filter(date=datetime.now(), name="Date", extras=[]):
+def get_filter( name="Date", extras=[]):
     """
     date：时间
     name：属性名称
     extras：额外的条件
     """
-    yesterday = (date-timedelta(days=1)).strftime("%Y-%m-%dT23:30:00+08:00")
-    date = date.strftime("%Y-%m-%dT23:30:00+08:00")
+    start = date.strftime("%Y-%m-%dT00:00:00+08:00")
+    end = date.strftime("%Y-%m-%dT24:00:00+08:00")
     conditions = [
-        {"property": name, "date": {"after": yesterday}},
-        {"property": name, "date": {"before": date}},
+        {"property": name, "date": {"on_or_after": start}},
+        {"property": name, "date": {"on_or_before": end}},
     ]
-    if(len(extras) > 0):
+    if (len(extras) > 0):
         conditions.extend(extras)
-    filter = {"and":conditions}
+    filter = {"and": conditions}
     return filter
 
 
 def query_movie():
-    filter = get_filter(date=datetime.now(),name="打分日期")
+    filter = get_filter(name="打分日期")
     response = notion_api.query_database(MOVIE_DATABASE_ID, filter)
     urls = set()
     for result in response.get("results"):
@@ -127,25 +127,49 @@ def query_book():
 
 
 def query_todo():
+    """查询今日完成的任务"""
+    print(get_filter())
     extras = [{"property": "Status", "select": {"equals": "Completed"}}]
-    response = notion_api.query_database(
-        "97955f34653b4658bc0aaa50423be45f", get_filter(extras=extras))
-    todo_list = []
-    results = response.get("results")
-    for result in results:
-        todo_list.append(result['properties']['Title']
-                         ['title'][0]['text']['content'])
-    return todo_list
+    response = notion_api.query_database(TODO_DATABASE_ID, get_filter(extras=extras))
+    return [result['properties']['Title']['title'][0]['text']['content'] for result in response.get("results")]
 
 
 def query_toggl():
-    response = notion_api.query_database(TOGGL_DATABASE_ID, get_filter())
+    #前天的20点到昨天的8点 搜索睡觉事件
+    yesterday = (date-timedelta(days=1)).strftime("%Y-%m-%dT20:00:00+08:00")
+    today = date.strftime("%Y-%m-%dT08:00:00+08:00")
+    filter = {
+        "and": [
+            {"property": "Date", "date": {"after": yesterday}},
+            {"property": "Date", "date": {"before": today}},
+            {"property": "二级分类", "select": {"equals": "😴睡觉"}}
+        ]
+    }
+    response = notion_api.query_database(TOGGL_DATABASE_ID, filter)
+    start =  date.strftime("%Y-%m-%dT00:00:00+08:00")
+    end =  date.strftime("%Y-%m-%dT24:00:00+08:00")
+    if len(response.get("results")) > 0:
+        start = response["results"][0]["properties"]["Date"]["date"]["start"]
+    print(start)
+    filter = {
+        "and": [
+            {"property": "Date", "date": {"on_or_after": start}},
+            {"property": "Date", "date": {"on_or_before": end}},
+        ]
+    }
+    sorted = [
+        {
+            "property": "Date",
+            "direction": "ascending"
+        }
+    ]
+    response = notion_api.query_database(TOGGL_DATABASE_ID, filter,sorted)
     toggl_list = []
     for index in range(0, len(response.get("results"))):
-        date = notion_api.get_date(response, "Date", index)
+        d = notion_api.get_date(response, "Date", index)
         # 格式化一下只保留时间
-        start = datetime.fromisoformat(date.get("start")).strftime("%H:%M")
-        end = datetime.fromisoformat(date.get("end")).strftime("%H:%M")
+        start = datetime.fromisoformat(d.get("start")).strftime("%H:%M")
+        end = datetime.fromisoformat(d.get("end")).strftime("%H:%M")
         name = notion_api.get_select(response, "二级分类", index)
         note = notion_api.get_rich_text(response, "备注", index)
         result = start + "-" + end + "：" + name
@@ -249,14 +273,19 @@ def create():
         for url in books:
             result += "- "+url
             result += "\n"
-    file = datetime.strftime(datetime.now(), "%Y-%m-%d") + ".md"
+    file = datetime.strftime(
+        date, "%Y-%m-%d") + ".md"
     with open("./content/posts/" + file, "w") as f:
         f.seek(0)
         f.write(result)
         f.truncate()
 
-
+date = datetime.now()
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("content")
+    content = parser.parse_args().content
+    if content !="":
+       date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     options = parser.parse_args()
     create()
