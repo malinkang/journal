@@ -55,17 +55,18 @@ def get_read_ifo(bookId,title,id,url):
     r = session.get(WEREAD_HISTORY_URL,params=params)
     print(r.text)
     if r.ok:
-        datas = r.json()["readDetail"]["data"]
-        for data in datas:
-            date = data["readDate"]
-            date = datetime.fromtimestamp(date) + timedelta(hours=8)
-            minutes = floor(data["readTime"] / 60)
-            print(date)
-            page_id= query_database(bookId,date)
-            if page_id =="":
-                insert(title,id,minutes,url,date,bookId)
-            else:
-                update(page_id,minutes)
+        if("readDetail" in r.json()):
+            datas = r.json()["readDetail"]["data"]
+            for data in datas:
+                date = data["readDate"]
+                date = datetime.fromtimestamp(date) + timedelta(hours=8)
+                minutes = floor(data["readTime"] / 60)
+                print(date)
+                page_id= query_database(bookId,date)
+                if page_id =="":
+                    insert(title,id,minutes,url,date,bookId)
+                else:
+                    update(page_id,minutes)
 
 
 def query_database(weread,date):
