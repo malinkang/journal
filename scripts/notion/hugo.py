@@ -129,7 +129,7 @@ def query_book():
 def query_todo():
     """查询今日完成的任务"""
     print(get_filter())
-    extras = [{"property": "Status", "select": {"equals": "Completed"}}]
+    extras = [{"property": "Status", "status": {"equals": "Completed"}}]
     response = notion_api.query_database(TODO_DATABASE_ID, get_filter(extras=extras))
     return [result['properties']['Title']['title'][0]['text']['content'] for result in response.get("results")]
 
