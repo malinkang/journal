@@ -21,7 +21,6 @@ import requests
 from config import(
     BOOK_DATABASE_ID,
     MOVIE_DATABASE_ID,
-    WEREAD_COOKIES
 )
 
 

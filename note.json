@@ -1,0 +1,553 @@
+{
+    "synckey": 1678968059,
+    "updated": [
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c2\u7ae0",
+            "chapterUid": 7,
+            "colorStyle": 2,
+            "contextAbstract": "\u5eb7\u6d85\u9c81\u5c11\u5c09\u6240\u611f\uff1a\u3008\u5188\u6301\u8282\u5b50\u662f\u4e00\u4f4d\u76f8\u8c8c\u7aef\u5e84\u7684\u5c0f\u4e2a",
+            "markText": "\u5188\u6301\u8282\u5b50",
+            "range": "1758-1762",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678968059,
+            "bookmarkId": "24918942_7_1758-1762"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c2\u7ae0",
+            "chapterUid": 7,
+            "colorStyle": 2,
+            "contextAbstract": "",
+            "markText": "\u7531\u5a01\u5ec9\u00b7\u514b\u6069\u4e00\u7b49\u5175",
+            "range": "1080-1089",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678967854,
+            "bookmarkId": "24918942_7_1080-1089"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c2\u7ae0",
+            "chapterUid": 7,
+            "colorStyle": 2,
+            "contextAbstract": "\u54c8\u5c14\u5fb7\u00b7\u7247\u5c71\u66f9\u957f[\u63d2\u56fe]\u5728\u5c71\u68a8\u53bf\u00d7\u00d7\u90e1\u8fdb\u884c\u4e86\u73b0\u573a\u76f4\u63a5",
+            "markText": "\u5c71\u68a8\u53bf",
+            "range": "1027-1030",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678967826,
+            "bookmarkId": "24918942_7_1027-1030"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c2\u7ae0",
+            "chapterUid": 7,
+            "colorStyle": 2,
+            "contextAbstract": "",
+            "markText": "\u54c8\u5c14\u5fb7\u00b7\u7247\u5c71\u66f9\u957f",
+            "range": "942-950",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678967820,
+            "bookmarkId": "24918942_7_942-950"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c2\u7ae0",
+            "chapterUid": 7,
+            "colorStyle": 2,
+            "contextAbstract": "",
+            "markText": "\u7f57\u4f2f\u7279\u00b7\u5965\u5eb7\u6d85\u9c81\u5c11\u5c09",
+            "range": "931-941",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678967806,
+            "bookmarkId": "24918942_7_931-941"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c8\u7ae0",
+            "chapterUid": 13,
+            "colorStyle": 3,
+            "contextAbstract": "",
+            "markText": "\u6211\u4eec\u5728\u7f8e\u519b\u7a7a\u88ad\u4e4b\u4e0b\uff0c\u5728\u5927\u5b66\u7814\u7a76\u5ba4\u91cc\u8270\u96be\u5730\u7ee7\u7eed\u7740\u5404\u81ea\u7684\u7814\u7a76\u3002\u5b66\u751f\u548c\u7814\u7a76\u751f\u4eec\u5dee\u4e0d\u591a\u90fd\u88ab\u53ec\u53bb\u5f53\u5175\u4e86\uff0c\u5927\u5b66\u6210\u4e86\u7a7a\u67b6\u5b50\u3002",
+            "range": "1786-1841",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678966972,
+            "bookmarkId": "24918942_13_1786-1841"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c8\u7ae0",
+            "chapterUid": 13,
+            "colorStyle": 5,
+            "contextAbstract": "\uff0c\u6211\u4eec\u5f53\u7136\u731c\u6d4b\u90a3\u662f\u201c\u7279\u6b8a\u573a\u5408\u201d\u3002\u8001\u5b9e\u8bf4\uff0c\u4e0d\u559c\u6b22\u5728",
+            "markText": "\u7279\u6b8a\u573a\u5408",
+            "range": "1659-1663",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678966793,
+            "bookmarkId": "24918942_13_1659-1663"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c8\u7ae0",
+            "chapterUid": 13,
+            "colorStyle": 4,
+            "contextAbstract": "\u9886\u57df\u7814\u7a76\u4eba\u5458\u548c\u533b\u5e08\u7684\u7279\u6b8a\u77e5\u8bc6\u3001\u6280\u672f\u7684\u573a\u5408\uff0c\u6839\u672c\u4e0d",
+            "markText": "\u7279\u6b8a\u77e5\u8bc6",
+            "range": "1581-1585",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678966784,
+            "bookmarkId": "24918942_13_1581-1585"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c8\u7ae0",
+            "chapterUid": 13,
+            "colorStyle": 5,
+            "contextAbstract": "\u5927\u5b66\u7cbe\u795e\u533b\u5b66\u4e13\u4e1a\u6559\u6388\u51a2\u5c71\u91cd\u5219\uff0852\u5c81\uff09\u7684\u9762\u8c08\u5728\u4e1c",
+            "markText": "\u51a2\u5c71\u91cd\u5219",
+            "range": "1056-1060",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678944664,
+            "bookmarkId": "24918942_13_1056-1060"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c12\u7ae0",
+            "chapterUid": 17,
+            "colorStyle": 1,
+            "contextAbstract": "",
+            "markText": "\u6700\u540e\uff0c\u795d\u5148\u751f\u7684\u7814\u7a76\u53d6\u5f97\u66f4\u5927\u8fdb\u5c55\u3002\u8bf7\u591a\u73cd\u91cd\u3002",
+            "range": "7904-7925",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678944592,
+            "bookmarkId": "24918942_17_7904-7925"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u53eb\u4e4c\u9e26\u7684\u5c11\u5e74",
+            "chapterUid": 5,
+            "colorStyle": 1,
+            "contextAbstract": "",
+            "markText": "\u4ece\u6c99\u5c18\u66b4\u4e2d\u9003\u51fa\u7684\u4f60\u5df2\u4e0d\u518d\u662f\u8de8\u5165\u6c99\u5c18\u66b4\u65f6\u7684\u4f60\u3002\u662f\u7684\uff0c\u8fd9\u5c31\u662f\u6240\u8c13\u6c99\u5c18\u66b4\u7684\u542b\u4e49\u3002",
+            "range": "4394-4431",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678857541,
+            "bookmarkId": "24918942_5_4394-4431"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u300a\u6d77\u8fb9\u7684\u5361\u592b\u5361\u300b\u4e2d\u6587\u7248\u5e8f\u8a00",
+            "chapterUid": 3,
+            "colorStyle": 1,
+            "contextAbstract": "",
+            "markText": "\u5e74\u9f84\u5728\u5341\u4e94\u5c81\uff0c\u610f\u5473\u7740\u5fc3\u5728\u5e0c\u671b\u4e0e\u7edd\u671b\u4e4b\u95f4\u78b0\u649e\uff0c\u610f\u5473\u7740\u4e16\u754c\u5728\u73b0\u5b9e\u6027\u4e0e\u865a\u62df\u6027\u4e4b\u95f4\u6e38\u79fb\uff0c\u610f\u5473\u7740\u8eab\u4f53\u5728\u8df3\u8dc3\u4e0e\u6c89\u5b9e\u4e4b\u95f4\u5f98\u5f8a\u3002\u6211\u4eec\u65e2\u63a5\u53d7\u70ed\u5207\u7684\u795d\u798f\uff0c\u53c8\u63a5\u53d7\u51f6\u72e0\u7684\u8bc5\u5492\u3002",
+            "range": "1358-1434",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678857492,
+            "bookmarkId": "24918942_3_1358-1434"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c6\u7ae0",
+            "chapterUid": 11,
+            "colorStyle": 5,
+            "contextAbstract": "\u9519\u4e0d\u9519\uff0c\u4e2d\u7530\u6211\u82e5\u8dd1\u51fa\u4e2d\u91ce\u533a\uff0c\u4e5f\u53ef\u80fd\u627e\u4e0d\u5230\u56de\u6765\u7684",
+            "markText": "\u4e2d\u91ce\u533a",
+            "range": "5358-5361",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678856900,
+            "bookmarkId": "24918942_11_5358-5361"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c4\u7ae0",
+            "chapterUid": 9,
+            "colorStyle": 2,
+            "contextAbstract": "\u4e1c\u4eac\u758f\u6563\u6765\u7684\uff0c\u540d\u5b57\u53eb\u4e2d\u7530\u806a\u2014\u2014\u5e94\u8be5\u53eb\u8fd9\u4e2a\u540d\u5b57\u3002",
+            "markText": "\u4e2d\u7530\u806a",
+            "range": "5203-5206",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678856085,
+            "bookmarkId": "24918942_9_5203-5206"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c4\u7ae0",
+            "chapterUid": 9,
+            "colorStyle": 2,
+            "contextAbstract": "\u00d7\u00d7\u9547\u5f00\u4e1a\u7684\u5185\u79d1\u533b\u751f\u4e2d\u6cfd\u91cd\u4e00\uff0853\u5c81\uff09\u7684\u9762\u8c08\u8bb0\u5f55",
+            "markText": "\u4e2d\u6cfd\u91cd\u4e00",
+            "range": "1061-1065",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678855367,
+            "bookmarkId": "24918942_9_1061-1065"
+        },
+        {
+            "bookId": "24918942",
+            "style": 2,
+            "bookVersion": 1526654728,
+            "range": "8219-8345",
+            "markText": "\u53e4\u65f6\u5019\uff0c\u4e16\u754c\u4e0d\u662f\u7531\u7537\u548c\u5973\uff0c\u800c\u662f\u7531\u7537\u7537\u548c\u7537\u5973\u548c\u5973\u5973\u6784\u6210\u7684\u3002\u5c31\u662f\u8bf4\uff0c\u4e00\u4e2a\u4eba\u7528\u7684\u662f\u4eca\u5929\u4e24\u4e2a\u4eba\u7684\u6750\u6599\u3002\u5927\u5bb6\u5bf9\u6b64\u5fc3\u6ee1\u610f\u8db3\uff0c\u76f8\u5b89\u65e0\u4e8b\u5730\u751f\u6d3b\u3002\u5c82\u6599\uff0c\u795e\u7528\u5229\u5200\u5c06\u6240\u6709\u4eba\u4e00\u5288\u4e24\u534a\uff0c\u5288\u5f97\u5229\u5229\u7d22\u7d22\u3002\u7ed3\u679c\uff0c\u4e16\u4e0a\u53ea\u6709\u7537\u548c\u5973\uff0c\u4e3a\u4e86\u5bfb\u627e\u672c\u5e94\u6709\u7684\u53e6\u4e00\u534a\uff0c\u4eba\u4eec\u5f00\u59cb\u5de6\u987e\u53f3\u76fc\uff0c\u60f6\u60f6\u4e0d\u53ef\u7ec8\u65e5\u3002",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1678807479,
+            "bookmarkId": "24918942_10_8219-8345"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c5\u7ae0",
+            "chapterUid": 10,
+            "colorStyle": 2,
+            "contextAbstract": "\u82e5\u5c71\u7267\u6c34\u3001\u77f3\u5ddd\u5544\u6728\u3001\u5fd7\u8d3a\u76f4\u54c9\u7b49\u7b49\u3002\u5927\u6982\u4f4f\u8d77\u6765\u8212\u5766",
+            "markText": "\u5fd7\u8d3a\u76f4\u54c9",
+            "range": "6103-6107",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678772057,
+            "bookmarkId": "24918942_10_6103-6107"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c5\u7ae0",
+            "chapterUid": 10,
+            "colorStyle": 2,
+            "contextAbstract": "\u5230\u8fd9\u91cc\uff0c\u5982\u82e5\u5c71\u7267\u6c34\u3001\u77f3\u5ddd\u5544\u6728\u3001\u5fd7\u8d3a\u76f4\u54c9\u7b49\u7b49\u3002\u5927\u6982",
+            "markText": "\u77f3\u5ddd\u5544\u6728",
+            "range": "6098-6102",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678772053,
+            "bookmarkId": "24918942_10_6098-6102"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c5\u7ae0",
+            "chapterUid": 10,
+            "colorStyle": 2,
+            "contextAbstract": "\u6765\u56db\u56fd\u65f6\u90fd\u5230\u8fd9\u91cc\uff0c\u5982\u82e5\u5c71\u7267\u6c34\u3001\u77f3\u5ddd\u5544\u6728\u3001\u5fd7\u8d3a\u76f4\u54c9",
+            "markText": "\u82e5\u5c71\u7267\u6c34",
+            "range": "6093-6097",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678772045,
+            "bookmarkId": "24918942_10_6093-6097"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c5\u7ae0",
+            "chapterUid": 10,
+            "colorStyle": 2,
+            "contextAbstract": "\u6211\u8bf4\u3002\u4ed6\u70b9\u5934\u9053\uff1a\u201c\u7532\u6751\u5bb6\u81ea\u6c5f\u6237\u65f6\u671f\u4ee5\u6765\u4ee3\u4ee3\u662f",
+            "markText": "\u7532\u6751\u5bb6",
+            "range": "6008-6011",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678772024,
+            "bookmarkId": "24918942_10_6008-6011"
+        },
+        {
+            "bookId": "24918942",
+            "style": 2,
+            "bookVersion": 1526654728,
+            "range": "1413-1434",
+            "markText": "\u6210\u4e3a\u53e6\u5916\u4e00\u4e2a\u4eba\u4e0d\u5bb9\u6613\uff0c\u6210\u4e3a\u53e6\u4e00\u4e2a\u540d\u5b57\u5e76\u4e0d\u96be",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1678720767,
+            "bookmarkId": "24918942_10_1413-1434"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c3\u7ae0",
+            "chapterUid": 8,
+            "colorStyle": 2,
+            "contextAbstract": "",
+            "markText": "\u5979\u7761\u5f97\u5f88\u6c89\uff0c\u4e0d\u4e45\u968f\u7740\u8f6c\u5f2f\u65f6\u7684\u6643\u52a8\u628a\u5934\u642d\u5728\u6211\u80a9\u4e0a\uff0c\u5c31\u52bf\u505c\u4f4f\u4e0d\u52a8\u3002\u91cd\u5e76\u4e0d\u5f88\u91cd\u3002\u5979\u95ed\u7740\u5634\uff0c\u7528\u9f3b\u5b50\u9759\u9759\u547c\u5438\u3002\u547c\u51fa\u7684\u6c14\u6781\u4e3a\u5747\u5300\u5730\u843d\u5728\u6211\u80a9\u9aa8\u3002\u4f4e\u5934\u4e00\u770b\uff0c\u4e00\u5b57\u5f62\u9886\u53e3\u95ea\u51fa\u4e73\u7f69\u7684\u7ec6\u5e26\u3002\u5976\u6cb9\u8272\u7ec6\u5e26\u3002\u6211\u60f3\u50cf\u5176\u524d\u7aef\u7684\u8d28\u5730\u7cbe\u5de7\u7684\u4e73\u7f69\uff0c\u60f3\u50cf\u4e0b\u9762\u7684\u4e73\u623f\uff0c\u60f3\u50cf\u56e0\u6211\u7684\u624b\u6307\u800c\u53d8\u786c\u7684\u7c89\u7ea2\u8272\u4e73\u5934\u3002\u4e0d\u662f\u6211\u523b\u610f\u60f3\u50cf\uff0c\u800c\u662f\u4e0d\u80fd\u4e0d\u60f3\u50cf\u3002\u7ed3\u679c\uff0c\u6211\u5f53\u7136\u633a\u4e86\u8d77\u6765\u3002\u786c\u786c\u5730\u633a\u8d77\uff0c\u786c\u5f97\u4e0d\u53ef\u601d\u8bae\uff1a\u4e3a\u4f55\u5168\u8eab\u5149\u90a3\u4e00\u90e8\u5206\u53d8\u786c\u5462\uff1f",
+            "range": "5937-6119",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678685100,
+            "bookmarkId": "24918942_8_5937-6119"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c3\u7ae0",
+            "chapterUid": 8,
+            "colorStyle": 2,
+            "contextAbstract": "\u4ece\u65f6\u95f4\u4e0a\u8bf4\uff0c\u89c9\u5f97\u8be5\u662f\u4ed3\u6577\u4e00\u5e26\u3002\u4e0d\u8fc7\u662f\u4ec0\u4e48\u5730\u65b9",
+            "markText": "\u4ed3\u6577",
+            "range": "5415-5417",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678684947,
+            "bookmarkId": "24918942_8_5415-5417"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c3\u7ae0",
+            "chapterUid": 8,
+            "colorStyle": 2,
+            "contextAbstract": "",
+            "markText": "\u201c\u51fa\u95e8\u9760\u65c5\u4f34\uff0c\u4eba\u95f4\u9760\u6e29\u60c5\u3002\u201d",
+            "range": "4925-4939",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678684233,
+            "bookmarkId": "24918942_8_4925-4939"
+        },
+        {
+            "bookId": "24918942",
+            "bookVersion": 1526654728,
+            "chapterName": "\u7b2c2\u7ae0",
+            "chapterUid": 7,
+            "colorStyle": 2,
+            "contextAbstract": "",
+            "markText": "\u6770\u59c6\u5179\u00b7P\u00b7\u4f0d\u4f26",
+            "range": "902-910",
+            "style": 2,
+            "type": 1,
+            "createTime": 1678606184,
+            "bookmarkId": "24918942_7_902-910"
+        }
+    ],
+    "removed": [],
+    "chapters": [
+        {
+            "bookId": "24918942",
+            "chapterUid": 7,
+            "chapterIdx": 7,
+            "title": "\u7b2c2\u7ae0"
+        },
+        {
+            "bookId": "24918942",
+            "chapterUid": 10,
+            "chapterIdx": 10,
+            "title": "\u7b2c5\u7ae0"
+        },
+        {
+            "bookId": "24918942",
+            "chapterUid": 9,
+            "chapterIdx": 9,
+            "title": "\u7b2c4\u7ae0"
+        },
+        {
+            "bookId": "24918942",
+            "chapterUid": 8,
+            "chapterIdx": 8,
+            "title": "\u7b2c3\u7ae0"
+        },
+        {
+            "bookId": "24918942",
+            "chapterUid": 17,
+            "chapterIdx": 17,
+            "title": "\u7b2c12\u7ae0"
+        },
+        {
+            "bookId": "24918942",
+            "chapterUid": 11,
+            "chapterIdx": 11,
+            "title": "\u7b2c6\u7ae0"
+        },
+        {
+            "bookId": "24918942",
+            "chapterUid": 3,
+            "chapterIdx": 3,
+            "title": "\u300a\u6d77\u8fb9\u7684\u5361\u592b\u5361\u300b\u4e2d\u6587\u7248\u5e8f\u8a00"
+        },
+        {
+            "bookId": "24918942",
+            "chapterUid": 5,
+            "chapterIdx": 5,
+            "title": "\u53eb\u4e4c\u9e26\u7684\u5c11\u5e74"
+        },
+        {
+            "bookId": "24918942",
+            "chapterUid": 13,
+            "chapterIdx": 13,
+            "title": "\u7b2c8\u7ae0"
+        }
+    ],
+    "book": {
+        "bookId": "24918942",
+        "version": 1526654728,
+        "format": "epub",
+        "soldout": 0,
+        "bookStatus": 1,
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/942/24918942/s_24918942.jpg",
+        "title": "\u6d77\u8fb9\u7684\u5361\u592b\u5361",
+        "author": "\u6751\u4e0a\u6625\u6811",
+        "coverBoxInfo": {
+            "blurhash": "KpMi+]yDu4*0iw$j%Mt7Rj",
+            "colors": [
+                {
+                    "key": "6/4",
+                    "hex": "#b58982"
+                },
+                {
+                    "key": "4/4",
+                    "hex": "#82544f"
+                },
+                {
+                    "key": "3/4",
+                    "hex": "#693b37"
+                },
+                {
+                    "key": "3/6",
+                    "hex": "#743430"
+                },
+                {
+                    "key": "3/8",
+                    "hex": "#802a28"
+                },
+                {
+                    "key": "2/4",
+                    "hex": "#4d2527"
+                },
+                {
+                    "key": "2/6",
+                    "hex": "#571d22"
+                },
+                {
+                    "key": "2/8",
+                    "hex": "#620f1e"
+                },
+                {
+                    "key": "1/4",
+                    "hex": "#370e17"
+                },
+                {
+                    "key": "1/6",
+                    "hex": "#400116"
+                },
+                {
+                    "key": "1/8",
+                    "hex": "#480016"
+                },
+                {
+                    "key": "6/6",
+                    "hex": "#c48279"
+                },
+                {
+                    "key": "4/6",
+                    "hex": "#8f4d47"
+                },
+                {
+                    "key": "9/2",
+                    "hex": "#f2dfdb"
+                },
+                {
+                    "key": "4/10",
+                    "hex": "#a63c36"
+                },
+                {
+                    "key": "5/10",
+                    "hex": "#c4584c"
+                },
+                {
+                    "key": "5/4",
+                    "hex": "#9b6e69"
+                },
+                {
+                    "key": "8/4",
+                    "hex": "#ebbdb5"
+                },
+                {
+                    "key": "5/8",
+                    "hex": "#b76056"
+                },
+                {
+                    "key": "6/8",
+                    "hex": "#d27c6f"
+                },
+                {
+                    "key": "8/6",
+                    "hex": "#fdb7aa"
+                },
+                {
+                    "key": "7/8",
+                    "hex": "#f09687"
+                },
+                {
+                    "key": "3/12",
+                    "hex": "#950019"
+                },
+                {
+                    "key": "9/12",
+                    "hex": "#ffb6a2"
+                },
+                {
+                    "key": "1/100",
+                    "hex": "#d27c6f"
+                },
+                {
+                    "key": "2/100",
+                    "hex": "#f09687"
+                },
+                {
+                    "key": "3/100",
+                    "hex": "#ffffff"
+                },
+                {
+                    "key": "4/100",
+                    "hex": "#F3E8E5"
+                },
+                {
+                    "key": "5/100",
+                    "hex": "#F3E8E5"
+                },
+                {
+                    "key": "6/100",
+                    "hex": "#270500"
+                }
+            ],
+            "dominate_color": {
+                "hex": "#e2463b",
+                "hsv": [
+                    3.983473044562472,
+                    73.72913656564917,
+                    88.70929275563765
+                ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/942/24918942/s_24918942.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/942/24918942/s_24918942.jpg"
+        }
+    }
+}

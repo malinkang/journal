@@ -344,7 +344,7 @@ def get_week_relation(year_id, date):
         print(start)
         parent = DatabaseParent(WEEK_DATABASE_ID)
         properties = (
-            Properties().title(week).date("Date", start, end).relation("Year", year_id)
+            Properties().title(week).date("Date", start, end,time_zone=None).relation("Year", year_id)
         )
         page = (
             Page()
@@ -377,6 +377,7 @@ def get_month_relation(year_id, year, month):
         ]
     }
     response = query_database(database_id=MONTH_DATABASE_ID, filter=filter)
+    print(f"month_id = {response}")
     if len(response.get("results")) == 0:
         parent = DatabaseParent(MONTH_DATABASE_ID)
         properties = Properties().title(month).relation("Year", year_id)
@@ -385,7 +386,7 @@ def get_month_relation(year_id, year, month):
             .parent(parent=parent)
             .children(Children())
             .properties(properties)
-            .icon("😄")
+            .icon("🈷️")
             .cover(unsplash.random())
         )
         id = create_page(page=page).get("id")
@@ -395,6 +396,7 @@ def get_month_relation(year_id, year, month):
     json_data = {"id": id}
     with open(month_json_file, "w") as outfile:
         json.dump(json_data, outfile)
+    
     return id
 
 

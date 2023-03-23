@@ -22,6 +22,10 @@ WEREAD_BASE_URL = "https://weread.qq.com/"
 WEREAD_HISTORY_URL = (
     "https://i.weread.qq.com/book/readinfo"
 )
+WEREAD_NOTE_URL = "https://i.weread.qq.com/shelf/sync"
+WEREAD_HOT_URL = "https://i.weread.qq.com/book/bestbookmarks"
+
+
 def parse_cookie_string(cookie_string):
     cookie = SimpleCookie()
     cookie.load(cookie_string)
@@ -42,66 +46,96 @@ def get_reading():
     print(len(results))
     for result in results:
         weread = get_rich_text(result, "WeRead")
-        title = get_title(result,"标题")
+        title = get_title(result, "标题")
         id = result["id"]
         url = result["properties"]["条目链接"]["url"]
-        get_read_ifo(weread,title,id,url)
+        get_read_ifo(weread, title, id, url)
 
 
-def get_read_ifo(bookId,title,id,url):
+def get_read_ifo(bookId, title, id, url):
     """获取书的详情"""
     session.get(WEREAD_BASE_URL)
     params = dict(bookId=bookId, readingDetail=1)
-    r = session.get(WEREAD_HISTORY_URL,params=params)
+    r = session.get(WEREAD_HISTORY_URL, params=params)
     print(r.text)
     if r.ok:
-        if("readDetail" in r.json()):
+        if ("readDetail" in r.json()):
             datas = r.json()["readDetail"]["data"]
             for data in datas:
                 date = data["readDate"]
                 date = datetime.fromtimestamp(date) + timedelta(hours=8)
                 minutes = floor(data["readTime"] / 60)
                 print(date)
-                page_id= query_database(bookId,date)
-                if page_id =="":
-                    insert(title,id,minutes,url,date,bookId)
+                page_id = query_database(bookId, date)
+                if page_id == "":
+                    insert(title, id, minutes, url, date, bookId)
                 else:
-                    update(page_id,minutes)
+                    update(page_id, minutes)
 
 
-def query_database(weread,date):
+def get_note(bookId):
+    """获取划线"""
+    session.get(WEREAD_BASE_URL)
+    params = dict(bookId=bookId)
+    r = session.get("https://i.weread.qq.com/book/bookmarklist", params=params)
+    with open("note.json", "w") as f:
+        json.dump(r.json(), f)
+
+
+def get_hot(bookId):
+    """获取热门划线"""
+    session.get(WEREAD_BASE_URL)
+    params = dict(bookId=bookId)
+    r = session.get(WEREAD_HOT_URL, params=params)
+    with open("note2.json", "w") as f:
+        json.dump(r.json(), f)
+
+
+def get_hot2(bookId):
+    """获取笔记"""
+    session.get(WEREAD_BASE_URL)
+    params = dict(bookId=bookId, listType=11, mine=1, syncKey=0)
+    r = session.get("https://i.weread.qq.com/review/list", params=params)
+    with open("note2.json", "w") as f:
+        json.dump(r.json(), f)
+
+
+def query_database(weread, date):
     date = date.strftime("%Y-%m-%dT00:00:00+08:00")
-    filter= {
-        "and":[
-        {"property": "ID", "rich_text": {"equals": weread}},
-        {"property": "Date", "date": {"equals": date}},
+    filter = {
+        "and": [
+            {"property": "ID", "rich_text": {"equals": weread}},
+            {"property": "Date", "date": {"equals": date}},
         ]
     }
     id = ""
-    response = notion_api.query_database("cca71ece15ac48a68c34e5f86a2e6b38", filter)
+    response = notion_api.query_database(
+        "cca71ece15ac48a68c34e5f86a2e6b38", filter)
     results = response["results"]
     if len(results) > 0:
         id = results[0]["id"]
-    return id 
+    return id
 
-def update(id,minutes):
+
+def update(id, minutes):
     properties = (
         Properties()
         .number("时长", minutes)
     )
-    notion_api.update_page(id,properties)
+    notion_api.update_page(id, properties)
 
-def insert(title, id,minutes,url,date,bookId):
+
+def insert(title, id, minutes, url, date, bookId):
     properties = (
         Properties()
         .title(title)
-        .rich_text("ID",bookId)
+        .rich_text("ID", bookId)
         .relation("Book", id)
-        .url("URL",url)
+        .url("URL", url)
         .number("时长", minutes)
         .date(start=date.strftime("%Y-%m-%dT00:00:00"))
     )
-    properties = notion_api.get_relation(properties,date=date)
+    properties = notion_api.get_relation(properties, date=date)
     page = (
         Page()
         .parent(DatabaseParent("cca71ece15ac48a68c34e5f86a2e6b38"))
@@ -111,6 +145,7 @@ def insert(title, id,minutes,url,date,bookId):
         .icon("📚")
     )
     notion_api.create_page(page)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

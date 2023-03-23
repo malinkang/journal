@@ -1,0 +1,164 @@
+{
+    "synckey": 1678968894,
+    "totalCount": 3,
+    "reviews": [
+        {
+            "reviewId": "16308016_7GLbIde4j",
+            "review": {
+                "abstract": "",
+                "atUserVids": [],
+                "bookId": "24918942",
+                "bookVersion": 1526654728,
+                "content": "\u5f88\u4e0d\u9519",
+                "friendship": 0,
+                "htmlContent": "\u5f88\u4e0d\u9519",
+                "isPrivate": 0,
+                "range": "",
+                "star": 100,
+                "title": "",
+                "type": 4,
+                "reviewId": "16308016_7GLbIde4j",
+                "userVid": 16308016,
+                "topics": [],
+                "createTime": 1678968894,
+                "newRatingLevel": 1,
+                "isLike": 0,
+                "isReposted": 0,
+                "book": {
+                    "bookId": "24918942",
+                    "format": "epub",
+                    "version": 1526654728,
+                    "soldout": 0,
+                    "bookStatus": 1,
+                    "type": 0,
+                    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/942/24918942/s_24918942.jpg",
+                    "title": "\u6d77\u8fb9\u7684\u5361\u592b\u5361",
+                    "author": "\u6751\u4e0a\u6625\u6811",
+                    "translator": "\u6797\u5c11\u534e",
+                    "payType": 1048577
+                },
+                "author": {
+                    "userVid": 16308016,
+                    "name": "CarveTime",
+                    "avatar": "https://res.weread.qq.com/wravatar/WV0016-RnaEL_g5XKTnGxtCRB5EW76/0",
+                    "isFollowing": 1,
+                    "isFollower": 1,
+                    "isHide": 1,
+                    "medalInfo": {
+                        "id": "M3-0-2000",
+                        "desc": "\u9605\u8bfb\u5929\u6570"
+                    }
+                }
+            }
+        },
+        {
+            "reviewId": "16308016_7GLalbYH0",
+            "review": {
+                "abstract": "",
+                "atUserVids": [],
+                "bookId": "24918942",
+                "bookVersion": 1526654728,
+                "chapterName": "\u7b2c6\u7ae0",
+                "chapterUid": 11,
+                "content": "\u4e2d\u7530\u4e0e\u732b\u4ea4\u8c08\u3002",
+                "contextAbstract": "",
+                "friendship": 0,
+                "htmlContent": "",
+                "isPrivate": 0,
+                "range": "",
+                "createTime": 1678967638,
+                "title": "",
+                "type": 1,
+                "reviewId": "16308016_7GLalbYH0",
+                "userVid": 16308016,
+                "topics": [],
+                "isLike": 0,
+                "isReposted": 0,
+                "book": {
+                    "bookId": "24918942",
+                    "format": "epub",
+                    "version": 1526654728,
+                    "soldout": 0,
+                    "bookStatus": 1,
+                    "type": 0,
+                    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/942/24918942/s_24918942.jpg",
+                    "title": "\u6d77\u8fb9\u7684\u5361\u592b\u5361",
+                    "author": "\u6751\u4e0a\u6625\u6811",
+                    "translator": "\u6797\u5c11\u534e",
+                    "payType": 1048577
+                },
+                "chapterIdx": 11,
+                "chapterTitle": "\u7b2c6\u7ae0",
+                "author": {
+                    "userVid": 16308016,
+                    "name": "CarveTime",
+                    "avatar": "https://res.weread.qq.com/wravatar/WV0016-RnaEL_g5XKTnGxtCRB5EW76/0",
+                    "isFollowing": 1,
+                    "isFollower": 1,
+                    "isHide": 1,
+                    "medalInfo": {
+                        "id": "M3-0-2000",
+                        "desc": "\u9605\u8bfb\u5929\u6570"
+                    }
+                }
+            }
+        },
+        {
+            "reviewId": "16308016_7GL9D0NRM",
+            "review": {
+                "abstract": "\u6211\u4eec\u5728\u7f8e\u519b\u7a7a\u88ad\u4e4b\u4e0b\uff0c\u5728\u5927\u5b66\u7814\u7a76\u5ba4\u91cc\u8270\u96be\u5730\u7ee7\u7eed\u7740\u5404\u81ea\u7684\u7814\u7a76\u3002\u5b66\u751f\u548c\u7814\u7a76\u751f\u4eec\u5dee\u4e0d\u591a\u90fd\u88ab\u53ec\u53bb\u5f53\u5175\u4e86\uff0c\u5927\u5b66\u6210\u4e86\u7a7a\u67b6\u5b50\u3002",
+                "atUserVids": [],
+                "bookId": "24918942",
+                "bookVersion": 1526654728,
+                "chapterName": "\u7b2c8\u7ae0",
+                "chapterUid": 13,
+                "content": "\u60f3\u6cd5\u6d4b\u8bd5",
+                "contextAbstract": "",
+                "friendship": 0,
+                "htmlContent": "",
+                "isPrivate": 0,
+                "range": "1786-1841",
+                "createTime": 1678966985,
+                "title": "",
+                "type": 1,
+                "reviewId": "16308016_7GL9D0NRM",
+                "userVid": 16308016,
+                "topics": [],
+                "isLike": 0,
+                "isReposted": 0,
+                "book": {
+                    "bookId": "24918942",
+                    "format": "epub",
+                    "version": 1526654728,
+                    "soldout": 0,
+                    "bookStatus": 1,
+                    "type": 0,
+                    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/942/24918942/s_24918942.jpg",
+                    "title": "\u6d77\u8fb9\u7684\u5361\u592b\u5361",
+                    "author": "\u6751\u4e0a\u6625\u6811",
+                    "translator": "\u6797\u5c11\u534e",
+                    "payType": 1048577
+                },
+                "chapterIdx": 13,
+                "chapterTitle": "\u7b2c8\u7ae0",
+                "author": {
+                    "userVid": 16308016,
+                    "name": "CarveTime",
+                    "avatar": "https://res.weread.qq.com/wravatar/WV0016-RnaEL_g5XKTnGxtCRB5EW76/0",
+                    "isFollowing": 1,
+                    "isFollower": 1,
+                    "isHide": 1,
+                    "medalInfo": {
+                        "id": "M3-0-2000",
+                        "desc": "\u9605\u8bfb\u5929\u6570"
+                    }
+                }
+            }
+        }
+    ],
+    "removed": [],
+    "atUsers": [],
+    "refUsers": [],
+    "columns": [],
+    "hasMore": 0
+}
