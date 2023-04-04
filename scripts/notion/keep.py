@@ -82,8 +82,8 @@ def write(r):
 def add_to_notion(start, end, cover, distance, title, id):
     time.sleep(0.3)
     date = start
-    start = start.replace(microsecond=0)
-    end = end.replace(microsecond=0)
+    start = start.replace(microsecond=0)+timedelta(hours=8)
+    end = end.replace(microsecond=0)+timedelta(hours=8)
     properties = Properties().title(title).date(
         start=start, end=end).number("距离", distance).rich_text("id", id)
     notion_api.get_relation(properties, date)
