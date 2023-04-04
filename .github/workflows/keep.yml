@@ -1,4 +1,4 @@
-name: update weight
+name: keep sync
 
 on:
   workflow_dispatch:
