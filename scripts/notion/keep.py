@@ -12,10 +12,13 @@ from notion_api import Page
 import notion_api
 from notion_api import DatabaseParent
 from notion_api import Children
+from config import (
+    KEEP_DATABASE_ID
+)
 LOGIN_API = "https://api.gotokeep.com/v1.1/users/login"
 RUN_DATA_API = "https://api.gotokeep.com/pd/v3/stats/detail?dateUnit=all&type=running&lastDate={last_date}"
 RUN_LOG_API = "https://api.gotokeep.com/pd/v3/runninglog/{run_id}"
-DATABASE_ID = "8dc2c4145901403ea9c4fb0b10ad3f86"
+
 
 
 def login():
@@ -23,7 +26,6 @@ def login():
     password = "KFitness04"
     data = {"mobile": mobile, "password": password}
     r = requests.post(LOGIN_API, headers=keep_headers, data=data)
-    print(r.text)
     if r.ok:
         print("登录成功")
         token = r.json()["data"]["token"]
@@ -51,17 +53,14 @@ def is_today(record):
     return today == record.get("date")
 
 # 检查是否存在
-
-
 def exists(id):
     time.sleep(0.3)
     filter = {"property": "id", "rich_text": {"equals": id}}
-    response = notion_api.query_database(DATABASE_ID, filter)
+    response = notion_api.query_database(KEEP_DATABASE_ID, filter)
     return len(response.get("results")) > 0
 
 
 def get_run_data(id, title):
-    
     r = requests.get(RUN_LOG_API.format(run_id=id), headers=keep_headers)
     if r.ok:
         data = r.json().get("data")
@@ -73,12 +72,6 @@ def get_run_data(id, title):
         distance = round(float(data.get("distance"))/1000, 2)
         add_to_notion(start, end, cover, distance, title, id)
 
-
-def write(r):
-    with open("data/keep.json", "w") as f:
-        f.write(json.dumps(r.json()))
-
-
 def add_to_notion(start, end, cover, distance, title, id):
     time.sleep(0.3)
     date = start
@@ -87,7 +80,7 @@ def add_to_notion(start, end, cover, distance, title, id):
     properties = Properties().title(title).date(
         start=start, end=end).number("距离", distance).rich_text("id", id)
     notion_api.get_relation(properties, date)
-    page = Page().parent(DatabaseParent(DATABASE_ID)).children(
+    page = Page().parent(DatabaseParent(KEEP_DATABASE_ID)).children(
         Children()).cover(cover).icon("🏃🏻").properties(properties)
     r = notion_api.create_page(page=page)
 

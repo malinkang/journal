@@ -25,9 +25,6 @@ jobs:
       - name: create tomorrow diary 
         run: |
           python scripts/notion/create_diary.py
-      - name: douban sync
-        run: |
-          python scripts/notion/douban.py "${{secrets.WEREAD_COOKIE}}"
       - name: ncm sync
         run: |
           python scripts/notion/ncm.py
@@ -37,9 +34,6 @@ jobs:
       - name: bilibili sync
         run: |
           python scripts/notion/bilibili.py       
-      - name: keep sync
-        run: |
-          python scripts/notion/keep.py 
       - name: toggl
         run: |
           python scripts/notion/toggl.py
