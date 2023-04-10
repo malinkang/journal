@@ -5,6 +5,7 @@ import dateutils
 from notion_api import Page
 from notion_api import Children, DatabaseParent
 from notion_api import Properties
+import util
 from config import (
     MOVIE_DATABASE_ID,
     DAY_PAGE_ID,
@@ -46,11 +47,15 @@ def query_twitter():
     response = notion_api.query_database(
         "5351451787d9403fb48d9a9c20f31f43", get_filter())
     urls = []
-    for index in range(0, len(response.get("results"))):
-        id = notion_api.get_rich_text(response, "id", index)
-        name = notion_api.get_title(response, "Name", index)
-        urls.append(
-            "{"+"""{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)+"}")
+    for result in response.get("results"):
+        id = util.get_rich_text(result,"id")
+        name = util.get_title(result,"Name")
+        text = util.get_rich_text(result,"text")
+        if id == None or id =='':
+            urls.append(text)
+        else:
+            urls.append(
+                "{"+"""{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)+"}")
     return urls
 
 
@@ -288,4 +293,5 @@ if __name__ == "__main__":
     if content !="":
        date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     options = parser.parse_args()
-    create()
+    query_ncm()
+    # create()

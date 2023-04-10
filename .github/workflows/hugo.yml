@@ -37,9 +37,9 @@ jobs:
       - name: hugo sync
         run: |
           python scripts/notion/hugo.py '${{ github.event.inputs.content }}'
-      # - name: telegram
-      #   run: |
-      #     python scripts/notion/telegram.py
+      - name: telegram
+        run: |
+          python scripts/notion/telegram.py
       - name: commit
         uses: EndBug/add-and-commit@v9
         with:

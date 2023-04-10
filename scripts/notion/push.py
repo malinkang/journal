@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from cgitb import text
 from datetime import datetime, timedelta
 import requests
 import argparse
@@ -27,20 +26,21 @@ map = {
 #获取星期
 #搜索需要同步的笔记
 def query_todo():
-    yesterday = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
-    filter = {"and":[
-        {"property": "Date", "date": {"after": yesterday}},
-        {"property": "Status", "select": {"equals": "Not Started"}}
-    ]}
-    response = notion_api.query_database("97955f34653b4658bc0aaa50423be45f", filter)
-    results= response.get("results")
-    message = ""
-    index = 0
-    for result in results:
-        index +=1
-        message +=map[index]+" "+result['properties']['Name']['title'][0]['text']['content']
-        message +="\n"
-    send(message,"http://diary.malinkang.com/images/weread.svg")
+    # yesterday = (datetime.now()-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
+    # filter = {"and":[
+    #     {"property": "Date", "date": {"after": yesterday}},
+    #     {"property": "Status", "select": {"equals": "Not Started"}}
+    # ]}
+    # response = notion_api.query_database("97955f34653b4658bc0aaa50423be45f", filter)
+    # results= response.get("results")
+    # message = ""
+    # index = 0
+    # for result in results:
+    #     index +=1
+    #     message +=map[index]+" "+result['properties']['Name']['title'][0]['text']['content']
+    #     message +="\n"
+
+    send("message","https://drive.malinkang.com/api/raw/?path=/Images/file_55.jpg")
     
     
 #创建markdown文件
