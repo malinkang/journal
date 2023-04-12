@@ -74,10 +74,12 @@ def get_plants(user_id):
                 insert_tomato(id, tag, note, start, end)
 
 
-# 番茄钟插入notion
 def insert_tomato(id, tag, note, start, end):
+    """
+    番茄钟插入到notion
+    """
     properties = Properties().title(note).select(
-        "Tag", dict[tag]).date("Date", start, end).number("Id", id)
+        "Category", dict[tag]).date("Date", start, end).number("Id", id)
     properties = notion_api.get_relation(properties)
     parent = DatabaseParent(TOMATO_DATABASE_ID)
     page = (
@@ -100,10 +102,9 @@ def exist(id):
 
 def query_tomato():
     today = datetime.now().strftime("%Y-%m-%dT00:00:00+08:00")
-    print(today)
     filter = {
         "and": [
-            {"property": "Date", "date": {"after": today}},
+            # {"property": "Date", "date": {"after": today}},
             {"property": "Toggl", "number": {"is_empty": True}}
         ]
     }
@@ -117,11 +118,11 @@ def query_tomato():
     for result in response["results"]:
         page_id = id = result["id"]
         properties = result["properties"]
-        tag = properties["Tag"]["select"]["name"]
+        category = properties["Category"]["select"]["name"]
         note = util.get_title(result,"Name")
         start = properties["Date"]["date"]["start"]
         duration = properties["Duration"]["formula"]["number"]
-        id = insert_to_toggl(note,start,duration,dict2[tag])
+        id = insert_to_toggl(note,start,duration,dict2[category])
         update_tomato(page_id=page_id,id=id)
 
 def update_tomato(page_id,id):

@@ -25,7 +25,12 @@ WEREAD_HISTORY_URL = (
 WEREAD_NOTE_URL = "https://i.weread.qq.com/shelf/sync"
 WEREAD_HOT_URL = "https://i.weread.qq.com/book/bestbookmarks"
 
-
+"""
+https://i.weread.qq.com/readdata/detail?mode=weekly&baseTime=0
+https://i.weread.qq.com/readdata/detail?mode=monthly&baseTime=0
+https://i.weread.qq.com/readdata/detail?mode=anually&baseTime=0
+https://i.weread.qq.com/readdata/detail?mode=overall&baseTime=0
+"""
 def parse_cookie_string(cookie_string):
     cookie = SimpleCookie()
     cookie.load(cookie_string)
