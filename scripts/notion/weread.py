@@ -39,13 +39,14 @@ def parse_cookie_string(cookie_string):
     return cookiejar
 
 
-def get_reading():
-    filter = {"property": "状态", "select": {"equals": "在读"}}
+def get_reading(weread):
+    """
+    从Database中获取某本书的id和url
+    """
+    filter =  {"property": "WeRead", "rich_text": {"equals": weread}}
     response = notion_api.query_database(BOOK_DATABASE_ID, filter)
     results = response["results"]
-    print(len(results))
     for result in results:
-        weread = get_rich_text(result, "WeRead")
         title = get_title(result, "标题")
         id = result["id"]
         url = result["properties"]["条目链接"]["url"]
@@ -53,19 +54,19 @@ def get_reading():
 
 
 def get_read_ifo(bookId, title, id, url):
-    """获取书的详情"""
-    session.get(WEREAD_BASE_URL)
-    params = dict(bookId=bookId, readingDetail=1)
+    """
+    https://i.weread.qq.com/book/readinfo?noteCount=1&readingDetail=1&readingBookIndex=1&finishedBookIndex=1&readingBookCount=1&finishedBookCount=1&bookId=44026191&finishedDate=1
+    """
+    params = dict(bookId=bookId, readingDetail=1,readingBookIndex=1)
     r = session.get(WEREAD_HISTORY_URL, params=params)
     print(r.text)
-    if r.ok:
-        if ("readDetail" in r.json()):
-            datas = r.json()["readDetail"]["data"]
-            for data in datas:
-                date = data["readDate"]
-                date = datetime.fromtimestamp(date) + timedelta(hours=8)
+    if r.ok and  "readDetail" in r.json():
+        datas = r.json()["readDetail"]["data"]
+        for data in datas:
+            date = data["readDate"]
+            date = datetime.fromtimestamp(date) 
+            if(date >=today):
                 minutes = floor(data["readTime"] / 60)
-                print(date)
                 page_id = query_database(bookId, date)
                 if page_id == "":
                     insert(title, id, minutes, url, date, bookId)
@@ -99,6 +100,21 @@ def get_hot2(bookId):
     with open("note2.json", "w") as f:
         json.dump(r.json(), f)
 
+def get_notebooklist():
+    """获取笔记本列表"""
+    url = "https://i.weread.qq.com/user/notebooks"
+    r = session.get(url)
+    books = []
+    with open("notebooks.json", "w", encoding="utf-8") as f:
+        f.write(r.text)
+    if r.ok:
+        data = r.json()
+        for b in data["books"]:
+            if today < datetime.fromtimestamp(b["sort"]):
+                print(today)
+                print(datetime.fromtimestamp(b["sort"]))
+                books.append(b["bookId"])
+    return books
 
 def query_database(weread, date):
     date = date.strftime("%Y-%m-%dT00:00:00+08:00")
@@ -154,4 +170,10 @@ if __name__ == "__main__":
     cookies = options.cookies
     session = requests.Session()
     session.cookies = parse_cookie_string(cookies)
-    get_reading()
+    session.get(WEREAD_BASE_URL)
+    today = datetime.now()
+    today = today.replace(hour=0,minute=0, second=0, microsecond=0)
+    books = get_notebooklist()
+    print(books)
+    for book in books:
+        get_reading(book)

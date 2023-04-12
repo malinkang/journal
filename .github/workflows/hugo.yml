@@ -34,6 +34,9 @@ jobs:
       - name: toggl
         run: |
           python scripts/notion/toggl.py
+      - name: weread sync
+        run: |
+          python scripts/notion/weread.py "${{secrets.WEREAD_COOKIE}}"
       - name: hugo sync
         run: |
           python scripts/notion/hugo.py '${{ github.event.inputs.content }}'

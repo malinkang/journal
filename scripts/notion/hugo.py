@@ -1,7 +1,6 @@
 import argparse
 from datetime import date, datetime, timedelta
 import notion_api
-import dateutils
 from notion_api import Page
 from notion_api import Children, DatabaseParent
 from notion_api import Properties
@@ -52,7 +51,7 @@ def query_twitter():
         name = util.get_title(result,"Name")
         text = util.get_rich_text(result,"text")
         if id == None or id =='':
-            urls.append(text)
+            urls.append(f"* {text}")
         else:
             urls.append(
                 "{"+"""{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)+"}")
@@ -293,5 +292,4 @@ if __name__ == "__main__":
     if content !="":
        date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     options = parser.parse_args()
-    query_ncm()
-    # create()
+    create()
