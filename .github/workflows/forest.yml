@@ -2,7 +2,7 @@ name: forest sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 12,15 * * *"
+    - cron: "0 1-15 * * *"
 jobs:
   sync:
     name: Sync
