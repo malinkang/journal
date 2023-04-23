@@ -83,8 +83,7 @@ def get_plants(user_id):
             tags = list(filter(lambda x:x.startswith("#"), note.split(" ")))
             tags = list(map(lambda x:x[1:], tags))
             note = list(filter(lambda x:not x.startswith("#"), note.split(" ")))[0]
-        print(tags)
-        print(note)
+        relation = get_relation(tags)
         start_time = plant.get("start_time")
         end_time = plant.get("end_time")
         start = date.format_utc(start_time) + timedelta(hours=8)
@@ -92,16 +91,22 @@ def get_plants(user_id):
         if (exist(id)):
             pass
         else:
-            insert_tomato(id,category, tags, note, start, end)
+            insert_tomato(id,category, tags, note, start, end,relation)
 
-
-def insert_tomato(id, category,tags, note, start, end):
+def get_relation(tags):
+    if(len(tags) > 0):
+        filter = {"property": "Name", "rich_text": {"equals": tags[0]}}
+        response = notion_api.query_database(database_id="e50dca03eafc47e7a4fda97191ee9426", filter=filter)
+        return response.get("results")[0].get("id")
+def insert_tomato(id, category,tags, note, start, end,relation):
     """
     番茄钟插入到notion
     """
     properties = Properties().title(note).select(
         "Category",category).multi_select("Tags",tags).date("Date", start, end).number("Id", id)
     properties = notion_api.get_relation(properties)
+    if relation != None:
+        properties.relation("Hour",relation)
     parent = DatabaseParent(TOMATO_DATABASE_ID)
     page = (
         Page()
@@ -111,6 +116,7 @@ def insert_tomato(id, category,tags, note, start, end):
         .icon("🍅")
         .properties(properties)
     )
+   
     notion_api.create_page(page=page)
 
 
@@ -188,7 +194,6 @@ def insert_to_toggl(description, start, duration, pid,tags):
 if __name__ == "__main__":
     user_id = login()
     forest_tag_dict = get_tags(user_id)
-    print(forest_tag_dict)
     get_plants(user_id)
     toggl_project_dict = get_projects()
     query_tomato()

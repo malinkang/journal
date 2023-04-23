@@ -262,6 +262,7 @@ def create():
     result = result.replace('-','\-')
     result = result.replace('[x]','\[x\]')
     result = result.replace('#','\#')
+    result = result.replace('|','\|')
     send(result,cover)
 def send(message,cover):
     url = "https://api.telegram.org/bot5509900379:AAHSimr7FiKrclApJImy91A3Dff4R4g2OPk/sendPhoto"
