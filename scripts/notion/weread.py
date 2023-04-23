@@ -31,6 +31,44 @@ https://i.weread.qq.com/readdata/detail?mode=monthly&baseTime=0
 https://i.weread.qq.com/readdata/detail?mode=anually&baseTime=0
 https://i.weread.qq.com/readdata/detail?mode=overall&baseTime=0
 """
+
+
+def get_weekly_reading():
+    """
+    获取周阅读数据
+    """
+    params = dict(mode="weekly", baseTime=0)
+    r = session.get("https://i.weread.qq.com/readdata/detail", params=params)
+    if r.ok and "readTimes" in r.json():
+        readTimes = r.json()["readTimes"]
+        for key,value in readTimes.items():
+            page_id = query_read_times(key)
+            if(page_id!=""):
+                update_read_time(page_id,value)
+            else:
+                insert_read_times(key,value,datetime.fromtimestamp(int(key)) )
+def query_read_times(timestamp):
+    filter = {
+        "and": [
+            {"property": "Timestamp", "title": {"equals": timestamp}},
+        ]
+    }
+    id = ""
+    response = notion_api.query_database(
+        "09aadf6940c74beb81baf3d60121c7a2", filter)
+    results = response["results"]
+    if len(results) > 0:
+        id = results[0]["id"]
+    return id
+
+
+def update_read_time(id, minutes):
+    properties = (
+        Properties()
+        .number("Minutes", minutes)
+    )
+    notion_api.update_page(id, properties)
+
 def parse_cookie_string(cookie_string):
     cookie = SimpleCookie()
     cookie.load(cookie_string)
@@ -57,6 +95,23 @@ def get_reading(weread):
         url = result["properties"]["条目链接"]["url"]
         get_read_ifo(weread, title, id, url)
 
+def insert_read_times(title,  minutes, date):
+    properties = (
+        Properties()
+        .title(title)
+        .number("Minutes", minutes)
+        .date(start=date.strftime("%Y-%m-%dT00:00:00"))
+    )
+    properties = notion_api.get_relation(properties, date=date)
+    page = (
+        Page()
+        .parent(DatabaseParent("09aadf6940c74beb81baf3d60121c7a2"))
+        .children(Children())
+        .properties(properties)
+        .cover(unsplash.random())
+        .icon("📚")
+    )
+    notion_api.create_page(page)
 
 def get_read_ifo(bookId, title, id, url):
     """
@@ -116,8 +171,6 @@ def get_notebooklist():
         data = r.json()
         for b in data["books"]:
             if today < datetime.fromtimestamp(b["sort"]):
-                print(today)
-                print(datetime.fromtimestamp(b["sort"]))
                 books.append(b["bookId"])
     return books
 
@@ -179,6 +232,6 @@ if __name__ == "__main__":
     today = datetime.now()
     today = today.replace(hour=0,minute=0, second=0, microsecond=0)
     books = get_notebooklist()
-    print(books)
     for book in books:
         get_reading(book)
+    get_weekly_reading()
