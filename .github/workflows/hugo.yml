@@ -34,15 +34,15 @@ jobs:
       - name: toggl
         run: |
           python scripts/notion/toggl.py
+      - name: keep
+        run: |
+          python scripts/notion/keep.py
       - name: weread sync
         run: |
           python scripts/notion/weread.py "${{secrets.WEREAD_COOKIE}}"
       - name: hugo sync
         run: |
           python scripts/notion/hugo.py '${{ github.event.inputs.content }}'
-      - name: telegram
-        run: |
-          python scripts/notion/telegram.py
       - name: commit
         uses: EndBug/add-and-commit@v9
         with:
@@ -51,3 +51,6 @@ jobs:
           author_email: linkang.ma@gmail.com
           committer_name: malinkang
           committer_email: linkang.ma@gmail.com
+      - name: telegram
+        run: |
+          python scripts/notion/telegram.py
