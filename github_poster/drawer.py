@@ -19,7 +19,7 @@ class Drawer:
 
     def __init__(self, p):
         self.poster = p
-        #年字体大小 字体修改会导致错位
+        # 年字体大小 字体修改会导致错位
         self.year_size = 200 * 4.0 / 80.0
         self.year_style = f"font-size:{self.year_size}px; font-family:Arial;"
         self.year_length_style = f"font-size:{110 * 3.0 / 80.0}px; font-family:Arial;"
@@ -31,7 +31,8 @@ class Drawer:
         for multiple types
         """
         return dict(
-            zip(self.poster.type_list, COLOR_TUPLE[: len(self.poster.type_list)])
+            zip(self.poster.type_list,
+                COLOR_TUPLE[: len(self.poster.type_list)])
         )
 
     def make_color(self, length_range, length):
@@ -70,7 +71,8 @@ class Drawer:
             )
         )
         return rect
-    #绘制一天的
+    # 绘制一天的
+
     def _gen_day_box(
         self,
         dr,
@@ -84,13 +86,15 @@ class Drawer:
     ):
         color = DEFAULT_DOM_COLOR
         if day_tracks:
-            color = self.make_color(self.poster.length_range_by_date, day_tracks)
+            color = self.make_color(
+                self.poster.length_range_by_date, day_tracks)
             if day_tracks >= self.poster.special_number["special_number1"]:
                 color = self.poster.colors.get("special2") or self.poster.colors.get(
                     "special"
                 )
             date_title = f"{date_title} {day_tracks} {self.poster.units}"
-        rect = dr.rect((rect_x, rect_y), DOM_BOX_TUPLE, fill=color,rx=0.5,ry=0.5)
+        rect = dr.rect((rect_x, rect_y), DOM_BOX_TUPLE,
+                       fill=color, rx=0.5, ry=0.5)
         if with_animation:
             rect = self.__add_animation(rect, key_times, animate_index)
         rect.set_desc(title=date_title)
@@ -121,7 +125,8 @@ class Drawer:
             index = 0
             for _type in self.poster.type_list:
                 num = day_tracks.get(_type, 0)
-                length_range = self.poster.length_range_by_date_dict.get(_type, 1)
+                length_range = self.poster.length_range_by_date_dict.get(
+                    _type, 1)
                 if not num:
                     continue
                 dom = dom_tuple[index]
@@ -135,7 +140,8 @@ class Drawer:
                 rect_y += dom_tuple[index][1]
                 index += 1
         else:
-            rect = dr.rect((rect_x, rect_y), DOM_BOX_TUPLE, fill=DEFAULT_DOM_COLOR)
+            rect = dr.rect((rect_x, rect_y), DOM_BOX_TUPLE,
+                           fill=DEFAULT_DOM_COLOR)
             if with_animation:
                 rect = self.__add_animation(rect, key_times, animate_index)
             yield rect
@@ -183,7 +189,8 @@ class Drawer:
             dr.add(
                 dr.text(
                     f"{name}",
-                    insert=(offset.tuple()[0] + 15.5 * num, offset.tuple()[1] + 14),
+                    insert=(offset.tuple()[0] + 15.5 *
+                            num, offset.tuple()[1] + 14),
                     fill=self.poster.colors["text"],
                     style=self.month_names_style,
                 )
@@ -194,7 +201,8 @@ class Drawer:
         year_count, key_times = 0, ""
         if self.poster.with_animation:
             # set default count 10
-            year_count = self.poster.year_tracks_date_count_dict.get(str(year), 10)
+            year_count = self.poster.year_tracks_date_count_dict.get(
+                str(year), 10)
             key_times = make_key_times(year_count)
 
         # add every day of this year for 53 weeks and per week has 7 days
@@ -248,7 +256,8 @@ class Drawer:
                 self.poster.colors["track"] = loader.track_color or "#4DD2FF"
                 self.poster.units = loader.unit
                 self.poster.compute_track_statistics([loader._type])
-                self._draw_one_calendar(dr, years[0], offset, _type=loader._type)
+                self._draw_one_calendar(
+                    dr, years[0], offset, _type=loader._type)
         else:
             for year in range(self.poster.years[0], self.poster.years[-1] + 1)[::-1]:
                 self._draw_one_calendar(dr, year, offset)
@@ -261,7 +270,8 @@ class Drawer:
         y = self.poster.height - 2.5
         index = 0
         for _type in self.poster.type_list:
-            dr.add(dr.rect((x, y - 2.5), DOM_BOX_TUPLE, fill=COLOR_TUPLE[index][0]))
+            dr.add(dr.rect((x, y - 2.5), DOM_BOX_TUPLE,
+                   fill=COLOR_TUPLE[index][0]))
             dr.add(
                 dr.text(
                     f": {_type}",

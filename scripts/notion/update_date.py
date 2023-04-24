@@ -13,10 +13,10 @@ from notion_api import Properties
 from datetime import datetime
 
 dict = {
-    # BILL_DATABASE_ID:"日期",
+    BILL_DATABASE_ID:"日期",
     # BOOK_DATABASE_ID:"打分日期",
     # MOVIE_DATABASE_ID:"打分日期",
-    WEREAD_DATABASE_ID: "Date",
+    # WEREAD_DATABASE_ID: "Date",
 }
 
 
