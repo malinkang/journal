@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import argparse
 import json
+import math
 import notion
 import time
 import requests
@@ -69,7 +70,7 @@ def get_run_data(id, title):
         cover = data.get("polylineSnapshot")
         if cover is None:
             cover = unsplash.random()
-        distance = round(float(data.get("distance"))/1000, 2)
+        distance = math.floor(data.get("distance")/10)/100
         add_to_notion(start, end, cover, distance, title, id)
 
 def add_to_notion(start, end, cover, distance, title, id):

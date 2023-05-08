@@ -223,8 +223,7 @@ def create():
     result += "\n"
     song = query_ncm()
     if song != '':
-        song_id = song.split('=')[1]
-        result += '{{<aplayer server="netease" type="song" id="'+song_id+'">}}\n'
+        result += '{{<spotify type="track" id="'+song+'" width="100%" height="100" >}}\n'
     days = query_day()
     if len(days) > 0:
         result += "## 📅 倒数日"
