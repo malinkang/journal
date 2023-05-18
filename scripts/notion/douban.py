@@ -212,8 +212,8 @@ def insert_movie(title, date, link, cover, rating, note, status, year, directors
         .url("条目链接", link)
         .number('上映年份', int(year))
         .select('状态', status)
-        .multi_select('导演', directors)
-        .multi_select('主演', actors[0:10])
+        # .multi_select('导演', directors)
+        # .multi_select('主演', actors[0:10])
         .multi_select('类型', genre)
         .rich_text('制片国家', country)
        

@@ -108,6 +108,19 @@ def query_movie():
     return urls
 
 
+def query_tv():
+    filter = get_filter(name="Date")
+    response = notion_api.query_database("301da784bddd41b692ee711e08150487", filter)
+    urls = set()
+    for result in response.get("results"):
+        title = result["properties"]["Name"]["title"][0]["text"]["content"]
+        url = result["properties"]["URL"]["url"]
+        season = result["properties"]["Season"]["number"]
+        number = result["properties"]["Number"]["number"]
+        urls.add(f"看过[{title}]({url})第{season}季第{number}集")
+    return urls
+
+
 def query_run():
     response = notion_api.query_database(
         "8dc2c4145901403ea9c4fb0b10ad3f86", get_filter())
@@ -260,7 +273,7 @@ def create():
         for url in urls:
             result += url
             result += "\n"
-    urls = query_bilibili() | query_movie()
+    urls = query_bilibili() | query_movie() | query_tv()
     if len(urls) > 0:
         result += "\n"
         result += "## 📺 今天看了啥"

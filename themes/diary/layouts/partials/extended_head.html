@@ -2,3 +2,9 @@
 If you want to include any custom html just before </head>, put it in /layouts/partials/extended_head.html
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/extended_head.html doesn't exist.
 -->
+{{ if .Page.Store.Get "hasMermaid" }}
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+{{ end }}

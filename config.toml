@@ -55,6 +55,14 @@ url = "/tags"
 name = "标签"
 weight = 3
 [[menu.main]]
+url = "/movies"
+name = "电影"
+weight = 3
+[[menu.main]]
+url = "/books"
+name = "阅读"
+weight = 3
+[[menu.main]]
 url = "/posts"
 name = "归档"
 weight = 1
