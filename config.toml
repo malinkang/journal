@@ -1,7 +1,7 @@
-baseURL = "https://diary.malinkang.com/"
+baseURL = "https://journal.malinkang.com/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "zh"
-title = "Diary"
+title = "Journal"
 copyright = " 2021 malinkang."
 theme = "diary"
 # googleAnalytics = "UA-123-45"
