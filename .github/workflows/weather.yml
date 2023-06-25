@@ -6,8 +6,6 @@ on:
       content:
         description: 'content'
         required: false
-
-
 jobs:
   sync:
     name: Sync

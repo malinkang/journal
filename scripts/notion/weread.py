@@ -47,6 +47,7 @@ def get_weekly_reading():
                 update_read_time(page_id,value)
             else:
                 insert_read_times(key,value,datetime.fromtimestamp(int(key)) )
+
 def query_read_times(timestamp):
     filter = {
         "and": [
@@ -81,18 +82,17 @@ def parse_cookie_string(cookie_string):
         )
     return cookiejar
 
-
 def get_reading(weread):
     """
     从Database中获取某本书的id和url
     """
-    filter =  {"property": "WeRead", "rich_text": {"equals": weread}}
-    response = notion_api.query_database(BOOK_DATABASE_ID, filter)
+    filter =  {"property": "BookId", "rich_text": {"equals": weread}}
+    response = notion_api.query_database("a7794117392d4625ace722f78742afca", filter)
     results = response["results"]
     for result in results:
-        title = get_title(result, "标题")
+        title = get_title(result, "BookName")
         id = result["id"]
-        url = result["properties"]["条目链接"]["url"]
+        url = result["properties"]["URL"]["url"]
         get_read_ifo(weread, title, id, url)
 
 def insert_read_times(title,  minutes, date):
@@ -119,12 +119,12 @@ def get_read_ifo(bookId, title, id, url):
     """
     params = dict(bookId=bookId, readingDetail=1,readingBookIndex=1)
     r = session.get(WEREAD_HISTORY_URL, params=params)
-    print(r.text)
     if r.ok and  "readDetail" in r.json():
         datas = r.json()["readDetail"]["data"]
         for data in datas:
             date = data["readDate"]
             date = datetime.fromtimestamp(date) 
+            print(date)
             if(date >=today):
                 minutes = floor(data["readTime"] / 60)
                 page_id = query_database(bookId, date)

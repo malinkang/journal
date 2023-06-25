@@ -7,6 +7,7 @@ from notion_api import Properties
 import util
 from config import (
     MOVIE_DATABASE_ID,
+    BOOK_DATABASE_ID,
     DAY_PAGE_ID,
     TOGGL_DATABASE_ID, TODO_DATABASE_ID
 )
@@ -129,17 +130,26 @@ def query_run():
         return results[0]["properties"]["距离"]["number"]
     return 0
 
-
 def query_book():
     response = notion_api.query_database(
         "cca71ece15ac48a68c34e5f86a2e6b38", get_filter())
-    books = []
+    books = set()
     for result in response.get("results"):
         properties = result['properties']
         name = properties['Name']['title'][0]['text']['content']
         duration = properties['时长']['number']
         url = properties['URL']['url']
-        books.append(f"读[《{name}》]({url}){duration}分钟")
+        books.add(f"读[《{name}》]({url}){duration}分钟")
+    return books
+
+def query_douban_book():
+    books = set()
+    response = notion_api.query_database(BOOK_DATABASE_ID, get_filter(name="打分日期"))
+    for result in response.get("results"):
+        title = result["properties"]["标题"]["title"][0]["text"]["content"]
+        url = result["properties"]["条目链接"]["url"]
+        status = result["properties"]["状态"]["select"]["name"]
+        books.add(f"[{status}{title}]({url})")
     return books
 
 
@@ -281,10 +291,10 @@ def create():
         for url in urls:
             result += "- "+url
             result += "\n"
-    books = query_book()
+    books = query_book() | query_douban_book()
     if len(books) > 0:
         result += "\n"
-        result += "## 📚 今天读了啥"
+        result += "## 📚 读书"
         result += "\n"
         for url in books:
             result += "- "+url
