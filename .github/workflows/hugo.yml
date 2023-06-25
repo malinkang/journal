@@ -37,6 +37,9 @@ jobs:
       - name: keep
         run: |
           python scripts/notion/keep.py
+      - name: twitter
+        run: |
+          python scripts/notion/twitter.py
       - name: weread sync
         run: |
           python scripts/notion/weread.py "${{secrets.WEREAD_COOKIE}}"
@@ -46,7 +49,6 @@ jobs:
       - name: commit
         uses: EndBug/add-and-commit@v9
         with:
-          branch: master
           author_name: malinkang
           author_email: linkang.ma@gmail.com
           committer_name: malinkang

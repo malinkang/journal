@@ -3,7 +3,7 @@ DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, 
 languageCode = "zh"
 title = "Journal"
 copyright = " 2021 malinkang."
-theme = "diary"
+theme =["diary", "gallery"]
 # googleAnalytics = "UA-123-45"
 
 [markup]
