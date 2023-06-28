@@ -1,7 +1,6 @@
 import glob
 import os
-file = glob.glob("./content/posts/*.md")
+file = glob.glob("./content/posts/2022/*/images/*.png")
 for i in file:
-    dir = i[i.rfind("/")+1:i.rfind(".")]
-    os.mkdir(f"./content/posts/{dir}")
-    os.rename(i,f"./content/posts/{dir}/index.md")
+    if os.path.isfile(i):
+        os.remove(i)
