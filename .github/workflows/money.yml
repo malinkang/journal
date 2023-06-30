@@ -26,4 +26,4 @@ jobs:
           pip install -r requirements.txt
       - name: update money
         run: |
-          python scripts/notion/money.py '${{ github.event.inputs.content }}'
+          python test.py
