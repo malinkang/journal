@@ -24,5 +24,8 @@ comment : true
 {{< tweet user="malinkang" id="1677642552227540994" >}}
 {{< tweet user="malinkang" id="1677606831554981889" >}}
 
+## 📚 读书
+- 读[《你一生的故事（译林幻系列）》](https://weread.qq.com/web/reader/cef32470719bdd31cef5a8a)15分钟
+
 ## 📷 照片
 {{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
