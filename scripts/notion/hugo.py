@@ -1,5 +1,6 @@
 import argparse
 from datetime import date, datetime, timedelta
+import os
 import notion_api
 from notion_api import Page
 from notion_api import Children, DatabaseParent
@@ -208,8 +209,9 @@ def query_toggl():
 
 def create():
     response = notion_api.query_database(DAY_PAGE_ID, get_filter())
-    cover = response.get("results")[0].get("cover").get("external").get("url")
-    icon = response.get("results")[0].get("icon").get("emoji")
+    results = response.get("results")
+    cover = results[0].get("cover").get("external").get("url")
+    icon = results[0].get("icon").get("emoji")
     name = notion_api.get_title(response, "Name")
     name = icon + " " + name
     tags = notion_api.get_multi_select(response, "Tags")
@@ -226,7 +228,10 @@ def create():
     )
     result += "\n"
     content = ""
-    weather = notion_api.get_rich_text(response, "天气")
+    song = query_ncm()
+    if song != '':
+        result += '{{<spotify type="track" id="'+song+'" width="100%" height="100" >}}\n'
+    weather = util.get_rich_text(results[0], "天气")
     if weather is not None:
         content += "今天天气" + weather
     aq = notion_api.get_number(response, "空气质量")
@@ -244,9 +249,6 @@ def create():
         content += "。"
     result += content
     result += "\n"
-    song = query_ncm()
-    if song != '':
-        result += '{{<spotify type="track" id="'+song+'" width="100%" height="100" >}}\n'
     days = query_day()
     if len(days) > 0:
         result += "## 📅 倒数日"
@@ -299,9 +301,16 @@ def create():
         for url in books:
             result += "- "+url
             result += "\n"
-    file = datetime.strftime(
-        date, "%Y-%m-%d") + ".md"
-    with open("./content/posts/" + file, "w") as f:
+    dir = "./content/posts/" + datetime.strftime(date, "%Y")+"/"+datetime.strftime(date,"%Y-%m-%d")
+    if os.path.exists(dir+"/images") and len(os.listdir(dir+"/images")) > 0:
+        result += "\n"
+        result += "## 📷 照片"
+        result += "\n"
+        result += '{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}'
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+    file = dir+ "/index.md"
+    with open(file, "w") as f:
         f.seek(0)
         f.write(result)
         f.truncate()
