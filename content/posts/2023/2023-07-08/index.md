@@ -2,7 +2,9 @@
 ---
 title: "☀️ 07月08日 星期六"
 date: 2023-07-08T15:38:00.000+08:00
-description: "None"
+description: "中国
+北京市 海淀区
+西北旺路61号"
 tags: [2023,7月,第27周]
 featured_image: "https://images.unsplash.com/photo-1686958633466-2a5e0579d2cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2ODUwfDB8MXxyYW5kb218fHx8fHx8fHwxNjg4NzQ0MjkyfA&ixlib=rb-4.0.3&q=80&w=400"
 categories: [日记]
@@ -19,5 +21,8 @@ comment : true
 - 跑步：8.3km
 ## ⏰ 时间统计
 ## 💬 碎碎念
+{{< tweet user="malinkang" id="1677642552227540994" >}}
 {{< tweet user="malinkang" id="1677606831554981889" >}}
+
+## 📷 照片
 {{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
