@@ -1,5 +1,6 @@
 import argparse
-import datetime
+from datetime import datetime
+from datetime import timedelta
 import glob
 import hashlib
 import json
@@ -30,7 +31,7 @@ if __name__ == "__main__":
     list = json.loads(options.content)
     for item in list:
         creationTime = item.get("mediaMetadata").get("creationTime")
-        date = datetime.strptime(creationTime, "%Y-%m-%dT%H:%M:%SZ") + datetime.timedelta(hours=8)
+        date = datetime.strptime(creationTime, "%Y-%m-%dT%H:%M:%SZ") + timedelta(hours=8)
         year = date.strftime("%Y")
         month = date.strftime("%m")
         day = date.strftime("%d")
