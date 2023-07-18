@@ -26,15 +26,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("content")
     options = parser.parse_args()
-    dict = json.loads(options.content)
-    date = dict.get("mediaMetadata").get("creationTime").split("T")[0].split("-")
-    base_url = dict["baseUrl"]
-    file_name = hashlib.sha256(base_url.encode()).hexdigest()
-    dir = f"./content/posts/{date[0]}/{date[0]}-{date[1]}-{date[2]}/images"
-    if(not os.path.exists(dir)):
-        os.makedirs(dir)
-    files = glob.glob(f"{dir}/{file_name}.*")
-    if len(files) == 0:
-        download_image(dict['baseUrl'],file_name,dir)
-    else:
-        print("图片已存在")
+    list = json.loads(options.content)
+    for item in list:
+        date = item.get("mediaMetadata").get("creationTime").split("T")[0].split("-")
+        base_url = item["baseUrl"]
+        file_name = hashlib.sha256(base_url.encode()).hexdigest()
+        dir = f"./content/posts/{date[0]}/{date[0]}-{date[1]}-{date[2]}/images"
+        if(not os.path.exists(dir)):
+            os.makedirs(dir)
+        files = glob.glob(f"{dir}/{file_name}.*")
+        if len(files) == 0:
+            download_image(base_url,file_name,dir)
+        else:
+            print("图片已存在")
