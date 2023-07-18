@@ -1,4 +1,5 @@
 import argparse
+import datetime
 import glob
 import hashlib
 import json
@@ -28,10 +29,14 @@ if __name__ == "__main__":
     options = parser.parse_args()
     list = json.loads(options.content)
     for item in list:
-        date = item.get("mediaMetadata").get("creationTime").split("T")[0].split("-")
+        creationTime = item.get("mediaMetadata").get("creationTime")
+        date = datetime.strptime(creationTime, "%Y-%m-%dT%H:%M:%SZ") + datetime.timedelta(hours=8)
+        year = date.strftime("%Y")
+        month = date.strftime("%m")
+        day = date.strftime("%d")
         base_url = item["baseUrl"]
         file_name = hashlib.sha256(base_url.encode()).hexdigest()
-        dir = f"./content/posts/{date[0]}/{date[0]}-{date[1]}-{date[2]}/images"
+        dir = f"./content/posts/{year}/{year}-{month}-{day}/images"
         if(not os.path.exists(dir)):
             os.makedirs(dir)
         files = glob.glob(f"{dir}/{file_name}.*")
