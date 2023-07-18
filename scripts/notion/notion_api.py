@@ -200,7 +200,7 @@ class Text(dict):
 
 client = Client(
     auth=NOTION_TOKEN, notion_version=NOTION_VERSION, 
-    log_level=logging.ERROR
+    log_level=logging.DEBUG
 )
 
 
