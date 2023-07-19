@@ -8,15 +8,18 @@ featured_image: "https://images.unsplash.com/photo-1684443726764-6a236cb33ccb?cr
 categories: [日记]
 comment : true
 ---
-{{<spotify type="track" id="7h3Fuz0zLGuxxo9rk1bRha" width="100%" height="100" >}}
-
 
 今天天气晴，空气质量38，最高温度38°C，最低温度20°C。
+{{<spotify type="track" id="7h3Fuz0zLGuxxo9rk1bRha" width="100%" height="100" >}}
 ## 📅 倒数日
 - 距离春节还有227天 ■■■■□□□□□□ 40%
 - 距离元旦还有187天 ■■■■□□□□□□ 48%
 ## ✅ ToDo
 ## ❤️ 健康
 ## ⏰ 时间统计
-
-{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+- 09:04-09:17：🇺🇸英语
+- 09:38-22:14：🚇上班
+- 10:17-10:42：未设置
+- 11:02-11:27：未设置
+- 20:41-21:16：🚇下班
+- 22:15-22:30：🛀洗漱
