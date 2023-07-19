@@ -36,7 +36,7 @@ if __name__ == "__main__":
         month = date.strftime("%m")
         day = date.strftime("%d")
         base_url = item["baseUrl"]
-        file_name = hashlib.sha256(base_url.encode()).hexdigest()
+        file_name = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
         dir = f"./content/posts/{year}/{year}-{month}-{day}/images"
         if(not os.path.exists(dir)):
             os.makedirs(dir)
