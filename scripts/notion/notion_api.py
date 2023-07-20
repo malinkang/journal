@@ -200,7 +200,8 @@ class Text(dict):
 
 client = Client(
     auth=NOTION_TOKEN, notion_version=NOTION_VERSION, 
-    log_level=logging.DEBUG
+    log_level=logging.DEBUG,
+    timeout_ms=120_000,
 )
 
 

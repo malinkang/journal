@@ -13,6 +13,7 @@ for entry in d.entries:
     filter = {"property": "id", "rich_text": {"equals": entry.id}}
     response = notion_api.query_database("46beb49d60b84317a0a2c36a0a024c71", filter)
     if(len(response.get("results")) == 0):
+        
         date = datetime.strptime(entry['published'],'%a, %d %b %Y %H:%M:%S %Z')+timedelta(hours=8)
         properties = (
             Properties()
