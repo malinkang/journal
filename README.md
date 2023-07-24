@@ -110,3 +110,13 @@ curl -X POST 'https://api.notion.com/v1/databases/294060cde13e4c29b0ac6ee490c8a4
   }
 ]
 }'
+
+zne2VZVg3ren893HtBLkPkByed5pYe
+
+curl -X POST https://neodb.social/oauth/token/ \
+-H "Content-Type: application/x-www-form-urlencoded" \
+-d "client_id=tXFd1sDShGbVS1nRhBWPbE9gFguFbg5QGp4cs2X3" \
+-d "client_secret=kyt99Ft7jnHqq41li49jgjBdrPG6LFMTDCQPoN71dCKexO0eOZ6tXuAc96evWcOn6lnkYtbz5FbK80a9dngLcNb4Qd8Ca2P5PBVQtRJvb4GptXQHyjvvu70Tq83ePKCt" \
+-d "code=zne2VZVg3ren893HtBLkPkByed5pYe" \
+-d "redirect_uri=https://blog.malinkang.com" \
+-d "grant_type=authorization_code"

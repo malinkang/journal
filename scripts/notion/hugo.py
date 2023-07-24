@@ -232,18 +232,18 @@ def create():
         for item in tags:
             items.append(item.get("name"))
         location = util.get_rich_text(result, "位置")
-        result = template.format(
+        r = template.format(
             title=name,
             date=util.get_date(result, "Date"),
             location=location,
             tag=",".join(items),
             cover=cover,
         )
-        result += "\n"
+        r += "\n"
         content = ""
         song = query_ncm()
         if song != '':
-            result += '{{<spotify type="track" id="'+song+'" width="100%" height="100" >}}\n'
+            r += '{{<spotify type="track" id="'+song+'" width="100%" height="100" >}}\n'
         weather = util.get_rich_text(result, "天气")
         if weather is not None:
             content += "今天天气" + weather
@@ -260,72 +260,72 @@ def create():
             pass
         else:
             content += "。"
-        result += content
-        result += "\n"
+        r += content
+        r += "\n"
         days = query_day()
         if len(days) > 0:
-            result += "## 📅 倒数日"
-            result += "\n"
+            r += "## 📅 倒数日"
+            r += "\n"
             for day in days:
-                result += "- " + day
-                result += "\n"
-        result += "## ✅ ToDo"
-        result += "\n"
+                r += "- " + day
+                r += "\n"
+        r += "## ✅ ToDo"
+        r += "\n"
         todos = query_todo()
         for todo in todos:
-            result += "- [x] " + todo
-            result += "\n"
-        result += "## ❤️ 健康"
-        result += "\n"
+            r += "- [x] " + todo
+            r += "\n"
+        r += "## ❤️ 健康"
+        r += "\n"
         weight = query_weight()
         if weight > 0:
-            result += "- 体重：" + str(weight) + "斤"
-            result += "\n"
+            r += "- 体重：" + str(weight) + "斤"
+            r += "\n"
         run = query_run()
         if run > 0:
-            result += "- 跑步：" + str(run) + "km"
-            result += "\n"
-        result += "## ⏰ 时间统计"
-        result += "\n"
+            r += "- 跑步：" + str(run) + "km"
+            r += "\n"
+        r += "## ⏰ 时间统计"
+        r += "\n"
         toggls = query_toggl()
         for toggl in toggls:
-            result += "- " + toggl
-            result += "\n"
+            r += "- " + toggl
+            r += "\n"
         urls = query_twitter()
         if len(urls) > 0:
-            result += "## 💬 碎碎念"
-            result += "\n"
+            r += "## 💬 碎碎念"
+            r += "\n"
             for url in urls:
-                result += url
-                result += "\n"
+                r += url
+                r += "\n"
         urls = query_bilibili() | query_movie() | query_tv()
         if len(urls) > 0:
-            result += "\n"
-            result += "## 📺 今天看了啥"
-            result += "\n"
+            r += "\n"
+            r += "## 📺 今天看了啥"
+            r += "\n"
             for url in urls:
-                result += "- "+url
-                result += "\n"
+                r += "- "+url
+                r += "\n"
         books = query_book() | query_douban_book()
         if len(books) > 0:
-            result += "\n"
-            result += "## 📚 读书"
-            result += "\n"
+            r += "\n"
+            r += "## 📚 读书"
+            r += "\n"
             for url in books:
-                result += "- "+url
-                result += "\n"
+                r += "- "+url
+                r += "\n"
         dir = "./content/posts/" + datetime.strftime(date, "%Y")+"/"+datetime.strftime(date,"%Y-%m-%d")
         if os.path.exists(dir+"/images") and len(os.listdir(dir+"/images")) > 0:
-            result += "\n"
-            result += "## 📷 照片"
-            result += "\n"
-            result += '{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}'
+            r += "\n"
+            r += "## 📷 照片"
+            r += "\n"
+            r += '{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}'
         if not os.path.exists(dir):
             os.makedirs(dir)
         file = dir+ "/index.md"
         with open(file, "w") as f:
             f.seek(0)
-            f.write(result)
+            f.write(r)
             f.truncate()
 
 date = datetime.now()
