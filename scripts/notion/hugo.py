@@ -43,7 +43,7 @@ def query_ncm():
     response = notion_api.query_database(
         "46beb49d60b84317a0a2c36a0a024c71", filter=get_filter())
     if len(response.get("results")) > 0:
-        return util.get_rich_text(response, "id")
+        return util.get_rich_text(response.get("results")[0], "id")
     return ''
 
 
