@@ -1,5 +1,6 @@
 import argparse
 from datetime import date, datetime, timedelta
+import glob
 import os
 import time
 import notion_api
@@ -172,6 +173,15 @@ def query_todo():
     response = notion_api.query_database(TODO_DATABASE_ID, get_filter(extras=extras))
     return [result['properties']['Title']['title'][0]['text']['content'] for result in response.get("results")]
 
+def query_memos():
+    result = []
+    files = glob.glob(f"{dir}/**/memos.md", recursive=True)
+    for file in files:
+        with open(file, "r") as f:
+            content = f.read()
+            result.append(content)
+        result.append("\n--------------------------------\n")
+    return result
 
 def query_toggl():
     #前天的20点到昨天的8点 搜索睡觉事件
@@ -222,6 +232,7 @@ def query_toggl():
 def create():
     response = notion_api.query_database(DAY_PAGE_ID, get_filter())
     results = response.get("results")
+    
     for result in results:
         cover = result.get("cover").get("external").get("url")
         icon = result.get("icon").get("emoji")
@@ -291,7 +302,7 @@ def create():
         for toggl in toggls:
             r += "- " + toggl
             r += "\n"
-        urls = query_twitter()
+        urls = query_memos()
         if len(urls) > 0:
             r += "## 💬 碎碎念"
             r += "\n"
@@ -314,7 +325,6 @@ def create():
             for url in books:
                 r += "- "+url
                 r += "\n"
-        dir = "./content/posts/" + datetime.strftime(date, "%Y")+"/"+datetime.strftime(date,"%Y-%m-%d")
         if os.path.exists(dir+"/images") and len(os.listdir(dir+"/images")) > 0:
             r += "\n"
             r += "## 📷 照片"
@@ -336,4 +346,9 @@ if __name__ == "__main__":
     if content !="":
        date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     options = parser.parse_args()
+    year = datetime.strftime(date, "%Y")
+    month = datetime.strftime(date, "%m")
+    day = datetime.strftime(date, "%d")
+    dir = f"./content/posts/{year}/{year}-{month}-{day}/"
     create()
+    # print(query_memos())

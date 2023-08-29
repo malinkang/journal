@@ -9,8 +9,9 @@ categories: [日记]
 comment : true
 ---
 
-{{<spotify type="track" id="2oa3LISllwPhnB8XWkqx4H" width="100%" height="100" >}}
 今天天气，空气质量None，最高温度，最低温度。
+
+{{<spotify type="track" id="2oa3LISllwPhnB8XWkqx4H" width="100%" height="100" >}}
 ## 📅 倒数日
 - 距离春节还有197天 ■■■■□□□□□□ 48%
 - 距离元旦还有157天 ■■■■■□□□□□ 56%

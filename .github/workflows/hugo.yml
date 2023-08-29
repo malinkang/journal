@@ -37,9 +37,9 @@ jobs:
       - name: keep
         run: |
           python scripts/notion/keep.py
-      - name: twitter
+      - name: memos sync
         run: |
-          python scripts/notion/twitter.py
+            python scripts/notion/memos.py
       - name: weread sync
         run: |
           python scripts/notion/weread.py "${{secrets.WEREAD_COOKIE}}"
