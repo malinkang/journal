@@ -1,0 +1,1 @@
+昨天发现rsshub的twitter接口不能用了，twitter真是越来越难用了。刚好最近Railway最近开始收费了，n8n服务也不能用了，尝试用fly.io搭建也没成功。最终决定买一个linode服务器，搭建memos替代Twitter，又部署了一个n8n，每月5$，不用到处折腾了。
