@@ -6,3 +6,4 @@ beautifulsoup4
 svgwrite
 colour
 pendulum
+pytz
