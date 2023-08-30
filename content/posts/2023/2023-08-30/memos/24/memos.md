@@ -1,0 +1,2 @@
+今天是中元节，没来北京之前对这个节日没什么了解，来北京之后，中元节总是有很多人在路口烧纸，自己也从来没有烧过。前几天珊珊说梦见爷爷奶奶了，眼看快到中元节了，就买来纸烧一烧。
+{{< gallery match="memos/24/images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
