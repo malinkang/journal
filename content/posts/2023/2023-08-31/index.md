@@ -18,9 +18,10 @@ comment : true
 ## ✅ ToDo
 ## ❤️ 健康
 ## ⏰ 时间统计
+- 15:08-15:33：未设置
 
 ## 📺 今天看了啥
 - [入狱八年的男人 爱上了一个单身妈妈，结局温暖，只要心存善念，一切都会变好](https://www.bilibili.com/video/BV1Cj41127GU)
 
 ## 📚 读书
-- 读[《卡拉马佐夫兄弟（套装上下册）（陀思妥耶夫斯基文集2015）》](https://weread.qq.com/web/reader/c653236071e55adbc6552fe)26分钟
+- 读[《卡拉马佐夫兄弟（套装上下册）（陀思妥耶夫斯基文集2015）》](https://weread.qq.com/web/reader/c653236071e55adbc6552fe)49分钟
