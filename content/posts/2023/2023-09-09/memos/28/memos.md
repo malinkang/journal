@@ -1,0 +1,2 @@
+早上7:35醒了，孩子和老婆然后也醒了。一家难得周末起这么早。今天继续下着雨，原本准备去牛街也没去。下午妈妈和老婆一起炸了油馍，丸子和韭菜鸡蛋菜盒子。
+{{< gallery match="memos/28/images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
