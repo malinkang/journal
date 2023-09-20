@@ -24,7 +24,7 @@ def get_memos():
         # 设置时区为Asia/Shanghai
         tz = pytz.timezone('Asia/Shanghai')
         # 获取今天的日期
-        now = datetime.now(tz)
+        now = datetime.now(tz) - timedelta(days=2)
         today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
         tomorrow_start = today_start + timedelta(days=1)
         

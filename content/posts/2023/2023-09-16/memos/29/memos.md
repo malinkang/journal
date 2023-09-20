@@ -1,0 +1,2 @@
+今天早上7点起床去参加园区的跑步比赛。中午老婆和孩子打车到西二旗，然后一起去招商银行给孩子办了银行卡。办完抱着孩子去公司，没走多远就睡着了。孩子到公司之后醒了，在公司看了会电视玩了一会，去楼下西部马华吃饭，闲聊知道今天圆明园免费。然后下午就去圆明园玩了一圈，一天走了27000步，累断腿。晚上打车回来，妈妈做了蛋蛋饭（面水鸡蛋）。
+{{< gallery match="memos/29/images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}

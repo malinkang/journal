@@ -6,47 +6,60 @@ import math
 import notion
 import time
 import requests
-from datetime import date, datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone
 import unsplash
 from notion_api import Properties
 from notion_api import Page
 import notion_api
 from notion_api import DatabaseParent
 from notion_api import Children
+import stravalib
+from stravalib import unithelper
 from config import (
     KEEP_DATABASE_ID
 )
 LOGIN_API = "https://api.gotokeep.com/v1.1/users/login"
 RUN_DATA_API = "https://api.gotokeep.com/pd/v3/stats/detail?dateUnit=all&type=running&lastDate={last_date}"
 RUN_LOG_API = "https://api.gotokeep.com/pd/v3/runninglog/{run_id}"
-
+client = stravalib.Client()
 
 
 def login():
-    mobile = "18611145755"
-    password = "KFitness04"
-    data = {"mobile": mobile, "password": password}
-    r = requests.post(LOGIN_API, headers=keep_headers, data=data)
-    if r.ok:
-        print("登录成功")
-        token = r.json()["data"]["token"]
-        keep_headers["Authorization"] = f"Bearer {token}"
-        get_run_id()
+    client_id = "67037"
+    client_secret = "9ea364fa0db767d52770b3a3deaf0f5e1ceafb51"
+    refresh_token = "6145d313d69e93ba801fd6754ad1363157f72972"
+    response= client.refresh_access_token(
+        client_id=client_id,
+        client_secret=client_secret,
+        refresh_token=refresh_token,
+    )   
+    print(response)
+    get_activities()
+  
 
 
-def get_run_id():
-    last_date = 0
-    r = requests.get(RUN_DATA_API.format(
-        last_date=last_date), headers=keep_headers)
-    if r.ok:
-        last_date = r.json()["data"]["lastTimestamp"]
-        for record in filter(is_today,r.json().get("data").get("records")):
-            for log in record.get("logs"):
-                id = log.get("stats").get("id")
-                if not exists(id):
-                    get_run_data(id, record.get("date"))
-                else:
-                    print("已存在")
+def get_activities():
+    filters = {"before":datetime(2020, 12, 12)}
+    activities = client.get_activities(**filters)
+    for activity in activities:
+        if(activity.type == "Run"):
+            print(activity)
+            print(activity.id)
+            print(activity.athlete)
+            print(activity.type)
+            print(activity.start_date)
+            print(activity.start_date_local)
+            print(activity.distance.num)
+            print(activity.moving_time)
+            print(activity.elapsed_time)
+            print(activity.timezone)
+            print(activity.location_city)
+            id = str(activity.id)
+            # break
+            if not exists(id):
+                add_to_notion(activity)
+            else:
+                print("已存在")
 
 
 def is_today(record):
@@ -61,35 +74,19 @@ def exists(id):
     return len(response.get("results")) > 0
 
 
-def get_run_data(id, title):
-    r = requests.get(RUN_LOG_API.format(run_id=id), headers=keep_headers)
-    if r.ok:
-        data = r.json().get("data")
-        start = datetime.fromtimestamp(data.get("startTime")/1000)
-        end = datetime.fromtimestamp(data.get("endTime")/1000)
-        cover = data.get("polylineSnapshot")
-        if cover is None:
-            cover = unsplash.random()
-        distance = math.floor(data.get("distance")/10)/100
-        add_to_notion(start, end, cover, distance, title, id)
 
-def add_to_notion(start, end, cover, distance, title, id):
+def add_to_notion(activity):
     time.sleep(0.3)
-    date = start
-    start = start.replace(microsecond=0)+timedelta(hours=8)
-    end = end.replace(microsecond=0)+timedelta(hours=8)
+    title  =datetime.strftime(activity.start_date_local, "%-m月%d日")
+    # cover = unsplash.random()
+    date = activity.start_date_local
     properties = Properties().title(title).date(
-        start=start, end=end).number("距离", distance).rich_text("id", id)
+        start=date).number("距离", activity.distance.num).rich_text("id", str(activity.id))
     notion_api.get_relation(properties, date)
     page = Page().parent(DatabaseParent(KEEP_DATABASE_ID)).children(
-        Children()).cover(cover).icon("🏃🏻").properties(properties)
+        Children()).cover(cover="https://images.unsplash.com/photo-1693817027569-908462a0bca1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2ODUwfDB8MXxyYW5kb218fHx8fHx8fHwxNjk1MDkyNTI3fA&ixlib=rb-4.0.3&q=80&w=4800").icon("🏃🏻").properties(properties)
     r = notion_api.create_page(page=page)
 
-
-keep_headers = {
-    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0",
-    "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
-}
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     login()

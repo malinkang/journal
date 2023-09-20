@@ -12,10 +12,7 @@ comment : true
 ---
 
 
-{{<spotify type="episode" id="5DR5pX4qLJFx0SX71gr8QX" width="100%" height="100" >}}
-
-˜
-{{<aplayer server="netease" type="song" id="16663700">}}
+{{<aplayer type="song" url="https://drive.malinkang.com/api/raw/?path=/Music/PLANET.mp3">}}
 
 
 ## 📅 倒数日
