@@ -12,7 +12,7 @@ comment : true
 ---
 
 
-{{<aplayer server="netease" type="song" id="492390949">}}
+{{<aplayer url="https://drive.malinkang.com/api/raw/?path=/Music/%E5%8B%87%E6%B0%94%E5%A4%A7%E7%88%86%E5%8F%91.mp3">}}
 
 
 ## 📅 倒数日
