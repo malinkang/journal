@@ -156,6 +156,15 @@
   />
 {{ end }}
 
+<!-- require APlayer -->
+<script>
+  var meting_api='https://meting-api.malinkang.com/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
 <!-- head custom -->
 {{- partial "extended_head.html" . }}
 

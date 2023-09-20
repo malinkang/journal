@@ -12,7 +12,7 @@ categories: ["日记"]
 comment : false
 ---
 
-{{ <aplayer server="netease" type="song" id="1867217766"> }}
+{{<aplayer server="netease" type="song" id="1867217766">}}
 
 
 今天天气大部晴朗，空气质量57，最高温度26.36°C，最低温度10.12°C。

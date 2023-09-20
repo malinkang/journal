@@ -12,7 +12,7 @@ comment : true
 ---
 
 
-{{<aplayer type="song" url="https://drive.malinkang.com/api/raw/?path=/Music/PLANET.mp3">}}
+{{<aplayer server="netease" type="song" id="492390949">}}
 
 
 ## 📅 倒数日

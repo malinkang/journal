@@ -27,11 +27,6 @@ params:
   subtitle: "过好每一天。"
   enableUtterances: true
 
-
-module:
-  imports:
-  - path: github.com/Runzelee/aplayer-hugo-module
-
 # Twitter Card and Open Graph settings
 enableOpenGraph: true
 enableTwitterCards: true
