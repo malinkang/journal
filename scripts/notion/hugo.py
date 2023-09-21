@@ -138,7 +138,7 @@ def query_run():
         "8dc2c4145901403ea9c4fb0b10ad3f86", get_filter())
     results = response.get("results")
     if len(results) > 0:
-        return results[0]["properties"]["距离"]["number"]
+        return results[0]["properties"]["距离"]["number"]/1000
     return 0
 
 def query_book():
@@ -309,7 +309,7 @@ def create():
             for url in urls:
                 r += url
                 r += "\n"
-        urls = query_bilibili() | query_movie() | query_tv()
+        urls = query_bilibili() | query_movie() 
         if len(urls) > 0:
             r += "\n"
             r += "## 📺 今天看了啥"
