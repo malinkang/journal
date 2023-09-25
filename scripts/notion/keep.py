@@ -40,10 +40,10 @@ def login():
 
 def get_activities():
     now = datetime.now()
-    today = datetime(now.year, now.month, now.day, 0, 0, 0, tzinfo=timezone(timedelta(hours=8))) - timedelta(days=1)
+    today = datetime(now.year, now.month, now.day, 0, 0, 0, tzinfo=timezone(timedelta(hours=8)))
     tommorrow = today + timedelta(days=1)
     filters = {"before":tommorrow, "after":today}
-
+    print(filters)
     activities = client.get_activities(**filters)
     for activity in activities:
         if(activity.type == "Run"):
