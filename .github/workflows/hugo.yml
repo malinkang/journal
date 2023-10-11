@@ -40,6 +40,9 @@ jobs:
       - name: memos sync
         run: |
             python scripts/notion/memos.py
+      - name: duolingo sync
+        run: |
+          python scripts/notion/duolingo.py
       - name: weread sync
         run: |
           python scripts/notion/weread.py "${{secrets.WEREAD_COOKIE}}"
