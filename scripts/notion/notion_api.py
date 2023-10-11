@@ -228,6 +228,9 @@ def query_database(database_id, filter=None, sorts=None, page_size=None):
     )
     return response
 
+def retreve_a_page(page_id):
+    return client.pages.retrieve(page_id)
+
 
 def properties_retrieve(page_id, property_id):
     response = client.pages.properties.retrieve(
@@ -322,19 +325,18 @@ def get_properties_id(response, name, index=0):
     return response.get("results")[index].get("properties").get(name).get("id")
 
 
-def get_week_relation(year_id, date):
+def get_week_relation( date):
     year = date.isocalendar().year
     week = date.isocalendar().week
-    week = "第" + str(week) + "周"
-    week_json_file = DATA_DIR + str(year) + "/" + week + ".json"
+    week = f"{year}年第{week}周"
+    week_json_file = DATA_DIR+ "/" + week + ".json"
     if os.path.exists(week_json_file):
         with open(week_json_file, "r") as json_file:
             return json.load(json_file).get("id")
 
     filter = {
         "and": [
-            {"property": "Name", "rich_text": {"equals": week}},
-            {"property": "Year", "relation": {"contains": year_id}},
+            {"property": "Name", "rich_text": {"equals": week}}
         ]
     }
 
@@ -345,7 +347,7 @@ def get_week_relation(year_id, date):
         print(start)
         parent = DatabaseParent(WEEK_DATABASE_ID)
         properties = (
-            Properties().title(week).date("Date", start, end,time_zone=None).relation("Year", year_id)
+            Properties().title(week).date("Date", start, end,time_zone=None)
         )
         page = (
             Page()
@@ -365,23 +367,22 @@ def get_week_relation(year_id, date):
     return id
 
 
-def get_month_relation(year_id, year, month):
+def get_month_relation( month):
     id = ""
-    month_json_file = DATA_DIR + year + "/" + month + ".json"
+    month_json_file = DATA_DIR + "/" + month + ".json"
     if os.path.exists(month_json_file):
         with open(month_json_file, "r") as json_file:
             return json.load(json_file).get("id")
     filter = {
         "and": [
-            {"property": "Name", "title": {"equals": month}},
-            {"property": "Year", "relation": {"contains": year_id}},
+            {"property": "Name", "title": {"equals": month}}
         ]
     }
     response = query_database(database_id=MONTH_DATABASE_ID, filter=filter)
     print(f"month_id = {response}")
     if len(response.get("results")) == 0:
         parent = DatabaseParent(MONTH_DATABASE_ID)
-        properties = Properties().title(month).relation("Year", year_id)
+        properties = Properties().title(month)
         page = (
             Page()
             .parent(parent=parent)
@@ -438,7 +439,7 @@ def get_year_releation(year):
 
 def get_relation(properties, date=datetime.now(), include_day=False):
     year = date.strftime("%Y")
-    month = date.strftime("%-m月")
+    month = date.strftime("%Y年%-m月")
     year_id = get_year_releation(year)
     print("year_id:", year_id)
     properties["Year"] = {
@@ -451,14 +452,14 @@ def get_relation(properties, date=datetime.now(), include_day=False):
     properties["Month"] = {
         "relation": [
             {
-                "id": get_month_relation(year_id, year, month),
+                "id": get_month_relation(month),
             }
         ]
     }
     properties["Week"] = {
         "relation": [
             {
-                "id": get_week_relation(year_id, date),
+                "id": get_week_relation( date),
             }
         ]
     }
