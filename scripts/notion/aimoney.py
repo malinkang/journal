@@ -60,7 +60,7 @@ def create_page(date,type,payee,product,amount,price,note,method):
     emo = "💰"
     payee = query_card(payee,"e8390b5ff8a34789b0c4703cc6615afc")
     method = query_card(method,"8bdadd5592534cc79586d29e86756bcd")
-    format_date = datetime.strptime(date, "%Y-%m-%d %H:%M:%S+08:00")
+    format_date = datetime.strptime(date, "%Y-%m-%dT%H:%M:%S+08:00")
     cover = "https://64.media.tumblr.com/d08697c9851e4aae0ce26e9d895c9b45/fa0fbfe0c7f3f78f-47/s400x600/d5f378df11819131b2f6fe2239ec201797d4ff97.jpg"
     properties = Properties().date("日期",format_date,None).select("交易类型",type).relation("商家",payee).relation("支付方式",method).title(product).select("收/支",amount).number("金额(元)",price).rich_text("备注",note)
     properties = notion_api.get_relation(properties,format_date)
