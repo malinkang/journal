@@ -69,8 +69,6 @@ def create_page(date,type,payee,product,amount,price,note,method):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    options = parser.parse_args()
-    parser = argparse.ArgumentParser()
     parser.add_argument("content")
     options = parser.parse_args()
     parse_csv(options.content)
