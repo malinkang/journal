@@ -11,7 +11,7 @@ from notion_api import Children
 
 def parse_csv(content):
     content = json.loads(content)
-    create_page(content.get("date"),"商户消费",content.get("merchant"),content.get("name"),"支出",content.get("cost"),content.get("method"))
+    create_page(content.get("date"),"商户消费",content.get("merchant"),content.get("name"),"支出",content.get("cost"),"备注",content.get("method"))
 
 #https://www.notion.so/malinkang/8bdadd5592534cc79586d29e86756bcd?v=61dba9e443b246b6bfd71f2dbac1f5f9&pvs=4
 
