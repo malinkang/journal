@@ -9,7 +9,7 @@ import notion_api
 from notion_api import Children
 
 
-def parse_csv():
+def parse_csv(content):
     content = json.loads(content)
     create_page(content.get("date"),"商户消费",content.get("merchant"),content.get("name"),"支出",content.get("cost"),content.get("method"))
 
@@ -73,3 +73,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("content")
     options = parser.parse_args()
+    parse_csv(options.content)
