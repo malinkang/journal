@@ -144,7 +144,7 @@ def query_run():
     for result in results:
         id = util.get_rich_text(result,"id")
         km = results[0]["properties"]["KM"]["formula"]["number"]
-        list.append(f"- 跑步：[{km}](https://www.strava.com/activities/{id})km")
+        list.append(f"- 跑步：[{km}km](https://www.strava.com/activities/{id})")
     return list
 
 def query_book():
