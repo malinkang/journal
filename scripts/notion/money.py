@@ -9,7 +9,7 @@ from notion_api import Children
 
 
 def parse_csv():
-    with open('./data/微信支付账单(20230901-20230930)2.csv', newline='') as csvfile:
+    with open('./data/微信支付账单(20231001-20231030).csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             price = float(row["金额(元)"].replace("¥",""))
@@ -75,7 +75,4 @@ def create_page(date,type,payee,product,amount,price,note,method):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     options = parser.parse_args()
-    # parse_csv()
-    query()
-    # result = query_year("145c12b3-0842-4039-a706-69b060910d8a")
-    # print("\n--------------------\n")
+    parse_csv()

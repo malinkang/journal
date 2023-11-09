@@ -18,6 +18,9 @@ def get_number(result,name):
 def get_formula(result,name):
     return result['properties'][name]['formula'].get("string")
 
+def get_select(result,name):
+    return result['properties'][name]['select'].get("name")
+
 
 def get_date(result,name):
    return result["properties"][name]["date"]["start"]

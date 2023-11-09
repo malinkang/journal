@@ -39,7 +39,7 @@ def login():
 
 
 def get_activities():
-    now = datetime.now()
+    now = datetime.now() - timedelta(days=1)
     today = datetime(now.year, now.month, now.day, 0, 0, 0, tzinfo=timezone(timedelta(hours=8)))
     tommorrow = today + timedelta(days=1)
     filters = {"before":tommorrow, "after":today}

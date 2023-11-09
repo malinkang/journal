@@ -57,8 +57,11 @@ def query_twitter():
         id = util.get_rich_text(result,"id")
         name = util.get_title(result,"Name")
         text = util.get_rich_text(result,"text")
+        type = util.get_select(result,"Type")
         if id == None or id =='':
             urls.append(f"* {text}")
+        if type =="mastodon":
+            urls.append("{"+"""{{< mastodon id="{id}" >}}""".format(id=id)+"}")
         else:
             urls.append(
                 "{"+"""{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)+"}")
@@ -134,12 +137,15 @@ def query_tv():
 
 def query_run():
     time.sleep(0.3)
+    list = []
     response = notion_api.query_database(
         "8dc2c4145901403ea9c4fb0b10ad3f86", get_filter())
     results = response.get("results")
-    if len(results) > 0:
-        return results[0]["properties"]["距离"]["number"]/1000
-    return 0
+    for result in results:
+        id = util.get_rich_text(result,"id")
+        km = results[0]["properties"]["KM"]["formula"]["number"]
+        list.append(f"- 跑步：[{km}](https://www.strava.com/activities/{id})km")
+    return list
 
 def query_book():
     time.sleep(0.3)
@@ -293,8 +299,8 @@ def create():
             r += "- 体重：" + str(weight) + "斤"
             r += "\n"
         run = query_run()
-        if run > 0:
-            r += "- 跑步：" + str(run) + "km"
+        if(len(run) > 0):
+            r += "\n".join(run)
             r += "\n"
         r += "## ⏰ 时间统计"
         r += "\n"
@@ -302,7 +308,7 @@ def create():
         for toggl in toggls:
             r += "- " + toggl
             r += "\n"
-        urls = query_memos()
+        urls = query_twitter()
         if len(urls) > 0:
             r += "## 💬 碎碎念"
             r += "\n"
@@ -351,4 +357,6 @@ if __name__ == "__main__":
     day = datetime.strftime(date, "%d")
     dir = f"./content/posts/{year}/{year}-{month}-{day}/"
     create()
+    # query_twitter()
+    # query_run()
     # print(query_memos())
