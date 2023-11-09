@@ -39,7 +39,7 @@ jobs:
           python scripts/notion/keep.py
       - name: memos sync
         run: |
-            python scripts/notion/memos.py
+            python scripts/notion/mastodon.py
       - name: duolingo sync
         run: |
           python scripts/notion/duolingo.py
