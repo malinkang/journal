@@ -25,7 +25,7 @@ def get_weekly_reading():
     获取周阅读数据
     """
     headers["Authorization"] = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjYzMDcyMDAwMDAsImlhdCI6MCwic3ViIjoyOTk3NTA4M30.X3RwmIAOT9MFwpgMztMHtgLliVbcXvvgJXuj3qROU_g"
-    r = requests.get("https://ios-api-2.duolingo.com/2017-06-30/users/29975083/xp_summaries?endDate=2023-10-11&startDate=2023-10-11&timezone=Asia/Shanghai",headers=headers)
+    r = requests.get("https://ios-api-2.duolingo.com/2017-06-30/users/29975083/xp_summaries?endDate=2023-10-12&startDate=2023-10-12&timezone=Asia/Shanghai",headers=headers)
     if r.ok:
         summaries = r.json()["summaries"]
         for item in summaries:

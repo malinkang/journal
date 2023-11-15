@@ -61,7 +61,7 @@ def query_twitter():
         if id == None or id =='':
             urls.append(f"* {text}")
         if type =="mastodon":
-            urls.append("{"+"""{{< mastodon id="{id}" >}}""".format(id=id)+"}")
+            urls.append("{"+"""{{< mastodon status="{id}" >}}""".format(id=id)+"}")
         else:
             urls.append(
                 "{"+"""{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)+"}")

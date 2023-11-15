@@ -8,7 +8,7 @@ from notion_api import Children
 import unsplash
 
 
-d = feedparser.parse("https://rsshub.app/ncm/playlist/7648872348")
+d = feedparser.parse("https://rsshub.malinkang.com/ncm/playlist/7648872348")
 for entry in d.entries:
     filter = {"property": "id", "rich_text": {"equals": entry.id}}
     response = notion_api.query_database("46beb49d60b84317a0a2c36a0a024c71", filter)
