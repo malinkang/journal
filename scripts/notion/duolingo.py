@@ -24,24 +24,32 @@ def get_weekly_reading():
     """
     获取周阅读数据
     """
+    now = datetime.now().strftime("%Y-%m-%d")
     headers["Authorization"] = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjYzMDcyMDAwMDAsImlhdCI6MCwic3ViIjoyOTk3NTA4M30.X3RwmIAOT9MFwpgMztMHtgLliVbcXvvgJXuj3qROU_g"
-    r = requests.get("https://ios-api-2.duolingo.com/2017-06-30/users/29975083/xp_summaries?endDate=2023-10-12&startDate=2023-10-12&timezone=Asia/Shanghai",headers=headers)
+    r = requests.get(f"https://ios-api-2.duolingo.com/2017-06-30/users/29975083/xp_summaries?endDate={now}&startDate={now}&timezone=Asia/Shanghai",headers=headers)
+    print(r.json())
     if r.ok:
         summaries = r.json()["summaries"]
         for item in summaries:
             date = str(item.get("date"))
             gainedXp = item.get("gainedXp")
+            session = item.get("numSessions")
+            time = item.get("totalSessionTime")
             page_id = query_read_times(date)
             if(page_id!=""):
-                update_read_time(page_id,gainedXp)
+                update_read_time(page_id,gainedXp,time,session)
             else:
-                insert_read_times(date,gainedXp,datetime.fromtimestamp(int(date)) )
+                insert_read_times(date,gainedXp,datetime.fromtimestamp(int(date)),time,session)
+    else:
+        print(r.text)
 
-def insert_read_times(title,  xp, date):
+def insert_read_times(title,  xp, date,time,session):
     properties = (
         Properties()
         .title(title)
         .number("Xp", xp)
+        .number("Time", time)
+        .number("Session", session)
         .date(start=date.strftime("%Y-%m-%dT00:00:00"))
     )
     properties = notion_api.get_relation(properties, date=date)
@@ -55,10 +63,12 @@ def insert_read_times(title,  xp, date):
     )
     notion_api.create_page(page)
 
-def update_read_time(id, xp):
+def update_read_time(id, xp,time,session):
     properties = (
         Properties()
         .number("Xp", xp)
+        .number("Time", time)
+        .number("Session", session)
     )
     notion_api.update_page(id, properties)
 
@@ -76,18 +86,7 @@ def query_read_times(timestamp):
     if len(results) > 0:
         id = results[0]["id"]
     return id
-def make_month_list():
-    start = pendulum.datetime(2022, 1, 1)
-    end = pendulum.datetime(2023, 12, 31)
-    period = pendulum.period(start, end)
-    month_list = list(period.range("months"))
-    # filter
-    month_list = [m for m in month_list if m < pendulum.now()]
-    return month_list
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     options = parser.parse_args()
     get_weekly_reading()
-    # for m in make_month_list():
-    #     print(m.end_of("month").to_date_string())
-    #     print(m.to_date_string())

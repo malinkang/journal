@@ -1,0 +1,26 @@
+
+---
+title: "☀️ 11月27日 星期一"
+date: 2023-11-27T15:37:00.000+08:00
+description: "中国
+北京市 海淀区
+上地东路"
+tags: [2023,11月,第48周]
+featured_image: "https://images.unsplash.com/photo-1700050554945-393740dc6a65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjEzMDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDEwMTMwNjV8&ixlib=rb-4.0.3&q=80&w=400"
+categories: [日记]
+comment : true
+---
+
+今天天气晴，空气质量76，最高温度8°C，最低温度-7°C。
+## 📅 倒数日
+- 距离退休还有2111天 □□□□□□□□□□ 3%
+- 距离高考还有6036天 □□□□□□□□□□ 9%
+- 距离春节还有74天 ■■■■■■■■□□ 80%
+- 距离元旦还有34天 ■■■■■■■■■□ 90%
+## ✅ ToDo
+- [x] 🍚订餐
+- [x] 多邻国数据添加到日记中
+## ❤️ 健康
+## 📖 学习
+今天在多邻国学习了19分钟，完成了3单元，共获得74经验
+## ⏰ 时间统计

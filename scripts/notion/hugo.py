@@ -12,8 +12,10 @@ from config import (
     MOVIE_DATABASE_ID,
     BOOK_DATABASE_ID,
     DAY_PAGE_ID,
-    TOGGL_DATABASE_ID, TODO_DATABASE_ID
+    TOGGL_DATABASE_ID,
+    TODO_DATABASE_ID,
 )
+
 template = """
 ---
 title: "{title}"
@@ -39,39 +41,59 @@ def query_day():
     return list
 
 
+def query_duolingo():
+    time.sleep(0.3)
+    response = notion_api.query_database(
+        "82277d8180564a949728b594faf4fd87", get_filter()
+    )
+    list = []
+    for result in response.get("results"):
+        xp = util.get_number(result, "Xp")
+        duration = int(round((util.get_number(result, "Time") / 60), 0))
+        session = util.get_number(result, "Session")
+        list.append(f"今天在多邻国学习了{duration}分钟，完成了{session}单元，共获得{xp}经验")
+    return list
+
+
 def query_ncm():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "46beb49d60b84317a0a2c36a0a024c71", filter=get_filter())
+        "46beb49d60b84317a0a2c36a0a024c71", filter=get_filter()
+    )
     if len(response.get("results")) > 0:
         return util.get_rich_text(response.get("results")[0], "id")
-    return ''
+    return ""
 
 
 def query_twitter():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "5351451787d9403fb48d9a9c20f31f43", get_filter())
+        "5351451787d9403fb48d9a9c20f31f43", get_filter()
+    )
     urls = []
     for result in response.get("results"):
-        id = util.get_rich_text(result,"id")
-        name = util.get_title(result,"Name")
-        text = util.get_rich_text(result,"text")
-        type = util.get_select(result,"Type")
-        if id == None or id =='':
+        id = util.get_rich_text(result, "id")
+        name = util.get_title(result, "Name")
+        text = util.get_rich_text(result, "text")
+        type = util.get_select(result, "Type")
+        if id == None or id == "":
             urls.append(f"* {text}")
-        if type =="mastodon":
-            urls.append("{"+"""{{< mastodon status="{id}" >}}""".format(id=id)+"}")
+        if type == "mastodon":
+            urls.append("{" + """{{< mastodon status="{id}" >}}""".format(id=id) + "}")
         else:
             urls.append(
-                "{"+"""{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)+"}")
+                "{"
+                + """{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)
+                + "}"
+            )
     return urls
 
 
 def query_weight():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "34c0db4313b24c3fac8e25436f5b3530", get_filter())
+        "34c0db4313b24c3fac8e25436f5b3530", get_filter()
+    )
     results = response.get("results")
     if len(results) > 0:
         return results[0]["properties"]["体重"]["number"]
@@ -81,7 +103,8 @@ def query_weight():
 def query_bilibili():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "de0b737abfd0490abd9e4652073becfe", get_filter())
+        "de0b737abfd0490abd9e4652073becfe", get_filter()
+    )
     urls = set()
     for result in response.get("results"):
         title = result["properties"]["Name"]["title"][0]["text"]["content"]
@@ -90,7 +113,7 @@ def query_bilibili():
     return urls
 
 
-def get_filter( name="Date", extras=[]):
+def get_filter(name="Date", extras=[]):
     """
     date：时间
     name：属性名称
@@ -102,7 +125,7 @@ def get_filter( name="Date", extras=[]):
         {"property": name, "date": {"on_or_after": start}},
         {"property": name, "date": {"on_or_before": end}},
     ]
-    if (len(extras) > 0):
+    if len(extras) > 0:
         conditions.extend(extras)
     filter = {"and": conditions}
     return filter
@@ -139,26 +162,30 @@ def query_run():
     time.sleep(0.3)
     list = []
     response = notion_api.query_database(
-        "8dc2c4145901403ea9c4fb0b10ad3f86", get_filter())
+        "8dc2c4145901403ea9c4fb0b10ad3f86", get_filter()
+    )
     results = response.get("results")
     for result in results:
-        id = util.get_rich_text(result,"id")
+        id = util.get_rich_text(result, "id")
         km = results[0]["properties"]["KM"]["formula"]["number"]
         list.append(f"- 跑步：[{km}km](https://www.strava.com/activities/{id})")
     return list
 
+
 def query_book():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "cca71ece15ac48a68c34e5f86a2e6b38", get_filter())
+        "cca71ece15ac48a68c34e5f86a2e6b38", get_filter()
+    )
     books = set()
     for result in response.get("results"):
-        properties = result['properties']
-        name = properties['Name']['title'][0]['text']['content']
-        duration = properties['时长']['number']
-        url = properties['URL']['url']
+        properties = result["properties"]
+        name = properties["Name"]["title"][0]["text"]["content"]
+        duration = properties["时长"]["number"]
+        url = properties["URL"]["url"]
         books.add(f"读[《{name}》]({url}){duration}分钟")
     return books
+
 
 def query_douban_book():
     time.sleep(0.3)
@@ -177,7 +204,11 @@ def query_todo():
     time.sleep(0.3)
     extras = [{"property": "Status", "status": {"equals": "Completed"}}]
     response = notion_api.query_database(TODO_DATABASE_ID, get_filter(extras=extras))
-    return [result['properties']['Title']['title'][0]['text']['content'] for result in response.get("results")]
+    return [
+        result["properties"]["Title"]["title"][0]["text"]["content"]
+        for result in response.get("results")
+    ]
+
 
 def query_memos():
     result = []
@@ -189,21 +220,22 @@ def query_memos():
         result.append("\n--------------------------------\n")
     return result
 
+
 def query_toggl():
-    #前天的20点到昨天的8点 搜索睡觉事件
+    # 前天的20点到昨天的8点 搜索睡觉事件
     time.sleep(0.3)
-    yesterday = (date-timedelta(days=1)).strftime("%Y-%m-%dT20:00:00+08:00")
+    yesterday = (date - timedelta(days=1)).strftime("%Y-%m-%dT20:00:00+08:00")
     today = date.strftime("%Y-%m-%dT08:00:00+08:00")
     filter = {
         "and": [
             {"property": "Date", "date": {"after": yesterday}},
             {"property": "Date", "date": {"before": today}},
-            {"property": "二级分类", "select": {"equals": "😴睡觉"}}
+            {"property": "二级分类", "select": {"equals": "😴睡觉"},}
         ]
     }
     response = notion_api.query_database(TOGGL_DATABASE_ID, filter)
-    start =  date.strftime("%Y-%m-%dT00:00:00+08:00")
-    end =  date.strftime("%Y-%m-%dT24:00:00+08:00")
+    start = date.strftime("%Y-%m-%dT00:00:00+08:00")
+    end = date.strftime("%Y-%m-%dT24:00:00+08:00")
     if len(response.get("results")) > 0:
         start = response["results"][0]["properties"]["Date"]["date"]["start"]
     print(start)
@@ -213,13 +245,8 @@ def query_toggl():
             {"property": "Date", "date": {"on_or_before": end}},
         ]
     }
-    sorted = [
-        {
-            "property": "Date",
-            "direction": "ascending"
-        }
-    ]
-    response = notion_api.query_database(TOGGL_DATABASE_ID, filter,sorted)
+    sorted = [{"property": "Date", "direction": "ascending"}]
+    response = notion_api.query_database(TOGGL_DATABASE_ID, filter, sorted)
     toggl_list = []
     for index in range(0, len(response.get("results"))):
         d = notion_api.get_date(response, "Date", index)
@@ -238,7 +265,7 @@ def query_toggl():
 def create():
     response = notion_api.query_database(DAY_PAGE_ID, get_filter())
     results = response.get("results")
-    
+
     for result in results:
         cover = result.get("cover").get("external").get("url")
         icon = result.get("icon").get("emoji")
@@ -259,8 +286,12 @@ def create():
         r += "\n"
         content = ""
         song = query_ncm()
-        if song != '':
-            r += '{{<spotify type="track" id="'+song+'" width="100%" height="100" >}}\n'
+        if song != "":
+            r += (
+                '{{<spotify type="track" id="'
+                + song
+                + '" width="100%" height="100" >}}\n'
+            )
         weather = util.get_rich_text(result, "天气")
         if weather is not None:
             content += "今天天气" + weather
@@ -299,8 +330,13 @@ def create():
             r += "- 体重：" + str(weight) + "斤"
             r += "\n"
         run = query_run()
-        if(len(run) > 0):
+        if len(run) > 0:
             r += "\n".join(run)
+            r += "\n"
+        duolingo = query_duolingo()
+        if len(duolingo) > 0:
+            r += "## 📖 学习\n"
+            r += "\n".join(duolingo)
             r += "\n"
         r += "## ⏰ 时间统计"
         r += "\n"
@@ -315,13 +351,13 @@ def create():
             for url in urls:
                 r += url
                 r += "\n"
-        urls = query_bilibili() | query_movie() 
+        urls = query_bilibili() | query_movie()
         if len(urls) > 0:
             r += "\n"
             r += "## 📺 今天看了啥"
             r += "\n"
             for url in urls:
-                r += "- "+url
+                r += "- " + url
                 r += "\n"
         books = query_book() | query_douban_book()
         if len(books) > 0:
@@ -329,34 +365,36 @@ def create():
             r += "## 📚 读书"
             r += "\n"
             for url in books:
-                r += "- "+url
+                r += "- " + url
                 r += "\n"
-        if os.path.exists(dir+"/images") and len(os.listdir(dir+"/images")) > 0:
+        if os.path.exists(dir + "/images") and len(os.listdir(dir + "/images")) > 0:
             r += "\n"
             r += "## 📷 照片"
             r += "\n"
             r += '{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}'
         if not os.path.exists(dir):
             os.makedirs(dir)
-        file = dir+ "/index.md"
+        file = dir + "/index.md"
         with open(file, "w") as f:
             f.seek(0)
             f.write(r)
             f.truncate()
+
 
 date = datetime.now()
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("content")
     content = parser.parse_args().content
-    if content !="":
-       date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
+    if content != "":
+        date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     options = parser.parse_args()
     year = datetime.strftime(date, "%Y")
     month = datetime.strftime(date, "%m")
     day = datetime.strftime(date, "%d")
     dir = f"./content/posts/{year}/{year}-{month}-{day}/"
     create()
+    # print(query_duoligo())
     # query_twitter()
     # query_run()
     # print(query_memos())

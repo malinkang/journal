@@ -28,7 +28,7 @@ WEREAD_HOT_URL = "https://i.weread.qq.com/book/bestbookmarks"
 """
 https://i.weread.qq.com/readdata/detail?mode=weekly&baseTime=0
 https://i.weread.qq.com/readdata/detail?mode=monthly&baseTime=0
-https://i.weread.qq.com/readdata/detail?mode=anually&baseTime=0
+https://i.weread.qq.com/readdata/detail?mode=anually&baseTime=1672502400
 https://i.weread.qq.com/readdata/detail?mode=overall&baseTime=0
 """
 

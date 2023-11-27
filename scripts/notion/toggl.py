@@ -18,8 +18,9 @@ def sync():
         TOGGL_DATABASE_ID, sorts=sorts, page_size=page_size
     )
     end = notion_api.get_date(response, "Date").get("end")
+    print(end)
     auth = ("2ef95512ce5b1528809f9a03a68e02b1", "api_token")
-    params = {"start_date": end}
+    params = {"start_date": "2023-11-10T09:05:00.000+08:00"}
     response = requests.get(
         "https://api.track.toggl.com/api/v8/time_entries", params=params, auth=auth
     )
