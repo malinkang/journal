@@ -9,8 +9,8 @@ from notion_api import Children
 import unsplash
 
 urls = [
-    "https://rsshub.app/twitter/user/malinkang/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150",
-    # "https://rsshub.app/twitter/user/Carve_Time",
+    # "https://rsshub.app/twitter/user/malinkang/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150",
+    "https://rsshub.app/twitter/user/Carve_Time/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150",
 ]
 for url in urls:
     d = feedparser.parse(url)
@@ -29,6 +29,7 @@ for url in urls:
                 .rich_text("text", entry.title)
                 .rich_text("id", id)
                 .url("url", entry.link)
+                .select("Type","Twitter")
             )
             page = (
                 Page()

@@ -9,7 +9,7 @@ from notion_api import Children
 
 
 def parse_csv():
-    with open('./data/微信支付账单(20231001-20231030).csv', newline='') as csvfile:
+    with open('./data/微信支付账单.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             price = float(row["金额(元)"].replace("¥",""))

@@ -31,7 +31,16 @@
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
-
+<!-- https://clarity.microsoft.com for detail -->
+{{ if .Site.Params.Clarity }}
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "{{.Site.Params.Clarity}}");
+</script>
+{{ end }}
 
 {{if .Site.Params.manifest}}
 <link rel="manifest" href="{{.Site.Params.manifest}}">
@@ -45,15 +54,6 @@
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
 {{ end }}
-
-{{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
-
-{{ if not .Site.Params.disableDarkmode }}
-{{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $darkmode.RelPermalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
-{{ end }}
-
 
 <!-- For compatibility. View https://github.com/AmazingRise/hugo-theme-diary/pull/135 for details.-->
 {{- $hugoVersion := split (replaceRE ".*([0-9]+)\\.([0-9]+)\\.([0-9]+).*" "$1 $2 $3" hugo.Version) " " -}}
@@ -70,6 +70,14 @@
     {{ end }}
     <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
 {{- end -}}
+
+{{ if not .Site.Params.disableDarkmode }}
+{{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $darkmode.RelPermalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
+{{ else }}
+{{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+{{ end }}
 
 <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Material+Icons">
@@ -145,7 +153,7 @@
 {{ end }}
 
 {{ if and (.Site.Params.enableTwikoo) (.IsPage) }}
-<script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.3/dist/twikoo.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.16/dist/twikoo.all.min.js"></script>
 {{ end }}
 
 {{ if and (.Site.Params.walineServer) (.IsPage) }}
@@ -155,7 +163,6 @@
     href="https://unpkg.com/@waline/client@v2/dist/waline.css"
   />
 {{ end }}
-
 <!-- require APlayer -->
 <script>
   var meting_api='https://meting-api.malinkang.com/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
