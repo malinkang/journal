@@ -11,11 +11,9 @@ categories: [日记]
 comment : true
 ---
 
-
-
 今天天气大部晴朗无云，空气质量68，最高温度18°C，最低温度6°C。
 
-{{<spotify type="track" id="25640625" width="100%" height="100" >}}
+{{<aplayer server="netease" type="song" id="2061978961">}}
 
 ## 📅 倒数日
 - 春节还有309天 ■□□□□□□□□□ 12%
