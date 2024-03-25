@@ -31,18 +31,12 @@ jobs:
       - name: bilibili sync
         run: |
           python scripts/notion/bilibili.py       
-      # - name: toggl
-      #   run: |
-      #     python scripts/notion/toggl.py
       - name: keep
         run: |
           python scripts/notion/keep.py
       - name: memos sync
         run: |
             python scripts/notion/mastodon.py
-      - name: duolingo sync
-        run: |
-          python scripts/notion/duolingo.py
       - name: weread sync
         run: |
           python scripts/notion/weread.py "${{secrets.WEREAD_COOKIE}}"
