@@ -257,7 +257,7 @@ def create():
         location = util.get_rich_text(result, "位置")
         r = template.format(
             title=name,
-            date=util.get_date(result, "Date"),
+            date=util.get_date(result, "Date")[0],
             location=location,
             tag=",".join(items),
             cover=cover,
