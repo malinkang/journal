@@ -32,8 +32,8 @@ comment : true
 {{< mastodon status="112155753655981029" >}}
 
 ## 📺 今天看了啥
-- [看过南来北往](https://movie.douban.com/subject/35237053/)
 - [在看小日子](https://movie.douban.com/subject/36189197/)
+- [看过南来北往](https://movie.douban.com/subject/35237053/)
 - [【越哥】R级动作爽片，满屏大长腿，这部特工电影赚足了眼球！](https://www.bilibili.com/video/BV1rf421f7nb)
 
 ## 📚 读书
