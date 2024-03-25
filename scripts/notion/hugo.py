@@ -3,6 +3,8 @@ from datetime import date, datetime, timedelta
 import glob
 import os
 import time
+
+import pendulum
 import notion_api
 from notion_api import Page
 from notion_api import Children, DatabaseParent
@@ -28,15 +30,16 @@ comment : true
 ---
 """
 
-
 def query_day():
     time.sleep(0.3)
-    response = notion_api.query_database("d34e3250832a4b5fb44054a8b364df2a")
+    response = notion_api.query_database(database_id="d34e3250832a4b5fb44054a8b364df2a")
     list = []
     for result in response.get("results"):
+        print(result)
         name = util.get_title(result, "Name")
         day = util.get_formula(result, "倒数日")
         progress = util.get_formula(result, "Progress")
+        print(f"name = {name} day = {day} progress = {progress}")
         list.append(name + day + " " + progress)
     return list
 
@@ -44,13 +47,13 @@ def query_day():
 def query_duolingo():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "82277d8180564a949728b594faf4fd87", get_filter()
+        database_id="8dc983cda135457fb65204ad62dd5f94", filter=get_filter(name="日期")
     )
     list = []
     for result in response.get("results"):
-        xp = util.get_number(result, "Xp")
-        duration = int(round((util.get_number(result, "Time") / 60), 0))
-        session = util.get_number(result, "Session")
+        xp = util.get_number(result, "经验")
+        duration = int(round((util.get_number(result, "学习时长") / 60), 0))
+        session = util.get_number(result, "单元")
         list.append(f"今天在多邻国学习了{duration}分钟，完成了{session}单元，共获得{xp}经验")
     return list
 
@@ -58,7 +61,7 @@ def query_duolingo():
 def query_ncm():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "46beb49d60b84317a0a2c36a0a024c71", filter=get_filter()
+        database_id="46beb49d60b84317a0a2c36a0a024c71", filter=get_filter()
     )
     if len(response.get("results")) > 0:
         return util.get_rich_text(response.get("results")[0], "id")
@@ -68,7 +71,7 @@ def query_ncm():
 def query_twitter():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "5351451787d9403fb48d9a9c20f31f43", get_filter()
+        database_id="5351451787d9403fb48d9a9c20f31f43", filter=get_filter()
     )
     urls = []
     for result in response.get("results"):
@@ -92,7 +95,7 @@ def query_twitter():
 def query_weight():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "34c0db4313b24c3fac8e25436f5b3530", get_filter()
+        database_id="34c0db4313b24c3fac8e25436f5b3530",filter=get_filter()
     )
     results = response.get("results")
     if len(results) > 0:
@@ -103,7 +106,7 @@ def query_weight():
 def query_bilibili():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "de0b737abfd0490abd9e4652073becfe", get_filter()
+        database_id="de0b737abfd0490abd9e4652073becfe", filter=get_filter()
     )
     urls = set()
     for result in response.get("results"):
@@ -128,18 +131,18 @@ def get_filter(name="Date", extras=[]):
     if len(extras) > 0:
         conditions.extend(extras)
     filter = {"and": conditions}
+    print(filter)
     return filter
 
-
+#https://www.notion.so/malinkang/4647d31ae4a44d06a155fcf7143c382e?v=b0d70b0fdb3e4f809b461c692cdbde44&pvs=4
 def query_movie():
     time.sleep(0.3)
-    filter = get_filter(name="打分日期")
-    response = notion_api.query_database(MOVIE_DATABASE_ID, filter)
+    response = notion_api.query_database(database_id="4647d31ae4a44d06a155fcf7143c382e", filter=get_filter(name="日期"))
     urls = set()
     for result in response.get("results"):
-        title = result["properties"]["标题"]["title"][0]["text"]["content"]
-        url = result["properties"]["条目链接"]["url"]
-        status = result["properties"]["状态"]["select"]["name"]
+        title = util.get_title(result,"电影名")
+        url = util.get_url(result,"豆瓣链接")
+        status = result["properties"]["状态"]["status"]["name"]
         urls.add(f"[{status}{title}]({url})")
     return urls
 
@@ -162,7 +165,7 @@ def query_run():
     time.sleep(0.3)
     list = []
     response = notion_api.query_database(
-        "8dc2c4145901403ea9c4fb0b10ad3f86", get_filter()
+        database_id="8dc2c4145901403ea9c4fb0b10ad3f86", filter=get_filter()
     )
     results = response.get("results")
     for result in results:
@@ -175,7 +178,7 @@ def query_run():
 def query_book():
     time.sleep(0.3)
     response = notion_api.query_database(
-        "cca71ece15ac48a68c34e5f86a2e6b38", get_filter()
+        database_id="cca71ece15ac48a68c34e5f86a2e6b38", filter=get_filter()
     )
     books = set()
     for result in response.get("results"):
@@ -186,76 +189,52 @@ def query_book():
         books.add(f"读[《{name}》]({url}){duration}分钟")
     return books
 
-
+#https://www.notion.so/malinkang/8db320a226324aa1a20ed7bbc39b7727?v=01e5a358c0f64da19a66dbe220c2ce5f&pvs=4
 def query_douban_book():
     time.sleep(0.3)
     books = set()
-    response = notion_api.query_database(BOOK_DATABASE_ID, get_filter(name="打分日期"))
+    response = notion_api.query_database(database_id="8db320a226324aa1a20ed7bbc39b7727", filter=get_filter(name="日期"))
     for result in response.get("results"):
-        title = result["properties"]["标题"]["title"][0]["text"]["content"]
-        url = result["properties"]["条目链接"]["url"]
-        status = result["properties"]["状态"]["select"]["name"]
+        title = util.get_title(result,"书名")
+        url = util.get_url(result,"豆瓣链接")
+        status = result["properties"]["状态"]["status"]["name"]
         books.add(f"[{status}{title}]({url})")
     return books
-
 
 def query_todo():
     """查询今日完成的任务"""
     time.sleep(0.3)
-    extras = [{"property": "Status", "status": {"equals": "Completed"}}]
-    response = notion_api.query_database(TODO_DATABASE_ID, get_filter(extras=extras))
+    extras = [{"property": "状态", "status": {"equals": "Completed"}}]
+    response = notion_api.query_database(database_id=TODO_DATABASE_ID, filter=get_filter(name="完成时间",extras=extras))
     return [
         result["properties"]["Title"]["title"][0]["text"]["content"]
         for result in response.get("results")
     ]
 
 
-def query_memos():
-    result = []
-    files = glob.glob(f"{dir}/**/memos.md", recursive=True)
-    for file in files:
-        with open(file, "r") as f:
-            content = f.read()
-            result.append(content)
-        result.append("\n--------------------------------\n")
-    return result
-
-
+# https://www.notion.so/malinkang/cf6359306f94456da01908af73191a61?v=462ad72e1a4c4c3591a074816dcccbd1&pvs=4
 def query_toggl():
-    # 前天的20点到昨天的8点 搜索睡觉事件
-    time.sleep(0.3)
-    yesterday = (date - timedelta(days=1)).strftime("%Y-%m-%dT20:00:00+08:00")
-    today = date.strftime("%Y-%m-%dT08:00:00+08:00")
-    filter = {
-        "and": [
-            {"property": "Date", "date": {"after": yesterday}},
-            {"property": "Date", "date": {"before": today}},
-            {"property": "二级分类", "select": {"equals": "😴睡觉"},}
-        ]
-    }
-    response = notion_api.query_database(TOGGL_DATABASE_ID, filter)
-    start = date.strftime("%Y-%m-%dT00:00:00+08:00")
+#     # 前天的20点到昨天的8点 搜索睡觉事件
+    start = (pendulum.now(tz="Asia/Shanghai")-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
     end = date.strftime("%Y-%m-%dT24:00:00+08:00")
-    if len(response.get("results")) > 0:
-        start = response["results"][0]["properties"]["Date"]["date"]["start"]
-    print(start)
     filter = {
         "and": [
-            {"property": "Date", "date": {"on_or_after": start}},
-            {"property": "Date", "date": {"on_or_before": end}},
+            {"property": "时间", "date": {"on_or_after": start}},
+            {"property": "时间", "date": {"on_or_before": end}},
         ]
     }
-    sorted = [{"property": "Date", "direction": "ascending"}]
-    response = notion_api.query_database(TOGGL_DATABASE_ID, filter, sorted)
+    sorted = [{"property": "时间", "direction": "ascending"}]
+    response = notion_api.query_database(database_id="cf6359306f94456da01908af73191a61", filter=filter, sorted=sorted)
     toggl_list = []
-    for index in range(0, len(response.get("results"))):
-        d = notion_api.get_date(response, "Date", index)
+    for result in response.get("results"):
+        start,end = util.get_date(result, "时间")
+        emoji = util.get_icon(result)
         # 格式化一下只保留时间
-        start = datetime.fromisoformat(d.get("start")).strftime("%H:%M")
-        end = datetime.fromisoformat(d.get("end")).strftime("%H:%M")
-        name = notion_api.get_select(response, "二级分类", index)
-        note = notion_api.get_rich_text(response, "备注", index)
-        result = start + "-" + end + "：" + name
+        start = datetime.fromisoformat(start).strftime("%H:%M")
+        end = datetime.fromisoformat(end).strftime("%H:%M")
+        name = util.get_title(result, "标题")
+        note = util.get_rich_text(result, "备注")
+        result = f'{start}-{end}：{emoji} {name}'
         if note != None and note != "":
             result += "：" + note
         toggl_list.append(result)
@@ -263,7 +242,7 @@ def query_toggl():
 
 
 def create():
-    response = notion_api.query_database(DAY_PAGE_ID, get_filter())
+    response = notion_api.query_database(database_id=DAY_PAGE_ID, filter=get_filter())
     results = response.get("results")
 
     for result in results:
@@ -398,3 +377,5 @@ if __name__ == "__main__":
     # query_twitter()
     # query_run()
     # print(query_memos())
+    # print(query_toggl())
+    # print(query_movie())

@@ -10,6 +10,7 @@ from notion_api import DatabaseParent
 from notion_api import Page
 import unsplash
 from config import TOGGL_DATABASE_ID
+from requests.auth import HTTPBasicAuth
 
 def sync():
     sorts = [{"property": "Date", "direction": "descending"}]
@@ -22,7 +23,7 @@ def sync():
     auth = ("2ef95512ce5b1528809f9a03a68e02b1", "api_token")
     params = {"start_date": "2023-11-10T09:05:00.000+08:00"}
     response = requests.get(
-        "https://api.track.toggl.com/api/v8/time_entries", params=params, auth=auth
+        "https://api.track.toggl.com/api/v9/me/time_entries", params=params, auth=auth
     )
     print(response.json())
     for task in response.json():
@@ -40,7 +41,7 @@ def sync():
             #获取project
             end = end + timedelta(hours=8)
             response = requests.get(
-                "https://api.track.toggl.com/api/v8/projects/" + str(task.get("pid")),
+                "https://api.track.toggl.com/api/v9/projects/" + str(task.get("pid")),
                 auth=auth,
             )
             print(response.json())
@@ -49,7 +50,7 @@ def sync():
             cid = data.get("cid")
             #获取client
             response = requests.get(
-                "https://api.track.toggl.com/api/v8/clients/" + str(cid),
+                "https://api.track.toggl.com/api/v9/clients/" + str(cid),
                 auth=auth,
             )
             print(response.json())

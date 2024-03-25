@@ -4,6 +4,10 @@ def get_title(result,name):
         return ""
     return result['properties'][name]['title'][0]['text']['content']
 
+
+def get_url(result,name):
+    return result["properties"][name]["url"]
+
 def get_rich_text(result,name):
     if(len(result['properties'][name]['rich_text']) ==0):
         return ""
@@ -23,4 +27,8 @@ def get_select(result,name):
 
 
 def get_date(result,name):
-   return result["properties"][name]["date"]["start"]
+   date = result.get("properties").get(name).get("date")
+   return (date.get("start"),date.get("end"))
+
+def get_icon(result):
+   return result.get("icon").get("emoji")

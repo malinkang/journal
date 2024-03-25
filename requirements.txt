@@ -1,5 +1,5 @@
 requests
-notion-client==2.1.0
+notion-client
 lxml
 feedparser
 beautifulsoup4

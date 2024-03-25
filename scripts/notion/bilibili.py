@@ -11,7 +11,7 @@ d = feedparser.parse("https://rsshub.app/bilibili/user/coin/27440979")
 id = "de0b737abfd0490abd9e4652073becfe"
 for entry in d.entries:
     filter = {"property": "Url", "url": {"equals": entry.link}}
-    response = notion_api.query_database(id, filter)
+    response = notion_api.query_database(database_id=id, filter=filter)
     if(len(response.get("results")) == 0):
         properties = (
             Properties()

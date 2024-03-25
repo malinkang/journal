@@ -199,7 +199,7 @@ class Text(dict):
 
 
 client = Client(
-    auth=NOTION_TOKEN, notion_version=NOTION_VERSION, 
+    auth=NOTION_TOKEN, 
     # log_level=logging.DEBUG,
     timeout_ms=120_000,
 )
@@ -222,11 +222,9 @@ def update_page(page_id, properties, icon=None, cover=None):
     return response
 
 
-def query_database(database_id, filter=None, sorts=None, page_size=None):
-    response = client.databases.query(
-        database_id=database_id, filter=filter, sorts=sorts, page_size=page_size
-    )
-    return response
+def query_database(**kwargs):
+    kwargs = {k: v for k, v in kwargs.items() if v}
+    return client.databases.query(**kwargs)
 
 def retreve_a_page(page_id):
     return client.pages.retrieve(page_id)

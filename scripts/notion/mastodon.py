@@ -19,7 +19,7 @@ for url in urls:
         id = entry.link.split("/")[-1]
         name = entry.link.split("/")[-3]
         filter = {"property": "id", "rich_text": {"equals": id}}
-        response = notion_api.query_database("5351451787d9403fb48d9a9c20f31f43", filter)
+        response = notion_api.query_database(database_id="5351451787d9403fb48d9a9c20f31f43", filter=filter)
         if(len(response.get("results")) == 0):
             date = datetime.strptime(entry['published'],'%a, %d %b %Y %H:%M:%S %Z')+timedelta(hours=8)
             properties = (

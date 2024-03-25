@@ -48,7 +48,7 @@ python3 -m github_poster forest --forest_email linkang.ma@gmail.com --forest_pas
 
 ```
 //1676472
-curl -u linkang.ma@gmail.com:TFitness@5 \
+curl -u linkangma@gmail.com:TFitness@5 \
   -H "Content-Type: application/json" \
   -X GET   https://api.track.toggl.com/api/v9/workspaces
 
