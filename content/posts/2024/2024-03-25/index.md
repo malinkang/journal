@@ -1,15 +1,17 @@
 
 ---
 title: "☀️ 03月25日 星期一"
-date: 2024-03-25T15:37:00.000+08:00
-description: ""
+date: ('2024-03-25T15:37:00.000+08:00', None)
+description: "中国
+北京市 海淀区
+上地六街"
 tags: [2024,3月,第13周]
-featured_image: "https://images.unsplash.com/photo-1708844897353-649da595a3f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjEzMDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTEyOTQ2NDd8&ixlib=rb-4.0.3&q=80&w=400"
+featured_image: "https://images.unsplash.com/photo-1588746853740-bd35aad10bfd?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb"
 categories: [日记]
 comment : true
 ---
 
-今天天气，空气质量None，最高温度，最低温度。
+今天天气大部晴朗无云，空气质量68，最高温度18°C，最低温度6°C。
 ## 📅 倒数日
 - 春节还有309天 ■□□□□□□□□□ 12%
 - 元旦还有281天 ■■□□□□□□□□ 22%
@@ -30,9 +32,9 @@ comment : true
 {{< mastodon status="112155753655981029" >}}
 
 ## 📺 今天看了啥
+- [看过南来北往](https://movie.douban.com/subject/35237053/)
 - [在看小日子](https://movie.douban.com/subject/36189197/)
 - [【越哥】R级动作爽片，满屏大长腿，这部特工电影赚足了眼球！](https://www.bilibili.com/video/BV1rf421f7nb)
-- [看过南来北往](https://movie.douban.com/subject/35237053/)
 
 ## 📚 读书
 - [想读笔记的方法](https://book.douban.com/subject/36615020/)
