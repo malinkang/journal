@@ -12,7 +12,7 @@ from notion_api import Properties
 def search(content):
     title = dateutils.format_date_with_week()
     filter = {"property":"Name","rich_text":{"equals":title}}
-    response = notion_api.query_database("294060cd-e13e-4c29-b0ac-6ee490c8a448",filter)
+    response = notion_api.query_database(database_id="294060cd-e13e-4c29-b0ac-6ee490c8a448",filter=filter)
     if(len([response["results"]])>0):
         id = response["results"][0].get("id")
         update(id,content)
