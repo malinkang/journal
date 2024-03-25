@@ -57,14 +57,13 @@ def query_duolingo():
         list.append(f"今天在多邻国学习了{duration}分钟，完成了{session}单元，共获得{xp}经验")
     return list
 
-
-def query_ncm():
+def query_music():
     time.sleep(0.3)
     response = notion_api.query_database(
-        database_id="46beb49d60b84317a0a2c36a0a024c71", filter=get_filter()
+        database_id="9fdc53150b5d4e0dabffca8a0f366d66", filter=get_filter("日期")
     )
     if len(response.get("results")) > 0:
-        return util.get_rich_text(response.get("results")[0], "id")
+        return util.get_rich_text(response.get("results")[0], "Id")
     return ""
 
 
@@ -264,7 +263,7 @@ def create():
         )
         r += "\n"
         content = ""
-        song = query_ncm()
+        song = query_music()
         if song != "":
             r += (
                 '{{<spotify type="track" id="'

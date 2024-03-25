@@ -39,7 +39,7 @@ def login():
 
 
 def get_activities():
-    now = datetime.now() - timedelta(days=1)
+    now = datetime.now()
     today = datetime(now.year, now.month, now.day, 0, 0, 0, tzinfo=timezone(timedelta(hours=8)))
     tommorrow = today + timedelta(days=1)
     filters = {"before":tommorrow, "after":today}
@@ -74,7 +74,7 @@ def is_today(record):
 def exists(id):
     time.sleep(0.3)
     filter = {"property": "id", "rich_text": {"equals": id}}
-    response = notion_api.query_database(KEEP_DATABASE_ID, filter)
+    response = notion_api.query_database(database_id=KEEP_DATABASE_ID, filter=filter)
     return len(response.get("results")) > 0
 
 
