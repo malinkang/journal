@@ -6,7 +6,7 @@ description: "中国
 北京市 海淀区
 上地六街"
 tags: [2024,3月,第13周]
-featured_image: "https://images.unsplash.com/photo-1588746853740-bd35aad10bfd?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb"
+featured_image: "https://th.bing.com/th/id/OIG1.zqGNvLaTwcsJ_dYTr9xj?w=1024&h=1024&rs=1&pid=ImgDetMain"
 categories: [日记]
 comment : true
 ---

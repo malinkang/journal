@@ -14,8 +14,6 @@ comment : true
 
 {{<aplayer name="勇气大爆发" cover="https://drive.malinkang.com/api/raw/?path=/Images/file_61.jpg" url="https://drive.malinkang.com/api/raw/?path=/Music/%E5%8B%87%E6%B0%94%E5%A4%A7%E7%88%86%E5%8F%91.mp3">}}
 
-{{< mastodon status="110152802991504320" >}}
-
 
 ## 📅 倒数日
 - 距离春节还有253天 ■■■□□□□□□□ 33%
