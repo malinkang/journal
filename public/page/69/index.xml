@@ -7,9 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Fri, 29 Mar 2024 11:46:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 15:37:00 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>10月25日 星期一</title>
+        <link>http://localhost:1313/posts/2021/2021-10-25/</link>
+        <pubDate>Mon, 25 Oct 2021 17:00:58 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2021/2021-10-25/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-25/ -&lt;h2 id=&#34;标题&#34;&gt;标题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;aaa&lt;/li&gt;
+&lt;li&gt;bbb&lt;/li&gt;
+&lt;li&gt;ccc&lt;/li&gt;
+&lt;li&gt;ddd&lt;/li&gt;
+&lt;li&gt;asdflasj&lt;/li&gt;
+&lt;li&gt;asdfsa&lt;/li&gt;
+&lt;li&gt;sadfas&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2021/2021-10-25/ -  2021 malinkang.</description>
+        </item>
     
     
     
@@ -124,24 +145,6 @@
         <guid>http://localhost:1313/posts/2021/2021-10-15/</guid>
         <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-15/ -&lt;p&gt;突然降温了，好冷啊。&lt;/p&gt;
 - http://localhost:1313/posts/2021/2021-10-15/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>10月14日 星期四</title>
-        <link>http://localhost:1313/posts/2021/2021-10-14/</link>
-        <pubDate>Thu, 14 Oct 2021 17:00:19 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2021/2021-10-14/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-14/ -&lt;h2 id=&#34;每日任务&#34;&gt;每日任务&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1️⃣蚂蚁庄园养一颗🥚&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2️⃣蚂蚁森林收集1kg能量&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3️⃣走15000步&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 4️⃣记账&lt;/li&gt;
-&lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-14/ -  2021 malinkang.</description>
         </item>
     
     

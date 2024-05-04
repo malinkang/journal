@@ -7,9 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Fri, 29 Mar 2024 11:46:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 15:37:00 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>☀️ 11月12日 星期六</title>
+        <link>http://localhost:1313/posts/2022/2022-11-12/</link>
+        <pubDate>Sat, 12 Nov 2022 15:45:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-11-12/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-12/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有49天 ■■■■■■■■□□ 86%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+- http://localhost:1313/posts/2022/2022-11-12/ -  2021 malinkang.</description>
+        </item>
     
     
     
@@ -247,63 +265,6 @@
 
 &lt;/p&gt;
 - http://localhost:1313/posts/2022/2022-11-03/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 11月02日 星期三</title>
-        <link>http://localhost:1313/posts/2022/2022-11-02/</link>
-        <pubDate>Wed, 02 Nov 2022 15:48:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2022/2022-11-02/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-02/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有59天 ■■■■■■■■□□ 83%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SetDB和setVw插入脚本&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; getAirplaneMode和setCInPicResize插入脚本&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; tvBalloons插入脚本&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; getBubbleMargin插入脚本&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; BubbleStyle插入脚本&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; AddDoubleTapToLike和setPicO插入脚本&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; isMRevoked插入脚本&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;21:12-21:31：🛀洗漱&lt;/li&gt;
-&lt;li&gt;20:33-21:11：🚇下班&lt;/li&gt;
-&lt;li&gt;19:17-19:42：👨‍💻工作，isMRevoked插入脚本&lt;/li&gt;
-&lt;li&gt;18:50-19:05：🍚吃晚饭&lt;/li&gt;
-&lt;li&gt;17:50-18:50：🏃🏻跑步&lt;/li&gt;
-&lt;li&gt;16:42-17:07：👨‍💻工作，BubbleStyle插入脚本&lt;/li&gt;
-&lt;li&gt;16:10-16:35：👨‍💻工作，getBubbleMargin插入脚本&lt;/li&gt;
-&lt;li&gt;15:19-15:44：👨‍💻工作，tvBalloons插入脚本&lt;/li&gt;
-&lt;li&gt;14:38-15:03：👨‍💻工作，getAirplaneMode和setCInPicResize插入脚本&lt;/li&gt;
-&lt;li&gt;14:06-14:31：👨‍💻工作，SetDB和setVw插入脚本&lt;/li&gt;
-&lt;li&gt;13:21-14:03：😴睡觉&lt;/li&gt;
-&lt;li&gt;11:54-12:37：🍚吃午饭&lt;/li&gt;
-&lt;li&gt;08:31-09:11：🚇上班&lt;/li&gt;
-&lt;li&gt;07:23-07:52：🛀洗漱&lt;/li&gt;
-&lt;li&gt;23:53-07:21：😴睡觉，AutoSleep自动同步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;咋了？&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1587716798278815744?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;测试测试😀&lt;/p&gt;&amp;mdash; 马林康 (@Carve_Time) &lt;a href=&#34;https://twitter.com/Carve_Time/status/1587645171159924736?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;今日睡眠💤 &lt;a href=&#34;https://t.co/sVzhymNH0p&#34;&gt;pic.twitter.com/sVzhymNH0p&lt;/a&gt;&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1587638671611551744?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;/p&gt;
-- http://localhost:1313/posts/2022/2022-11-02/ -  2021 malinkang.</description>
         </item>
     
     

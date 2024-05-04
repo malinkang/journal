@@ -7,9 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Fri, 29 Mar 2024 11:46:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 15:37:00 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>☁️ 01月26日 星期四</title>
+        <link>http://localhost:1313/posts/2023/2023-01-26/</link>
+        <pubDate>Thu, 26 Jan 2023 15:38:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2023/2023-01-26/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-01-26/ -&lt;p&gt;今天天气局部多云，空气质量68，最高温度-0.03°C，最低温度-15.13°C。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有339天 □□□□□□□□□□ 6%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;17:08-17:23：💧买水&lt;/li&gt;
+&lt;li&gt;14:11-14:31：🧹做家务，换床单&lt;/li&gt;
+&lt;li&gt;13:22-13:34：🇺🇸英语&lt;/li&gt;
+&lt;li&gt;08:00-10:49：🎬看电影&lt;/li&gt;
+&lt;li&gt;02:01-07:54：😴睡觉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;非得一起死？&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1618593232648310785?ref_src=twsrc%5Etfw&#34;&gt;January 26, 2023&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;-今天看了啥&#34;&gt;📺 今天看了啥&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://movie.douban.com/subject/35465232/&#34;&gt;在看狂飙&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://movie.douban.com/subject/5301572/&#34;&gt;想看大宅门&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://movie.douban.com/subject/35267208/&#34;&gt;看过流浪地球2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://movie.douban.com/subject/35662223/&#34;&gt;看过去有风的地方&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-今天读了啥&#34;&gt;📚 今天读了啥&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://book.douban.com/subject/33430679/&#34;&gt;《刀锋》&lt;/a&gt;48分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2023/2023-01-26/ -  2021 malinkang.</description>
+        </item>
     
     
     
@@ -324,58 +366,6 @@
 
 
 - http://localhost:1313/posts/2023/2023-01-17/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 01月16日 星期一</title>
-        <link>http://localhost:1313/posts/2023/2023-01-16/</link>
-        <pubDate>Mon, 16 Jan 2023 15:37:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2023/2023-01-16/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-01-16/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有349天 □□□□□□□□□□ 4%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Youtube同步到Notion&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 日记添加今日读了啥&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 将豆瓣标记的添加到今日看了啥&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 优化BiliBili同步到Notion&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 多邻国打卡&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; LeetCode解题&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; n8n触发Forest&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 点餐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;21:27-22:04：🚇下班&lt;/li&gt;
-&lt;li&gt;11:50-12:34：🍚吃饭&lt;/li&gt;
-&lt;li&gt;11:23-11:48：👨‍💻工作，优化BiliBili同步到Notion&lt;/li&gt;
-&lt;li&gt;11:23-11:48：👨‍💻工作，优化BiliBili同步到Notion&lt;/li&gt;
-&lt;li&gt;11:07-11:24：🇺🇸英语&lt;/li&gt;
-&lt;li&gt;10:08-11:01：👨‍💻工作，Youtube同步到Notion&lt;/li&gt;
-&lt;li&gt;10:08-11:01：👨‍💻工作，Youtube同步到Notion&lt;/li&gt;
-&lt;li&gt;09:29-10:04：🚇上班&lt;/li&gt;
-&lt;li&gt;09:10-09:29：🍚吃饭&lt;/li&gt;
-&lt;li&gt;08:45-09:10：🍼陪孩子&lt;/li&gt;
-&lt;li&gt;08:05-08:45：🛀洗漱&lt;/li&gt;
-&lt;li&gt;07:54-08:05：👨‍🍳做饭&lt;/li&gt;
-&lt;li&gt;07:08-07:53：🏃🏻跑步&lt;/li&gt;
-&lt;li&gt;23:48-07:08：😴睡觉&lt;/li&gt;
-&lt;li&gt;23:48-07:08：😴睡觉，AutoSleep自动同步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-今天看了啥&#34;&gt;📺 今天看了啥&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1jx4y137Lq&#34;&gt;“从没想过这碗面，会改变我的这一年。”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://movie.douban.com/subject/1428581/&#34;&gt;想看天书奇谭&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://movie.douban.com/subject/1461403/&#34;&gt;看过茶馆&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/Uszj_k0DGsg&#34;&gt;Git for Professionals Tutorial - Tools &amp;amp; Concepts for Mastering Version Control with Git&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-- http://localhost:1313/posts/2023/2023-01-16/ -  2021 malinkang.</description>
         </item>
     
     
