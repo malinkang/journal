@@ -19,6 +19,6 @@ comment : true
 
 ## 💬 碎碎念
 
-今天放假第一天，7点多起来跑了8公里。上午去合生汇转了一圈，下午去弄洋槐花，发现都被人搞完了，空跑了一趟，然后带着孩子去足球场完了一会儿。晚上孩子睡着了，把电视机搬到卧室和媳妇一起看了飞驰人生2，自从有了孩子很少去电影院了，甚至两个人一起在电视上看电影的机会也变少了。
+今天放假第一天，7点多起来跑了8公里。上午去合生汇转了一圈，下午去弄洋槐花，发现都被人搞完了，空跑了一趟，然后带着孩子去足球场完了一会儿。晚上孩子睡着了，把电视机搬到卧室和媳妇一起看了《飞驰人生2》，自从有了孩子很少去电影院了，甚至两个人一起在电视上看电影的机会也变少了。
 
 {{< gallery match="images/*" sortOrder="desc" rowHeight="200" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
