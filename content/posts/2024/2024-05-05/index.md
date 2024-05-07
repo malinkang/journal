@@ -13,14 +13,21 @@ comment : true
 ---
 
 今天天气多云，空气质量147，最高温度22°C，最低温度13°C。
-## 📅 倒数日
-- 春节还有266天 ■■□□□□□□□□ 24%
-- 元旦还有238天 ■■■□□□□□□□ 34%
-## ✅ ToDo
-## ❤️ 健康
+
 ## 📖 学习
 今天在多邻国学习了42分钟，完成了11单元，共获得238经验
-## ⏰ 时间统计
+
+## 💬 碎碎念
+
+空气太差一整天都没怎么出门，下午带孩子出去玩，跟别人抢摇摇车还把人打哭了。后来跑到15号楼里面，看到别人的车子玩了好大一会。出门时跑得飞快，下巴摔破了，后面又去看小鸭子，一点都不害怕，还要伸手去摸摸。
+
+{{< gallery match="images/*" sortOrder="desc" rowHeight="200" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
 
 ## 📺 今天看了啥
+
 - [看过我的孩子我的家](https://movie.douban.com/subject/5313383/)
+
+## 📆 历史上的今天
+
+* [2023年05月05日](https://journal.malinkang.com/posts/2023/2023-05-05/)
+* [2022年05月05日](https://journal.malinkang.com/posts/2022/2022-05-05/)
