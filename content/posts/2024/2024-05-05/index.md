@@ -7,7 +7,7 @@ description: "领秀慧谷社区警务工作室
 北京市 昌平区
 史各庄街道朱辛庄西路领秀慧谷D区3号楼"
 tags: [2024,5月,第18周]
-featured_image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb"
+featured_image: images/2581715048094_.pic_hd.jpg
 categories: [日记]
 comment : true
 ---
