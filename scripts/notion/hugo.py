@@ -215,6 +215,7 @@ def query_todo():
 def query_toggl():
 #     # 前天的20点到昨天的8点 搜索睡觉事件
     start = (pendulum.now(tz="Asia/Shanghai")-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
+    print(start)
     end = date.strftime("%Y-%m-%dT24:00:00+08:00")
     filter = {
         "and": [
