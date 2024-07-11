@@ -52,4 +52,4 @@ jobs:
           committer_email: linkang.ma@gmail.com
       - name: journal
         run: |
-          python scripts/notion/journal.py
+          python scripts/notion/journal.py '${{ github.event.inputs.content }}'
