@@ -50,6 +50,6 @@ jobs:
           author_email: linkang.ma@gmail.com
           committer_name: malinkang
           committer_email: linkang.ma@gmail.com
-      # - name: telegram
-      #   run: |
-      #     python scripts/notion/telegram.py
+      - name: journal
+        run: |
+          python scripts/notion/journal.py

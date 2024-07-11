@@ -34,11 +34,11 @@ def query_day():
     response = notion_api.query_database(database_id="d34e3250832a4b5fb44054a8b364df2a")
     list = []
     for result in response.get("results"):
-        print(result)
+        # print(result)
         name = util.get_title(result, "Name")
         day = util.get_formula(result, "倒数日")
         progress = util.get_formula(result, "Progress")
-        print(f"name = {name} day = {day} progress = {progress}")
+        # print(f"name = {name} day = {day} progress = {progress}")
         list.append(name + day + " " + progress)
     return list
 
@@ -127,12 +127,11 @@ def get_filter(name="Date", extras=[]):
     end = date.strftime("%Y-%m-%dT24:00:00+08:00")
     conditions = [
         {"property": name, "date": {"on_or_after": start}},
-        {"property": name, "date": {"on_or_before": end}},
+        {"property": name, "date": {"before": end}},
     ]
     if len(extras) > 0:
         conditions.extend(extras)
     filter = {"and": conditions}
-    print(filter)
     return filter
 
 
@@ -197,6 +196,7 @@ def query_book():
             page_id=properties.get("书架").get("relation")[0].get("id")
         )
         name = util.get_title(book, "书名")
+        print(name)
         url = util.get_url(book, "链接")
         rich_text = [
             get_text("读"),
@@ -278,7 +278,6 @@ def query_toggl():
             {"property": "时间", "date": {"on_or_before": end}},
         ]
     }
-    print(filter)
     sorted = [{"property": "时间", "direction": "ascending"}]
     response = notion_api.query_database(
         database_id="cf6359306f94456da01908af73191a61", filter=filter, sorted=sorted
@@ -487,7 +486,6 @@ if __name__ == "__main__":
     if content:
         date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     title = dateutils.format_date_with_week(date=date)
-    print(query_mastodon())
     check(title)
     result = create_page(title)
     children = []
