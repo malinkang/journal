@@ -206,6 +206,7 @@ client = Client(
 
 
 def create_page(page):
+    print(page)
     response = client.pages.create(
         parent=page["parent"],
         properties=page["properties"],
