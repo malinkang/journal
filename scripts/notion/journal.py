@@ -46,7 +46,7 @@ def query_day():
 def query_duolingo():
     time.sleep(0.3)
     response = notion_api.query_database(
-        database_id="8dc983cda135457fb65204ad62dd5f94", filter=get_filter(name="日期")
+        database_id="e646426349a3449eacbc30e9e71ce33b", filter=get_filter(name="日期")
     )
     list = []
     for result in response.get("results"):
@@ -54,7 +54,7 @@ def query_duolingo():
         duration = int(round((util.get_number(result, "学习时长") / 60), 0))
         session = util.get_number(result, "单元")
         list.append(
-            f"今天在多邻国学习了{duration}分钟，完成了{session}单元，共获得{xp}经验"
+            get_block("bulleted_list_item",rich_text=[get_text(f"今天在多邻国学习了{duration}分钟，完成了{session}单元，共获得{xp}经验")])
         )
     return list
 
@@ -76,20 +76,21 @@ def query_twitter():
     )
     urls = []
     for result in response.get("results"):
-        id = util.get_rich_text(result, "id")
-        name = util.get_title(result, "Name")
-        text = util.get_rich_text(result, "text")
-        type = util.get_select(result, "Type")
-        if id == None or id == "":
-            urls.append(f"* {text}")
-        if type == "mastodon":
-            urls.append("{" + """{{< mastodon status="{id}" >}}""".format(id=id) + "}")
-        else:
-            urls.append(
-                "{"
-                + """{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)
-                + "}"
-            )
+        url = util.get_url(result, "url")
+        urls.append(get_block("embed",url=url))
+        # name = util.get_title(result, "Name")
+        # text = util.get_rich_text(result, "text")
+        # type = util.get_select(result, "Type")
+        # if id == None or id == "":
+        #     urls.append(f"* {text}")
+        # if type == "mastodon":
+        #     urls.append("{" + """{{< mastodon status="{id}" >}}""".format(id=id) + "}")
+        # else:
+        #     urls.append(
+        #         "{"
+        #         + """{{< tweet user="{name}" id="{id}" >}}""".format(name=name, id=id)
+        #         + "}"
+        #     )
     return urls
 
 
@@ -151,7 +152,6 @@ def query_movie():
 
 
 def query_run():
-    time.sleep(0.3)
     list = []
     response = notion_api.query_database(
         database_id="8dc2c4145901403ea9c4fb0b10ad3f86", filter=get_filter()
@@ -160,7 +160,11 @@ def query_run():
     for result in results:
         id = util.get_rich_text(result, "id")
         km = results[0]["properties"]["KM"]["formula"]["number"]
-        list.append(f"- 跑步：[{km}km](https://www.strava.com/activities/{id})")
+        url = f"https://www.strava.com/activities/{id}"
+        rich_text=[
+            get_text(f"跑步{km}km",url=url)
+        ]
+        list.append(get_block("bulleted_list_item",rich_text=rich_text))
     return list
 
 
@@ -253,7 +257,7 @@ def get_external(url):
     return {"type": "external", "external": {"url": url}}
 
 
-def get_block(type, rich_text=None, checked=False,external = None):
+def get_block(type, rich_text=None, checked=False,external = None,url=None):
     block = {
         "type": type,
         type: {},
@@ -264,6 +268,8 @@ def get_block(type, rich_text=None, checked=False,external = None):
         block[type]["checked"] = checked
     if external:
         block[type] = external
+    if url:
+        block[type]["url"] = url
     return block
 
 
@@ -426,8 +432,8 @@ def create():
             f.truncate()
 
 
-def check(title):
-    filter = {"property": "title", "title": {"equals": title}}
+def check(slug):
+    filter = {"property": "slug", "rich_text": {"equals": slug}}
 
     r = notion_api.client.databases.query(
         database_id="48107861338540dc97f6985be1e2a198", filter=filter
@@ -436,7 +442,7 @@ def check(title):
         notion_api.client.blocks.delete(result.get("id"))
 
 
-def create_page(title):
+def create_page(title,slug):
     emo = "☀️"
     year = date.strftime("%Y")
     week = date.strftime("第%V周")
@@ -448,6 +454,9 @@ def create_page(title):
         .title(title)
         .date(property="date", start=date)
         .multi_select("tags", tags)
+        .rich_text("slug",slug)
+        .select("type","Post")
+        .select("status","Published")
     )
     # properties = notion_api.get_relation(properties,date,False)
     parent = DatabaseParent("48107861338540dc97f6985be1e2a198")
@@ -486,22 +495,31 @@ if __name__ == "__main__":
     if content:
         date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     title = dateutils.format_date_with_week(date=date)
-    check(title)
-    result = create_page(title)
+    slug = date.strftime("%Y-%m-%d")
+    check(slug)
+    result = create_page(title,slug)
     children = []
     if result and result.get("id"):
         todos = query_todo()
         if todos:
             children.append(get_block("heading_2",rich_text=[get_text("✅ ToDo")]))
             children.extend(todos)
-        toots = query_mastodon()
-        if toots:
+        timelines = query_twitter()
+        if timelines:
             children.append(get_block("heading_2",rich_text=[get_text("💬 碎碎念")]))
-            children.extend(toots)
+            children.extend(timelines)
         books = query_book()
         if books:
             children.append(get_block("heading_2",rich_text=[get_text("📖 阅读")]))
             children.extend(books)
+        duolingo = query_duolingo()
+        if duolingo:
+            children.append(get_block("heading_2",rich_text=[get_text("📖 学习")]))
+            children.extend(duolingo)
+        runs = query_run()
+        if runs:
+            children.append(get_block("heading_2",rich_text=[get_text("❤️ 健康")]))
+            children.extend(runs)
         table = query_toggl()
         if table:
             children.append(get_block("heading_2",rich_text=[get_text("⏰ 日程")]))
