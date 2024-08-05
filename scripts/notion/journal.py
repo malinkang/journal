@@ -136,18 +136,21 @@ def get_filter(name="Date", extras=[]):
     return filter
 
 
-# https://www.notion.so/malinkang/4647d31ae4a44d06a155fcf7143c382e?v=b0d70b0fdb3e4f809b461c692cdbde44&pvs=4
+# https://malinkang.notion.site/aaa0f16646be480b8ad31c244f30ed17?v=40fabf9084c442999d02f166eb3e7e2d&pvs=4
 def query_movie():
-    time.sleep(0.3)
     response = notion_api.query_database(
-        database_id="8d2d183733b2412b873aa8decb72e4e2", filter=get_filter(name="日期")
+        database_id="aaa0f16646be480b8ad31c244f30ed17", filter=get_filter(name="日期")
     )
-    urls = set()
+    urls = []
     for result in response.get("results"):
         title = util.get_title(result, "电影名")
         url = util.get_url(result, "豆瓣链接")
         status = result["properties"]["状态"]["status"]["name"]
-        urls.add(f"[{status}{title}]({url})")
+        rich_text = [
+            get_text(status),
+            get_text(title,url),
+        ]
+        urls.append(get_block("bulleted_list_item",rich_text=rich_text))
     return urls
 
 
@@ -524,11 +527,14 @@ if __name__ == "__main__":
         if table:
             children.append(get_block("heading_2",rich_text=[get_text("⏰ 日程")]))
             children.append(table)
-        
+        movies = query_movie()
+        if movies:
+            children.append(get_block("heading_2",rich_text=[get_text("📺 电影")]))
+            children.extend(movies)
         notion_api.client.blocks.children.append(
             block_id=result.get("id"), children=children
         )
-
+    # print(query_movie())
     # # print()
     # print(query_todo())
     # print(query_duoligo())
