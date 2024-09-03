@@ -135,15 +135,18 @@ def get_filter(name="Date", extras=[]):
 
 #https://www.notion.so/malinkang/4647d31ae4a44d06a155fcf7143c382e?v=b0d70b0fdb3e4f809b461c692cdbde44&pvs=4
 def query_movie():
-    time.sleep(0.3)
-    response = notion_api.query_database(database_id="4647d31ae4a44d06a155fcf7143c382e", filter=get_filter(name="日期"))
+    response = notion_api.query_database(
+        database_id="aaa0f16646be480b8ad31c244f30ed17", filter=get_filter(name="日期")
+    )
     urls = set()
     for result in response.get("results"):
-        title = util.get_title(result,"电影名")
-        url = util.get_url(result,"豆瓣链接")
+        title = util.get_title(result, "电影名")
+        url = util.get_url(result, "豆瓣链接")
         status = result["properties"]["状态"]["status"]["name"]
         urls.add(f"[{status}{title}]({url})")
+
     return urls
+
 
 
 def query_tv():
@@ -175,30 +178,36 @@ def query_run():
 
 
 def query_book():
-    time.sleep(0.3)
     response = notion_api.query_database(
-        database_id="cca71ece15ac48a68c34e5f86a2e6b38", filter=get_filter()
+        database_id="c4f00fa3af964a03b4a05198fa255a10", filter=get_filter(name="日期")
     )
-    books = set()
+    books = []
     for result in response.get("results"):
-        properties = result["properties"]
-        name = properties["Name"]["title"][0]["text"]["content"]
-        duration = properties["时长"]["number"]
-        url = properties["URL"]["url"]
-        books.add(f"读[《{name}》]({url}){duration}分钟")
+        properties = result.get("properties")
+        duration = util.get_number(result, "时长")
+        book = notion_api.client.pages.retrieve(
+            page_id=properties.get("书架").get("relation")[0].get("id")
+        )
+        name = util.get_title(book, "书名")
+        print(name)
+        url = util.get_url(book, "链接")
+        books.add(f"读[《{name}》]({url}){round(duration/60)}分钟")
     return books
 
-#https://www.notion.so/malinkang/8db320a226324aa1a20ed7bbc39b7727?v=01e5a358c0f64da19a66dbe220c2ce5f&pvs=4
-def query_douban_book():
-    time.sleep(0.3)
-    books = set()
-    response = notion_api.query_database(database_id="8db320a226324aa1a20ed7bbc39b7727", filter=get_filter(name="日期"))
-    for result in response.get("results"):
-        title = util.get_title(result,"书名")
-        url = util.get_url(result,"豆瓣链接")
-        status = result["properties"]["状态"]["status"]["name"]
-        books.add(f"[{status}{title}]({url})")
-    return books
+
+# https://www.notion.so/malinkang/8db320a226324aa1a20ed7bbc39b7727?v=01e5a358c0f64da19a66dbe220c2ce5f&pvs=4
+# def query_douban_book():
+#     books = set()
+#     response = notion_api.query_database(
+#         database_id="8db320a226324aa1a20ed7bbc39b7727", filter=get_filter(name="日期")
+#     )
+#     for result in response.get("results"):
+#         title = util.get_title(result, "书名")
+#         url = util.get_url(result, "豆瓣链接")
+#         status = result["properties"]["状态"]["status"]["name"]
+#         books.add(f"[{status}{title}]({url})")
+#     return books
+
 
 def query_todo():
     """查询今日完成的任务"""
@@ -213,9 +222,7 @@ def query_todo():
 
 # https://www.notion.so/malinkang/cf6359306f94456da01908af73191a61?v=462ad72e1a4c4c3591a074816dcccbd1&pvs=4
 def query_toggl():
-#     # 前天的20点到昨天的8点 搜索睡觉事件
-    start = (pendulum.now(tz="Asia/Shanghai")-timedelta(days=1)).strftime("%Y-%m-%dT00:00:00+08:00")
-    print(start)
+    start = date.strftime("%Y-%m-%dT00:00:00+08:00")
     end = date.strftime("%Y-%m-%dT24:00:00+08:00")
     filter = {
         "and": [
@@ -224,27 +231,27 @@ def query_toggl():
         ]
     }
     sorted = [{"property": "时间", "direction": "ascending"}]
-    response = notion_api.query_database(database_id="cf6359306f94456da01908af73191a61", filter=filter, sorted=sorted)
-    toggl_list = []
+    response = notion_api.query_database(
+        database_id="cf6359306f94456da01908af73191a61", filter=filter, sorted=sorted
+    )
+    results = ""
+    if response.get("results"):
+        results+="|  时间   |   分类  |  备注   |\n"
+        results+="|--------|--------|--------|\n"
     for result in response.get("results"):
-        start,end = util.get_date(result, "时间")
+        start, end = util.get_date(result, "时间")
         emoji = util.get_icon(result)
         # 格式化一下只保留时间
         start = datetime.fromisoformat(start).strftime("%H:%M")
         end = datetime.fromisoformat(end).strftime("%H:%M")
         name = util.get_title(result, "标题")
         note = util.get_rich_text(result, "备注")
-        result = f'{start}-{end}：{emoji} {name}'
-        if note != None and note != "":
-            result += "：" + note
-        toggl_list.append(result)
-    return toggl_list
-
+        results+=f"|{start}-{end}|{emoji} {name}|{note}|\n"
+    return results
 
 def create():
     response = notion_api.query_database(database_id=DAY_PAGE_ID, filter=get_filter())
     results = response.get("results")
-
     for result in results:
         cover = result.get("cover").get("external").get("url")
         icon = result.get("icon").get("emoji")
@@ -267,9 +274,9 @@ def create():
         song = query_music()
         if song != "":
             r += (
-                '{{<spotify type="track" id="'
+                '{{<aplayer  server="netease" type="song" id="'
                 + song
-                + '" width="100%" height="100" >}}\n'
+                + '>}}\n'
             )
         weather = util.get_rich_text(result, "天气")
         if weather is not None:
@@ -320,9 +327,8 @@ def create():
         r += "## ⏰ 时间统计"
         r += "\n"
         toggls = query_toggl()
-        for toggl in toggls:
-            r += "- " + toggl
-            r += "\n"
+        if toggls:
+            r += toggls
         urls = query_twitter()
         if len(urls) > 0:
             r += "## 💬 碎碎念"
@@ -338,7 +344,7 @@ def create():
             for url in urls:
                 r += "- " + url
                 r += "\n"
-        books = query_book() | query_douban_book()
+        books = query_book()
         if len(books) > 0:
             r += "\n"
             r += "## 📚 读书"

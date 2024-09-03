@@ -217,9 +217,9 @@ def create_page(page):
     return response
 
 
-def update_page(page_id, properties, icon=None, cover=None):
+def update_page(page_id, properties):
     response = client.pages.update(
-        page_id, properties=properties, icon=icon, cover=cover)
+        page_id, properties=properties)
     return response
 
 
