@@ -56,11 +56,10 @@ def query_duolingo():
         session = util.get_number(result, "单元")
         list.append(f"今天在多邻国学习了{duration}分钟，完成了{session}单元，共获得{xp}经验")
     return list
-
 def query_music():
     time.sleep(0.3)
     response = notion_api.query_database(
-        database_id="9fdc53150b5d4e0dabffca8a0f366d66", filter=get_filter("日期")
+        database_id="f852878351c7450db17f85b68410ce44", filter=get_filter("日期")
     )
     if len(response.get("results")) > 0:
         return util.get_rich_text(response.get("results")[0], "Id")
