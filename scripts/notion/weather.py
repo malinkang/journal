@@ -42,7 +42,7 @@ def update(id, content):
     icon = emoji(weather)
     properties=Properties().rich_text("天气",weather).rich_text("最高温度",highest).rich_text("最低温度",lowest).number("空气质量",int(aqi))
     icon = {"type": "emoji", "emoji": icon}
-    notion_api.update_page(id,properties,icon=icon)
+    notion_api.update_page_with_icon(id,properties,icon=icon)
     
                     
 if __name__ == "__main__":

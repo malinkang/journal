@@ -222,6 +222,11 @@ def update_page(page_id, properties):
         page_id, properties=properties)
     return response
 
+def update_page_with_icon(page_id, properties,icon):
+    response = client.pages.update(
+        page_id, properties=properties,icon=icon)
+    return response
+
 
 def query_database(**kwargs):
     kwargs = {k: v for k, v in kwargs.items() if v}
