@@ -190,7 +190,7 @@ def query_book():
         name = util.get_title(book, "书名")
         print(name)
         url = util.get_url(book, "链接")
-        books.add(f"读[《{name}》]({url}){round(duration/60)}分钟")
+        books.append(f"读[《{name}》]({url}){round(duration/60)}分钟")
     return books
 
 
