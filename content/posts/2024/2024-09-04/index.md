@@ -12,7 +12,7 @@ categories: [日记]
 comment : true
 ---
 
-{{<aplayer  server="netease" type="song" id="166321>}}
+{{<aplayer  server="netease" type="song" id="166321">}}
 今天天气，空气质量None，最高温度，最低温度。
 ## 📅 倒数日
 - 春节还有146天 ■■■■■□□□□□ 58%

@@ -276,7 +276,7 @@ def create():
             r += (
                 '{{<aplayer  server="netease" type="song" id="'
                 + song
-                + '>}}\n'
+                + '">}}\n'
             )
         weather = util.get_rich_text(result, "天气")
         if weather is not None:
