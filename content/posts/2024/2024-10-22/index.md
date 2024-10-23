@@ -1,16 +1,19 @@
 
 ---
 title: "☀️ 10月22日 星期二"
-date: 2024-10-22T11:49:00.000+08:00
-description: ""
+date: 2024-10-22T15:41:00.000+08:00
+description: "弘源首著大厦(东北门)
+中国
+北京市 海淀区
+信息路7号弘源首著大厦"
 tags: [2024,10月,第43周]
-featured_image: "https://images.unsplash.com/photo-1727965530585-25af21fc084d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2ODUwfDB8MXxyYW5kb218fHx8fHx8fHwxNzI5NTExMzQwfA&ixlib=rb-4.0.3&q=80&w=400"
+featured_image: "https://images.unsplash.com/photo-1726967023920-8f04895f11e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2ODUwfDB8MXxyYW5kb218fHx8fHx8fHwxNzI5NTI1MjkwfA&ixlib=rb-4.0.3&q=80&w=400"
 categories: [日记]
 comment : true
 ---
 
 {{<aplayer  server="netease" type="song" id="1398663411">}}
-今天天气，空气质量None，最高温度，最低温度。
+今天天气晴朗无云，空气质量24，最高温度17°C，最低温度5°C。
 ## 📅 倒数日
 - 春节还有97天 ■■■■■■■□□□ 72%
 - 元旦还有69天 ■■■■■■■■□□ 80%
