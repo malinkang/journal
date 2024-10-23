@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on linkang&#39;s life</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>http://localhost:61119/categories/</link>
     <description>Recent content in Categories on linkang&#39;s life</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Thu, 12 Sep 2024 15:40:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Oct 2024 15:41:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:61119/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>日记</title>
-      <link>http://localhost:1313/categories/%E6%97%A5%E8%AE%B0/</link>
-      <pubDate>Thu, 12 Sep 2024 15:40:00 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E6%97%A5%E8%AE%B0/</guid>
+      <link>http://localhost:61119/categories/%E6%97%A5%E8%AE%B0/</link>
+      <pubDate>Wed, 23 Oct 2024 15:41:00 +0800</pubDate>
+      <guid>http://localhost:61119/categories/%E6%97%A5%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>2022</title>
-      <link>http://localhost:1313/categories/2022/</link>
+      <link>http://localhost:61119/categories/2022/</link>
       <pubDate>Sun, 10 Jul 2022 15:55:52 +0800</pubDate>
-      <guid>http://localhost:1313/categories/2022/</guid>
+      <guid>http://localhost:61119/categories/2022/</guid>
       <description></description>
     </item>
     <item>
       <title>2021</title>
-      <link>http://localhost:1313/categories/2021/</link>
+      <link>http://localhost:61119/categories/2021/</link>
       <pubDate>Fri, 31 Dec 2021 15:57:44 +0800</pubDate>
-      <guid>http://localhost:1313/categories/2021/</guid>
+      <guid>http://localhost:61119/categories/2021/</guid>
       <description></description>
     </item>
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/categories/test/</link>
+      <link>http://localhost:61119/categories/test/</link>
       <pubDate>Tue, 07 Sep 2021 21:01:58 +0800</pubDate>
-      <guid>http://localhost:1313/categories/test/</guid>
+      <guid>http://localhost:61119/categories/test/</guid>
       <description></description>
     </item>
   </channel>

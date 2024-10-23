@@ -11,8 +11,9 @@ def get_memos():
     headers = {
         'Content-Type': 'application/json'
     }
+    
     params = {
-        'openId': '65806e0d-dced-483d-8ba4-4ec4d51ccae7'
+        'token': 'eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiIxIiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDg2Mjg4NDQzMCwiaWF0IjoxNzA5Mjg0NDMwfQ.n6ScWO_ir8SWxI9QRse9HbAoW-vUYEGB5aNe8pca9mo'
     }
 
     # 发送API请求并获取数据
@@ -20,6 +21,7 @@ def get_memos():
 
     if response.status_code == 200:
         json_data = response.text
+        print(json_data)
         data = json.loads(json_data)
         # 设置时区为Asia/Shanghai
         tz = pytz.timezone('Asia/Shanghai')

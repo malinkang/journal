@@ -242,6 +242,10 @@ def properties_retrieve(page_id, property_id):
     )
     return response
 
+def get_all_blocks(page_id):
+    response = client.blocks.children.list(block_id=page_id)
+    return response.get("results")
+
 
 def get_title(response, name, index=0):
     result = response.get("results")[index]

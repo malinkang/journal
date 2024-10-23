@@ -30,6 +30,7 @@ comment : true
 ---
 """
 
+
 def query_day():
     time.sleep(0.3)
     response = notion_api.query_database(database_id="d34e3250832a4b5fb44054a8b364df2a")
@@ -54,8 +55,12 @@ def query_duolingo():
         xp = util.get_number(result, "经验")
         duration = int(round((util.get_number(result, "学习时长") / 60), 0))
         session = util.get_number(result, "单元")
-        list.append(f"今天在多邻国学习了{duration}分钟，完成了{session}单元，共获得{xp}经验")
+        list.append(
+            f"今天在多邻国学习了{duration}分钟，完成了{session}单元，共获得{xp}经验"
+        )
     return list
+
+
 def query_music():
     time.sleep(0.3)
     response = notion_api.query_database(
@@ -90,10 +95,56 @@ def query_twitter():
     return urls
 
 
+def query_memos():
+    response = notion_api.query_database(
+        database_id="736d23cc9ef94bac865cfc9f6393e5d1", filter=get_filter(name="日期")
+    )
+    markdown_result = ""
+    for result in response.get("results"):
+        page_id = result.get("id")
+        id = util.get_rich_text(result, "id")
+        blocks = notion_api.get_all_blocks(page_id)
+        images = []
+        for block in blocks:
+            block_type = block.get("type")
+            if block_type == "image":
+                url = block.get("image", {}).get("external", {}).get("url", "")
+                images.append(url)
+                download_image(url, f"{dir}/images/{id}/")
+            else:
+                markdown_result += notion_block_to_markdown(block)
+        print(images)
+        if images:
+            markdown_result += f'{{{{< gallery match="{dir}/images/{id}/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}}}\n'
+        markdown_result += "\n--------\n"
+    return markdown_result
+
+
+def download_image(url, parent_folder):
+    import os
+    import requests
+
+    # 创建多级文件夹
+    if not os.path.exists(parent_folder):
+        os.makedirs(parent_folder)
+
+    # 获取图片内容
+    response = requests.get(url)
+    if response.status_code == 200:
+        # 提取文件名
+        file_name = os.path.join(parent_folder, url.split("/")[-1])
+        # 写入文件
+        with open(file_name, "wb") as file:
+            file.write(response.content)
+        print(f"图片已下载到: {file_name}")
+    else:
+        print(f"无法下载图片，状态码: {response.status_code}")
+
+
 def query_weight():
     time.sleep(0.3)
     response = notion_api.query_database(
-        database_id="34c0db4313b24c3fac8e25436f5b3530",filter=get_filter()
+        database_id="34c0db4313b24c3fac8e25436f5b3530", filter=get_filter()
     )
     results = response.get("results")
     if len(results) > 0:
@@ -132,7 +183,8 @@ def get_filter(name="Date", extras=[]):
     print(filter)
     return filter
 
-#https://www.notion.so/malinkang/4647d31ae4a44d06a155fcf7143c382e?v=b0d70b0fdb3e4f809b461c692cdbde44&pvs=4
+
+# https://www.notion.so/malinkang/4647d31ae4a44d06a155fcf7143c382e?v=b0d70b0fdb3e4f809b461c692cdbde44&pvs=4
 def query_movie():
     response = notion_api.query_database(
         database_id="aaa0f16646be480b8ad31c244f30ed17", filter=get_filter(name="日期")
@@ -145,7 +197,6 @@ def query_movie():
         urls.add(f"[{status}{title}]({url})")
 
     return urls
-
 
 
 def query_tv():
@@ -211,10 +262,12 @@ def query_book():
 def query_todo():
     """查询今日完成的任务"""
     time.sleep(0.3)
-    extras = [{"property": "状态", "status": {"equals": "Completed"}}]
-    response = notion_api.query_database(database_id=TODO_DATABASE_ID, filter=get_filter(name="完成时间",extras=extras))
+    extras = [{"property": "状态", "status": {"equals": "Done"}}]
+    response = notion_api.query_database(
+        database_id=TODO_DATABASE_ID, filter=get_filter(name="完成时间", extras=extras)
+    )
     return [
-        result["properties"]["Title"]["title"][0]["text"]["content"]
+        result["properties"]["标题"]["title"][0]["text"]["content"]
         for result in response.get("results")
     ]
 
@@ -235,8 +288,8 @@ def query_toggl():
     )
     results = ""
     if response.get("results"):
-        results+="|  时间   |   分类  |  备注   |\n"
-        results+="|--------|--------|--------|\n"
+        results += "|  时间   |   分类  |  备注   |\n"
+        results += "|--------|--------|--------|\n"
     for result in response.get("results"):
         start, end = util.get_date(result, "时间")
         emoji = util.get_icon(result)
@@ -245,8 +298,9 @@ def query_toggl():
         end = datetime.fromisoformat(end).strftime("%H:%M")
         name = util.get_title(result, "标题")
         note = util.get_rich_text(result, "备注")
-        results+=f"|{start}-{end}|{emoji} {name}|{note}|\n"
+        results += f"|{start}-{end}|{emoji} {name}|{note}|\n"
     return results
+
 
 def create():
     response = notion_api.query_database(database_id=DAY_PAGE_ID, filter=get_filter())
@@ -272,11 +326,7 @@ def create():
         content = ""
         song = query_music()
         if song != "":
-            r += (
-                '{{<aplayer  server="netease" type="song" id="'
-                + song
-                + '">}}\n'
-            )
+            r += '{{<aplayer  server="netease" type="song" id="' + song + '">}}\n'
         weather = util.get_rich_text(result, "天气")
         if weather is not None:
             content += "今天天气" + weather
@@ -329,12 +379,16 @@ def create():
         if toggls:
             r += toggls
         urls = query_twitter()
-        if len(urls) > 0:
-            r += "## 💬 碎碎念"
+        memos = query_memos()
+        if urls or memos:
+            r += "## 💬 碎碎念\n"
+        if urls:
             r += "\n"
             for url in urls:
                 r += url
                 r += "\n"
+        if memos:
+            r += memos
         urls = query_bilibili() | query_movie()
         if len(urls) > 0:
             r += "\n"
@@ -344,18 +398,18 @@ def create():
                 r += "- " + url
                 r += "\n"
         books = query_book()
-        if len(books) > 0:
+        if books:
             r += "\n"
             r += "## 📚 读书"
             r += "\n"
             for url in books:
                 r += "- " + url
                 r += "\n"
-        if os.path.exists(dir + "/images") and len(os.listdir(dir + "/images")) > 0:
-            r += "\n"
-            r += "## 📷 照片"
-            r += "\n"
-            r += '{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}'
+        # if os.path.exists(dir + "/images") and len(os.listdir(dir + "/images")) > 0:
+        #     r += "\n"
+        #     r += "## 📷 照片"
+        #     r += "\n"
+        #     r += '{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}'
         if not os.path.exists(dir):
             os.makedirs(dir)
         file = dir + "/index.md"
@@ -363,6 +417,79 @@ def create():
             f.seek(0)
             f.write(r)
             f.truncate()
+
+
+def notion_block_to_markdown(block):
+    """
+    将Notion的block对象转换为Markdown格式。
+
+    参数:
+    block (dict): Notion的block对象
+
+    返回:
+    str: 转换后的Markdown字符串
+    """
+    markdown = ""
+    block_type = block.get("type")
+    if block_type == "paragraph":
+        rich_texts = block.get("paragraph", {}).get("rich_text", [])
+        for rich_text in rich_texts:
+            text = rich_text.get("text")
+            link = text.get("link")
+            content = text.get("content")
+            if link:
+                url = link.get("url")
+                markdown += f"[{content}]({url})\n"
+            else:
+                markdown += content + "\n"
+
+    elif block_type == "heading_1":
+        rich_texts = block.get("heading_1", {}).get("rich_text", [])
+        for rich_text in rich_texts:
+            markdown += "# " + rich_text.get("text", {}).get("content", "") + "\n"
+
+    elif block_type == "heading_2":
+        rich_texts = block.get("heading_2", {}).get("rich_text", [])
+        for rich_text in rich_texts:
+            markdown += "## " + rich_text.get("text", {}).get("content", "") + "\n"
+
+    elif block_type == "heading_3":
+        rich_texts = block.get("heading_3", {}).get("rich_text", [])
+        for rich_text in rich_texts:
+            markdown += "### " + rich_text.get("text", {}).get("content", "") + "\n"
+
+    elif block_type == "bulleted_list_item":
+        rich_texts = block.get("bulleted_list_item", {}).get("rich_text", [])
+        for rich_text in rich_texts:
+            markdown += "- " + rich_text.get("text", {}).get("content", "") + "\n"
+
+    elif block_type == "numbered_list_item":
+        rich_texts = block.get("numbered_list_item", {}).get("rich_text", [])
+        for rich_text in rich_texts:
+            markdown += "1. " + rich_text.get("text", {}).get("content", "") + "\n"
+
+    elif block_type == "to_do":
+        rich_texts = block.get("to_do", {}).get("rich_text", [])
+        checked = block.get("to_do", {}).get("checked", False)
+        for rich_text in rich_texts:
+            markdown += "- ["
+            markdown += "x" if checked else " "
+            markdown += "] " + rich_text.get("text", {}).get("content", "") + "\n"
+
+    elif block_type == "quote":
+        rich_texts = block.get("quote", {}).get("rich_text", [])
+        for rich_text in rich_texts:
+            markdown += "> " + rich_text.get("text", {}).get("content", "") + "\n"
+
+    elif block_type == "code":
+        language = block.get("code", {}).get("language", "")
+        rich_texts = block.get("code", {}).get("rich_text", [])
+        markdown += f"```{language}\n"
+        for rich_text in rich_texts:
+            markdown += rich_text.get("text", {}).get("content", "") + "\n"
+        markdown += "```\n"
+
+    return markdown
 
 
 date = datetime.now()
@@ -378,9 +505,8 @@ if __name__ == "__main__":
     day = datetime.strftime(date, "%d")
     dir = f"./content/posts/{year}/{year}-{month}-{day}/"
     create()
-    # print(query_duoligo())
-    # query_twitter()
+    # query_memos()
     # query_run()
     # print(query_memos())
-    # print(query_toggl())
+    # print(query_todo())
     # print(query_movie())
