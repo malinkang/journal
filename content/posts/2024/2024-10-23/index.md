@@ -18,6 +18,10 @@ comment : true
 - 春节还有97天 ■■■■■■■□□□ 72%
 - 元旦还有69天 ■■■■■■■■□□ 80%
 ## ✅ ToDo
+- [x] GBW新Base添加新白名单
+- [x] GBW新Base添加点击确认（CC）
+- [x] 修复GBW的View All xxx Message功能
+- [x] Memos插入到Notion
 ## ❤️ 健康
 ## ⏰ 时间统计
 ## 💬 碎碎念
