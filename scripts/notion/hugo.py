@@ -288,8 +288,8 @@ def query_toggl():
     )
     results = ""
     if response.get("results"):
-        results += "|  时间   |   分类  |  备注   |\n"
-        results += "|--------|--------|--------|\n"
+        results += "|  时间   |   分类  | 时长   | 备注    |\n"
+        results += "|--------|--------|--------|--------|\n"
     for result in response.get("results"):
         start, end = util.get_date(result, "时间")
         emoji = util.get_icon(result)
@@ -297,8 +297,9 @@ def query_toggl():
         start = datetime.fromisoformat(start).strftime("%H:%M")
         end = datetime.fromisoformat(end).strftime("%H:%M")
         name = util.get_title(result, "标题")
+        duration = result.get("properties").get("时长格式化").get("formula").get("string")
         note = util.get_rich_text(result, "备注")
-        results += f"|{start}-{end}|{emoji} {name}|{note}|\n"
+        results += f"|{start}-{end}|{emoji} {name}|{duration}|{note}|\n"
     return results
 
 
@@ -505,6 +506,7 @@ if __name__ == "__main__":
     day = datetime.strftime(date, "%d")
     dir = f"./content/posts/{year}/{year}-{month}-{day}/"
     create()
+    # print(query_toggl())
     # query_memos()
     # query_run()
     # print(query_memos())
