@@ -27,6 +27,12 @@
 &lt;li&gt;元旦还有69天 ■■■■■■■■□□ 80%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; GBW新Base添加新白名单&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; GBW新Base添加点击确认（CC）&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 修复GBW的View All xxx Message功能&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Memos插入到Notion&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
