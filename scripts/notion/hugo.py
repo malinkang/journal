@@ -44,11 +44,10 @@ def query_day():
         list.append(name + day + " " + progress)
     return list
 
-
 def query_duolingo():
     time.sleep(0.3)
     response = notion_api.query_database(
-        database_id="8dc983cda135457fb65204ad62dd5f94", filter=get_filter(name="日期")
+        database_id="e646426349a3449eacbc30e9e71ce33b", filter=get_filter(name="日期")
     )
     list = []
     for result in response.get("results"):
