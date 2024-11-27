@@ -2,24 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linkang&#39;s life</title>
-    <link>https://journal.malinkang.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on linkang&#39;s life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2024 15:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 15:43:00 +0800</lastBuildDate>
     
-        <atom:link href="https://journal.malinkang.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>☀️ 04月22日 星期六</title>
+        <link>http://localhost:1313/posts/2023/2023-04-22/</link>
+        <pubDate>Sat, 22 Apr 2023 15:37:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2023/2023-04-22/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-22/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;距离春节还有293天 ■■□□□□□□□□ 23%&lt;/li&gt;
+&lt;li&gt;距离元旦还有253天 ■■■□□□□□□□ 30%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;h2 id=&#34;-今天看了啥&#34;&gt;📺 今天看了啥&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1So4y1j7jG&#34;&gt;三分钟教程|如何将微信读书同步至 Notion，轻松做好阅读笔记&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2023/2023-04-22/ -  2021 malinkang.</description>
+        </item>
     
     
     
         <item>
         <title>☀️ 04月21日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-21/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-21/</link>
         <pubDate>Fri, 21 Apr 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-21/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-21/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-21/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-21/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有294天 ■■□□□□□□□□ 23%&lt;/li&gt;
 &lt;li&gt;距离元旦还有254天 ■■■□□□□□□□ 30%&lt;/li&gt;
@@ -30,18 +53,18 @@
 &lt;ul&gt;
 &lt;li&gt;19:39-20:04：未设置&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-04-21/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-21/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 04月20日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-20/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-20/</link>
         <pubDate>Thu, 20 Apr 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-20/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-20/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-20/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-20/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有295天 ■■□□□□□□□□ 22%&lt;/li&gt;
 &lt;li&gt;距离元旦还有255天 ■■□□□□□□□□ 29%&lt;/li&gt;
@@ -54,18 +77,18 @@
 &lt;li&gt;11:04-11:29：🤖️Android：分析tivi源码&lt;/li&gt;
 &lt;li&gt;11:37-12:02：🤖️Android：分析tivi源码&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-04-20/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-20/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 04月19日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-19/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-19/</link>
         <pubDate>Wed, 19 Apr 2023 15:38:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-19/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-19/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-19/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-19/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有296天 ■■□□□□□□□□ 22%&lt;/li&gt;
 &lt;li&gt;距离元旦还有256天 ■■□□□□□□□□ 29%&lt;/li&gt;
@@ -79,18 +102,18 @@
 &lt;li&gt;12:20-12:45：📚读书&lt;/li&gt;
 &lt;li&gt;14:15-14:40：未设置&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-04-19/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-19/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 04月17日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-17/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-17/</link>
         <pubDate>Mon, 17 Apr 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-17/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-17/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-17/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-17/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有298天 ■■□□□□□□□□ 22%&lt;/li&gt;
 &lt;li&gt;距离元旦还有258天 ■■□□□□□□□□ 29%&lt;/li&gt;
@@ -107,22 +130,18 @@
 &lt;li&gt;14:48-15:13：未设置&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;一个月少提点吧。总比放里面强&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1647844550407495680?ref_src=twsrc%5Etfw&#34;&gt;April 17, 2023&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-- https://journal.malinkang.com/posts/2023/2023-04-17/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-17/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 04月16日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-16/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-16/</link>
         <pubDate>Sun, 16 Apr 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-16/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-16/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-16/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-16/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有299天 ■■□□□□□□□□ 21%&lt;/li&gt;
 &lt;li&gt;距离元旦还有259天 ■■□□□□□□□□ 28%&lt;/li&gt;
@@ -130,18 +149,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-04-16/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-16/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 04月13日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-13/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-13/</link>
         <pubDate>Thu, 13 Apr 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-13/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-13/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-13/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-13/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有302天 ■■□□□□□□□□ 21%&lt;/li&gt;
 &lt;li&gt;距离元旦还有262天 ■■□□□□□□□□ 27%&lt;/li&gt;
@@ -156,22 +175,18 @@
 &lt;li&gt;21:23-21:41：🛀洗漱&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#读书笔记&lt;/a&gt; &lt;a href=&#34;https://t.co/Lob28sgeEf&#34;&gt;pic.twitter.com/Lob28sgeEf&lt;/a&gt;&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1646381825995177985?ref_src=twsrc%5Etfw&#34;&gt;April 13, 2023&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-- https://journal.malinkang.com/posts/2023/2023-04-13/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-13/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 04月12日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-12/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-12/</link>
         <pubDate>Wed, 12 Apr 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-12/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-12/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-12/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-12/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有303天 ■■□□□□□□□□ 20%&lt;/li&gt;
 &lt;li&gt;距离元旦还有263天 ■■□□□□□□□□ 27%&lt;/li&gt;
@@ -189,18 +204,18 @@
 &lt;ul&gt;
 &lt;li&gt;读&lt;a href=&#34;https://book.douban.com/subject/35876121/&#34;&gt;《纳瓦尔宝典》&lt;/a&gt;49分钟&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-04-12/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-12/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 04月11日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-11/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-11/</link>
         <pubDate>Tue, 11 Apr 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-11/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-11/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-11/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-11/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有304天 ■■□□□□□□□□ 20%&lt;/li&gt;
 &lt;li&gt;距离元旦还有264天 ■■□□□□□□□□ 27%&lt;/li&gt;
@@ -213,18 +228,18 @@
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
 &lt;p&gt;封面图片来源：昨天沙尘暴，今天看到有人在群里发这个图，挺有意思。&lt;/p&gt;
-- https://journal.malinkang.com/posts/2023/2023-04-11/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-11/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 04月10日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-10/</link>
+        <link>http://localhost:1313/posts/2023/2023-04-10/</link>
         <pubDate>Mon, 10 Apr 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-10/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-10/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2023/2023-04-10/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-04-10/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有305天 ■■□□□□□□□□ 20%&lt;/li&gt;
 &lt;li&gt;距离元旦还有265天 ■■□□□□□□□□ 27%&lt;/li&gt;
@@ -232,30 +247,7 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-04-10/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 04月09日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-04-09/</link>
-        <pubDate>Sun, 09 Apr 2023 15:37:00 +0800</pubDate>
-        
-        <guid>https://journal.malinkang.com/posts/2023/2023-04-09/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-04-09/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;距离春节还有306天 ■■□□□□□□□□ 20%&lt;/li&gt;
-&lt;li&gt;距离元旦还有266天 ■■□□□□□□□□ 26%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;00:42-08:30：😴睡觉&lt;/li&gt;
-&lt;li&gt;08:35-08:45：🇺🇸英语&lt;/li&gt;
-&lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-04-09/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-04-10/ -  2021 malinkang.</description>
         </item>
     
     

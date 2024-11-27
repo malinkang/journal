@@ -2,24 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linkang&#39;s life</title>
-    <link>https://journal.malinkang.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on linkang&#39;s life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2024 15:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 15:43:00 +0800</lastBuildDate>
     
-        <atom:link href="https://journal.malinkang.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>☀️ 11月17日 星期日</title>
+        <link>http://localhost:1313/posts/2024/2024-11-17/</link>
+        <pubDate>Sun, 17 Nov 2024 15:39:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2024/2024-11-17/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-17/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有72天 ■■■■■■■□□□ 79%&lt;/li&gt;
+&lt;li&gt;元旦还有44天 ■■■■■■■■□□ 87%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12920750015&#34;&gt;2.5km&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+- http://localhost:1313/posts/2024/2024-11-17/ -  2021 malinkang.</description>
+        </item>
     
     
     
         <item>
         <title>☁️ 11月16日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-16/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-16/</link>
         <pubDate>Sat, 16 Nov 2024 15:41:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-16/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-16/ -&lt;p&gt;今天天气局部多云，空气质量13，最高温度15°C，最低温度4°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-16/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-16/ -&lt;p&gt;今天天气局部多云，空气质量13，最高温度15°C，最低温度4°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有73天 ■■■■■■■□□□ 79%&lt;/li&gt;
@@ -28,18 +51,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-16/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-16/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月15日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-15/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-15/</link>
         <pubDate>Fri, 15 Nov 2024 15:41:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-15/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-15/ -&lt;p&gt;今天天气晴，空气质量46，最高温度15°C，最低温度6°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-15/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-15/ -&lt;p&gt;今天天气晴，空气质量46，最高温度15°C，最低温度6°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有74天 ■■■■■■■□□□ 78%&lt;/li&gt;
@@ -48,18 +71,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-15/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-15/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月14日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-14/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-14/</link>
         <pubDate>Thu, 14 Nov 2024 15:41:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-14/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-14/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-14/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-14/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有75天 ■■■■■■■□□□ 78%&lt;/li&gt;
@@ -68,18 +91,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-14/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-14/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☁️ 11月13日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-13/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-13/</link>
         <pubDate>Wed, 13 Nov 2024 15:41:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-13/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-13/ -&lt;p&gt;今天天气多云，空气质量86，最高温度14°C，最低温度9°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-13/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-13/ -&lt;p&gt;今天天气多云，空气质量86，最高温度14°C，最低温度9°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有76天 ■■■■■■■□□□ 78%&lt;/li&gt;
@@ -89,22 +112,18 @@
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;BRANDING&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1856655797222355066?ref_src=twsrc%5Etfw&#34;&gt;November 13, 2024&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-- https://journal.malinkang.com/posts/2024/2024-11-13/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-13/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月12日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-12/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-12/</link>
         <pubDate>Tue, 12 Nov 2024 15:39:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-12/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-12/ -&lt;p&gt;今天天气晴，空气质量65，最高温度18°C，最低温度4°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-12/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-12/ -&lt;p&gt;今天天气晴，空气质量65，最高温度18°C，最低温度4°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有77天 ■■■■■■■□□□ 77%&lt;/li&gt;
@@ -116,18 +135,18 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-12/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-12/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☁️ 11月11日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-11/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-11/</link>
         <pubDate>Mon, 11 Nov 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-11/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-11/ -&lt;p&gt;今天天气多云，空气质量62，最高温度14°C，最低温度6°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-11/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-11/ -&lt;p&gt;今天天气多云，空气质量62，最高温度14°C，最低温度6°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有78天 ■■■■■■■□□□ 77%&lt;/li&gt;
@@ -136,18 +155,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-11/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-11/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月10日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-10/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-10/</link>
         <pubDate>Sun, 10 Nov 2024 15:39:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-10/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-10/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-10/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-10/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有79天 ■■■■■■■□□□ 77%&lt;/li&gt;
@@ -156,18 +175,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-10/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-10/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月09日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-09/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-09/</link>
         <pubDate>Sat, 09 Nov 2024 10:00:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-09/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-09/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-09/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-09/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有80天 ■■■■■■■□□□ 77%&lt;/li&gt;
@@ -176,18 +195,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-09/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-09/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月08日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-08/</link>
+        <link>http://localhost:1313/posts/2024/2024-11-08/</link>
         <pubDate>Fri, 08 Nov 2024 15:40:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-08/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-08/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-08/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-08/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;春节还有81天 ■■■■■■■□□□ 76%&lt;/li&gt;
@@ -198,27 +217,7 @@
 &lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
 &lt;p&gt;今天在多邻国学习了11分钟，完成了1单元，共获得42经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-08/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 11月06日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-11-06/</link>
-        <pubDate>Wed, 06 Nov 2024 15:40:00 +0800</pubDate>
-        
-        <guid>https://journal.malinkang.com/posts/2024/2024-11-06/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-11-06/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有83天 ■■■■■■■□□□ 76%&lt;/li&gt;
-&lt;li&gt;元旦还有55天 ■■■■■■■■□□ 84%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-11-06/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-08/ -  2021 malinkang.</description>
         </item>
     
     

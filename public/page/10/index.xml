@@ -2,24 +2,90 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linkang&#39;s life</title>
-    <link>https://journal.malinkang.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on linkang&#39;s life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2024 15:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 15:43:00 +0800</lastBuildDate>
     
-        <atom:link href="https://journal.malinkang.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>☀️ 03月26日 星期二</title>
+        <link>http://localhost:1313/posts/2024/2024-03-26/</link>
+        <pubDate>Tue, 26 Mar 2024 11:58:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2024/2024-03-26/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-03-26/ -&lt;p&gt;
+
+
+&lt;iframe src=&#34;https://open.spotify.com/embed/track/1HYzRuWjmS9LXCkdVHi25K&#34;
+    width=&#34;100%&#34;
+    height=&#34;100&#34;
+    frameborder=&#34;0&#34;
+    allowtransparency=&#34;true&#34;
+    allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;
+
+今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有308天 ■□□□□□□□□□ 12%&lt;/li&gt;
+&lt;li&gt;元旦还有280天 ■■□□□□□□□□ 23%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚订餐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
+&lt;p&gt;今天在多邻国学习了26分钟，完成了5单元，共获得158经验&lt;/p&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;15:59-16:20：📱 玩手机&lt;/li&gt;
+&lt;li&gt;15:19-15:58：✍️ 写作：weread2notion教程修改&lt;/li&gt;
+&lt;li&gt;14:05-15:19：🧑‍💻 写代码：集成Google Ad Manager&lt;/li&gt;
+&lt;li&gt;13:30-14:05：😴 睡觉&lt;/li&gt;
+&lt;li&gt;12:45-13:30：📱 玩手机&lt;/li&gt;
+&lt;li&gt;12:06-12:45：🍚 吃饭&lt;/li&gt;
+&lt;li&gt;11:03-12:04：✍️ 写作：写weread2notion公众号文章&lt;/li&gt;
+&lt;li&gt;10:49-11:03：💬 闲聊&lt;/li&gt;
+&lt;li&gt;10:30-10:49：🧑‍💻 开会&lt;/li&gt;
+&lt;li&gt;09:44-10:30：🛠️ 工具&lt;/li&gt;
+&lt;li&gt;09:19-09:43：💬 闲聊&lt;/li&gt;
+&lt;li&gt;08:49-09:19：🇺🇸 英语&lt;/li&gt;
+&lt;li&gt;08:04-08:49：🚇 通勤&lt;/li&gt;
+&lt;li&gt;07:43-08:04：👼 孩子&lt;/li&gt;
+&lt;li&gt;07:26-07:43：🍚 吃饭&lt;/li&gt;
+&lt;li&gt;07:01-07:26：👨‍🍳 做饭&lt;/li&gt;
+&lt;li&gt;06:41-07:01：🛀 洗漱&lt;/li&gt;
+&lt;li&gt;00:30-06:41：😴 睡觉&lt;/li&gt;
+&lt;li&gt;21:35-22:06：🛀 洗漱&lt;/li&gt;
+&lt;li&gt;20:55-21:35：🚇 通勤&lt;/li&gt;
+&lt;li&gt;19:26-19:50：🍚 吃饭&lt;/li&gt;
+&lt;li&gt;18:00-19:26：🏃🏻 跑步&lt;/li&gt;
+&lt;li&gt;09:14-09:24：📆 计划&lt;/li&gt;
+&lt;li&gt;08:54-09:14：🇺🇸 英语&lt;/li&gt;
+&lt;li&gt;08:13-08:54：🚇 通勤&lt;/li&gt;
+&lt;li&gt;07:43-08:13：👼 孩子&lt;/li&gt;
+&lt;li&gt;07:26-07:43：🍚 吃饭&lt;/li&gt;
+&lt;li&gt;06:51-07:26：👨‍🍳 做饭&lt;/li&gt;
+&lt;li&gt;06:33-06:51：🛀 洗漱&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2024/2024-03-26/ -  2021 malinkang.</description>
+        </item>
     
     
     
         <item>
         <title>☀️ 03月25日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-03-25/</link>
+        <link>http://localhost:1313/posts/2024/2024-03-25/</link>
         <pubDate>Mon, 25 Mar 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-03-25/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-03-25/ -&lt;p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-03-25/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-03-25/ -&lt;p&gt;
 
 
 &lt;iframe src=&#34;https://open.spotify.com/embed/track/25640625&#34;
@@ -72,18 +138,18 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/36615020/&#34;&gt;想读笔记的方法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2024/2024-03-25/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-03-25/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 02月29日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-02-29/</link>
+        <link>http://localhost:1313/posts/2024/2024-02-29/</link>
         <pubDate>Thu, 29 Feb 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-02-29/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-02-29/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-02-29/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-02-29/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离退休还有2017天 □□□□□□□□□□ 7%&lt;/li&gt;
@@ -96,18 +162,18 @@
 &lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
 &lt;p&gt;今天在多邻国学习了2分钟，完成了1单元，共获得20经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-02-29/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-02-29/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 02月28日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-02-28/</link>
+        <link>http://localhost:1313/posts/2024/2024-02-28/</link>
         <pubDate>Wed, 28 Feb 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-02-28/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-02-28/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-02-28/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-02-28/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离退休还有2018天 □□□□□□□□□□ 7%&lt;/li&gt;
@@ -120,18 +186,18 @@
 &lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
 &lt;p&gt;今天在多邻国学习了3分钟，完成了2单元，共获得70经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-02-28/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-02-28/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 02月27日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-02-27/</link>
+        <link>http://localhost:1313/posts/2024/2024-02-27/</link>
         <pubDate>Tue, 27 Feb 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-02-27/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-02-27/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-02-27/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-02-27/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离退休还有2019天 □□□□□□□□□□ 7%&lt;/li&gt;
@@ -144,18 +210,18 @@
 &lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
 &lt;p&gt;今天在多邻国学习了11分钟，完成了7单元，共获得235经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2024/2024-02-27/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-02-27/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 02月26日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-02-26/</link>
+        <link>http://localhost:1313/posts/2024/2024-02-26/</link>
         <pubDate>Mon, 26 Feb 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-02-26/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-02-26/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-02-26/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-02-26/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离退休还有2020天 □□□□□□□□□□ 7%&lt;/li&gt;
@@ -172,18 +238,18 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1X44y1v7hZ&#34;&gt;9.7分历史权谋国剧！开局就是一场“洗钱”大戏！《大明王朝1566》P1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2024/2024-02-26/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-02-26/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 02月25日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-02-25/</link>
+        <link>http://localhost:1313/posts/2024/2024-02-25/</link>
         <pubDate>Sun, 25 Feb 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-02-25/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-02-25/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-02-25/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-02-25/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离退休还有2021天 □□□□□□□□□□ 7%&lt;/li&gt;
@@ -200,18 +266,18 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1oH4y1773N&#34;&gt;陈翔六点半：仿佛如同一场梦，我们如此短暂的相逢&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2024/2024-02-25/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-02-25/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 02月24日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-02-24/</link>
+        <link>http://localhost:1313/posts/2024/2024-02-24/</link>
         <pubDate>Sat, 24 Feb 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-02-24/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-02-24/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-02-24/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-02-24/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离退休还有2022天 □□□□□□□□□□ 7%&lt;/li&gt;
@@ -228,18 +294,18 @@
 &lt;ul&gt;
 &lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/18b42403643425f33766e32475a324b4c364566366c68366b66344b4a386d64d50&#34;&gt;《打造第二大脑》&lt;/a&gt;2分钟&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2024/2024-02-24/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-02-24/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 02月23日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2024/2024-02-23/</link>
+        <link>http://localhost:1313/posts/2024/2024-02-23/</link>
         <pubDate>Fri, 23 Feb 2024 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2024/2024-02-23/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2024/2024-02-23/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-02-23/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-02-23/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离退休还有2023天 □□□□□□□□□□ 7%&lt;/li&gt;
@@ -257,18 +323,18 @@
 &lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1uu4m1A76Y&#34;&gt;体验去多邻国上班，这可能是我去过最爽的公司!&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Xv421k7nH&#34;&gt;利用github把微信读书笔记同步到Notion&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2024/2024-02-23/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-02-23/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 12月25日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-12-25/</link>
+        <link>http://localhost:1313/posts/2023/2023-12-25/</link>
         <pubDate>Mon, 25 Dec 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-12-25/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-12-25/ -&lt;p&gt;今天天气晴，空气质量60，最高温度1°C，最低温度-12°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-12-25/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-12-25/ -&lt;p&gt;今天天气晴，空气质量60，最高温度1°C，最低温度-12°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离退休还有2083天 □□□□□□□□□□ 4%&lt;/li&gt;
@@ -286,35 +352,7 @@
 &lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/6e732140813ab6e60g013caf&#34;&gt;《我的阿勒泰》&lt;/a&gt;23分钟&lt;/li&gt;
 &lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/c653236071e55adbc6552fe&#34;&gt;《卡拉马佐夫兄弟（套装上下册）（陀思妥耶夫斯基文集2015）》&lt;/a&gt;111分钟&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-12-25/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☁️ 12月24日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-12-24/</link>
-        <pubDate>Sun, 24 Dec 2023 15:37:00 +0800</pubDate>
-        
-        <guid>https://journal.malinkang.com/posts/2023/2023-12-24/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-12-24/ -&lt;p&gt;今天天气大部多云，空气质量28，最高温度0°C，最低温度-11°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;距离退休还有2084天 □□□□□□□□□□ 4%&lt;/li&gt;
-&lt;li&gt;距离高考还有6009天 ■□□□□□□□□□ 10%&lt;/li&gt;
-&lt;li&gt;距离春节还有47天 ■■■■■■■■□□ 87%&lt;/li&gt;
-&lt;li&gt;距离元旦还有7天 ■■■■■■■■■□ 97%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
-&lt;p&gt;今天在多邻国学习了33分钟，完成了7单元，共获得214经验&lt;/p&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;19:10-19:55：👼孩子：孩子洗澡，给孩子洗衣服。&lt;/li&gt;
-&lt;li&gt;19:56-20:31：🛀洗漱：洗澡，洗衣服。&lt;/li&gt;
-&lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-12-24/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-12-25/ -  2021 malinkang.</description>
         </item>
     
     

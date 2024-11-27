@@ -2,24 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linkang&#39;s life</title>
-    <link>https://journal.malinkang.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on linkang&#39;s life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2024 15:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 15:43:00 +0800</lastBuildDate>
     
-        <atom:link href="https://journal.malinkang.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>☀️ 11月01日 星期三</title>
+        <link>http://localhost:1313/posts/2023/2023-11-01/</link>
+        <pubDate>Wed, 01 Nov 2023 15:37:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2023/2023-11-01/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-11-01/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;距离退休还有2191天&lt;/li&gt;
+&lt;li&gt;距离高考还有6062天 □□□□□□□□□□ 9%&lt;/li&gt;
+&lt;li&gt;距离春节还有100天 ■■■■■■■□□□ 73%&lt;/li&gt;
+&lt;li&gt;距离元旦还有60天 ■■■■■■■■□□ 83%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;跑步：8.286100000000001km&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+- http://localhost:1313/posts/2023/2023-11-01/ -  2021 malinkang.</description>
+        </item>
     
     
     
         <item>
         <title>☁️ 10月31日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-31/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-31/</link>
         <pubDate>Tue, 31 Oct 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-31/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-31/ -&lt;p&gt;今天天气局部多云，空气质量81，最高温度22°C，最低温度12°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-31/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-31/ -&lt;p&gt;今天天气局部多云，空气质量81，最高温度22°C，最低温度12°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6063天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -29,18 +54,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-31/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-31/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 10月30日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-30/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-30/</link>
         <pubDate>Mon, 30 Oct 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-30/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-30/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-30/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-30/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6064天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -54,18 +79,18 @@
 &lt;ul&gt;
 &lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/6e732140813ab6e60g013caf&#34;&gt;《我的阿勒泰》&lt;/a&gt;28分钟&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-30/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-30/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 10月29日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-29/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-29/</link>
         <pubDate>Sun, 29 Oct 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-29/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-29/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-29/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-29/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6065天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -75,18 +100,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-29/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-29/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 10月28日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-28/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-28/</link>
         <pubDate>Sat, 28 Oct 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-28/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-28/ -&lt;p&gt;今天天气晴，空气质量65，最高温度21°C，最低温度7°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-28/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-28/ -&lt;p&gt;今天天气晴，空气质量65，最高温度21°C，最低温度7°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6066天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -99,18 +124,18 @@
 &lt;li&gt;跑步：10.2953km&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-28/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-28/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 10月27日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-27/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-27/</link>
         <pubDate>Fri, 27 Oct 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-27/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-27/ -&lt;p&gt;今天天气晴，空气质量64，最高温度21°C，最低温度6°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-27/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-27/ -&lt;p&gt;今天天气晴，空气质量64，最高温度21°C，最低温度6°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6067天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -123,18 +148,18 @@
 &lt;li&gt;跑步：8.2881km&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-27/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-27/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 10月26日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-26/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-26/</link>
         <pubDate>Thu, 26 Oct 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-26/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-26/ -&lt;p&gt;今天天气晴，空气质量43，最高温度20°C，最低温度8°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-26/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-26/ -&lt;p&gt;今天天气晴，空气质量43，最高温度20°C，最低温度8°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6068天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -144,18 +169,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-26/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-26/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 10月25日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-25/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-25/</link>
         <pubDate>Wed, 25 Oct 2023 15:38:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-25/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-25/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-25/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-25/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6069天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -176,18 +201,18 @@
 &lt;ul&gt;
 &lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/6e732140813ab6e60g013caf&#34;&gt;《我的阿勒泰》&lt;/a&gt;11分钟&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-25/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-25/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 10月24日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-24/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-24/</link>
         <pubDate>Tue, 24 Oct 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-24/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-24/ -&lt;p&gt;今天天气晴，空气质量153，最高温度24°C，最低温度7°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-24/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-24/ -&lt;p&gt;今天天气晴，空气质量153，最高温度24°C，最低温度7°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6070天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -200,18 +225,18 @@
 &lt;ul&gt;
 &lt;li&gt;15:56-16:21：未设置&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-24/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-24/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 10月23日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-23/</link>
+        <link>http://localhost:1313/posts/2023/2023-10-23/</link>
         <pubDate>Mon, 23 Oct 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-23/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-23/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-10-23/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-10-23/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离高考还有6071天 □□□□□□□□□□ 9%&lt;/li&gt;
@@ -224,50 +249,7 @@
 &lt;li&gt;跑步：8.2953km&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-10-23/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 10月22日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-10-22/</link>
-        <pubDate>Sun, 22 Oct 2023 15:37:00 +0800</pubDate>
-        
-        <guid>https://journal.malinkang.com/posts/2023/2023-10-22/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-10-22/ -&lt;p&gt;今天天气晴，空气质量42，最高温度21°C，最低温度5°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;距离高考还有6072天 □□□□□□□□□□ 9%&lt;/li&gt;
-&lt;li&gt;距离春节还有110天 ■■■■■■■□□□ 71%&lt;/li&gt;
-&lt;li&gt;距离元旦还有70天 ■■■■■■■■□□ 80%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;h2 id=&#34;-今天看了啥&#34;&gt;📺 今天看了啥&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1PX4y1b7yn&#34;&gt;奥林匹克森林公园北园超详细攻略&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV19w411X7c8&#34;&gt;这家店让我感觉物价瞬间回到十年前！四元一大碗面！&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-
-
-
-
-
-
-&lt;iframe src= &#34;https://mastodon.social/@malinkang/111279315084388649/embed&#34; class=&#34;mastodon-embed&#34; style=&#34;max-width: 100%; border: 0&#34; width=&#34;100%&#34; height=&#34;auto&#34; allowfullscreen=&#34;allowfullscreen&#34;&gt;&lt;/iframe&gt;&lt;script src=&#34;https://mastodon.social/embed.js&#34; async=&#34;async&#34;&gt;&lt;/script&gt;
-
-
-
-
-
-
-
-&lt;iframe src= &#34;https://mastodon.social/@malinkang/111279382265073317/embed&#34; class=&#34;mastodon-embed&#34; style=&#34;max-width: 100%; border: 0&#34; width=&#34;100%&#34; height=&#34;auto&#34; allowfullscreen=&#34;allowfullscreen&#34;&gt;&lt;/iframe&gt;&lt;script src=&#34;https://mastodon.social/embed.js&#34; async=&#34;async&#34;&gt;&lt;/script&gt;
-
-- https://journal.malinkang.com/posts/2023/2023-10-22/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-10-23/ -  2021 malinkang.</description>
         </item>
     
     

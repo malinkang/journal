@@ -2,24 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linkang&#39;s life</title>
-    <link>https://journal.malinkang.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on linkang&#39;s life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2024 15:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 15:43:00 +0800</lastBuildDate>
     
-        <atom:link href="https://journal.malinkang.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>02月06日 星期日</title>
+        <link>http://localhost:1313/posts/2022/2022-02-06/</link>
+        <pubDate>Sun, 06 Feb 2022 15:57:38 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-02-06/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-02-06/ -&lt;p&gt;今天是2022年02月06日 星期日，今天天气大部晴朗，最高温度4°C，最低温度-7°C，空气质量18。距离元旦还有328天。距离春节还有-5天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💳  信用卡还款&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-02-06/ -  2021 malinkang.</description>
+        </item>
     
     
     
         <item>
         <title>02月05日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-02-05/</link>
+        <link>http://localhost:1313/posts/2022/2022-02-05/</link>
         <pubDate>Sat, 05 Feb 2022 15:58:41 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-02-05/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-02-05/ -&lt;p&gt;今天是2022年02月05日 星期六，今天天气大部晴朗，最高温度1°C，最低温度-8°C，空气质量20。距离元旦还有329天。距离春节还有-4天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-02-05/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-02-05/ -&lt;p&gt;今天是2022年02月05日 星期六，今天天气大部晴朗，最高温度1°C，最低温度-8°C，空气质量20。距离元旦还有329天。距离春节还有-4天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
@@ -29,18 +51,18 @@
 &lt;ul&gt;
 &lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-02-05/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-02-05/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>02月04日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-02-04/</link>
+        <link>http://localhost:1313/posts/2022/2022-02-04/</link>
         <pubDate>Fri, 04 Feb 2022 15:57:29 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-02-04/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-02-04/ -&lt;p&gt;今天是2022年02月04日 星期五，今天天气大部晴朗，最高温度3°C，最低温度-8°C，空气质量22。距离元旦还有330天。距离春节还有-3天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-02-04/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-02-04/ -&lt;p&gt;今天是2022年02月04日 星期五，今天天气大部晴朗，最高温度3°C，最低温度-8°C，空气质量22。距离元旦还有330天。距离春节还有-3天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
@@ -53,18 +75,18 @@
 &lt;ul&gt;
 &lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-02-04/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-02-04/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>02月03日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-02-03/</link>
+        <link>http://localhost:1313/posts/2022/2022-02-03/</link>
         <pubDate>Thu, 03 Feb 2022 15:57:45 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-02-03/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-02-03/ -&lt;p&gt;今天是2022年02月03日 星期四，今天天气大部晴朗，最高温度4°C，最低温度-8°C，空气质量16。距离元旦还有331天。距离春节还有-2天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-02-03/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-02-03/ -&lt;p&gt;今天是2022年02月03日 星期四，今天天气大部晴朗，最高温度4°C，最低温度-8°C，空气质量16。距离元旦还有331天。距离春节还有-2天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
@@ -76,18 +98,18 @@
 &lt;ul&gt;
 &lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-02-03/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-02-03/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>02月02日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-02-02/</link>
+        <link>http://localhost:1313/posts/2022/2022-02-02/</link>
         <pubDate>Wed, 02 Feb 2022 15:57:50 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-02-02/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-02-02/ -&lt;p&gt;今天是2022年02月02日 星期三，今天天气大部晴朗，最高温度3°C，最低温度-10°C，空气质量16。距离元旦还有332天。距离春节还有-1天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-02-02/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-02-02/ -&lt;p&gt;今天是2022年02月02日 星期三，今天天气大部晴朗，最高温度3°C，最低温度-10°C，空气质量16。距离元旦还有332天。距离春节还有-1天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
@@ -99,18 +121,18 @@
 &lt;ul&gt;
 &lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-02-02/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-02-02/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>01月30日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-01-30/</link>
+        <link>http://localhost:1313/posts/2022/2022-01-30/</link>
         <pubDate>Sun, 30 Jan 2022 15:57:39 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-01-30/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-01-30/ -&lt;p&gt;今天是2022年01月30日 星期日，今天天气大部晴朗，最高温度4°C，最低温度-8°C，空气质量50。距离元旦还有335天。距离春节还有1天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-30/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-30/ -&lt;p&gt;今天是2022年01月30日 星期日，今天天气大部晴朗，最高温度4°C，最低温度-8°C，空气质量50。距离元旦还有335天。距离春节还有1天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
@@ -125,18 +147,18 @@
 &lt;ul&gt;
 &lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-01-30/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-01-30/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>01月29日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-01-29/</link>
+        <link>http://localhost:1313/posts/2022/2022-01-29/</link>
         <pubDate>Sat, 29 Jan 2022 15:57:40 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-01-29/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-01-29/ -&lt;p&gt;今天是2022年01月29日 星期六，今天天气大部晴朗，最高温度2°C，最低温度-8°C，空气质量16。距离元旦还有336天。距离春节还有2天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-29/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-29/ -&lt;p&gt;今天是2022年01月29日 星期六，今天天气大部晴朗，最高温度2°C，最低温度-8°C，空气质量16。距离元旦还有336天。距离春节还有2天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
@@ -146,18 +168,18 @@
 &lt;ul&gt;
 &lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-01-29/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-01-29/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>01月28日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-01-28/</link>
+        <link>http://localhost:1313/posts/2022/2022-01-28/</link>
         <pubDate>Fri, 28 Jan 2022 15:57:46 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-01-28/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-01-28/ -&lt;p&gt;今天是2022年01月28日 星期五，今天天气大部晴朗，最高温度2°C，最低温度-8°C，空气质量14。距离元旦还有337天。距离春节还有3天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-28/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-28/ -&lt;p&gt;今天是2022年01月28日 星期五，今天天气大部晴朗，最高温度2°C，最低温度-8°C，空气质量14。距离元旦还有337天。距离春节还有3天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
@@ -173,18 +195,18 @@
 &lt;ul&gt;
 &lt;li&gt;4:31~7:07 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-01-28/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-01-28/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>01月27日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-01-27/</link>
+        <link>http://localhost:1313/posts/2022/2022-01-27/</link>
         <pubDate>Thu, 27 Jan 2022 15:57:52 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-01-27/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-01-27/ -&lt;p&gt;今天是2022年01月27日 星期四，今天天气大部晴朗，最高温度1°C，最低温度-8°C，空气质量22。距离元旦还有338天。距离春节还有4天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-27/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-27/ -&lt;p&gt;今天是2022年01月27日 星期四，今天天气大部晴朗，最高温度1°C，最低温度-8°C，空气质量22。距离元旦还有338天。距离春节还有4天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
@@ -196,18 +218,18 @@
 &lt;ul&gt;
 &lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-01-27/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-01-27/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>01月26日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-01-26/</link>
+        <link>http://localhost:1313/posts/2022/2022-01-26/</link>
         <pubDate>Wed, 26 Jan 2022 15:57:34 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-01-26/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-01-26/ -&lt;p&gt;今天是2022年01月26日 星期三，今天天气大部晴朗，最高温度6°C，最低温度-7°C，空气质量17。距离元旦还有339天。距离春节还有5天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-26/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-26/ -&lt;p&gt;今天是2022年01月26日 星期三，今天天气大部晴朗，最高温度6°C，最低温度-7°C，空气质量17。距离元旦还有339天。距离春节还有5天。睡眠时长0小时。体重0斤。&lt;/p&gt;
 &lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
@@ -219,31 +241,7 @@
 &lt;ul&gt;
 &lt;li&gt;11:46~7:03 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-01-26/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>01月25日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-01-25/</link>
-        <pubDate>Tue, 25 Jan 2022 15:57:37 +0800</pubDate>
-        
-        <guid>https://journal.malinkang.com/posts/2022/2022-01-25/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-01-25/ -&lt;p&gt;今天是2022年01月25日 星期二，今天天气有雾，最高温度2°C，最低温度-4°C，空气质量180。距离元旦还有340天。距离春节还有6天。睡眠时长0小时。体重0斤。&lt;/p&gt;
-&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 亿通行切换为微信支付&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 打新&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;10:59~11:00 睡觉&lt;/li&gt;
-&lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-01-25/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-01-26/ -  2021 malinkang.</description>
         </item>
     
     

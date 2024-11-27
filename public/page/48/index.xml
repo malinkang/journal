@@ -2,24 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linkang&#39;s life</title>
-    <link>https://journal.malinkang.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on linkang&#39;s life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2024 15:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 15:43:00 +0800</lastBuildDate>
     
-        <atom:link href="https://journal.malinkang.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>☀️ 11月10日 星期四</title>
+        <link>http://localhost:1313/posts/2022/2022-11-10/</link>
+        <pubDate>Thu, 10 Nov 2022 15:46:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-11-10/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-10/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有51天 ■■■■■■■■□□ 85%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+- http://localhost:1313/posts/2022/2022-11-10/ -  2021 malinkang.</description>
+        </item>
     
     
     
         <item>
         <title>☀️ 11月09日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-09/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-09/</link>
         <pubDate>Wed, 09 Nov 2022 15:45:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-09/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-09/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-09/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-09/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年还有52天 ■■■■■■■■□□ 85%&lt;/li&gt;
 &lt;/ul&gt;
@@ -31,22 +50,18 @@
 &lt;li&gt;00:01-07:20：😴睡觉，AutoSleep自动同步&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;今天带孩子去儿童医院看了骨科，眼科和皮肤科。下午带妈妈去看牙。&lt;/p&gt;&amp;mdash; 马林康 (@Carve_Time) &lt;a href=&#34;https://twitter.com/Carve_Time/status/1590217904645365761?ref_src=twsrc%5Etfw&#34;&gt;November 9, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-- https://journal.malinkang.com/posts/2022/2022-11-09/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-09/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月08日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-08/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-08/</link>
         <pubDate>Tue, 08 Nov 2022 15:44:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-08/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-08/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-08/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-08/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年还有53天 ■■■■■■■■□□ 85%&lt;/li&gt;
 &lt;/ul&gt;
@@ -54,22 +69,18 @@
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;去儿童医院 &lt;a href=&#34;https://t.co/NbkPPlF8EM&#34;&gt;https://t.co/NbkPPlF8EM&lt;/a&gt; &lt;a href=&#34;https://t.co/kDOqFUQEj6&#34;&gt;pic.twitter.com/kDOqFUQEj6&lt;/a&gt;&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1589789123858075648?ref_src=twsrc%5Etfw&#34;&gt;November 8, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-- https://journal.malinkang.com/posts/2022/2022-11-08/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-08/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月07日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-07/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-07/</link>
         <pubDate>Mon, 07 Nov 2022 15:43:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-07/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-07/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-07/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-07/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年还有54天 ■■■■■■■■□□ 84%&lt;/li&gt;
 &lt;/ul&gt;
@@ -80,22 +91,18 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;今天买了新的电动单车电池。&lt;/p&gt;&amp;mdash; 马林康 (@Carve_Time) &lt;a href=&#34;https://twitter.com/Carve_Time/status/1589627297518485505?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-- https://journal.malinkang.com/posts/2022/2022-11-07/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-07/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月06日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-06/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-06/</link>
         <pubDate>Sun, 06 Nov 2022 15:42:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-06/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-06/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-06/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-06/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年还有55天 ■■■■■■■■□□ 84%&lt;/li&gt;
 &lt;/ul&gt;
@@ -111,22 +118,18 @@
 &lt;li&gt;07:19-07:34：学英语&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;drx太励志了！&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1589180560131653632?ref_src=twsrc%5Etfw&#34;&gt;November 6, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-- https://journal.malinkang.com/posts/2022/2022-11-06/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-06/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月05日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-05/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-05/</link>
         <pubDate>Sat, 05 Nov 2022 15:46:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-05/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-05/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-05/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-05/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年还有56天 ■■■■■■■■□□ 84%&lt;/li&gt;
 &lt;/ul&gt;
@@ -134,30 +137,18 @@
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/ISjblIgRpi&#34;&gt;https://t.co/ISjblIgRpi&lt;/a&gt; &lt;a href=&#34;https://t.co/2MXPGmUZT3&#34;&gt;pic.twitter.com/2MXPGmUZT3&lt;/a&gt;&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1588782431628414976?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;刚刚发了照片 &lt;a href=&#34;https://t.co/9fF5dlCckl&#34;&gt;https://t.co/9fF5dlCckl&lt;/a&gt;&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1588776687491325954?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/2ln1YZc7Xw&#34;&gt;https://t.co/2ln1YZc7Xw&lt;/a&gt; &lt;a href=&#34;https://t.co/aeqyMg87OP&#34;&gt;pic.twitter.com/aeqyMg87OP&lt;/a&gt;&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1588776986192879616?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;/p&gt;
-- https://journal.malinkang.com/posts/2022/2022-11-05/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-05/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月04日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-04/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-04/</link>
         <pubDate>Fri, 04 Nov 2022 15:57:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-04/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-04/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-04/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-04/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年还有57天 ■■■■■■■■□□ 84%&lt;/li&gt;
 &lt;/ul&gt;
@@ -168,18 +159,18 @@
 &lt;li&gt;09:09-09:21：学英语&lt;/li&gt;
 &lt;li&gt;08:33-09:07：🚇上班&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-11-04/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-04/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月03日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-03/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-03/</link>
         <pubDate>Thu, 03 Nov 2022 15:48:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-03/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-03/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-03/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-03/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年还有58天 ■■■■■■■■□□ 83%&lt;/li&gt;
 &lt;/ul&gt;
@@ -194,26 +185,18 @@
 &lt;li&gt;07:15-07:31：🛀洗漱&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;取消关注了一些人，时间线干净多了。&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1588186780200640512?ref_src=twsrc%5Etfw&#34;&gt;November 3, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;夏が恋しい &lt;a href=&#34;https://t.co/ALyVf6LPB7&#34;&gt;pic.twitter.com/ALyVf6LPB7&lt;/a&gt;&lt;/p&gt;&amp;mdash; おくで (@photo_okina) &lt;a href=&#34;https://twitter.com/photo_okina/status/1588103961395204096?ref_src=twsrc%5Etfw&#34;&gt;November 3, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;/p&gt;
-- https://journal.malinkang.com/posts/2022/2022-11-03/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-03/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月02日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-02/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-02/</link>
         <pubDate>Wed, 02 Nov 2022 15:48:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-02/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-02/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-02/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-02/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年还有59天 ■■■■■■■■□□ 83%&lt;/li&gt;
 &lt;/ul&gt;
@@ -247,30 +230,18 @@
 &lt;li&gt;23:53-07:21：😴睡觉，AutoSleep自动同步&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;咋了？&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1587716798278815744?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;测试测试😀&lt;/p&gt;&amp;mdash; 马林康 (@Carve_Time) &lt;a href=&#34;https://twitter.com/Carve_Time/status/1587645171159924736?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;今日睡眠💤 &lt;a href=&#34;https://t.co/sVzhymNH0p&#34;&gt;pic.twitter.com/sVzhymNH0p&lt;/a&gt;&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1587638671611551744?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;/p&gt;
-- https://journal.malinkang.com/posts/2022/2022-11-02/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-02/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 11月01日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-11-01/</link>
+        <link>http://localhost:1313/posts/2022/2022-11-01/</link>
         <pubDate>Tue, 01 Nov 2022 01:44:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2022/2022-11-01/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-11-01/ -&lt;p&gt;今天天气大部晴朗无云，空气质量54，最高温度14.51°C，最低温度0.83°C。
+        <guid>http://localhost:1313/posts/2022/2022-11-01/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-01/ -&lt;p&gt;今天天气大部晴朗无云，空气质量54，最高温度14.51°C，最低温度0.83°C。
 &lt;meting-js server=&#34;netease&#34;  url=&#34;&#34; name=&#34;&#34; cover=&#34;&#34; type=&#34;song&#34; id=&#34;27810022&#34;&gt;&lt;/meting-js&gt;&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
@@ -288,39 +259,7 @@
 &lt;li&gt;09:44-10:16：🚇上班&lt;/li&gt;
 &lt;li&gt;07:19-07:46：🛀洗漱&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2022/2022-11-01/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 10月16日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2022/2022-10-16/</link>
-        <pubDate>Sun, 16 Oct 2022 14:25:00 +0800</pubDate>
-        
-        <guid>https://journal.malinkang.com/posts/2022/2022-10-16/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2022/2022-10-16/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有75天 ■■■■■■■□□□ 79%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《夜晚的潜水艇》24 分钟&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;体重：143.9斤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;08:17-08:32：💧买水&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/dMT6Lldi4y&#34;&gt;pic.twitter.com/dMT6Lldi4y&lt;/a&gt;&lt;/p&gt;&amp;mdash; 马林康 (@malinkang) &lt;a href=&#34;https://twitter.com/malinkang/status/1581423201455812608?ref_src=twsrc%5Etfw&#34;&gt;October 15, 2022&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-- https://journal.malinkang.com/posts/2022/2022-10-16/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-11-01/ -  2021 malinkang.</description>
         </item>
     
     

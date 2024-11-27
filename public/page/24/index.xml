@@ -2,24 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linkang&#39;s life</title>
-    <link>https://journal.malinkang.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on linkang&#39;s life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2024 15:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 15:43:00 +0800</lastBuildDate>
     
-        <atom:link href="https://journal.malinkang.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>🌫 08月07日 星期一</title>
+        <link>http://localhost:1313/posts/2023/2023-08-07/</link>
+        <pubDate>Mon, 07 Aug 2023 15:37:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2023/2023-08-07/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-08-07/ -&lt;p&gt;今天天气雾霾，空气质量52，最高温度25°C，最低温度22°C。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;距离春节还有186天 ■■■■■□□□□□ 51%&lt;/li&gt;
+&lt;li&gt;距离元旦还有146天 ■■■■■□□□□□ 59%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+- http://localhost:1313/posts/2023/2023-08-07/ -  2021 malinkang.</description>
+        </item>
     
     
     
         <item>
         <title>☀️ 08月06日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-08-06/</link>
+        <link>http://localhost:1313/posts/2023/2023-08-06/</link>
         <pubDate>Sun, 06 Aug 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-08-06/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-08-06/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-08-06/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-08-06/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有187天 ■■■■■□□□□□ 51%&lt;/li&gt;
@@ -28,18 +48,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-08-06/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-08-06/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☁️ 08月05日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-08-05/</link>
+        <link>http://localhost:1313/posts/2023/2023-08-05/</link>
         <pubDate>Sat, 05 Aug 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-08-05/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-08-05/ -&lt;p&gt;今天天气大部多云，空气质量16，最高温度35°C，最低温度25°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-08-05/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-08-05/ -&lt;p&gt;今天天气大部多云，空气质量16，最高温度35°C，最低温度25°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有188天 ■■■■■□□□□□ 50%&lt;/li&gt;
@@ -48,18 +68,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-08-05/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-08-05/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☁️ 08月04日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-08-04/</link>
+        <link>http://localhost:1313/posts/2023/2023-08-04/</link>
         <pubDate>Fri, 04 Aug 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-08-04/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-08-04/ -&lt;p&gt;今天天气多云，空气质量21，最高温度31°C，最低温度26°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-08-04/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-08-04/ -&lt;p&gt;今天天气多云，空气质量21，最高温度31°C，最低温度26°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有189天 ■■■■■□□□□□ 50%&lt;/li&gt;
@@ -68,18 +88,18 @@
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- https://journal.malinkang.com/posts/2023/2023-08-04/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-08-04/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 08月03日 星期四</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-08-03/</link>
+        <link>http://localhost:1313/posts/2023/2023-08-03/</link>
         <pubDate>Thu, 03 Aug 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-08-03/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-08-03/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-08-03/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-08-03/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有190天 ■■■■■□□□□□ 50%&lt;/li&gt;
@@ -145,18 +165,18 @@
 	
 
 	
-		&lt;script src=&#34;https://journal.malinkang.com/shortcode-gallery/jquery-3.7.0.min.js&#34;&gt;&lt;/script&gt;
+		&lt;script src=&#34;http://localhost:1313/shortcode-gallery/jquery-3.7.0.min.js&#34;&gt;&lt;/script&gt;
 	
 	
 	
-		&lt;script src=&#34;https://journal.malinkang.com/shortcode-gallery/lazy/jquery.lazy.min.js&#34;&gt;&lt;/script&gt;
+		&lt;script src=&#34;http://localhost:1313/shortcode-gallery/lazy/jquery.lazy.min.js&#34;&gt;&lt;/script&gt;
 	
 
-	&lt;script src=&#34;https://journal.malinkang.com/shortcode-gallery/swipebox/js/jquery.swipebox.min.js&#34;&gt;&lt;/script&gt;
-	&lt;link rel=&#34;stylesheet&#34; href=&#34;https://journal.malinkang.com/shortcode-gallery/swipebox/css/swipebox.min.css&#34;&gt;
+	&lt;script src=&#34;http://localhost:1313/shortcode-gallery/swipebox/js/jquery.swipebox.min.js&#34;&gt;&lt;/script&gt;
+	&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/shortcode-gallery/swipebox/css/swipebox.min.css&#34;&gt;
 
-	&lt;script src=&#34;https://journal.malinkang.com/shortcode-gallery/justified_gallery/jquery.justifiedGallery.min.js&#34;&gt;&lt;/script&gt;
-	&lt;link rel=&#34;stylesheet&#34; href=&#34;https://journal.malinkang.com/shortcode-gallery/justified_gallery/justifiedGallery.min.css&#34;/&gt;
+	&lt;script src=&#34;http://localhost:1313/shortcode-gallery/justified_gallery/jquery.justifiedGallery.min.js&#34;&gt;&lt;/script&gt;
+	&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/shortcode-gallery/justified_gallery/justifiedGallery.min.css&#34;/&gt;
 
 
 &lt;style&gt;
@@ -198,7 +218,7 @@
 				
 					
 				
-				&lt;a href=&#34;https://journal.malinkang.com/posts/2023/2023-08-03/images/2023-08-03-15-25-35.png&#34; 
+				&lt;a href=&#34;http://localhost:1313/posts/2023/2023-08-03/images/2023-08-03-15-25-35.png&#34; 
 					class=&#34;galleryImg&#34;
 					
 					&gt;
@@ -212,7 +232,7 @@
 								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAEgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/AEtNNjhuITefu7eUPh156DIz9fz4NP1Wz0&amp;#43;ONDYybzuwQecD1xivSjdyRXskPlNFGqsRI7NtPTvnA5P86lbU4Laza5luonUPsVoyzDPXB681kkfSRzepKafI35J6fkeOG1QkkqM/Sk&amp;#43;yp/dH5V7jFKs0SSpyrqGBx1Bp/PpVcoPOorR0/wDyb/gGSz6impTiVkNmVPl7JAHB&amp;#43;X1P&amp;#43;9&amp;#43;lSm4uV092t7eWZ/Mxhp0yB65yR&amp;#43;HXmqcdvANWnu47mQmYlNjwsUDYA4PQ/dP51ckS4&amp;#43;zGJLiCGTzAxJhIBH0J65xzTR4UOVPW3zv&amp;#43;heiZniRpE8tyoLJnO09xmncVFFKoiQPKrttGWU4BPr1p/mx/3x&amp;#43;dUZPc/9k=&#34;
 							
 							class=&#34;lazy&#34;
-							data-src=&#34;https://journal.malinkang.com/posts/2023/2023-08-03/images/2023-08-03-15-25-35_hu1739837444702437469.png&#34;
+							data-src=&#34;http://localhost:1313/posts/2023/2023-08-03/images/2023-08-03-15-25-35_hu1739837444702437469.png&#34;
 						
 
 						
@@ -247,7 +267,7 @@
 				
 					
 				
-				&lt;a href=&#34;https://journal.malinkang.com/posts/2023/2023-08-03/images/2023-08-03-14-22-53.png&#34; 
+				&lt;a href=&#34;http://localhost:1313/posts/2023/2023-08-03/images/2023-08-03-14-22-53.png&#34; 
 					class=&#34;galleryImg&#34;
 					
 					&gt;
@@ -261,7 +281,7 @@
 								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAABgMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APU7UP5ZD54PBJOT&amp;#43;YqbFZ6R6jkmM26A5ztXqcn2p/l6p/z1i/L/AOtXXyeaOD2n91l9eWPBH1p&amp;#43;KhVfLO51iBOfm7nmn&amp;#43;ZH/eSsDfTof//Z&#34;
 							
 							class=&#34;lazy&#34;
-							data-src=&#34;https://journal.malinkang.com/posts/2023/2023-08-03/images/2023-08-03-14-22-53_hu12144670878495879816.png&#34;
+							data-src=&#34;http://localhost:1313/posts/2023/2023-08-03/images/2023-08-03-14-22-53_hu12144670878495879816.png&#34;
 						
 
 						
@@ -324,18 +344,18 @@
 	});
 &lt;/script&gt;
 
-- https://journal.malinkang.com/posts/2023/2023-08-03/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-08-03/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☀️ 08月02日 星期三</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-08-02/</link>
+        <link>http://localhost:1313/posts/2023/2023-08-02/</link>
         <pubDate>Wed, 02 Aug 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-08-02/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-08-02/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-08-02/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-08-02/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有191天 ■■■■■□□□□□ 50%&lt;/li&gt;
@@ -351,18 +371,18 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1U94y1Y77E&#34;&gt;北京什刹海硬核旅游攻略：一口气看遍49处古迹看点|北京旅游景点推荐|北京旅游攻略&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-08-02/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-08-02/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>🌧 08月01日 星期二</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-08-01/</link>
+        <link>http://localhost:1313/posts/2023/2023-08-01/</link>
         <pubDate>Tue, 01 Aug 2023 15:38:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-08-01/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-08-01/ -&lt;p&gt;今天天气下雨，空气质量18，最高温度30°C，最低温度24°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-08-01/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-08-01/ -&lt;p&gt;今天天气下雨，空气质量18，最高温度30°C，最低温度24°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有192天 ■■■■□□□□□□ 49%&lt;/li&gt;
@@ -376,18 +396,18 @@
 &lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/e1e32b00729fc94fe1e824d&#34;&gt;《纳瓦尔宝典》&lt;/a&gt;36分钟&lt;/li&gt;
 &lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/4b4327a0716d376e4b489f0&#34;&gt;《巨人的工具》&lt;/a&gt;36分钟&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-08-01/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-08-01/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>🌧 07月31日 星期一</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-07-31/</link>
+        <link>http://localhost:1313/posts/2023/2023-07-31/</link>
         <pubDate>Mon, 31 Jul 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-07-31/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-07-31/ -&lt;p&gt;今天天气暴雨，空气质量8，最高温度27°C，最低温度23°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-07-31/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-07-31/ -&lt;p&gt;今天天气暴雨，空气质量8，最高温度27°C，最低温度23°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有193天 ■■■■□□□□□□ 49%&lt;/li&gt;
@@ -414,18 +434,18 @@
 &lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/27065607/&#34;&gt;想读每周工作4小时&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/10799082/&#34;&gt;想读投资最重要的事&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-07-31/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-07-31/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>🌧 07月30日 星期日</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-07-30/</link>
+        <link>http://localhost:1313/posts/2023/2023-07-30/</link>
         <pubDate>Sun, 30 Jul 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-07-30/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-07-30/ -&lt;p&gt;今天天气暴雨，空气质量10，最高温度26°C，最低温度23°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-07-30/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-07-30/ -&lt;p&gt;今天天气暴雨，空气质量10，最高温度26°C，最低温度23°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有194天 ■■■■□□□□□□ 49%&lt;/li&gt;
@@ -444,18 +464,18 @@
 &lt;li&gt;读&lt;a href=&#34;None&#34;&gt;《悉达多》&lt;/a&gt;4分钟&lt;/li&gt;
 &lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/38c328705c989838ccef849&#34;&gt;《不能错过的英语启蒙：中国孩子的英语路线图》&lt;/a&gt;48分钟&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-07-30/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-07-30/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
         <title>☁️ 07月29日 星期六</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-07-29/</link>
+        <link>http://localhost:1313/posts/2023/2023-07-29/</link>
         <pubDate>Sat, 29 Jul 2023 15:37:00 +0800</pubDate>
         
-        <guid>https://journal.malinkang.com/posts/2023/2023-07-29/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-07-29/ -&lt;p&gt;今天天气多云，空气质量49，最高温度30°C，最低温度23°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2023/2023-07-29/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2023/2023-07-29/ -&lt;p&gt;今天天气多云，空气质量49，最高温度30°C，最低温度23°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;距离春节还有195天 ■■■■□□□□□□ 48%&lt;/li&gt;
@@ -468,42 +488,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1fV411V7fo&#34;&gt;陈翔六点半：有时候蹲在草丛里的真不是盖伦&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-07-29/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☁️ 07月28日 星期五</title>
-        <link>https://journal.malinkang.com/posts/2023/2023-07-28/</link>
-        <pubDate>Fri, 28 Jul 2023 15:37:00 +0800</pubDate>
-        
-        <guid>https://journal.malinkang.com/posts/2023/2023-07-28/</guid>
-        <description>linkang&#39;s life https://journal.malinkang.com/posts/2023/2023-07-28/ -&lt;p&gt;今天天气多云，空气质量22，最高温度30°C，最低温度23°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;距离春节还有196天 ■■■■□□□□□□ 48%&lt;/li&gt;
-&lt;li&gt;距离元旦还有156天 ■■■■■□□□□□ 56%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：8.11km&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;14:20-14:45：🧑‍💻工作：添加admob广告&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-今天看了啥&#34;&gt;📺 今天看了啥&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://movie.douban.com/subject/4218768/&#34;&gt;看过画皮2 畫皮Ⅱ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://movie.douban.com/subject/1308480/&#34;&gt;想看那时花开&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/34c32750717cc24734cf9a6&#34;&gt;《树上的男爵》&lt;/a&gt;4分钟&lt;/li&gt;
-&lt;/ul&gt;
-- https://journal.malinkang.com/posts/2023/2023-07-28/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2023/2023-07-29/ -  2021 malinkang.</description>
         </item>
     
     
