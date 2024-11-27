@@ -1,0 +1,54 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linkang&#39;s life</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on linkang&#39;s life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright> 2021 malinkang.</copyright>
+    <lastBuildDate>Tue, 26 Nov 2024 15:42:00 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>09月06日 星期一</title>
+        <link>http://localhost:1313/posts/2021/2021-09-06/</link>
+        <pubDate>Mon, 06 Sep 2021 15:51:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2021/2021-09-06/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-09-06/ -&lt;h2 id=&#34;工作&#34;&gt;工作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FileManager国际化自测并提测🍅x3&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 首页添加大文件Card、增加排序逻辑🍅x5&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 修复菲律宾语言不显示问题🍅x1&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 自启动Bug修复🍅x3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;运动&#34;&gt;运动&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 跑步10km&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 骑行7.6km&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 看完教父2&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2021/2021-09-06/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>09月05日 星期日</title>
+        <link>http://localhost:1313/posts/2021/2021-09-05/</link>
+        <pubDate>Sun, 05 Sep 2021 15:16:40 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2021/2021-09-05/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-09-05/ -&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 跑步8km&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2021/2021-09-05/ -  2021 malinkang.</description>
+        </item>
+    
+    
+  </channel>
+</rss> 
