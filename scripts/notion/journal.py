@@ -233,7 +233,7 @@ def query_todo():
     results = []
     extras = [{"property": "状态", "status": {"equals": "Done"}}]
     response = notion_api.query_database(
-        database_id="5da1dc2075e744839e1817546102c187",
+        database_id="14b86019c92c817f8bdedc8f651bb598",
         filter=get_filter(name="完成时间", extras=extras),
     )
     for result in response.get("results"):
