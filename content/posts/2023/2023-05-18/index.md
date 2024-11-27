@@ -19,7 +19,6 @@ comment : true
 ## ❤️ 健康
 ## ⏰ 时间统计
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1659015483474214915" >}}
 
 ## 📺 今天看了啥
 - [想看名侦探柯南：贝克街的亡灵 名探偵コナン ベイカー街の亡霊](https://movie.douban.com/subject/2286642/)

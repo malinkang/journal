@@ -20,4 +20,3 @@ comment : true
 - 08:33-09:17：🚇上班
 - 00:01-07:20：😴睡觉，AutoSleep自动同步
 ## 💬 碎碎念
-{{< tweet user="Carve_Time" id="1590217904645365761" >}}

@@ -22,7 +22,3 @@ comment : false
 - 11:57-12:41：🍚吃午饭
 - 09:35-10:16：🚇上班
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1546796744800735232" >}}
-{{< tweet user="malinkang" id="1546782078364270592" >}}
-{{< tweet user="malinkang" id="1546723763504685056" >}}
-{{< tweet user="malinkang" id="1546693663165763586" >}}

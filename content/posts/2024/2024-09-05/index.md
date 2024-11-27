@@ -18,4 +18,3 @@ comment : true
 - 跑步：[8.06km](https://www.strava.com/activities/12331606199)
 ## ⏰ 时间统计
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1831540670617809298" >}}

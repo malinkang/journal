@@ -22,8 +22,6 @@ comment : true
 - 17:56-18:58：🏃🏻跑步
 - 20:34-21:11：🚇下班
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1627623024190197760" >}}
-{{< tweet user="malinkang" id="1627488815391862784" >}}
 
 ## 📺 今天看了啥
 - [看过恋恋笔记本 The Notebook](https://movie.douban.com/subject/1309163/)

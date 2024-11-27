@@ -19,6 +19,3 @@ comment : true
 ## ❤️ 健康
 ## ⏰ 时间统计
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1588782431628414976" >}}
-{{< tweet user="malinkang" id="1588776687491325954" >}}
-{{< tweet user="malinkang" id="1588776986192879616" >}}

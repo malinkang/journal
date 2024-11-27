@@ -25,7 +25,3 @@ comment : false
 - 07:01-07:10：🛀洗漱
 - 00:00-07:01：😴睡觉，AutoSleep自动同步
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1554488572228804608" >}}
-{{< tweet user="malinkang" id="1554316163538370561" >}}
-{{< tweet user="malinkang" id="1554270713904648192" >}}
-{{< tweet user="malinkang" id="1554271833548996613" >}}

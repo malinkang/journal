@@ -24,9 +24,6 @@ comment : true
 今天在多邻国学习了22分钟，完成了10单元，共获得545经验
 ## ⏰ 时间统计
 ## 💬 碎碎念
-{{< tweet user="Carve_Time" id="1734398675340968244" >}}
-{{< tweet user="Carve_Time" id="1734399950388367763" >}}
-{{< tweet user="Carve_Time" id="1734400591496093744" >}}
 
 ## 📺 今天看了啥
 - [Notion+微信读书，高效汇总读书笔记](https://www.bilibili.com/video/BV14c411X7F5)

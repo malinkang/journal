@@ -21,8 +21,6 @@ comment : true
 - 08:16-09:00：🚇上班
 - 09:24-09:49：未设置
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1655751218688589824" >}}
-{{< tweet user="malinkang" id="1655745946997895168" >}}
 
 ## 📺 今天看了啥
 - [【AI 孙燕姿 × 周杰伦】《半岛铁盒》终究只有5分19秒](https://www.bilibili.com/video/BV1TM41157jA)

@@ -20,6 +20,3 @@ comment : true
 - 跑步：5.11km
 ## ⏰ 时间统计
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1616227908464541697" >}}
-{{< tweet user="malinkang" id="1616098245566148608" >}}
-{{< tweet user="malinkang" id="1616095650617372675" >}}

@@ -17,4 +17,3 @@ comment : true
 ## ⏰ 时间统计
 - 01:30-09:08：😴睡觉，AutoSleep自动同步
 ## 💬 碎碎念
-{{< tweet user="Carve_Time" id="1596410226088943616" >}}

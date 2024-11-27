@@ -22,7 +22,6 @@ comment : true
 - 跑步：8.25km
 ## ⏰ 时间统计
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1636338448901767168" >}}
 
 ## 📺 今天看了啥
 - [割喉强奸、杀人碎尸、雨夜尾随……这部新剧也太敢拍了吧！国产犯罪剧《他是谁》](https://www.bilibili.com/video/BV1JT411k7Vp)

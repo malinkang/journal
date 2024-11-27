@@ -25,8 +25,6 @@ comment : true
 - 14:35-15:00：未设置
 ## 💬 碎碎念
 * 打三个包各种出错，真是搞得心力交瘁。反思
-{{< tweet user="malinkang" id="1650430521988775938" >}}
-{{< tweet user="malinkang" id="1650329841257058304" >}}
 
 ## 📺 今天看了啥
 - [希然的下班路番外篇：终于抓住说粤语的圣枪！](https://www.bilibili.com/video/BV1rX4y1B7Eq)

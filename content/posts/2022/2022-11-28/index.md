@@ -23,4 +23,3 @@ comment : true
 - 14:10-14:35：👨‍💻工作，Pop_Heds_O插入脚本
 - 01:27-08:28：😴睡觉，AutoSleep自动同步
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1596830959399157761" >}}

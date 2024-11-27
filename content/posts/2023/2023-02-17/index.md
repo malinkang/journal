@@ -27,10 +27,6 @@ comment : true
 - 09:55-10:20：👨‍💻工作：部署新的打包网站
 - 10:51-11:16：👨‍💻工作：写网站构建脚本
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1626578607996047362" >}}
-{{< tweet user="malinkang" id="1626449027553460224" >}}
-{{< tweet user="Carve_Time" id="1626393310389764096" >}}
-{{< tweet user="Carve_Time" id="1626394827092008961" >}}
 
 ## 📺 今天看了啥
 - [刀哥：我见了他都吓得退了两步](https://www.bilibili.com/video/BV14e4y1w7qC)

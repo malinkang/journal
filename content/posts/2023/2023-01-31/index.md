@@ -28,11 +28,6 @@ comment : true
 - 07:29-08:10：👨‍🍳做饭
 - 07:15-07:28：🛀洗漱
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1620352150714081283" >}}
-{{< tweet user="malinkang" id="1620352504587489281" >}}
-{{< tweet user="malinkang" id="1620315539594948608" >}}
-{{< tweet user="malinkang" id="1620315788333944832" >}}
-{{< tweet user="malinkang" id="1620234194986344449" >}}
 
 ## 📚 今天读了啥
 - 读[《刀锋》](https://book.douban.com/subject/33430679/)54分钟

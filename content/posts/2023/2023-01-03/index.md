@@ -22,7 +22,6 @@ comment : true
 - 09:26-09:41：学英语
 - 08:36-09:17：🚇上班
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1610161111646744577" >}}
 
 ## 📺 今天看了啥
 - [恭喜卖火柴的大华2022完美通关，点击查看ta的通关记录～](https://www.bilibili.com/video/BV1JG4y1j7R2)

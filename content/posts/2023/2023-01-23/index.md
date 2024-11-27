@@ -34,7 +34,6 @@ comment : true
 - 10:47-11:08：🇺🇸英语
 - 10:11-10:40：🛀洗漱
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1617466810638663680" >}}
 
 ## 📺 今天看了啥
 - [【純VLOG】嘗試了下宜家2美元早餐，結果又是悲劇｜大耳朵TV]( https://youtu.be/pXQi3WmWZIU)

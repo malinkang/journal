@@ -21,7 +21,3 @@ comment : false
 ## ⏰ 时间统计
 - 23:45-08:01：😴睡觉，AutoSleep自动同步
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1561331768120459264" >}}
-{{< tweet user="malinkang" id="1561256627092992000" >}}
-{{< tweet user="malinkang" id="1561245738755330048" >}}
-{{< tweet user="malinkang" id="1561186553774616576" >}}

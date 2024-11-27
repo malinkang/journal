@@ -30,9 +30,6 @@ comment : true
 - 18:02-18:46：🏃🏻跑步
 - 20:05-20:46：🛀洗漱：洗澡，洗袜子，刷马桶。
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1629463690553741316" >}}
-{{< tweet user="malinkang" id="1629432549834641414" >}}
-{{< tweet user="malinkang" id="1629369410929704960" >}}
 
 ## 📚 今天读了啥
 - 读[《掌控习惯》](https://book.douban.com/subject/34326931/)34分钟

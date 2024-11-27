@@ -40,6 +40,3 @@ comment : true
 - 07:23-07:52：🛀洗漱
 - 23:53-07:21：😴睡觉，AutoSleep自动同步
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1587716798278815744" >}}
-{{< tweet user="Carve_Time" id="1587645171159924736" >}}
-{{< tweet user="malinkang" id="1587638671611551744" >}}

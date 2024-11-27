@@ -33,7 +33,6 @@ comment : true
 - 07:11-07:31：🛀洗漱
 - 23:33-07:10：😴睡觉
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1619611385008365571" >}}
 
 ## 📺 今天看了啥
 - [在零下30度吃拉麵，是一種怎樣的感受？｜大耳朵TV]( https://youtu.be/sUqqBrPxRTc)

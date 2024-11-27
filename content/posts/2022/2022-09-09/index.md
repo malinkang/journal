@@ -24,4 +24,3 @@ comment : false
 - 08:30-09:06：🚇上班
 - 00:04-07:30：😴睡觉，AutoSleep自动同步
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1568107011069583361" >}}

@@ -26,7 +26,6 @@ comment : true
 - 14:23-14:48：未设置
 - 15:20-15:45：未设置
 ## 💬 碎碎念
-{{< tweet user="malinkang" id="1659375997287018497" >}}
 
 ## 📺 今天看了啥
 - [一席一果（二十五）杨桃———里面住着五角星的宝藏水果【滇西小哥】](https://www.bilibili.com/video/BV1ig4y1V7SM)
