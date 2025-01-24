@@ -1,0 +1,21 @@
+
+---
+title: "☀️ 01月24日 星期五"
+date: 2025-01-24T15:40:00.000+08:00
+description: ""
+tags: [2025,1月,第04周]
+featured_image: "https://images.unsplash.com/photo-1735116356965-ad5b323d1af8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2ODUwfDB8MXxyYW5kb218fHx8fHx8fHwxNzM3NjQ2ODIwfA&ixlib=rb-4.0.3&q=80&w=400"
+categories: [日记]
+comment : true
+---
+
+今天天气，空气质量None，最高温度，最低温度。
+## 📅 倒数日
+- 春节还有4天 ■■■■■■■■■□ 98%
+- 元旦还有-23天 ■■■■■■■■■■ 106%
+## ✅ ToDo
+## ❤️ 健康
+## ⏰ 时间统计
+
+## 📚 读书
+- 读[《昨日的世界》](https://weread.qq.com/web/reader/80a324f0716b1a6480af682)21分钟
