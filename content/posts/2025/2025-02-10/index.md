@@ -23,4 +23,4 @@ comment : true
 ## ⏰ 时间统计
 
 ## 📚 读书
-- 读[《兄弟（第3版）》](https://weread.qq.com/web/reader/b0f32f805cbba2b0f901ea8)23分钟
+- 读[《兄弟（第3版）》](https://weread.qq.com/web/reader/b0f32f805cbba2b0f901ea8)38分钟
