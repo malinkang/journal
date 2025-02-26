@@ -11,7 +11,7 @@ featured_image: "https://images.unsplash.com/photo-1731351621470-8aebda14d242?cr
 categories: [日记]
 comment : true
 ---
-
+{{<aplayer url="netease" type="song" id="1867217766">}}
 今天天气晴，空气质量17，最高温度4°C，最低温度-5°C。
 ## 📅 倒数日
 - 春节还有62天 ■■■■■■■■□□ 82%
