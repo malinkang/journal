@@ -7,187 +7,269 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Wed, 27 Nov 2024 15:43:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 25 Feb 2025 15:41:00 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>10月11日 星期一</title>
-        <link>http://localhost:1313/posts/2021/2021-10-11/</link>
-        <pubDate>Mon, 11 Oct 2021 15:16:44 +0800</pubDate>
+        <title>01月21日 星期五</title>
+        <link>http://localhost:1313/posts/2022/2022-01-21/</link>
+        <pubDate>Fri, 21 Jan 2022 15:57:30 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-11/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-11/ -&lt;p&gt;今天是2021年10月11日，星期一 。距离元旦还有81天，距离春节还有112天。今天天气大部晴朗，最高气温19°C，最低气温7°C，空气质量。体重斤149.2，21/10/11周一 上午2:45睡觉，21/10/11周一 上午8:01起床，睡眠时长5.27小时。&lt;/p&gt;
-&lt;h2 id=&#34;每日任务&#34;&gt;每日任务&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-21/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-21/ -&lt;p&gt;今天是2022年01月21日 星期五，今天天气多云，最高温度-2°C，最低温度-6°C，空气质量69。距离元旦还有344天。距离春节还有10天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1️⃣蚂蚁庄园养一颗🥚&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2️⃣蚂蚁森林收集1kg能量&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3️⃣走15000步&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 4️⃣记账&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 打新&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 定投&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💳  信用卡还款&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;工作&#34;&gt;工作&lt;/h2&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 广告测试Fragment🍅x2&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SanSdk获取广告出错对接&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; MoPubSdk集成&lt;/li&gt;
+&lt;li&gt;10:59~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-11/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-01-21/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月10日 星期日</title>
-        <link>http://localhost:1313/posts/2021/2021-10-10/</link>
-        <pubDate>Sun, 10 Oct 2021 16:20:39 +0800</pubDate>
+        <title>01月20日 星期四</title>
+        <link>http://localhost:1313/posts/2022/2022-01-20/</link>
+        <pubDate>Thu, 20 Jan 2022 15:57:35 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-10/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-10/ -&lt;p&gt;今天是2021年10月10日，星期日 。距离元旦还有83天，距离春节还有114天。今天天气大部晴朗，最高气温16°C，最低气温12°C，空气质量21。体重149.6斤，21/10/10周日 上午12:25睡觉，21/10/10周日 上午8:13起床，睡眠时长7.50小时。&lt;/p&gt;
-&lt;h2 id=&#34;每日任务&#34;&gt;每日任务&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-20/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-20/ -&lt;p&gt;今天是2022年01月20日 星期四，今天天气小阵雪，最高温度-1°C，最低温度-6°C，空气质量45。距离元旦还有345天。距离春节还有11天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1️⃣ 蚂蚁庄园养一颗🥚&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2️⃣ 蚂蚁森林收集1kg能量&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3️⃣ 走15000步&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 4️⃣ 记账&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 打新&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-10/ -  2021 malinkang.</description>
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;11:30~7:15 睡觉&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-01-20/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月09日 星期六</title>
-        <link>http://localhost:1313/posts/2021/2021-10-09/</link>
-        <pubDate>Sat, 09 Oct 2021 14:44:07 +0800</pubDate>
+        <title>01月19日 星期三</title>
+        <link>http://localhost:1313/posts/2022/2022-01-19/</link>
+        <pubDate>Wed, 19 Jan 2022 15:57:31 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-09/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-09/ -&lt;p&gt;今天是2021年10月09日，星期六 。距离元旦还有84天，距离春节还有115天。今天天气阵雨，最高气温20°C，最低气温13°C，空气质量23。体重斤，21/10/9周六 上午12:30睡觉，21/10/9周六 上午8:15起床，睡眠时长7.32小时。&lt;/p&gt;
-&lt;h2 id=&#34;每日任务&#34;&gt;每日任务&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-19/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-19/ -&lt;p&gt;今天是2022年01月19日 星期三，今天天气多云，最高温度3°C，最低温度-8°C，空气质量87。距离元旦还有346天。距离春节还有12天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1️⃣蚂蚁庄园养一颗🥚&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2️⃣蚂蚁森林收集1kg能量&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3️⃣走15000步&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 4️⃣记账&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 打新&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-09/ -  2021 malinkang.</description>
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;12:13~7:15 睡觉&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-01-19/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月08日 星期五</title>
-        <link>http://localhost:1313/posts/2021/2021-10-08/</link>
-        <pubDate>Fri, 08 Oct 2021 10:55:40 +0800</pubDate>
+        <title>12月01日 星期三</title>
+        <link>http://localhost:1313/posts/2022/2022-01-12/</link>
+        <pubDate>Wed, 12 Jan 2022 15:57:34 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-08/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-08/ -&lt;p&gt;今天是2021年10月08日，星期五 。距离元旦还有85天，距离春节还有116天。今天天气大部晴朗，最高气温19°C，最低气温9°C，空气质量36。21/10/7周四 下午11:30睡觉，21/10/8周五 早上7:25 起床，睡眠时长8小时。晚上跑了5km。今天清了一天假，陪珊珊产检。一大早堵车，一个小时才到医院。&lt;/p&gt;
-&lt;h2 id=&#34;每日任务&#34;&gt;每日任务&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-12/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-12/ -&lt;p&gt;今天是2022年12月01日 星期三，今天天气大部晴朗，最高温度0°C，最低温度-9°C，空气质量41。距离元旦还有395天。距离春节还有61天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1️⃣蚂蚁庄园养一颗🥚&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2️⃣蚂蚁森林收集1kg能量&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3️⃣走15000步&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 4️⃣记账&lt;/li&gt;
+&lt;li&gt;11:30~7:25 睡觉&lt;/li&gt;
+&lt;li&gt;07:25~07:49 🪥洗漱&lt;/li&gt;
+&lt;li&gt;07:50~08:07 🥛吃早饭&lt;/li&gt;
+&lt;li&gt;08:07~08:57 🚇上班&lt;/li&gt;
+&lt;li&gt;09:34~10:00 🏃🏻跑步&lt;/li&gt;
+&lt;li&gt;10:10~12:09 学习协程&lt;/li&gt;
+&lt;li&gt;12:10~12:40 🍚吃午饭&lt;/li&gt;
+&lt;li&gt;12:40~13:06 📱玩手机&lt;/li&gt;
+&lt;li&gt;13:06~14:02 😴睡觉&lt;/li&gt;
+&lt;li&gt;14:25~18:35 👨‍💻工作&lt;/li&gt;
+&lt;li&gt;20:50~22:03 下班&lt;/li&gt;
+&lt;li&gt;22:03~23:46 🪥洗漱&lt;/li&gt;
+&lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7369b73d-df61-4374-818e-70563208bb2b/004684A7-5F77-4C4D-84E4-EE338B261EBA.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211013%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20211013T025544Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-Signature=bf93eefe8c06ceee6e55a2030b2fa8955a71bafb23912ff80bde3abc011b1ff1&amp;amp;X-Amz-SignedHeaders=host&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-- http://localhost:1313/posts/2021/2021-10-08/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-01-12/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月07日 星期四</title>
-        <link>http://localhost:1313/posts/2021/2021-10-07/</link>
-        <pubDate>Thu, 07 Oct 2021 10:51:31 +0800</pubDate>
+        <title>01月11日 星期二</title>
+        <link>http://localhost:1313/posts/2022/2022-01-11/</link>
+        <pubDate>Tue, 11 Jan 2022 15:57:36 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-07/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-07/ -&lt;h2 id=&#34;每日任务&#34;&gt;每日任务&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-11/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-11/ -&lt;p&gt;今天是2022年01月11日 星期二，今天天气大部晴朗，最高温度3°C，最低温度-11°C，空气质量15。距离元旦还有354天。距离春节还有20天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1️⃣蚂蚁庄园养一颗🥚&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2️⃣蚂蚁森林收集1kg能量&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3️⃣走15000步&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 4️⃣记账&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 打新&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-07/ -  2021 malinkang.</description>
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;11:46~7:11 睡觉&lt;/li&gt;
+&lt;li&gt;06:32~06:49 🛀洗漱&lt;/li&gt;
+&lt;li&gt;06:49~08:02 🥛吃早饭&lt;/li&gt;
+&lt;li&gt;08:02~08:51 🚇上班&lt;/li&gt;
+&lt;li&gt;09:21~09:53 🏃🏻跑步&lt;/li&gt;
+&lt;li&gt;10:38~11:58 👩🏻‍🎓学习&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-01-11/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月06日 星期三</title>
-        <link>http://localhost:1313/posts/2021/2021-10-06/</link>
-        <pubDate>Wed, 06 Oct 2021 05:21:34 +0800</pubDate>
+        <title>01月10日 星期一</title>
+        <link>http://localhost:1313/posts/2022/2022-01-10/</link>
+        <pubDate>Tue, 11 Jan 2022 02:12:03 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-06/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-06/ -&lt;p&gt;今天是2021年10月06日，星期三 。距离元旦还有86天，距离春节还有117天。今天天气阵雨，最高气温17°C，最低气温12°C，空气质量13。体重斤，21/10/6周三 上午1:18睡觉，21/10/6周三 上午9:40起床，睡眠时长8.37小时。&lt;/p&gt;
-&lt;h2 id=&#34;每日任务&#34;&gt;每日任务&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-10/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-10/ -&lt;p&gt;今天是2022年01月10日 星期一，今天天气大部晴朗，最高温度3℃，最低温度-8℃，空气质量None。距离元旦还有-9天。距离春节还有21天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1️⃣蚂蚁庄园养一颗🥚&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2️⃣蚂蚁森林收集1kg能量&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3️⃣走15000步&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 4️⃣记账&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 打新&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-06/ -  2021 malinkang.</description>
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;11:46~7:11 睡觉&lt;/li&gt;
+&lt;li&gt;07:15~07:32 🛀洗漱&lt;/li&gt;
+&lt;li&gt;08:03~08:58 🚇上班&lt;/li&gt;
+&lt;li&gt;08:58~09:27 😂其他&lt;/li&gt;
+&lt;li&gt;09:27~09:57 🏃🏻跑步&lt;/li&gt;
+&lt;li&gt;10:09~12:01 👨‍💻工作&lt;/li&gt;
+&lt;li&gt;12:01~12:39 🍚吃午饭&lt;/li&gt;
+&lt;li&gt;20:34~22:00 🚇下班&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-01-10/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月05日 星期二</title>
-        <link>http://localhost:1313/posts/2021/2021-10-05/</link>
-        <pubDate>Tue, 05 Oct 2021 16:37:44 +0800</pubDate>
+        <title>01月09日 星期日</title>
+        <link>http://localhost:1313/posts/2022/2022-01-09/</link>
+        <pubDate>Sun, 09 Jan 2022 15:57:49 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-05/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-05/ -&lt;p&gt;今天是2021年10月06日，星期三 。距离元旦还有87天，距离春节还有118天。今天天气阵雨，最高气温17°C，最低气温13°C，空气质量10。体重斤，21/10/5周二 下午10:59睡觉，21/10/5周二 下午11:00起床，睡眠时长0.00小时。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-09/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-09/ -&lt;p&gt;今天是2022年01月09日 星期日，今天天气局部多云，最高温度9°C，最低温度-5°C，空气质量59。距离元旦还有-8天。距离春节还有22天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;看完《情书》&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-05/ -  2021 malinkang.</description>
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;11:00~11:00 睡觉&lt;/li&gt;
+&lt;li&gt;17:27~17:58 🏃🏻跑步&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-01-09/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月03日 星期日</title>
-        <link>http://localhost:1313/posts/2021/2021-10-03/</link>
-        <pubDate>Sun, 03 Oct 2021 16:05:17 +0800</pubDate>
+        <title>01月08日 星期六</title>
+        <link>http://localhost:1313/posts/2022/2022-01-08/</link>
+        <pubDate>Sat, 08 Jan 2022 15:57:29 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-03/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-03/ -&lt;p&gt;今天是2021年10月04日，星期一 。距离元旦还有89天，距离春节还有120天。今天天气大部晴朗，最高气温22°C，最低气温18°C，空气质量19。体重斤，21/10/3周日 下午10:59睡觉，21/10/3周日 下午11:00起床，睡眠时长0.00小时。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-08/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-08/ -&lt;p&gt;今天是2022年01月08日 星期六，今天天气大部晴朗，最高温度5°C，最低温度-7°C，空气质量112。距离元旦还有-7天。距离春节还有23天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;老婆给我补发了520的生日红包&lt;/li&gt;
-&lt;li&gt;看完《五月槐花香》&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💳  信用卡还款&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-03/ -  2021 malinkang.</description>
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今天去理发。理发的时候在想为什么猴子头上的毛不会一直长。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;11:46~7:13 睡觉&lt;/li&gt;
+&lt;li&gt;17:45~18:52 🏃🏻跑步&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-01-08/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月02日 星期六</title>
-        <link>http://localhost:1313/posts/2021/2021-10-02/</link>
-        <pubDate>Sat, 02 Oct 2021 14:53:33 +0800</pubDate>
+        <title>01月07日 星期五</title>
+        <link>http://localhost:1313/posts/2022/2022-01-07/</link>
+        <pubDate>Fri, 07 Jan 2022 15:57:35 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-02/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-02/ -&lt;p&gt;今天是2021年10月02日，星期六 。距离元旦还有90天，距离春节还有121天。今天天气局部多云，最高气温20°C，最低气温15°C，空气质量62。体重146.7斤，21/10/2周六 上午1:00睡觉，21/10/2周六 上午8:39起床，睡眠时长7.17小时。* 买的京东机械键盘到了&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-01-07/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-07/ -&lt;p&gt;今天是2022年01月07日 星期五，今天天气大部晴朗，最高温度6°C，最低温度-8°C，空气质量94。距离元旦还有-6天。距离春节还有24天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;看了一天《五月槐花香》&lt;/li&gt;
-&lt;li&gt;蚂蚁森林捐了30颗蛋&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 打新&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 定投&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2021/2021-10-02/ -  2021 malinkang.</description>
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;11:46~7:13 睡觉&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-01-07/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>10月01日 星期五</title>
-        <link>http://localhost:1313/posts/2021/2021-10-01/</link>
-        <pubDate>Fri, 01 Oct 2021 16:44:51 +0800</pubDate>
+        <title>01月06日 星期四</title>
+        <link>http://localhost:1313/posts/2022/2022-01-06/</link>
+        <pubDate>Thu, 06 Jan 2022 15:57:29 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2021/2021-10-01/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2021/2021-10-01/ -&lt;p&gt;今天是2021年10月02日，星期六 。距离元旦还有91天，距离春节还有122天。今天天气大部晴朗，最高气温23°C，最低气温15°C，空气质量53。体重斤，21/10/1周五 上午12:15睡觉，21/10/1周五 上午8:06起床，睡眠时长7.63小时。&lt;/p&gt;
-- http://localhost:1313/posts/2021/2021-10-01/ -  2021 malinkang.</description>
+        <guid>http://localhost:1313/posts/2022/2022-01-06/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-01-06/ -&lt;p&gt;今天是2022年01月06日 星期四，今天天气大部晴朗，最高温度4°C，最低温度-8°C，空气质量77。距离元旦还有-5天。距离春节还有25天。睡眠时长0小时。体重0斤。&lt;/p&gt;
+&lt;h2 id=&#34;--todo&#34;&gt;✅  TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🍚 订餐&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💰 打新&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 💳  信用卡还款&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🏃🏻 步数打卡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今天陪珊珊去医院体检，路上特别堵。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-今日日程&#34;&gt;📅 今日日程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;10:59~11:00 睡觉&lt;/li&gt;
+&lt;li&gt;12:01~12:55 🍚吃午饭&lt;/li&gt;
+&lt;li&gt;12:55~13:23 📱玩手机&lt;/li&gt;
+&lt;li&gt;13:23~14:01 😴午休&lt;/li&gt;
+&lt;li&gt;20:45~21:53 🚇下班&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-01-06/ -  2021 malinkang.</description>
         </item>
     
     

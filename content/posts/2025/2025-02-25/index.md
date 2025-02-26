@@ -22,11 +22,11 @@ comment : true
 ## ⏰ 时间统计
 ## 💬 碎碎念
 今天做的芹菜炒腊肉和豆芽韭菜炒鸡蛋。腊肉是虫虫家送的，吃的时候看到了几根猪毛，我就都扔掉了。😂
-{{< gallery match="./content/posts/2025/2025-02-25//images/114062627327254314/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< gallery match="images/114062627327254314/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
 
 --------
 领导今天从美国回来了。中午请喝一杯奶茶。
-{{< gallery match="./content/posts/2025/2025-02-25//images/114062716223245588/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< gallery match="images/114062716223245588/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
 
 --------
 

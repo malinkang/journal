@@ -27,7 +27,7 @@ comment : true
 ## 💬 碎碎念
 手机支架掉地上摔坏了
 [Message link](https://t.me/malinkanglife/76)
-{{< gallery match="./content/posts/2024/2024-10-23//images/23/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< gallery match="images/23/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
 
 --------
 ```python

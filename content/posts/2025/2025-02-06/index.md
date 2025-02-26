@@ -23,7 +23,7 @@ comment : true
 ## ⏰ 时间统计
 ## 💬 碎碎念
 补发昨天的开工红包，去茄子两年都没领到开工红包。这两年总算领到了。今年发了100元，感觉不如去年各种币有意思。
-{{< gallery match="./content/posts/2025/2025-02-06//images/113954483903683819/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< gallery match="./content/posts/2025/2025-02-06/images/113954483903683819/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
 
 --------
 

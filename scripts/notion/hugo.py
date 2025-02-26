@@ -109,7 +109,7 @@ def query_memos():
             if block_type == "image":
                 url = block.get("image", {}).get("external", {}).get("url", "")
                 images.append(url)
-                download_image(url, f"{dir}/images/{id}/")
+                download_image(url, f"images/{id}/")
             else:
                 markdown_result += notion_block_to_markdown(block)
         print(images)

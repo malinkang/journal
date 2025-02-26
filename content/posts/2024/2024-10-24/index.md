@@ -30,6 +30,6 @@ comment : true
 ## 💬 碎碎念
 程序员节快乐
 [Message link](https://t.me/malinkanglife/77)
-{{< gallery match="./content/posts/2024/2024-10-24//images/24/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< gallery match=".images/24/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
 
 --------
