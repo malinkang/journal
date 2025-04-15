@@ -25,6 +25,6 @@ comment : true
 |06:45-07:20|👨‍🍳 做饭|35分钟||
 ## 💬 碎碎念
 最近每次拿出手机看微信读书，孩子都会说爸爸我想看手机。刚开始考虑买几本纸质书，但是不方便携带，价格也贵，就又考虑买个电子书阅读器。去年买了文石的poke5，放到共享单车的框里忘记拿，被一个老头拿走了。挑选了一遍，最终还是选择了文石的poke6，国补下来一共花了915。
-{{< gallery match="./content/posts/2025/2025-04-10//images/114311131515228264/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< gallery match="images/114311131515228264/*" sortOrder="desc" rowHeight="200" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
 
 --------

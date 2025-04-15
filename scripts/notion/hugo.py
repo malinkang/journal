@@ -109,12 +109,12 @@ def query_memos():
             if block_type == "image":
                 url = block.get("image", {}).get("external", {}).get("url", "")
                 images.append(url)
-                download_image(url, f"images/{id}/")
+                download_image(url, f"{dir}/images/{id}/")
             else:
                 markdown_result += notion_block_to_markdown(block)
         print(images)
         if images:
-            markdown_result += f'{{{{< gallery match="{dir}/images/{id}/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}}}\n'
+            markdown_result += f'{{{{< gallery match="images/{id}/*" sortOrder="desc" rowHeight="200" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}}}\n'
         markdown_result += "\n--------\n"
     return markdown_result
 

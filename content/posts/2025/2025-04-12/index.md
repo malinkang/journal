@@ -31,7 +31,7 @@ comment : true
 
 然后孩子醒了，又去小象动悟玩了会，到下面西西弗书店逛了一圈。然后在合生汇买了寿司，醉面，卤味，果汁和蜜雪冰城的柠檬水，吃完喝完，顶着大风骑着电动车回家了。路上真是冻死了。
 [#日记](https://mastodon.social/tags/%E6%97%A5%E8%AE%B0)
-{{< gallery match="./content/posts/2025/2025-04-12//images/114325777277804559/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< gallery match="images/114325777277804559/*" sortOrder="desc" rowHeight="200" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
 
 --------
 
