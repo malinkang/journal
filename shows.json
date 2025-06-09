@@ -1,0 +1,302 @@
+[
+    {
+        "id": 10763143327,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 22,
+            "title": "Episode 22",
+            "ids": {
+                "trakt": 12939642,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072657,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143326,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 21,
+            "title": "Episode 21",
+            "ids": {
+                "trakt": 12939641,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072656,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143325,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 20,
+            "title": "Episode 20",
+            "ids": {
+                "trakt": 12939640,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072655,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143324,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 19,
+            "title": "Episode 19",
+            "ids": {
+                "trakt": 12939639,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072654,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143323,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 18,
+            "title": "Episode 18",
+            "ids": {
+                "trakt": 12939638,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072653,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143322,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 17,
+            "title": "Episode 17",
+            "ids": {
+                "trakt": 12939637,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072652,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143321,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 16,
+            "title": "Episode 16",
+            "ids": {
+                "trakt": 12939636,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072651,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143320,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 15,
+            "title": "Episode 15",
+            "ids": {
+                "trakt": 12939635,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072650,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143319,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 14,
+            "title": "Episode 14",
+            "ids": {
+                "trakt": 12939634,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072649,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    },
+    {
+        "id": 10763143318,
+        "watched_at": "2025-04-15T10:39:44.000Z",
+        "action": "watch",
+        "type": "episode",
+        "episode": {
+            "season": 1,
+            "number": 13,
+            "title": "Episode 13",
+            "ids": {
+                "trakt": 12939633,
+                "tvdb": null,
+                "imdb": null,
+                "tmdb": 6072648,
+                "tvrage": null
+            }
+        },
+        "show": {
+            "title": "Playing Go",
+            "year": 2025,
+            "ids": {
+                "trakt": 247572,
+                "slug": "playing-go",
+                "tvdb": 461677,
+                "imdb": "tt29899769",
+                "tmdb": 258490,
+                "tvrage": null
+            }
+        }
+    }
+]

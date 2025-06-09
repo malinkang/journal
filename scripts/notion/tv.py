@@ -1,4 +1,5 @@
 import datetime
+import json
 import logging
 import time
 import requests
@@ -10,8 +11,8 @@ def get_tv_shows():
     headers = {
         'Content-Type': 'application/json',
         'trakt-api-version': '2',
-        'Authorization': 'Bearer c99d5256b5483f3067febc4fdf47f950e76f9732a4c35cb0492ffa5bebc16633',
-        'trakt-api-key': '31c70c1d138849b946bf2497fe099f87dc7dd800a771a3755f9485f0bb69b5ea'
+        'Authorization': 'Bearer 1439bef323df01acd75f46dc1331341148b89ac17ca0d207e1cdf3f8f68b3a1c',
+        'trakt-api-key': '5e4c7346bf29ef6e75975f6c08496ce504bac3927a5923dc5083085ae99becaa'
     }
     # 设置请求URL和参数
     url = 'https://api.trakt.tv/users/me/history'
@@ -28,6 +29,28 @@ def get_tv_shows():
     else:
         print('请求失败：', response.status_code)
     return shows
+
+def get_trakt_token(code):
+    """
+    根据Trakt的code获取token
+    """
+    url = "https://api.trakt.tv/oauth/token"
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    data = {
+        "code": code,
+        "client_id": "5e4c7346bf29ef6e75975f6c08496ce504bac3927a5923dc5083085ae99becaa",
+        "client_secret": "624f50edc6dc1367fef336b51190cbf3a4258e1fe74d4264180ee0fc59df3239",  # 请替换为实际的client_secret
+        "redirect_uri": "https://malinkang.com",
+        "grant_type": "authorization_code"
+    }
+    response = requests.post(url, headers=headers, json=data)
+    if response.status_code == 200:
+        return response.json().get("access_token")
+    else:
+        logging.error(f"获取token失败，状态码: {response.status_code}")
+        return None
 
 
 def query(imdb):
@@ -89,23 +112,28 @@ if __name__ == '__main__':
         auth=notion_token,
         log_level=logging.DEBUG
     )
+    code = "your_code_here"  # 假设这是获取的code
+    # shows = get_trakt_token("070f977cf78935d64c7f61fa3c7719c7792636e63396ad965bcb2ddbf0e578db")
     shows = get_tv_shows()
-    for show in shows:
-        id = str(show.get("id"))
-        if check_if_exists(id):
-            continue
+    # 将tv shows写入到shows.json中
+    with open('shows.json', 'w', encoding='utf-8') as f:
+        json.dump(shows, f, ensure_ascii=False, indent=4)
+    # for show in shows:
+    #     id = str(show.get("id"))
+    #     if check_if_exists(id):
+    #         continue
 
-        imdb = show.get("show").get("ids").get("imdb")
-        results = query(imdb)
-        if len(results) > 0:
-            date = datetime.datetime.strptime(
-                show.get("watched_at"), "%Y-%m-%dT%H:%M:%S.%fZ")+datetime.timedelta(hours=8)
-            season = show.get("episode").get("season")
-            number = show.get("episode").get("number")
-            title = results[0].get("properties").get("标题").get("title")[
-                0].get("text").get("content")
-            url = results[0].get("properties").get("条目链接").get("url")
-            print(results[0].get("properties").get("海报"))
-            cover = results[0].get("properties").get("海报").get("files")[0].get("external").get("url")
-            insert_to_notion(title, id, date, season, number,
-                             imdb, url, results[0].get("id"),cover)
+    #     imdb = show.get("show").get("ids").get("imdb")
+    #     results = query(imdb)
+    #     if len(results) > 0:
+    #         date = datetime.datetime.strptime(
+    #             show.get("watched_at"), "%Y-%m-%dT%H:%M:%S.%fZ")+datetime.timedelta(hours=8)
+    #         season = show.get("episode").get("season")
+    #         number = show.get("episode").get("number")
+    #         title = results[0].get("properties").get("标题").get("title")[
+    #             0].get("text").get("content")
+    #         url = results[0].get("properties").get("条目链接").get("url")
+    #         print(results[0].get("properties").get("海报"))
+    #         cover = results[0].get("properties").get("海报").get("files")[0].get("external").get("url")
+    #         insert_to_notion(title, id, date, season, number,
+    #                          imdb, url, results[0].get("id"),cover)
