@@ -7,75 +7,244 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Mon, 14 Apr 2025 15:40:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jun 2025 15:44:00 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>☀️ 08月26日 星期五</title>
-        <link>http://localhost:1313/posts/2022/2022-08-26/</link>
-        <pubDate>Fri, 26 Aug 2022 14:21:00 +0800</pubDate>
+        <title>☀️ 11月03日 星期四</title>
+        <link>http://localhost:1313/posts/2022/2022-11-03/</link>
+        <pubDate>Thu, 03 Nov 2022 15:48:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2022/2022-08-26/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-26/ -&lt;p&gt;今天天气大部晴朗，空气质量33，最高温度32°C，最低温度18°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-11-03/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-03/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有58天 ■■■■■■■■□□ 83%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; actionbarbk插入脚本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;10:51-11:16：👨‍💻工作，actionbarbk插入脚本&lt;/li&gt;
+&lt;li&gt;07:15-07:31：🛀洗漱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+- http://localhost:1313/posts/2022/2022-11-03/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 11月02日 星期三</title>
+        <link>http://localhost:1313/posts/2022/2022-11-02/</link>
+        <pubDate>Wed, 02 Nov 2022 15:48:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-11-02/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-02/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有59天 ■■■■■■■■□□ 83%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SetDB和setVw插入脚本&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; getAirplaneMode和setCInPicResize插入脚本&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; tvBalloons插入脚本&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; getBubbleMargin插入脚本&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; BubbleStyle插入脚本&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; AddDoubleTapToLike和setPicO插入脚本&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; isMRevoked插入脚本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;21:12-21:31：🛀洗漱&lt;/li&gt;
+&lt;li&gt;20:33-21:11：🚇下班&lt;/li&gt;
+&lt;li&gt;19:17-19:42：👨‍💻工作，isMRevoked插入脚本&lt;/li&gt;
+&lt;li&gt;18:50-19:05：🍚吃晚饭&lt;/li&gt;
+&lt;li&gt;17:50-18:50：🏃🏻跑步&lt;/li&gt;
+&lt;li&gt;16:42-17:07：👨‍💻工作，BubbleStyle插入脚本&lt;/li&gt;
+&lt;li&gt;16:10-16:35：👨‍💻工作，getBubbleMargin插入脚本&lt;/li&gt;
+&lt;li&gt;15:19-15:44：👨‍💻工作，tvBalloons插入脚本&lt;/li&gt;
+&lt;li&gt;14:38-15:03：👨‍💻工作，getAirplaneMode和setCInPicResize插入脚本&lt;/li&gt;
+&lt;li&gt;14:06-14:31：👨‍💻工作，SetDB和setVw插入脚本&lt;/li&gt;
+&lt;li&gt;13:21-14:03：😴睡觉&lt;/li&gt;
+&lt;li&gt;11:54-12:37：🍚吃午饭&lt;/li&gt;
+&lt;li&gt;08:31-09:11：🚇上班&lt;/li&gt;
+&lt;li&gt;07:23-07:52：🛀洗漱&lt;/li&gt;
+&lt;li&gt;23:53-07:21：😴睡觉，AutoSleep自动同步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+- http://localhost:1313/posts/2022/2022-11-02/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 11月01日 星期二</title>
+        <link>http://localhost:1313/posts/2022/2022-11-01/</link>
+        <pubDate>Tue, 01 Nov 2022 01:44:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-11-01/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-11-01/ -&lt;p&gt;今天天气大部晴朗无云，空气质量54，最高温度14.51°C，最低温度0.83°C。
+&lt;meting-js server=&#34;netease&#34;  url=&#34;&#34; name=&#34;&#34; cover=&#34;&#34; type=&#34;song&#34; id=&#34;27810022&#34;&gt;&lt;/meting-js&gt;&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;今年还有127天 ■■■■■■□□□□ 64%&lt;/li&gt;
+&lt;li&gt;今年还有60天 ■■■■■■■■□□ 83%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 订餐&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;体重：0斤&lt;/li&gt;
+&lt;li&gt;体重：144.8斤&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2022/2022-08-26/ -  2021 malinkang.</description>
+&lt;ul&gt;
+&lt;li&gt;20:50-21:24：🚇下班&lt;/li&gt;
+&lt;li&gt;12:01-12:43：🍚吃午饭&lt;/li&gt;
+&lt;li&gt;09:44-10:16：🚇上班&lt;/li&gt;
+&lt;li&gt;07:19-07:46：🛀洗漱&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-11-01/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 08月25日 星期四</title>
-        <link>http://localhost:1313/posts/2022/2022-08-25/</link>
-        <pubDate>Thu, 25 Aug 2022 14:21:00 +0800</pubDate>
+        <title>☀️ 10月16日 星期日</title>
+        <link>http://localhost:1313/posts/2022/2022-10-16/</link>
+        <pubDate>Sun, 16 Oct 2022 14:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2022/2022-08-25/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-25/ -&lt;p&gt;今天天气大部晴朗，空气质量30，最高温度28°C，最低温度19°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-10-16/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-10-16/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有75天 ■■■■■■■□□□ 79%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《夜晚的潜水艇》24 分钟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;体重：143.9斤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;08:17-08:32：💧买水&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+- http://localhost:1313/posts/2022/2022-10-16/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 10月15日 星期六</title>
+        <link>http://localhost:1313/posts/2022/2022-10-15/</link>
+        <pubDate>Sat, 15 Oct 2022 14:38:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-10-15/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-10-15/ -&lt;meting-js server=&#34;netease&#34;  url=&#34;&#34; name=&#34;&#34; cover=&#34;&#34; type=&#34;song&#34; id=&#34;1805289566&#34;&gt;&lt;/meting-js&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;今年还有128天 ■■■■■■□□□□ 64%&lt;/li&gt;
+&lt;li&gt;今年还有76天 ■■■■■■■□□□ 78%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 订餐&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;体重：0斤&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;00:15-07:16：😴睡觉，AutoSleep自动同步&lt;/li&gt;
-&lt;/ul&gt;
-- http://localhost:1313/posts/2022/2022-08-25/ -  2021 malinkang.</description>
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+- http://localhost:1313/posts/2022/2022-10-15/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 08月24日 星期三</title>
-        <link>http://localhost:1313/posts/2022/2022-08-24/</link>
-        <pubDate>Wed, 24 Aug 2022 14:21:00 +0800</pubDate>
+        <title>☀️ 10月14日 星期五</title>
+        <link>http://localhost:1313/posts/2022/2022-10-14/</link>
+        <pubDate>Fri, 14 Oct 2022 14:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2022/2022-08-24/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-24/ -&lt;p&gt;今天天气大部晴朗，空气质量23，最高温度28°C，最低温度20°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2022/2022-10-14/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-10-14/ -&lt;meting-js server=&#34;netease&#34;  url=&#34;&#34; name=&#34;&#34; cover=&#34;&#34; type=&#34;song&#34; id=&#34;436514312&#34;&gt;&lt;/meting-js&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;今年还有129天 ■■■■■■□□□□ 64%&lt;/li&gt;
+&lt;li&gt;今年还有77天 ■■■■■■■□□□ 78%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 订餐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;09:58-10:27：🚇上班&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+- http://localhost:1313/posts/2022/2022-10-14/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 10月13日 星期四</title>
+        <link>http://localhost:1313/posts/2022/2022-10-13/</link>
+        <pubDate>Thu, 13 Oct 2022 14:41:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-10-13/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-10-13/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有78天 ■■■■■■■□□□ 78%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《夜晚的潜水艇》34 分钟&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 订餐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;20:25-21:00：🚇下班，顺便做了个核酸&lt;/li&gt;
+&lt;li&gt;12:36-13:02：📚读书&lt;/li&gt;
+&lt;li&gt;12:00-12:36：🍚吃午饭，西红柿鸡蛋面&lt;/li&gt;
+&lt;li&gt;08:35-09:10：🚇上班&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2022/2022-10-13/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 10月12日 星期三</title>
+        <link>http://localhost:1313/posts/2022/2022-10-12/</link>
+        <pubDate>Wed, 12 Oct 2022 14:33:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-10-12/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-10-12/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有80天 ■■■■■■■□□□ 77%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《夜晚的潜水艇》34 分钟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+- http://localhost:1313/posts/2022/2022-10-12/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 10月11日 星期二</title>
+        <link>http://localhost:1313/posts/2022/2022-10-11/</link>
+        <pubDate>Tue, 11 Oct 2022 14:41:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2022/2022-10-11/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-10-11/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年还有81天 ■■■■■■■□□□ 77%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;ul&gt;
@@ -87,203 +256,36 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;20:41-21:15：🚇下班&lt;/li&gt;
-&lt;li&gt;08:28-09:06：🚇上班&lt;/li&gt;
-&lt;li&gt;00:15-07:31：😴睡觉，AutoSleep自动同步&lt;/li&gt;
+&lt;li&gt;20:39-21:12：🚇下班&lt;/li&gt;
+&lt;li&gt;08:32-09:09：🚇上班&lt;/li&gt;
+&lt;li&gt;00:45-07:53：😴睡觉，AutoSleep自动同步&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2022/2022-08-24/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-10-11/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 08月23日 星期二</title>
-        <link>http://localhost:1313/posts/2022/2022-08-23/</link>
-        <pubDate>Tue, 23 Aug 2022 14:19:00 +0800</pubDate>
+        <title>☀️ 10月10日 星期一</title>
+        <link>http://localhost:1313/posts/2022/2022-10-10/</link>
+        <pubDate>Mon, 10 Oct 2022 14:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2022/2022-08-23/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-23/ -&lt;p&gt;今天天气大部晴朗，空气质量15，最高温度33°C，最低温度18°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+        <guid>http://localhost:1313/posts/2022/2022-10-10/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-10-10/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;今年还有130天 ■■■■■■□□□□ 64%&lt;/li&gt;
+&lt;li&gt;今年还有82天 ■■■■■■■□□□ 77%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 订餐&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;体重：0斤&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;01:03-07:20：😴睡觉，AutoSleep自动同步&lt;/li&gt;
+&lt;li&gt;08:31-09:09：🚇上班&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-- http://localhost:1313/posts/2022/2022-08-23/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 08月22日 星期一</title>
-        <link>http://localhost:1313/posts/2022/2022-08-22/</link>
-        <pubDate>Mon, 22 Aug 2022 14:19:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2022/2022-08-22/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-22/ -&lt;p&gt;今天天气大部晴朗，空气质量25，最高温度32°C，最低温度23°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有131天 ■■■■■■□□□□ 63%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 订餐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;体重：0斤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-- http://localhost:1313/posts/2022/2022-08-22/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 08月21日 星期日</title>
-        <link>http://localhost:1313/posts/2022/2022-08-21/</link>
-        <pubDate>Sun, 21 Aug 2022 14:20:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2022/2022-08-21/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-21/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有132天 ■■■■■■□□□□ 63%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;体重：0斤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;23:45-08:01：😴睡觉，AutoSleep自动同步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-- http://localhost:1313/posts/2022/2022-08-21/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 08月20日 星期六</title>
-        <link>http://localhost:1313/posts/2022/2022-08-20/</link>
-        <pubDate>Sat, 20 Aug 2022 14:21:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2022/2022-08-20/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-20/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有133天 ■■■■■■□□□□ 63%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;体重：0斤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;05:32-07:06：😴睡觉，AutoSleep自动同步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-- http://localhost:1313/posts/2022/2022-08-20/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 08月18日 星期四</title>
-        <link>http://localhost:1313/posts/2022/2022-08-18/</link>
-        <pubDate>Thu, 18 Aug 2022 14:26:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2022/2022-08-18/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-18/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有135天 ■■■■■■□□□□ 62%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 订餐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;体重：0斤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-- http://localhost:1313/posts/2022/2022-08-18/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 08月17日 星期三</title>
-        <link>http://localhost:1313/posts/2022/2022-08-17/</link>
-        <pubDate>Wed, 17 Aug 2022 14:21:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2022/2022-08-17/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-17/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有136天 ■■■■■■□□□□ 62%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 修复SanSdk3.8.3的Bug&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;体重：0斤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;21:08-21:33：🛀洗漱&lt;/li&gt;
-&lt;li&gt;20:25-20:55：🚇下班&lt;/li&gt;
-&lt;li&gt;14:03-14:55：👨‍💻工作，修复SanSdk3.8.3的Bug&lt;/li&gt;
-&lt;li&gt;12:00-12:43：🍚吃午饭&lt;/li&gt;
-&lt;li&gt;10:36-11:01：👨‍💻工作，GB SanSdk降级到3.8.3版本&lt;/li&gt;
-&lt;li&gt;09:47-10:22：🚇上班&lt;/li&gt;
-&lt;li&gt;23:31-07:16：😴睡觉，AutoSleep自动同步&lt;/li&gt;
-&lt;/ul&gt;
-- http://localhost:1313/posts/2022/2022-08-17/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 08月16日 星期二</title>
-        <link>http://localhost:1313/posts/2022/2022-08-16/</link>
-        <pubDate>Tue, 16 Aug 2022 14:24:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2022/2022-08-16/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2022/2022-08-16/ -&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;今年还有137天 ■■■■■■□□□□ 62%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《福格行为模型Tiny Habits: The Small Changes That Change Everything》Page30 - Page60&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 订餐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;体重：0斤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;00:18-07:05：😴睡觉，AutoSleep自动同步&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-- http://localhost:1313/posts/2022/2022-08-16/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2022/2022-10-10/ -  2021 malinkang.</description>
         </item>
     
     

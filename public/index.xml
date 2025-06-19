@@ -7,973 +7,186 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Mon, 14 Apr 2025 15:40:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jun 2025 15:44:00 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>☀️ 04月14日 星期一</title>
-        <link>http://localhost:1313/posts/2025/2025-04-14/</link>
-        <pubDate>Mon, 14 Apr 2025 15:40:00 +0800</pubDate>
+        <title>☀️ 06月11日 星期三</title>
+        <link>http://localhost:1313/posts/2025/2025-06-11/</link>
+        <pubDate>Wed, 11 Jun 2025 15:44:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2025/2025-04-14/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-04-14/ -&lt;p&gt;今天天气晴，空气质量12，最高温度23°C，最低温度10°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2025/2025-06-11/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-06-11/ -&lt;p&gt;今天天气晴，空气质量35，最高温度35°C，最低温度16°C。
+&lt;meting-js server=&#34;notion&#34;  url=&#34;&#34; name=&#34;&#34; cover=&#34;&#34; type=&#34;song&#34; id=&#34;20f86019-c92c-813b-b43f-e36554c56f4e&#34;&gt;&lt;/meting-js&gt;&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有308天 ■□□□□□□□□□ 19%&lt;/li&gt;
-&lt;li&gt;元旦还有261天 ■■□□□□□□□□ 28%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; OChat弹窗排查&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/14173135731&#34;&gt;6.51km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
-&lt;p&gt;今天在多邻国学习了36分钟，完成了7单元，共获得576经验&lt;/p&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;时间&lt;/th&gt;
-          &lt;th&gt;分类&lt;/th&gt;
-          &lt;th&gt;时长&lt;/th&gt;
-          &lt;th&gt;备注&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;08:25-08:54&lt;/td&gt;
-          &lt;td&gt;🇺🇸 英语&lt;/td&gt;
-          &lt;td&gt;29分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;08:03-08:25&lt;/td&gt;
-          &lt;td&gt;🏋️ 去健身房&lt;/td&gt;
-          &lt;td&gt;22分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;07:30-08:03&lt;/td&gt;
-          &lt;td&gt;🍚 吃饭&lt;/td&gt;
-          &lt;td&gt;33分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;06:50-07:30&lt;/td&gt;
-          &lt;td&gt;👨‍🍳 做饭&lt;/td&gt;
-          &lt;td&gt;40分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;00:00-06:50&lt;/td&gt;
-          &lt;td&gt;😴 睡觉&lt;/td&gt;
-          &lt;td&gt;6小时50分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/95a32e30729e73e895aa88d&#34;&gt;《游戏力：笑声，激活孩子天性中的合作与勇气》&lt;/a&gt;33分钟&lt;/li&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/215328407200f6f9215a612&#34;&gt;《平面国（果麦经典）》&lt;/a&gt;14分钟&lt;/li&gt;
-&lt;/ul&gt;
-- http://localhost:1313/posts/2025/2025-04-14/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 04月13日 星期日</title>
-        <link>http://localhost:1313/posts/2025/2025-04-13/</link>
-        <pubDate>Sun, 13 Apr 2025 15:40:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2025/2025-04-13/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-04-13/ -&lt;p&gt;今天天气大部晴朗，空气质量32，最高温度14°C，最低温度6°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有309天 ■□□□□□□□□□ 19%&lt;/li&gt;
-&lt;li&gt;元旦还有262天 ■■□□□□□□□□ 27%&lt;/li&gt;
+&lt;li&gt;春节还有250天 ■■■□□□□□□□ 34%&lt;/li&gt;
+&lt;li&gt;元旦还有203天 ■■■■□□□□□□ 44%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2025/2025-04-13/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 04月12日 星期六</title>
-        <link>http://localhost:1313/posts/2025/2025-04-12/</link>
-        <pubDate>Sat, 12 Apr 2025 15:41:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2025/2025-04-12/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-04-12/ -&lt;p&gt;今天天气有风，空气质量6，最高温度12°C，最低温度7°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有308天 ■□□□□□□□□□ 19%&lt;/li&gt;
-&lt;li&gt;元旦还有261天 ■■□□□□□□□□ 28%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/14153087873&#34;&gt;5.3km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
-&lt;p&gt;今天在多邻国学习了3分钟，完成了2单元，共获得18经验&lt;/p&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;p&gt;今天刮着超级大的风，本来没打算出门，但是要物业交割和户口确认就带着孩子出门了。&lt;/p&gt;
-&lt;p&gt;上午去小象动悟玩了抓鱼和小动物，孩子对小动物一点都不害怕。整体体验不错，咸鱼52买的票价挺划算。&lt;/p&gt;
-&lt;p&gt;中午去汉堡王吃午饭。吃完孩子就睡着了，孩子在健身房的沙发躺着睡，我去游泳然后又跑了5公里。&lt;/p&gt;
-&lt;p&gt;然后孩子醒了，又去小象动悟玩了会，到下面西西弗书店逛了一圈。然后在合生汇买了寿司，醉面，卤味，果汁和蜜雪冰城的柠檬水，吃完喝完，顶着大风骑着电动车回家了。路上真是冻死了。
-&lt;a href=&#34;https://mastodon.social/tags/%E6%97%A5%E8%AE%B0&#34;&gt;#日记&lt;/a&gt;
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;style&gt;
-	
-
-	
-&lt;/style&gt;
-
-
-
-
-
-&lt;div id=&#34;gallery-792a8a69856d08799b94d249fc03c0f1-0-wrapper&#34; class=&#34;gallery-wrapper&#34;&gt;
-&lt;div id=&#34;gallery-792a8a69856d08799b94d249fc03c0f1-0&#34; class=&#34;justified-gallery&#34;&gt;
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-					
-				
-			
-
-
-			
-			
-			
-				
-				
-				
-				
-				
-				
-				
-				
-			
-
-			
-			
-
-
-			&lt;div&gt;
-				
-				
-					
-				
-				&lt;a href=&#34;http://localhost:1313/posts/2025/2025-04-12/images/114325777277804559/fccf98e2d982b935.jpeg&#34; 
-					class=&#34;galleryImg&#34;
-					
-						
-
-						
-							data-description=&#34; + &lt;br/&gt;mm f/ sec ISO &#34;
-						
-
-						
-					
-					&gt;
-					&lt;img			
-						width=&#34;600&#34; height=&#34;450&#34;
-
-						
-							
-							style=&#34;filter: blur(25px);&#34;
-							
-								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABgAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/AM6SyimkWXAMcpyD1wPSpbS0k0vWGn0iVcrD/pMZPyurEgqPU8Ej0xWpNa&amp;#43;fEIoQijPHzEY/Kr6aWltGotcjbgy5YkvjvWMJOcLQsKMFB&amp;#43;&amp;#43;RzX6lYmVhCiLkuUUqnbPPQ4P61mSyR2rKkgaN2cABpM4Y5wSB2&amp;#43;U/StQacGkZXkV425UAZP41PHpYOCVWUABSWQA4HTv71Cm4&amp;#43;7cdKDUdULHBGMHaPyrn7zxnZxaitrYk3csjBFC/KgYnA&amp;#43;Y//XrpF7V47pv/ACMNr/19J/6FWWFdlKxtV1seiyz6jeeek4gR4yVCwucnocZOMnBxnHUVtabJI1qnlsGJG4kIcc1jr/yELj/rsf5Ctrw7/wAeI/3R/IVy1ZS5nZ2OqlFOOp//2Q==&#34;
-							
-							class=&#34;lazy&#34;
-							data-src=&#34;http://localhost:1313/posts/2025/2025-04-12/images/114325777277804559/fccf98e2d982b935_hu17563724050512891918.jpeg&#34;
-						
-
-						
-							
-								
-							
-						
-					&gt;
-				&lt;/a&gt;
-			&lt;/div&gt;
-		
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-					
-				
-			
-
-
-			
-			
-			
-				
-				
-				
-				
-				
-				
-				
-				
-			
-
-			
-			
-
-
-			&lt;div&gt;
-				
-				
-					
-				
-				&lt;a href=&#34;http://localhost:1313/posts/2025/2025-04-12/images/114325777277804559/7e1019f844e19e4a.jpeg&#34; 
-					class=&#34;galleryImg&#34;
-					
-						
-
-						
-							data-description=&#34; + &lt;br/&gt;mm f/ sec ISO &#34;
-						
-
-						
-					
-					&gt;
-					&lt;img			
-						width=&#34;600&#34; height=&#34;450&#34;
-
-						
-							
-							style=&#34;filter: blur(25px);&#34;
-							
-								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABgAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/ANi/ijRVkLSkQusm1eN&amp;#43;DjA/P0rnrvXZGa4WJpA9ujYifrwDg/TpXbTRv9mfKhsqdoI7VU1OBXhiH3NjhsbTtOOx9uf0rjnUjTSdrGsYubs9TjS97f2sU0DFXESzSRKQecDntk1bgIu3YW100wK7n2gAbj7HGOldBex28jRKh2M&amp;#43;RlVwW9vzq3DZwRKSsC7WXayqAB9a3lUlUjGd1b/Pv1MklF2S1I9X1GPTdNmu5cMQQMHqSTxWdpGpHWNPm2yqjW&amp;#43;3ayjhixwBjNR&amp;#43;N/8AkAyf76f1rN8Ef8gu6/6&amp;#43;Lb&amp;#43;bVwu1SjJy7/lqdSjyzSRqXenaiqN5V1tlGQJUGG55xznipPDE92ILm2u3Z3jlIDk5yRgED26H8a1rj73/AAKszRv&amp;#43;Pq5/6&amp;#43;Zv/ZKjDTbgVXVmf//Z&#34;
-							
-							class=&#34;lazy&#34;
-							data-src=&#34;http://localhost:1313/posts/2025/2025-04-12/images/114325777277804559/7e1019f844e19e4a_hu8637908183578948986.jpeg&#34;
-						
-
-						
-							
-								
-							
-						
-					&gt;
-				&lt;/a&gt;
-			&lt;/div&gt;
-		
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-					
-				
-			
-
-
-			
-			
-			
-				
-				
-				
-				
-				
-				
-				
-				
-			
-
-			
-			
-
-
-			&lt;div&gt;
-				
-				
-					
-				
-				&lt;a href=&#34;http://localhost:1313/posts/2025/2025-04-12/images/114325777277804559/2e09db4f8a967ee2.jpeg&#34; 
-					class=&#34;galleryImg&#34;
-					
-						
-
-						
-							data-description=&#34; + &lt;br/&gt;mm f/ sec ISO &#34;
-						
-
-						
-					
-					&gt;
-					&lt;img			
-						width=&#34;600&#34; height=&#34;450&#34;
-
-						
-							
-							style=&#34;filter: blur(25px);&#34;
-							
-								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABgAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/AMuXQYJdYtrYgLukkgePO7DbdwxnqOKmbR5vDl1sFw8sTBwYtucDH3hkjAx15OPeqM15Imp2V60zPLbXKuwLbmdc4Jb3A78966DWGXU9RjQsY2Kt5cQPLAq2GJ7cjoM&amp;#43;tcuqW51SXvO/4HI3Gk3El6UiEMVveYODIGH1yMdz2x0pNaW2thZwWtmLYqh8wiQnzOSAcdB1PT1NWEtbi3vLi3VwxtR8hZQBksWyPWsfWrq7uNSQXBZmSMKCcnvn0rRO5Ely6dTdEb23hucTweXLIA0UhGPNwQenX/63411TeUUjnMUrvwSyHGGxjj2H9aw/EH/IG0//AK5n/wBBroIv&amp;#43;PCP6n&amp;#43;dS1zS1NaCTKkVvaSW0suMyM3zMxyT9fwArH1&amp;#43;yitcXqHZjhTnnIGePyrVtv8Aj3k/3v61n&amp;#43;Lf&amp;#43;QPF/vn/ANBNOOsTF/xPmf/Z&#34;
-							
-							class=&#34;lazy&#34;
-							data-src=&#34;http://localhost:1313/posts/2025/2025-04-12/images/114325777277804559/2e09db4f8a967ee2_hu2808655578825593798.jpeg&#34;
-						
-
-						
-							
-								
-							
-						
-					&gt;
-				&lt;/a&gt;
-			&lt;/div&gt;
-		
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-					
-				
-			
-
-
-			
-			
-			
-				
-				
-				
-				
-				
-				
-				
-				
-			
-
-			
-			
-
-
-			&lt;div&gt;
-				
-				
-					
-				
-				&lt;a href=&#34;http://localhost:1313/posts/2025/2025-04-12/images/114325777277804559/25b289d2d44ca9c5.jpeg&#34; 
-					class=&#34;galleryImg&#34;
-					
-						
-
-						
-							data-description=&#34; + &lt;br/&gt;mm f/ sec ISO &#34;
-						
-
-						
-					
-					&gt;
-					&lt;img			
-						width=&#34;600&#34; height=&#34;450&#34;
-
-						
-							
-							style=&#34;filter: blur(25px);&#34;
-							
-								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABgAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/AN3zDbakiCX55IywGODjAPP4ip572VbSRlfzVVCHiB3Zx2A9ayrtbiW4hmV9gjJ7diMHmrtpHZyzFJ/JBeNss4A3HtT5I25mtCXJ35UylpXiCabemwIifIuQOOcAc/0qnrkly8gSNMIv3gmcDtnvWpa20drYTSTM0iwxbVDbSSwxzkdc1Ua4&amp;#43;z28U0yhvMIV1A/vDpW&amp;#43;AtJe2S12RlinyyVO&amp;#43;m7JQ7sMluap3MghuYZXCsqseGGQDggE&amp;#43;wODVtfu1n6t/qK9CSumvU54u0k/QfZjVPtEst3JG1tIh/iUkntt2k555pNsd1cbHyWj5B6YPY1Zh/5B1t9BVS2/4/7j6VyUtIadzpxT9/Xsf//Z&#34;
-							
-							class=&#34;lazy&#34;
-							data-src=&#34;http://localhost:1313/posts/2025/2025-04-12/images/114325777277804559/25b289d2d44ca9c5_hu5495194150510129977.jpeg&#34;
-						
-
-						
-							
-								
-							
-						
-					&gt;
-				&lt;/a&gt;
-			&lt;/div&gt;
-		
-	
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	if (!jQuery) {
-		alert(&#34;jquery is not loaded&#34;);
-	}
-
-	$( document ).ready(() =&gt; {
-		const gallery = $(&#34;#gallery-792a8a69856d08799b94d249fc03c0f1-0&#34;);
-		
-
-		
-		let swipeboxInstance = null;
-
-		
-		
-		gallery.on(&#39;jg.complete&#39;, () =&gt; {
-			
-				
-				
-				$(() =&gt; {
-					$(&#39;.lazy&#39;).Lazy({
-						visibleOnly: true,
-						afterLoad: element =&gt; element.css({filter: &#34;none&#34;, transition: &#34;filter 1.0s ease-in-out&#34;})
-					});
-				});
-			
-
-			swipeboxInstance = $(&#39;.galleryImg&#39;).swipebox(
-				jQuery.extend({},
-					{  }
-				)
-			);
-		});
-
-		
-		gallery.justifiedGallery({
-			rowHeight : &#34;200&#34;,
-			margins : &#34;5&#34;,
-			border : 0,
-			randomize :  false ,
-			waitThumbnailsLoad : false,
-			lastRow : &#34;justify&#34;,
-			captions : false,
-			
-			
-		});
-
-		
-		
-	});
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/215328407200f6f9215a612&#34;&gt;《平面国（果麦经典）》&lt;/a&gt;14分钟&lt;/li&gt;
-&lt;/ul&gt;
-- http://localhost:1313/posts/2025/2025-04-12/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 04月11日 星期五</title>
-        <link>http://localhost:1313/posts/2025/2025-04-11/</link>
-        <pubDate>Fri, 11 Apr 2025 15:42:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2025/2025-04-11/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-04-11/ -&lt;p&gt;今天天气大部晴朗，空气质量66，最高温度26°C，最低温度13°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有311天 ■□□□□□□□□□ 18%&lt;/li&gt;
-&lt;li&gt;元旦还有264天 ■■□□□□□□□□ 27%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/14142352221&#34;&gt;5.13km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
-&lt;p&gt;今天在多邻国学习了12分钟，完成了3单元，共获得191经验&lt;/p&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;时间&lt;/th&gt;
-          &lt;th&gt;分类&lt;/th&gt;
-          &lt;th&gt;时长&lt;/th&gt;
-          &lt;th&gt;备注&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;08:00-08:16&lt;/td&gt;
-          &lt;td&gt;🇺🇸 英语&lt;/td&gt;
-          &lt;td&gt;16分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;p&gt;有一阵刷抖音总能刷到老婆不体谅老公之类的，下面也是清一色的评论我老婆也这样，或者是我要转发给老婆。我忽然意识到抖音这大数据真是把人摸透了，你是老公就推荐老公在看，你是老婆就推荐老婆爱看的，你要是婆婆就推荐婆婆爱看的。看多了会不自觉的产生代入感，就会不自觉的生气。所以少刷抖音，不利于家庭和谐。😂&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://mastodon.social/tags/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3&#34;&gt;#胡思乱想&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-- http://localhost:1313/posts/2025/2025-04-11/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 04月10日 星期四</title>
-        <link>http://localhost:1313/posts/2025/2025-04-10/</link>
-        <pubDate>Thu, 10 Apr 2025 09:37:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2025/2025-04-10/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-04-10/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有312天 ■□□□□□□□□□ 18%&lt;/li&gt;
-&lt;li&gt;元旦还有265天 ■■□□□□□□□□ 27%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; GB崩溃修复&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/14132454250&#34;&gt;6.21km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;时间&lt;/th&gt;
-          &lt;th&gt;分类&lt;/th&gt;
-          &lt;th&gt;时长&lt;/th&gt;
-          &lt;th&gt;备注&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;08:40-08:58&lt;/td&gt;
-          &lt;td&gt;🛀 洗漱&lt;/td&gt;
-          &lt;td&gt;18分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;08:00-08:39&lt;/td&gt;
-          &lt;td&gt;🏃🏻 跑步&lt;/td&gt;
-          &lt;td&gt;39分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;06:45-07:20&lt;/td&gt;
-          &lt;td&gt;👨‍🍳 做饭&lt;/td&gt;
-          &lt;td&gt;35分钟&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
-&lt;p&gt;最近每次拿出手机看微信读书，孩子都会说爸爸我想看手机。刚开始考虑买几本纸质书，但是不方便携带，价格也贵，就又考虑买个电子书阅读器。去年买了文石的poke5，放到共享单车的框里忘记拿，被一个老头拿走了。挑选了一遍，最终还是选择了文石的poke6，国补下来一共花了915。
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  	
-	
-
-	
-		&lt;script src=&#34;http://localhost:1313/shortcode-gallery/jquery-3.7.0.min.js&#34;&gt;&lt;/script&gt;
-	
-	
-	
-		&lt;script src=&#34;http://localhost:1313/shortcode-gallery/lazy/jquery.lazy.min.js&#34;&gt;&lt;/script&gt;
-	
-
-	&lt;script src=&#34;http://localhost:1313/shortcode-gallery/swipebox/js/jquery.swipebox.min.js&#34;&gt;&lt;/script&gt;
-	&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/shortcode-gallery/swipebox/css/swipebox.min.css&#34;&gt;
-
-	&lt;script src=&#34;http://localhost:1313/shortcode-gallery/justified_gallery/jquery.justifiedGallery.min.js&#34;&gt;&lt;/script&gt;
-	&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/shortcode-gallery/justified_gallery/justifiedGallery.min.css&#34;/&gt;
-
-
-&lt;style&gt;
-	
-
-	
-&lt;/style&gt;
-
-
-
-
-
-&lt;div id=&#34;gallery-b11498b3172c18fea70bf8becd6d0d76-0-wrapper&#34; class=&#34;gallery-wrapper&#34;&gt;
-&lt;div id=&#34;gallery-b11498b3172c18fea70bf8becd6d0d76-0&#34; class=&#34;justified-gallery&#34;&gt;
-	
-		
-		
-				
-			
-			
-			
-				
-			
-
-			
-			
-				
-					
-				
-			
-
-
-			
-			
-			
-				
-				
-				
-				
-				
-				
-				
-				
-			
-
-			
-			
-
-
-			&lt;div&gt;
-				
-				
-					
-				
-				&lt;a href=&#34;http://localhost:1313/posts/2025/2025-04-10/images/114311131515228264/35b4f8c5baccfd53.jpeg&#34; 
-					class=&#34;galleryImg&#34;
-					
-						
-
-						
-							data-description=&#34; + &lt;br/&gt;mm f/ sec ISO &#34;
-						
-
-						
-					
-					&gt;
-					&lt;img			
-						width=&#34;450&#34; height=&#34;600&#34;
-
-						
-							
-							style=&#34;filter: blur(25px);&#34;
-							
-								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIACAAGAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/AL&amp;#43;uPeeIdZv2shaxLG6xlpJG5O0HOAK52bwFfTnc9zZA&amp;#43;od/8K6TTl8rV9ZTA4uF6dB&amp;#43;7WtAPuO3170Aec6p4Pl0tYnmkSYSyiMLbhmYZBPAPXpVX/hHo/8An11P/wABD/8AFV3&amp;#43;u2AvksYTK0Ya7Ub42ww&amp;#43;VhxR/wAIZH/0F9S/7/D/AArOTl0Lil1KHh&amp;#43;48281STkgzqPmPooH9K3Qw/uLn8f8a4G38QRaFql/G1pNOkrqymM9Pl561oHx/bpHvOlXWOnLAf0qov3UOonzs6TUpB9p0sDAzfoPr8rV0eBXl7eN7bU9S0xDZyW6QXiSs7sDwARjge9dp/wl&amp;#43;l/89R/30KGiUf/Z&#34;
-							
-							class=&#34;lazy&#34;
-							data-src=&#34;http://localhost:1313/posts/2025/2025-04-10/images/114311131515228264/35b4f8c5baccfd53_hu1673815615714807743.jpeg&#34;
-						
-
-						
-							
-								
-							
-						
-					&gt;
-				&lt;/a&gt;
-			&lt;/div&gt;
-		
-	
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	if (!jQuery) {
-		alert(&#34;jquery is not loaded&#34;);
-	}
-
-	$( document ).ready(() =&gt; {
-		const gallery = $(&#34;#gallery-b11498b3172c18fea70bf8becd6d0d76-0&#34;);
-		
-
-		
-		let swipeboxInstance = null;
-
-		
-		
-		gallery.on(&#39;jg.complete&#39;, () =&gt; {
-			
-				
-				
-				$(() =&gt; {
-					$(&#39;.lazy&#39;).Lazy({
-						visibleOnly: true,
-						afterLoad: element =&gt; element.css({filter: &#34;none&#34;, transition: &#34;filter 1.0s ease-in-out&#34;})
-					});
-				});
-			
-
-			swipeboxInstance = $(&#39;.galleryImg&#39;).swipebox(
-				jQuery.extend({},
-					{  }
-				)
-			);
-		});
-
-		
-		gallery.justifiedGallery({
-			rowHeight : &#34;200&#34;,
-			margins : &#34;5&#34;,
-			border : 0,
-			randomize :  false ,
-			waitThumbnailsLoad : false,
-			lastRow : &#34;justify&#34;,
-			captions : false,
-			
-			
-		});
-
-		
-		
-	});
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;hr&gt;
-- http://localhost:1313/posts/2025/2025-04-10/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☁️ 04月09日 星期三</title>
-        <link>http://localhost:1313/posts/2025/2025-04-09/</link>
-        <pubDate>Wed, 09 Apr 2025 15:43:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2025/2025-04-09/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-04-09/ -&lt;p&gt;今天天气多云，空气质量51，最高温度23°C，最低温度10°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有313天 ■□□□□□□□□□ 18%&lt;/li&gt;
-&lt;li&gt;元旦还有266天 ■■□□□□□□□□ 26%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Keep同步到Notion热力图修改&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Keep封装成库&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/14122732079&#34;&gt;5.1km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/215328407200f6f9215a612&#34;&gt;《平面国（果麦经典）》&lt;/a&gt;7分钟&lt;/li&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/cc932860813ab67c2g014597&#34;&gt;《长安的荔枝（同名影视原著）》&lt;/a&gt;8分钟&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2025/2025-04-09/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2025/2025-06-11/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 03月23日 星期日</title>
-        <link>http://localhost:1313/posts/2025/2025-03-23/</link>
-        <pubDate>Sun, 23 Mar 2025 15:38:00 +0800</pubDate>
+        <title>☀️ 06月05日 星期四</title>
+        <link>http://localhost:1313/posts/2025/2025-06-05/</link>
+        <pubDate>Thu, 05 Jun 2025 15:56:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2025/2025-03-23/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-03-23/ -&lt;p&gt;今天天气晴，空气质量41，最高温度27°C，最低温度17°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2025/2025-06-05/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-06-05/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有330天 ■□□□□□□□□□ 13%&lt;/li&gt;
-&lt;li&gt;元旦还有283天 ■■□□□□□□□□ 22%&lt;/li&gt;
+&lt;li&gt;春节还有256天 ■■■□□□□□□□ 33%&lt;/li&gt;
+&lt;li&gt;元旦还有209天 ■■■■□□□□□□ 42%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
-&lt;p&gt;今天在多邻国学习了1分钟，完成了1单元，共获得8经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2025/2025-03-23/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2025/2025-06-05/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 03月22日 星期六</title>
-        <link>http://localhost:1313/posts/2025/2025-03-22/</link>
-        <pubDate>Sat, 22 Mar 2025 15:41:00 +0800</pubDate>
+        <title>☀️ 06月04日 星期三</title>
+        <link>http://localhost:1313/posts/2025/2025-06-04/</link>
+        <pubDate>Wed, 04 Jun 2025 15:45:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2025/2025-03-22/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-03-22/ -&lt;p&gt;今天天气晴，空气质量43，最高温度28°C，最低温度13°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2025/2025-06-04/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-06-04/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有331天 ■□□□□□□□□□ 13%&lt;/li&gt;
-&lt;li&gt;元旦还有284天 ■■□□□□□□□□ 21%&lt;/li&gt;
+&lt;li&gt;春节还有257天 ■■■□□□□□□□ 32%&lt;/li&gt;
+&lt;li&gt;元旦还有210天 ■■■■□□□□□□ 42%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
-&lt;p&gt;今天在多邻国学习了2分钟，完成了1单元，共获得15经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/91f329c0813ab8ee0g011c9d&#34;&gt;《食南之徒》&lt;/a&gt;17分钟&lt;/li&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/8b9329607186dc198b9bdab&#34;&gt;《被讨厌的勇气：“自我启发之父”阿德勒的哲学课》&lt;/a&gt;8分钟&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2025/2025-03-22/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2025/2025-06-04/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☁️ 03月21日 星期五</title>
-        <link>http://localhost:1313/posts/2025/2025-03-21/</link>
-        <pubDate>Fri, 21 Mar 2025 15:42:00 +0800</pubDate>
+        <title>☀️ 06月03日 星期二</title>
+        <link>http://localhost:1313/posts/2025/2025-06-03/</link>
+        <pubDate>Tue, 03 Jun 2025 15:44:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2025/2025-03-21/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-03-21/ -&lt;p&gt;今天天气局部多云，空气质量16，最高温度27°C，最低温度12°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2025/2025-06-03/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-06-03/ -&lt;p&gt;今天天气晴，空气质量9，最高温度29°C，最低温度16°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有332天 ■□□□□□□□□□ 13%&lt;/li&gt;
-&lt;li&gt;元旦还有285天 ■■□□□□□□□□ 21%&lt;/li&gt;
+&lt;li&gt;春节还有258天 ■■■□□□□□□□ 32%&lt;/li&gt;
+&lt;li&gt;元旦还有211天 ■■■■□□□□□□ 41%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/13941672144&#34;&gt;5.4km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
-&lt;p&gt;今天在多邻国学习了4分钟，完成了1单元，共获得20经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/91f329c0813ab8ee0g011c9d&#34;&gt;《食南之徒》&lt;/a&gt;60分钟&lt;/li&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/8b9329607186dc198b9bdab&#34;&gt;《被讨厌的勇气：“自我启发之父”阿德勒的哲学课》&lt;/a&gt;56分钟&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2025/2025-03-21/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2025/2025-06-03/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 03月20日 星期四</title>
-        <link>http://localhost:1313/posts/2025/2025-03-20/</link>
-        <pubDate>Thu, 20 Mar 2025 15:43:00 +0800</pubDate>
+        <title>☀️ 06月02日 星期一</title>
+        <link>http://localhost:1313/posts/2025/2025-06-02/</link>
+        <pubDate>Mon, 02 Jun 2025 15:40:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2025/2025-03-20/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-03-20/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2025/2025-06-02/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-06-02/ -&lt;p&gt;今天天气晴，空气质量41，最高温度29°C，最低温度15°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有333天 ■□□□□□□□□□ 13%&lt;/li&gt;
-&lt;li&gt;元旦还有286天 ■■□□□□□□□□ 21%&lt;/li&gt;
+&lt;li&gt;春节还有259天 ■■■□□□□□□□ 32%&lt;/li&gt;
+&lt;li&gt;元旦还有212天 ■■■■□□□□□□ 41%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/d13322c072b449f7d13b204&#34;&gt;《打开心智》&lt;/a&gt;344分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2025/2025-06-02/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 06月01日 星期日</title>
+        <link>http://localhost:1313/posts/2025/2025-06-01/</link>
+        <pubDate>Sun, 01 Jun 2025 15:41:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2025/2025-06-01/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-06-01/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有260天 ■■■□□□□□□□ 32%&lt;/li&gt;
+&lt;li&gt;元旦还有213天 ■■■■□□□□□□ 41%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
+&lt;p&gt;今天在多邻国学习了7分钟，完成了1单元，共获得44经验&lt;/p&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+- http://localhost:1313/posts/2025/2025-06-01/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☁️ 05月31日 星期六</title>
+        <link>http://localhost:1313/posts/2025/2025-05-31/</link>
+        <pubDate>Sat, 31 May 2025 15:42:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2025/2025-05-31/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-05-31/ -&lt;p&gt;今天天气多云，空气质量80，最高温度26°C，最低温度20°C。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有261天 ■■■□□□□□□□ 31%&lt;/li&gt;
+&lt;li&gt;元旦还有214天 ■■■■□□□□□□ 41%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/d13322c072b449f7d13b204&#34;&gt;《打开心智》&lt;/a&gt;20分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2025/2025-05-31/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 05月30日 星期五</title>
+        <link>http://localhost:1313/posts/2025/2025-05-30/</link>
+        <pubDate>Fri, 30 May 2025 15:43:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2025/2025-05-30/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-05-30/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有262天 ■■■□□□□□□□ 31%&lt;/li&gt;
+&lt;li&gt;元旦还有215天 ■■■■□□□□□□ 40%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
@@ -982,9 +195,92 @@
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/91f329c0813ab8ee0g011c9d&#34;&gt;《食南之徒》&lt;/a&gt;187分钟&lt;/li&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/d13322c072b449f7d13b204&#34;&gt;《打开心智》&lt;/a&gt;12分钟&lt;/li&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/7bb32c305e0c557bbdeab81&#34;&gt;《你是你吃出来的：吃对少生病，病了这样吃》&lt;/a&gt;35分钟&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2025/2025-03-20/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2025/2025-05-30/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 05月29日 星期四</title>
+        <link>http://localhost:1313/posts/2025/2025-05-29/</link>
+        <pubDate>Thu, 29 May 2025 15:44:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2025/2025-05-29/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-05-29/ -&lt;p&gt;今天天气大部晴朗，空气质量63，最高温度33°C，最低温度17°C。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有263天 ■■■□□□□□□□ 31%&lt;/li&gt;
+&lt;li&gt;元旦还有216天 ■■■■□□□□□□ 40%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 壁纸更换广告id&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 大峡谷增加用户安装应用上报&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 大峡谷添加refer&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 碎屏壁纸&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; OLite弹窗排查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/14626604812&#34;&gt;5.1km&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/d13322c072b449f7d13b204&#34;&gt;《打开心智》&lt;/a&gt;4分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2025/2025-05-29/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 05月28日 星期三</title>
+        <link>http://localhost:1313/posts/2025/2025-05-28/</link>
+        <pubDate>Wed, 28 May 2025 15:44:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2025/2025-05-28/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2025/2025-05-28/ -&lt;p&gt;今天天气晴，空气质量34，最高温度32°C，最低温度16°C。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有264天 ■■■□□□□□□□ 30%&lt;/li&gt;
+&lt;li&gt;元旦还有217天 ■■■■□□□□□□ 40%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;时间&lt;/th&gt;
+          &lt;th&gt;分类&lt;/th&gt;
+          &lt;th&gt;时长&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;08:35-08:53&lt;/td&gt;
+          &lt;td&gt;🛀 洗漱&lt;/td&gt;
+          &lt;td&gt;18分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;07:53-08:34&lt;/td&gt;
+          &lt;td&gt;🏃🏻 跑步&lt;/td&gt;
+          &lt;td&gt;41分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/d13322c072b449f7d13b204&#34;&gt;《打开心智》&lt;/a&gt;8分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2025/2025-05-28/ -  2021 malinkang.</description>
         </item>
     
     

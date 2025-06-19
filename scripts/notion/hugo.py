@@ -61,12 +61,11 @@ def query_duolingo():
 
 
 def query_music():
-    time.sleep(0.3)
     response = notion_api.query_database(
         database_id="f852878351c7450db17f85b68410ce44", filter=get_filter("日期")
     )
     if len(response.get("results")) > 0:
-        return util.get_rich_text(response.get("results")[0], "Id")
+        return response.get("results")[0].get("id")
     return ""
 
 
@@ -323,9 +322,6 @@ def create():
         )
         r += "\n"
         content = ""
-        song = query_music()
-        if song != "":
-            r += '{{<aplayer  server="netease" type="song" id="' + song + '">}}\n'
         weather = util.get_rich_text(result, "天气")
         if weather is not None:
             content += "今天天气" + weather
@@ -344,6 +340,9 @@ def create():
             content += "。"
         r += content
         r += "\n"
+        song = query_music()
+        if song:
+            r += '{{<aplayer  server="notion" type="song" id="' + song + '">}}\n'
         days = query_day()
         if len(days) > 0:
             r += "## 📅 倒数日"

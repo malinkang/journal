@@ -7,228 +7,374 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright> 2021 malinkang.</copyright>
-    <lastBuildDate>Mon, 14 Apr 2025 15:40:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jun 2025 15:44:00 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>☁️ 09月27日 星期五</title>
-        <link>http://localhost:1313/posts/2024/2024-09-27/</link>
-        <pubDate>Fri, 27 Sep 2024 15:40:00 +0800</pubDate>
+        <title>☀️ 11月30日 星期六</title>
+        <link>http://localhost:1313/posts/2024/2024-11-30/</link>
+        <pubDate>Sat, 30 Nov 2024 15:41:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2024/2024-09-27/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-27/ -&lt;p&gt;今天天气多云，空气质量48，最高温度25°C，最低温度17°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-30/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-30/ -&lt;p&gt;今天天气晴，空气质量14，最高温度15°C，最低温度3°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有123天 ■■■■■■□□□□ 64%&lt;/li&gt;
-&lt;li&gt;元旦还有95天 ■■■■■■■□□□ 73%&lt;/li&gt;
+&lt;li&gt;春节还有59天 ■■■■■■■■□□ 83%&lt;/li&gt;
+&lt;li&gt;元旦还有31天 ■■■■■■■■■□ 91%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/13012313849&#34;&gt;7.43km&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/13012314278&#34;&gt;7.43km&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
+&lt;p&gt;今天在多邻国学习了12分钟，完成了2单元，共获得174经验&lt;/p&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;时间&lt;/th&gt;
+          &lt;th&gt;分类&lt;/th&gt;
+          &lt;th&gt;时长&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;09:04-09:25&lt;/td&gt;
+          &lt;td&gt;🛀 洗漱&lt;/td&gt;
+          &lt;td&gt;21分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/98d327d05d047398d8a6b97&#34;&gt;《基督山伯爵》&lt;/a&gt;36分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2024/2024-11-30/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 11月29日 星期五</title>
+        <link>http://localhost:1313/posts/2024/2024-11-29/</link>
+        <pubDate>Fri, 29 Nov 2024 15:42:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2024/2024-11-29/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-29/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有60天 ■■■■■■■■□□ 82%&lt;/li&gt;
+&lt;li&gt;元旦还有32天 ■■■■■■■■■□ 90%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 拦截WebView请求添加Chrome UA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/13006409889&#34;&gt;8.11km&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
+&lt;p&gt;今天在多邻国学习了15分钟，完成了4单元，共获得350经验&lt;/p&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;时间&lt;/th&gt;
+          &lt;th&gt;分类&lt;/th&gt;
+          &lt;th&gt;时长&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;08:43-09:02&lt;/td&gt;
+          &lt;td&gt;🇺🇸 英语&lt;/td&gt;
+          &lt;td&gt;19分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;08:00-08:43&lt;/td&gt;
+          &lt;td&gt;🚇 通勤&lt;/td&gt;
+          &lt;td&gt;43分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/98d327d05d047398d8a6b97&#34;&gt;《基督山伯爵》&lt;/a&gt;44分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2024/2024-11-29/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 11月28日 星期四</title>
+        <link>http://localhost:1313/posts/2024/2024-11-28/</link>
+        <pubDate>Thu, 28 Nov 2024 07:45:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2024/2024-11-28/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-28/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有61天 ■■■■■■■■□□ 82%&lt;/li&gt;
+&lt;li&gt;元旦还有33天 ■■■■■■■■■□ 90%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《基督山伯爵》 P421-P480&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;时间&lt;/th&gt;
+          &lt;th&gt;分类&lt;/th&gt;
+          &lt;th&gt;时长&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;08:15-08:59&lt;/td&gt;
+          &lt;td&gt;🚇 通勤&lt;/td&gt;
+          &lt;td&gt;44分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/98d327d05d047398d8a6b97&#34;&gt;《基督山伯爵》&lt;/a&gt;85分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2024/2024-11-28/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 11月27日 星期三</title>
+        <link>http://localhost:1313/posts/2024/2024-11-27/</link>
+        <pubDate>Wed, 27 Nov 2024 15:43:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2024/2024-11-27/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-27/ -&lt;p&gt;&lt;meting-js server=&#34;&#34;  url=&#34;netease&#34; name=&#34;&#34; cover=&#34;&#34; type=&#34;song&#34; id=&#34;1867217766&#34;&gt;&lt;/meting-js&gt;
+今天天气晴，空气质量17，最高温度4°C，最低温度-5°C。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有62天 ■■■■■■■■□□ 82%&lt;/li&gt;
+&lt;li&gt;元旦还有34天 ■■■■■■■■■□ 90%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《基督山伯爵》 P181-P240&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《基督山伯爵》 P61-P120&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《基督山伯爵》 P241-P300&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《基督山伯爵》 P361-P420&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《基督山伯爵》 P121-P180&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《基督山伯爵》 P301-P360&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 读《基督山伯爵》 P1-P60&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 《基督山伯爵》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12993635851&#34;&gt;6.01km&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12993616863&#34;&gt;6.01km&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
+&lt;p&gt;今天在多邻国学习了34分钟，完成了7单元，共获得531经验&lt;/p&gt;
+&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;时间&lt;/th&gt;
+          &lt;th&gt;分类&lt;/th&gt;
+          &lt;th&gt;时长&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;19:27-20:00&lt;/td&gt;
+          &lt;td&gt;📆 复盘&lt;/td&gt;
+          &lt;td&gt;33分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;19:02-19:27&lt;/td&gt;
+          &lt;td&gt;🇺🇸 英语&lt;/td&gt;
+          &lt;td&gt;25分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;18:43-19:02&lt;/td&gt;
+          &lt;td&gt;🍚 吃饭&lt;/td&gt;
+          &lt;td&gt;19分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;17:31-18:43&lt;/td&gt;
+          &lt;td&gt;🏃🏻 跑步&lt;/td&gt;
+          &lt;td&gt;1小时12分钟&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-碎碎念&#34;&gt;💬 碎碎念&lt;/h2&gt;
+&lt;p&gt;昨天晚上下雪了，这次的雪和以往不太一样。之前下雪都是先下雨再下雪，这次直接下的雪，散落在地上像粉末一样，风一吹飘的到处都是。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/98d327d05d047398d8a6b97&#34;&gt;《基督山伯爵》&lt;/a&gt;49分钟&lt;/li&gt;
+&lt;/ul&gt;
+- http://localhost:1313/posts/2024/2024-11-27/ -  2021 malinkang.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>☀️ 11月26日 星期二</title>
+        <link>http://localhost:1313/posts/2024/2024-11-26/</link>
+        <pubDate>Tue, 26 Nov 2024 15:42:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/2024/2024-11-26/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-26/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;春节还有63天 ■■■■■■■■□□ 81%&lt;/li&gt;
+&lt;li&gt;元旦还有35天 ■■■■■■■■■□ 90%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
 &lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/23e32130813ab82bdg015cd2&#34;&gt;《太白金星有点烦》&lt;/a&gt;4分钟&lt;/li&gt;
+&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/98d327d05d047398d8a6b97&#34;&gt;《基督山伯爵》&lt;/a&gt;3分钟&lt;/li&gt;
 &lt;/ul&gt;
-- http://localhost:1313/posts/2024/2024-09-27/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-26/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☁️ 09月26日 星期四</title>
-        <link>http://localhost:1313/posts/2024/2024-09-26/</link>
-        <pubDate>Thu, 26 Sep 2024 15:41:00 +0800</pubDate>
+        <title>☀️ 11月25日 星期一</title>
+        <link>http://localhost:1313/posts/2024/2024-11-25/</link>
+        <pubDate>Mon, 25 Nov 2024 15:38:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2024/2024-09-26/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-26/ -&lt;p&gt;今天天气多云，空气质量16，最高温度24°C，最低温度15°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-25/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-25/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有124天 ■■■■■■□□□□ 64%&lt;/li&gt;
-&lt;li&gt;元旦还有96天 ■■■■■■■□□□ 73%&lt;/li&gt;
+&lt;li&gt;春节还有64天 ■■■■■■■■□□ 81%&lt;/li&gt;
+&lt;li&gt;元旦还有36天 ■■■■■■■■□□ 89%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12507557858&#34;&gt;2.06km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
+&lt;p&gt;今天在多邻国学习了10分钟，完成了3单元，共获得248经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2024/2024-09-26/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-25/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 09月25日 星期三</title>
-        <link>http://localhost:1313/posts/2024/2024-09-25/</link>
-        <pubDate>Wed, 25 Sep 2024 15:41:00 +0800</pubDate>
+        <title>☁️ 11月24日 星期日</title>
+        <link>http://localhost:1313/posts/2024/2024-11-24/</link>
+        <pubDate>Sun, 24 Nov 2024 15:39:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2024/2024-09-25/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-25/ -&lt;p&gt;今天天气大部晴朗，空气质量67，最高温度25°C，最低温度15°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-24/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-24/ -&lt;p&gt;今天天气多云，空气质量59，最高温度11°C，最低温度-0°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有125天 ■■■■■■□□□□ 64%&lt;/li&gt;
-&lt;li&gt;元旦还有97天 ■■■■■■■□□□ 73%&lt;/li&gt;
+&lt;li&gt;春节还有65天 ■■■■■■■■□□ 81%&lt;/li&gt;
+&lt;li&gt;元旦还有37天 ■■■■■■■■□□ 89%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12501217143&#34;&gt;2.1km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2024/2024-09-25/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-24/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 09月24日 星期二</title>
-        <link>http://localhost:1313/posts/2024/2024-09-24/</link>
-        <pubDate>Tue, 24 Sep 2024 15:39:00 +0800</pubDate>
+        <title>☁️ 11月23日 星期六</title>
+        <link>http://localhost:1313/posts/2024/2024-11-23/</link>
+        <pubDate>Sat, 23 Nov 2024 15:41:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2024/2024-09-24/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-24/ -&lt;p&gt;今天天气晴，空气质量53，最高温度24°C，最低温度12°C。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-23/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-23/ -&lt;p&gt;今天天气多云，空气质量49，最高温度9°C，最低温度3°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有126天 ■■■■■■□□□□ 64%&lt;/li&gt;
-&lt;li&gt;元旦还有98天 ■■■■■■■□□□ 72%&lt;/li&gt;
+&lt;li&gt;春节还有66天 ■■■■■■■■□□ 81%&lt;/li&gt;
+&lt;li&gt;元旦还有38天 ■■■■■■■■□□ 89%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12965250905&#34;&gt;3.8km&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2024/2024-09-24/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-23/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 09月23日 星期一</title>
-        <link>http://localhost:1313/posts/2024/2024-09-23/</link>
-        <pubDate>Mon, 23 Sep 2024 15:38:00 +0800</pubDate>
+        <title>☀️ 11月22日 星期五</title>
+        <link>http://localhost:1313/posts/2024/2024-11-22/</link>
+        <pubDate>Fri, 22 Nov 2024 15:42:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2024/2024-09-23/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-23/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-22/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-22/ -&lt;p&gt;今天天气晴，空气质量15，最高温度11°C，最低温度-1°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有127天 ■■■■■■□□□□ 63%&lt;/li&gt;
-&lt;li&gt;元旦还有99天 ■■■■■■■□□□ 72%&lt;/li&gt;
+&lt;li&gt;春节还有67天 ■■■■■■■■□□ 80%&lt;/li&gt;
+&lt;li&gt;元旦还有39天 ■■■■■■■■□□ 89%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
+&lt;h2 id=&#34;-学习&#34;&gt;📖 学习&lt;/h2&gt;
+&lt;p&gt;今天在多邻国学习了14分钟，完成了2单元，共获得150经验&lt;/p&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-&lt;h2 id=&#34;-读书&#34;&gt;📚 读书&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;读&lt;a href=&#34;https://weread.qq.com/web/reader/94c325d05e1ae594c7c1535&#34;&gt;《失明症漫记》&lt;/a&gt;26分钟&lt;/li&gt;
-&lt;/ul&gt;
-- http://localhost:1313/posts/2024/2024-09-23/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-22/ -  2021 malinkang.</description>
         </item>
     
     
     
         <item>
-        <title>☀️ 09月22日 星期日</title>
-        <link>http://localhost:1313/posts/2024/2024-09-22/</link>
-        <pubDate>Sun, 22 Sep 2024 15:39:00 +0800</pubDate>
+        <title>☀️ 11月21日 星期四</title>
+        <link>http://localhost:1313/posts/2024/2024-11-21/</link>
+        <pubDate>Thu, 21 Nov 2024 15:42:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/2024/2024-09-22/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-22/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
+        <guid>http://localhost:1313/posts/2024/2024-11-21/</guid>
+        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-11-21/ -&lt;p&gt;今天天气晴，空气质量24，最高温度15°C，最低温度3°C。&lt;/p&gt;
 &lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有128天 ■■■■■■□□□□ 63%&lt;/li&gt;
-&lt;li&gt;元旦还有100天 ■■■■■■■□□□ 72%&lt;/li&gt;
+&lt;li&gt;春节还有68天 ■■■■■■■■□□ 80%&lt;/li&gt;
+&lt;li&gt;元旦还有40天 ■■■■■■■■□□ 88%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2024/2024-09-22/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 09月21日 星期六</title>
-        <link>http://localhost:1313/posts/2024/2024-09-21/</link>
-        <pubDate>Sat, 21 Sep 2024 15:39:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2024/2024-09-21/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-21/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;春节还有129天 ■■■■■■□□□□ 63%&lt;/li&gt;
-&lt;li&gt;元旦还有101天 ■■■■■■■□□□ 72%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; universe马甲包集成adjust&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
 &lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12460837769&#34;&gt;2km&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12949663001&#34;&gt;2.01km&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2024/2024-09-21/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 09月20日 星期五</title>
-        <link>http://localhost:1313/posts/2024/2024-09-20/</link>
-        <pubDate>Fri, 20 Sep 2024 15:40:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2024/2024-09-20/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-20/ -&lt;p&gt;今天天气大部晴朗，空气质量231，最高温度30°C，最低温度14°C。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有130天 ■■■■■■□□□□ 62%&lt;/li&gt;
-&lt;li&gt;元旦还有102天 ■■■■■■■□□□ 71%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2024/2024-09-20/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 09月18日 星期三</title>
-        <link>http://localhost:1313/posts/2024/2024-09-18/</link>
-        <pubDate>Wed, 18 Sep 2024 15:40:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2024/2024-09-18/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-18/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有132天 ■■■■■■□□□□ 62%&lt;/li&gt;
-&lt;li&gt;元旦还有104天 ■■■■■■■□□□ 71%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;跑步：&lt;a href=&#34;https://www.strava.com/activities/12440648275&#34;&gt;3.05km&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2024/2024-09-18/ -  2021 malinkang.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>☀️ 09月17日 星期二</title>
-        <link>http://localhost:1313/posts/2024/2024-09-17/</link>
-        <pubDate>Tue, 17 Sep 2024 15:40:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/posts/2024/2024-09-17/</guid>
-        <description>linkang&#39;s life http://localhost:1313/posts/2024/2024-09-17/ -&lt;p&gt;今天天气，空气质量None，最高温度，最低温度。&lt;/p&gt;
-&lt;h2 id=&#34;-倒数日&#34;&gt;📅 倒数日&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;春节还有133天 ■■■■■■□□□□ 62%&lt;/li&gt;
-&lt;li&gt;元旦还有105天 ■■■■■■■□□□ 71%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-todo&#34;&gt;✅ ToDo&lt;/h2&gt;
-&lt;h2 id=&#34;-健康&#34;&gt;❤️ 健康&lt;/h2&gt;
-&lt;h2 id=&#34;-时间统计&#34;&gt;⏰ 时间统计&lt;/h2&gt;
-- http://localhost:1313/posts/2024/2024-09-17/ -  2021 malinkang.</description>
+- http://localhost:1313/posts/2024/2024-11-21/ -  2021 malinkang.</description>
         </item>
     
     

@@ -12,8 +12,9 @@ categories: [日记]
 comment : true
 ---
 
-{{<aplayer  server="netease" type="song" id="21674656">}}
+
 今天天气晴，空气质量35，最高温度35°C，最低温度16°C。
+{{<aplayer  server="notion" type="song" id="20f86019-c92c-813b-b43f-e36554c56f4e">}}
 ## 📅 倒数日
 - 春节还有250天 ■■■□□□□□□□ 34%
 - 元旦还有203天 ■■■■□□□□□□ 44%
@@ -26,3 +27,4 @@ comment : true
 
 ## 📚 读书
 - 读[《长安的荔枝（同名影视原著）》](https://weread.qq.com/web/reader/cc932860813ab67c2g014597)12分钟
+
