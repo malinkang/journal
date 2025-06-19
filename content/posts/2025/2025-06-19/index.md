@@ -12,10 +12,12 @@ comment : true
 ---
 
 今天天气大部多云，空气质量69，最高温度28°C，最低温度20°C。
+{{<aplayer  server="notion" type="song" id="21786019-c92c-81e5-88e4-cc81a00a88dd">}}
 ## 📅 倒数日
 - 春节还有242天 ■■■□□□□□□□ 36%
 - 元旦还有195天 ■■■■□□□□□□ 46%
 ## ✅ ToDo
+- [x] Olite大峡谷新功能集成
 ## ❤️ 健康
 - 跑步：[5km](https://www.strava.com/activities/14845944592)
 ## ⏰ 时间统计
