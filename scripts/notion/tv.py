@@ -11,7 +11,7 @@ def get_tv_shows():
     headers = {
         'Content-Type': 'application/json',
         'trakt-api-version': '2',
-        'Authorization': 'Bearer 1439bef323df01acd75f46dc1331341148b89ac17ca0d207e1cdf3f8f68b3a1c',
+        'Authorization': 'Bearer 5955513f7b4f15fb6f19ac4afe9d703de3e20992f583aea0959d299a5c3ff72d',
         'trakt-api-key': '5e4c7346bf29ef6e75975f6c08496ce504bac3927a5923dc5083085ae99becaa'
     }
     # 设置请求URL和参数
@@ -113,9 +113,9 @@ if __name__ == '__main__':
         log_level=logging.DEBUG
     )
     code = "your_code_here"  # 假设这是获取的code
-    # shows = get_trakt_token("070f977cf78935d64c7f61fa3c7719c7792636e63396ad965bcb2ddbf0e578db")
+#    shows = get_trakt_token("32d50cfab815a6a418fd2e3b6533139f0b672e47d8de139645d3c4f0116202f1")
     shows = get_tv_shows()
-    # 将tv shows写入到shows.json中
+#    将tv shows写入到shows.json中
     with open('shows.json', 'w', encoding='utf-8') as f:
         json.dump(shows, f, ensure_ascii=False, indent=4)
     # for show in shows:

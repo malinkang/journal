@@ -122,3 +122,6 @@ curl -X POST https://neodb.social/oauth/token/ \
 -d "grant_type=authorization_code"
 
 ihiCHsBtdvLkBihTAkyBA4qSEUKAEt
+
+
+https://api.themoviedb.org/3/tv/{series_id}/season/{season_number}/episode//{episode_number}
