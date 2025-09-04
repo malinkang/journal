@@ -60,12 +60,11 @@ def query_duolingo():
 
 
 def query_music():
-    time.sleep(0.3)
     response = notion_api.query_database(
-        database_id="9fdc53150b5d4e0dabffca8a0f366d66", filter=get_filter("日期")
+        database_id="f852878351c7450db17f85b68410ce44", filter=get_filter("日期")
     )
     if len(response.get("results")) > 0:
-        return util.get_rich_text(response.get("results")[0], "Id")
+        return response.get("results")[0].get("id")
     return ""
 
 
@@ -193,7 +192,7 @@ def query_mastodon():
 
 def query_book():
     response = notion_api.query_database(
-        database_id="c4f00fa3af964a03b4a05198fa255a10", filter=get_filter(name="日期")
+        database_id="25386019c92c81fd839cc2e903edd9e0", filter=get_filter(name="日期")
     )
     books = []
     for result in response.get("results"):
@@ -258,6 +257,8 @@ def get_text(content, url=None):
 
 def get_external(url):
     return {"type": "external", "external": {"url": url}}
+def get_embed(url):
+    return {"type": "embed", "embed": {"url": url}}
 
 
 def get_block(type, rich_text=None, checked=False,external = None,url=None):
@@ -503,14 +504,18 @@ if __name__ == "__main__":
     result = create_page(title,slug)
     children = []
     if result and result.get("id"):
+        song = query_music()
+        if song:
+            children.append(get_embed(f"https://notion-music.malinkang.com/player?server=notion&type=song&id={song}"))
         todos = query_todo()
         if todos:
             children.append(get_block("heading_2",rich_text=[get_text("✅ ToDo")]))
             children.extend(todos)
-        timelines = query_twitter()
-        if timelines:
-            children.append(get_block("heading_2",rich_text=[get_text("💬 碎碎念")]))
-            children.extend(timelines)
+
+        # timelines = query_twitter()
+        # if timelines:
+        #     children.append(get_block("heading_2",rich_text=[get_text("💬 碎碎念")]))
+        #     children.extend(timelines)
         books = query_book()
         if books:
             children.append(get_block("heading_2",rich_text=[get_text("📖 阅读")]))
