@@ -226,7 +226,7 @@ def query_run():
 
 def query_book():
     response = notion_api.query_database(
-        database_id="25386019c92c812a8f14c0fbc80642a2", filter=get_filter(name="日期")
+        database_id="25386019c92c81fd839cc2e903edd9e0", filter=get_filter(name="日期")
     )
     books = []
     for result in response.get("results"):
