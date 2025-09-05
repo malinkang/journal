@@ -442,7 +442,8 @@ def check(slug):
     r = notion_api.client.databases.query(
         database_id="48107861338540dc97f6985be1e2a198", filter=filter
     )
-    return len(r.get("results")) == 0
+    for result in r.get("results"):
+        notion_api.client.blocks.delete(result.get("id"))
         
 
 
@@ -500,8 +501,8 @@ if __name__ == "__main__":
         date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     title = dateutils.format_date_with_week(date=date)
     slug = date.strftime("%Y-%m-%d")
-    if check(slug):
-        result = create_page(title,slug)
+    check(slug):
+    result = create_page(title,slug)
     children = []
     if result and result.get("id"):
         song = query_music()

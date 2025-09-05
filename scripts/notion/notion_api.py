@@ -227,6 +227,11 @@ def update_page_with_icon(page_id, properties,icon):
         page_id, properties=properties,icon=icon)
     return response
 
+def update_page_with_cover(page_id, properties,icon,cover):
+    response = client.pages.update(
+        page_id, properties=properties,icon=icon,cover=cover)
+    return response
+
 
 def query_database(**kwargs):
     kwargs = {k: v for k, v in kwargs.items() if v}
