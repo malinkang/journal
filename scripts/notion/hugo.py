@@ -232,13 +232,14 @@ def query_book():
     for result in response.get("results"):
         properties = result.get("properties")
         duration = util.get_number(result, "时长")
-        book = notion_api.client.pages.retrieve(
-            page_id=properties.get("书架").get("relation")[0].get("id")
-        )
-        name = util.get_title(book, "书名")
-        print(name)
-        url = util.get_url(book, "链接")
-        books.append(f"读[《{name}》]({url}){round(duration/60)}分钟")
+        if properties.get("书架").get("relation"):
+            book = notion_api.client.pages.retrieve(
+                page_id=properties.get("书架").get("relation")[0].get("id")
+            )
+            name = util.get_title(book, "书名")
+            print(name)
+            url = util.get_url(book, "链接")
+            books.append(f"读[《{name}》]({url}){round(duration/60)}分钟")
     return books
 
 
