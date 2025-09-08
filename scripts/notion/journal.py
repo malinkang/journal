@@ -501,7 +501,7 @@ if __name__ == "__main__":
         date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     title = dateutils.format_date_with_week(date=date)
     slug = date.strftime("%Y-%m-%d")
-    check(slug):
+    check(slug)
     result = create_page(title,slug)
     children = []
     if result and result.get("id"):
