@@ -198,18 +198,20 @@ def query_book():
     for result in response.get("results"):
         properties = result.get("properties")
         duration = util.get_number(result, "时长")
-        book = notion_api.client.pages.retrieve(
-            page_id=properties.get("书架").get("relation")[0].get("id")
-        )
-        name = util.get_title(book, "书名")
-        print(name)
-        url = util.get_url(book, "链接")
-        rich_text = [
-            get_text("读"),
-            get_text(f"《{name}》", url),
-            get_text(f"{round(duration/60)}分钟"),
-        ]
-        books.append(get_block("bulleted_list_item", rich_text))
+        relation = properties.get("书架").get("relation")
+        if relation:
+            book = notion_api.client.pages.retrieve(
+                page_id=properties.get("书架").get("relation")[0].get("id")
+            )
+            name = util.get_title(book, "书名")
+            print(name)
+            url = util.get_url(book, "链接")
+            rich_text = [
+                get_text("读"),
+                get_text(f"《{name}》", url),
+                get_text(f"{round(duration/60)}分钟"),
+            ]
+            books.append(get_block("bulleted_list_item", rich_text))
     return books
 
 
