@@ -388,7 +388,8 @@ def create():
                 r += "\n"
         if memos:
             r += memos
-        urls = query_bilibili() | query_movie()
+        # urls = query_bilibili() | query_movie()
+        urls = query_bilibili() 
         if len(urls) > 0:
             r += "\n"
             r += "## 📺 今天看了啥"
