@@ -7,6 +7,7 @@ import dateutils
 import notion_api
 from notion_api import Page
 from notion_api import Properties
+import utils
 
 #搜索笔记
 def search(content):
@@ -33,7 +34,7 @@ def emoji(weather):
         return "☀️"
 
 
-def update(id, content):
+def update(content):
     content = json.loads(content)
     weather = content['weather']
     highest = content['highest']
@@ -42,11 +43,11 @@ def update(id, content):
     icon = emoji(weather)
     properties=Properties().rich_text("天气",weather).rich_text("最高温度",highest).rich_text("最低温度",lowest).number("空气质量",int(aqi))
     icon = {"type": "emoji", "emoji": icon}
-    notion_api.update_page_with_icon(id,properties,icon=icon)
+    utils.ensure_journal_page(properties=properties, icon=icon)
     
                     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("content")
     options = parser.parse_args()
-    search(options.content)
+    update(options.content)

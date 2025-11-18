@@ -9,6 +9,7 @@ import notion_api
 from datetime import datetime
 from notion_api import Properties
 from notion_api import Page
+import utils
 
 #搜索笔记
 def search(content):
@@ -21,11 +22,11 @@ def search(content):
     
 
 
-def update(id, content):
+def update(content):
     content = json.loads(content)
     location = content['location']
     properties=Properties().rich_text("位置",location)
-    notion_api.update_page(id,properties)
+    utils.ensure_journal_page(properties=properties)
 
 
 
@@ -33,4 +34,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("content")
     options = parser.parse_args()
-    search(options.content)
+    update(options.content)

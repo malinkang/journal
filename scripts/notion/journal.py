@@ -6,12 +6,8 @@ import time
 
 import pendulum
 import notion_api
-from notion_api import Page
-from notion_api import Children, DatabaseParent
-from notion_api import Properties
-import dateutils
 import util
-import unsplash
+from utils import ensure_journal_page
 from config import (
     DAY_PAGE_ID,
 )
@@ -437,48 +433,6 @@ def create():
             f.seek(0)
             f.write(r)
             f.truncate()
-
-
-def check(slug):
-    filter = {"property": "slug", "rich_text": {"equals": slug}}
-
-    r = notion_api.client.databases.query(
-        database_id="48107861338540dc97f6985be1e2a198", filter=filter
-    )
-    for result in r.get("results"):
-        notion_api.client.blocks.delete(result.get("id"))
-        
-
-
-def create_page(title,slug):
-    emo = "☀️"
-    year = date.strftime("%Y")
-    week = date.strftime("第%V周")
-    month = date.strftime("%-m月")
-    cover = unsplash.random()
-    tags = [year, month, week]
-    properties = (
-        Properties()
-        .title(title)
-        .date(property="date", start=date)
-        .multi_select("tags", tags)
-        .rich_text("slug",slug)
-        .select("type","Post")
-        .select("status","Published")
-    )
-    # properties = notion_api.get_relation(properties,date,False)
-    parent = DatabaseParent("48107861338540dc97f6985be1e2a198")
-    page = (
-        Page()
-        .parent(parent)
-        .children(Children())
-        .cover(cover)
-        .icon(emo)
-        .properties(properties)
-    )
-    return notion_api.create_page(page=page)
-
-
 def get_table_row(cells):
     return {"type": "table_row", "table_row": {"cells": cells}}
 
@@ -502,12 +456,9 @@ if __name__ == "__main__":
     date = datetime.now()
     if content:
         date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
-    title = dateutils.format_date_with_week(date=date)
-    slug = date.strftime("%Y-%m-%d")
-    check(slug)
-    result = create_page(title,slug)
-    children = []
-    if result and result.get("id"):
+    page_id = ensure_journal_page(date)
+    if page_id:
+        children = []
         song = query_music()
         if song:
             children.append(get_embed(f"https://notion-music.malinkang.com/player?server=notion&type=song&id={song}"))
@@ -540,9 +491,10 @@ if __name__ == "__main__":
         # if movies:
         #     children.append(get_block("heading_2",rich_text=[get_text("📺 电影")]))
         #     children.extend(movies)
-        notion_api.client.blocks.children.append(
-            block_id=result.get("id"), children=children
-        )
+        if children:
+            notion_api.client.blocks.children.append(
+                block_id=page_id, children=children
+            )
     # print(query_movie())
     # # print()
     # print(query_todo())
