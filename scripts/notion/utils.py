@@ -59,7 +59,7 @@ def create_journal_page(
 def ensure_journal_page(
     page_date: Optional[datetime] = None,
     properties: Optional[Properties] = None,
-    icon: Optional[str] = None,
+    icon: Optional[str] = EMOJI_ICON,
 ):
     """Return existing page id for the given date (defaults to now).
 
@@ -70,7 +70,6 @@ def ensure_journal_page(
     """
     if page_date is None:
         page_date = datetime.now()
-
     title = dateutils.format_date_with_week(date=page_date)
     slug = page_date.strftime("%Y-%m-%d")
 
@@ -88,11 +87,10 @@ def ensure_journal_page(
         if properties and icon:
             merged_properties = _build_default_properties(page_date, title, slug)
             merged_properties.update(properties)
-            icon_value = icon or EMOJI_ICON
             notion_api.update_page_with_icon(
                 page_id,
                 merged_properties,
-                {"type": "emoji", "emoji": icon_value},
+                {"type": "emoji", "emoji": icon},
             )
         return page_id
 

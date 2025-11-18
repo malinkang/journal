@@ -26,7 +26,8 @@ def update(content):
     content = json.loads(content)
     location = content['location']
     properties=Properties().rich_text("位置",location)
-    utils.ensure_journal_page(properties=properties)
+    print(properties)
+    print(utils.ensure_journal_page(properties=properties))
 
 
 
