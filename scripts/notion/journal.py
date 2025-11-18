@@ -536,10 +536,10 @@ if __name__ == "__main__":
         if table:
             children.append(get_block("heading_2",rich_text=[get_text("⏰ 日程")]))
             children.append(table)
-        movies = query_movie()
-        if movies:
-            children.append(get_block("heading_2",rich_text=[get_text("📺 电影")]))
-            children.extend(movies)
+        # movies = query_movie()
+        # if movies:
+        #     children.append(get_block("heading_2",rich_text=[get_text("📺 电影")]))
+        #     children.extend(movies)
         notion_api.client.blocks.children.append(
             block_id=result.get("id"), children=children
         )
