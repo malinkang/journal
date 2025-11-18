@@ -13,7 +13,7 @@ comment : true
 ---
 
 今天天气局部多云，空气质量25，最高温度11°C，最低温度1°C。
-{{<aplayer  server="notion" type="song" id="2af86019-c92c-8106-a6ca-db7ea35f5d8d">}}
+{{<aplayer  server="notion" type="song" id="2af86019-c92c-8105-bac8-f15142762bb3">}}
 ## 📅 倒数日
 - 元旦还有43天 ■■■■■■■■□□ 87%
 - 春节还有90天 ■■■■■■■□□□ 76%
