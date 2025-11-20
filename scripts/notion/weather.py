@@ -42,7 +42,6 @@ def update(content):
     aqi = content['aqi']
     icon = emoji(weather)
     properties=Properties().rich_text("天气",weather).rich_text("最高温度",highest).rich_text("最低温度",lowest).number("空气质量",int(aqi))
-    icon = {"type": "emoji", "emoji": icon}
     utils.ensure_journal_page(properties=properties, icon=icon)
     
                     
