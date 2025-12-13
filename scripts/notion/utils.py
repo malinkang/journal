@@ -73,8 +73,7 @@ def ensure_journal_page(
     title = dateutils.format_date_with_week(date=page_date)
     slug = page_date.strftime("%Y-%m-%d")
 
-    filter = {"property": "title", "title": {"equals": title}}
-
+    filter = {"property": "title", "title": {"contains": title}}
     response = notion_api.client.databases.query(
         database_id=JOURNAL_DATABASE_ID, filter=filter
     )

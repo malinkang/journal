@@ -188,7 +188,7 @@ def query_mastodon():
 
 def query_book():
     response = notion_api.query_database(
-        database_id="25386019c92c81fd839cc2e903edd9e0", filter=get_filter(name="日期")
+        database_id="25386019c92c81549225d641cc3aae04", filter=get_filter(name="日期")
     )
     books = []
     for result in response.get("results"):
@@ -318,7 +318,7 @@ def query_toggl():
 def create():
     response = notion_api.query_database(database_id=DAY_PAGE_ID, filter=get_filter())
     results = response.get("results")
-
+    print(f"查询到{len(results)}条记录")
     for result in results:
         cover = result.get("cover").get("external").get("url")
         icon = result.get("icon").get("emoji")
@@ -457,6 +457,7 @@ if __name__ == "__main__":
     if content:
         date = datetime.strptime(parser.parse_args().content, "%Y-%m-%d")
     page_id = ensure_journal_page(date)
+    print(f"创建日记页面 {page_id} 成功")
     if page_id:
         children = []
         song = query_music()
@@ -492,6 +493,7 @@ if __name__ == "__main__":
         #     children.append(get_block("heading_2",rich_text=[get_text("📺 电影")]))
         #     children.extend(movies)
         if children:
+            print(f"添加 {len(children)} 个块到页面 {page_id}")
             notion_api.client.blocks.children.append(
                 block_id=page_id, children=children
             )
